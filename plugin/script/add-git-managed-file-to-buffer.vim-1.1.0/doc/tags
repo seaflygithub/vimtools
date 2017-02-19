@@ -1,0 +1,13 @@
+:AddCToBuffer	add-git-managed-file-to-buffer.txt	/*:AddCToBuffer*
+:AddCToTab	add-git-managed-file-to-buffer.txt	/*:AddCToTab*
+:AddMToBuffer	add-git-managed-file-to-buffer.txt	/*:AddMToBuffer*
+:AddMToTab	add-git-managed-file-to-buffer.txt	/*:AddMToTab*
+:AddUToBuffer	add-git-managed-file-to-buffer.txt	/*:AddUToBuffer*
+:AddUToTab	add-git-managed-file-to-buffer.txt	/*:AddUToTab*
+:OpenAllBuffersInTab	add-git-managed-file-to-buffer.txt	/*:OpenAllBuffersInTab*
+add-git-managed-file-to-buffer	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer*
+add-git-managed-file-to-buffer-commnads	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer-commnads*
+add-git-managed-file-to-buffer-contents	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer-contents*
+add-git-managed-file-to-buffer-interface	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer-interface*
+add-git-managed-file-to-buffer-introduction	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer-introduction*
+add-git-managed-file-to-buffer.txt	add-git-managed-file-to-buffer.txt	/*add-git-managed-file-to-buffer.txt*

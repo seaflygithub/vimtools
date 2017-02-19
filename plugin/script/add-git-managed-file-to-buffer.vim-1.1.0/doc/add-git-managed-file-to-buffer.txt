@@ -1,0 +1,62 @@
+*add-git-managed-file-to-buffer.txt*
+
+Version: 1.1.0
+Author: ToruIwashita <toru.iwashita@gmail.com>
+License: MIT License
+
+==============================================================================
+				*add-git-managed-file-to-buffer-contents*
+CONTENTS
+
+Introduction			|add-git-managed-file-to-buffer-introduction|
+Interface			|add-git-managed-file-to-buffer-interface|
+  Commands			|add-git-managed-file-to-buffer-commnads|
+
+==============================================================================
+				*add-git-managed-file-to-buffer-introduction*
+Introduction
+
+*add-git-managed-file-to-buffer* provides the ability to add files that are
+changed, modifiled, untracked in Git to the buffer.
+
+==============================================================================
+				*add-git-managed-file-to-buffer-interface*
+Interface
+
+------------------------------------------------------------------------------
+				*add-git-managed-file-to-buffer-commnads*
+Commands
+
+								*:AddCToBuffer*
+:AddCToBuffer
+	Add all changed files to the buffer.
+
+								*:AddMToBuffer*
+:AddMToBuffer
+	Add all modifiled files to the buffer.
+
+								*:AddUToBuffer*
+:AddUToBuffer
+	Add all untracked files to the buffer.
+
+								*:AddCToTab*
+:AddCToTab
+	After emptying the buffer, add the changed file to the buffer and open
+	it in the tab.
+
+								*:AddMToTab*
+:AddMToTab
+	After emptying the buffer, add the modifiled file to the buffer and
+	open it in the tab.
+
+								*:AddUToTab*
+:AddUToTab
+	After emptying the buffer, add the untracked file to the buffer and
+	open it in the tab.
+
+							*:OpenAllBuffersInTab*
+:OpenAllBuffersInTab
+	Open all buffers in tab.
+
+==============================================================================
+vim:tw=78:sw=4:ts=8:ft=help:norl:noet:

@@ -1,0 +1,12 @@
+:AddCToBuffer	add-git-managed-file-to-buffer.jax	/*:AddCToBuffer*
+:AddCToTab	add-git-managed-file-to-buffer.jax	/*:AddCToTab*
+:AddMToBuffer	add-git-managed-file-to-buffer.jax	/*:AddMToBuffer*
+:AddMToTab	add-git-managed-file-to-buffer.jax	/*:AddMToTab*
+:AddUToBuffer	add-git-managed-file-to-buffer.jax	/*:AddUToBuffer*
+:AddUToTab	add-git-managed-file-to-buffer.jax	/*:AddUToTab*
+:OpenAllBuffersInTab	add-git-managed-file-to-buffer.jax	/*:OpenAllBuffersInTab*
+add-git-managed-file-to-buffer-commnads	add-git-managed-file-to-buffer.jax	/*add-git-managed-file-to-buffer-commnads*
+add-git-managed-file-to-buffer-contents	add-git-managed-file-to-buffer.jax	/*add-git-managed-file-to-buffer-contents*
+add-git-managed-file-to-buffer-interface	add-git-managed-file-to-buffer.jax	/*add-git-managed-file-to-buffer-interface*
+add-git-managed-file-to-buffer-introduction	add-git-managed-file-to-buffer.jax	/*add-git-managed-file-to-buffer-introduction*
+add-git-managed-file-to-buffer.txt	add-git-managed-file-to-buffer.jax	/*add-git-managed-file-to-buffer.txt*

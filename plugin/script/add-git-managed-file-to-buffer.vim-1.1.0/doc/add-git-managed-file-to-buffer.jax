@@ -1,0 +1,62 @@
+*add-git-managed-file-to-buffer.txt*
+
+Version: 1.1.0
+Author: ToruIwashita <toru.iwashita@gmail.com>
+License: MIT License
+
+==============================================================================
+				*add-git-managed-file-to-buffer-contents*
+目次
+
+概要				|add-git-managed-file-to-buffer-introduction|
+インターフェース		|add-git-managed-file-to-buffer-interface|
+  コマンド			|add-git-managed-file-to-buffer-commnads|
+
+==============================================================================
+				*add-git-managed-file-to-buffer-introduction*
+概要
+
+*add-git-managed-file-to-buffer*はGitでchanged、modifiled、untracked
+となっているファイルをバッファに追加する機能を提供します。
+
+==============================================================================
+				*add-git-managed-file-to-buffer-interface*
+インターフェース
+
+------------------------------------------------------------------------------
+				*add-git-managed-file-to-buffer-commnads*
+コマンド
+
+								*:AddCToBuffer*
+:AddCToBuffer
+	全てのchanged状態のファイルをバッファに追加します。
+
+								*:AddMToBuffer*
+:AddMToBuffer
+	全てのmodifiled状態のファイルをバッファに追加します。
+
+								*:AddUToBuffer*
+:AddUToBuffer
+	全てのuntracked状態のファイルをバッファに追加します。
+
+								*:AddCToTab*
+:AddCToTab
+	バッファを初期化しchanged状態のファイルをバッファに追加した後、
+	タブで開きます。
+
+								*:AddMToTab*
+:AddMToTab
+	バッファを初期化しmodifiled状態のファイルをバッファに追加した後、
+	タブで開きます。
+
+								*:AddUToTab*
+:AddUToTab
+	バッファを初期化しuntracked状態のファイルをバッファに追加した後、
+	タブで開きます。
+
+							*:OpenAllBuffersInTab*
+:OpenAllBuffersInTab
+	全てのバッファをタブで開きます。
+
+==============================================================================
+vim:tw=78:sw=4:ts=8:ft=help:norl:noet:
