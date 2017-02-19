@@ -1,0 +1,22 @@
+" Vundle {{{
+set nocompatible
+set encoding=utf-8
+filetype off
+set rtp+=$VIM/bundle/Vundle.vim
+call vundle#begin("$VIM/bundle/")
+" ycm
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/ListToggle'
+call vundle#end()
+filetype plugin indent on
+" }}}
+
+" Ycm config{{{ 
+let g:ycm_complete_in_comments=1
+let g:ycm_confirm_extra_conf=0
+let g:ycm_cache_omnifunc=0
+let g:ycm_collect_identifiers_from_tags_files=1
+map <F8> :YcmCompleter GoToDefinitionElseDeclaration <C-R>=expand("<cword>")<CR><CR>
+nmap <Leader>g :YcmCompleter GoToDeclaration <C-R>=expand("<cword>")<CR><CR>
+map <F10> :YcmDiags<CR>
+" }}}

@@ -8,7 +8,7 @@
 #--------------------------------------------------------------------------
 CUR=
 MAKE=make
-MKCLEAN=clean
+MKCLEAN=distclean
 MKINSTALL=install
 MKARGS=-j4
 SUDO=
@@ -66,7 +66,7 @@ do
     ret=$value
     echo "$value" > ${TEMP_FILE}
     value=`awk -F . '{print $1}' ${TEMP_FILE}`
-    if [ "$value" == "${python_version}" ] ;	#main support python2.x
+    if [ "$value" == "${python_version}" ] ;	#main support python2.x  !!!!!!
     then
 	break
     fi
@@ -74,8 +74,16 @@ done
 PY_VERSION=$ret
 VIM_CONFIG=(./configure \
     --prefix=/usr \
+    --with-features=huge \
+    --enable-rubyinterp \
     --enable-pythoninterp=yes \
-    --with-python-config-dir=/usr/lib/${PY_VERSION}/config)
+    --enable-python3interp=yes \
+    --enable-luainterp \
+    --enable-perlinterp \
+    --enable-multibyte \
+    --enable-cscope \
+    --with-python-config-dir=/usr/lib/python2.6/config)
+#    --with-python-config-dir=/usr/lib/${PY_VERSION}/config)
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"        #print all element of array
 #======================================================================
 ####--with-features=huge \
@@ -362,6 +370,38 @@ function build_all_help()
 
 function only_vim()
 {
+    uname -v | grep "Ubuntu"
+    if [ $? -eq 0 ] ;
+    then
+        host www.baidu.com 1>/dev/null 2>/dev/null
+        if [ $? -ne 0 ] ;
+        then
+            echo "Error: Network unavailable!"
+            exit 1
+        fi
+
+        $SUDO apt-get install vim
+        $SUDO apt-get install vim-gocomplete
+        $SUDO apt-get install vim-syntax-gtk
+        $SUDO apt-get install vim-tiny
+        $SUDO apt-get install vim-vim-youcompleteme
+        $SUDO apt-get install vim-python-jedi
+        $SUDO apt-get install vim-scripts
+        $SUDO apt-get install vim-syntax-go
+        $SUDO apt-get install vim-syntax-docker
+        $SUDO apt-get install vim-gnome
+        $SUDO apt-get install vim-doc
+        $SUDO apt-get install vim-dbg
+        $SUDO apt-get install vim-common
+        $SUDO apt-get install vim-gtk
+        $SUDO apt-get install vim-gui-common
+        $SUDO apt-get install vim-vimerl
+        $SUDO apt-get install vim-vimerl-syntax
+        $SUDO apt-get install vim-outliner
+        $SUDO apt-get install vim-runtime
+        return 0
+    fi
+
     echo "function only_vim()>>>only install vim"
     CUR=$VIMTOOL_VIM
     cd $CUR                     #vimtool/vim
@@ -369,7 +409,18 @@ function only_vim()
     $TAR_VIM $TAR_VIM_ARGS $VIM
     cd $VIMTOOL_VIM/$VIM_DIR    #vimtool/vim/vim80
     $MAKE $MKCLEAN
-    $VIM_CONFIG     #configuration for python
+    #$VIM_CONFIG     #configuration for python
+    ./configure  \
+        --prefix=/usr  \
+        --with-features=huge  \
+        --enable-rubyinterp  \
+        --enable-pythoninterp=yes  \
+        --enable-python3interp=yes  \
+        --enable-luainterp  \
+        --enable-perlinterp  \
+        --enable-multibyte   \
+        --enable-cscope \
+        --with-python-config-dir=/usr/lib/python2.6/config
 
     $MAKE $MKARGS
     $SUDO $MAKE $MKINSTALL
@@ -498,6 +549,19 @@ function source_zip_plugin()
 function source_plugin()
 {
     echo "function source_plugin()>>>  script plugins"
+    uname -v | grep "Ubuntu"
+    if [ $? -eq 0 ] ;
+    then
+        host www.baidu.com 1>/dev/null 2>/dev/null
+        if [ $? -ne 0 ] ;
+        then
+            echo "Error: Network unavailable!"
+            exit 1
+        fi
+        $SUDO apt-get install ctags
+        $SUDO apt-get install cscope
+        return 0
+    fi
     source_tar_plugin
     source_zip_plugin
     source_tar_gz_plugin
