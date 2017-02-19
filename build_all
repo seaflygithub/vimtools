@@ -418,8 +418,7 @@ function only_vim()
         --enable-python3interp=yes  \
         --enable-luainterp  \
         --enable-perlinterp  \
-        --enable-multibyte   \
-        --enable-cscope \
+        --enable-multibyte   \ --enable-cscope \
         --with-python-config-dir=/usr/lib/python2.6/config
 
     $MAKE $MKARGS
@@ -765,6 +764,14 @@ function config_vimrc()
 {
     echo "function config_vimrc()>>>Install vimrc configuration file"
     cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
+    echo -e "Please input your name: \c"
+    read user_name
+    echo -e "Please input your email: \c"
+    read user_email
+
+    echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
+    echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
+
     return 0
 }
 
@@ -779,7 +786,7 @@ function install_config()
 #Don't install vim"
 function no_vim()
 {
-    echo "function no_vim()>>>Don't install vim"
+    echo "function no_vim()>>>Dont install vim"
     CUR=`pwd`
     echo "CUR: $CUR"
     install_plugin
