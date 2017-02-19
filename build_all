@@ -663,7 +663,8 @@ function script_tar_gz_plugin()
     then
         mkdir -p $VIM_CFG_DIR
     fi
-    cp -v $VIMTOOL_PLG_SCRIPT/*.tar.gz $VIM_CFG_DIR 1>/dev/null 2>/dev/null
+    tar -xzvf $VIMTOOL_PLG_SCRIPT/*.tar.gz -C $VIM_CFG_DIR 1>/dev/null 2>/dev/null
+#   cp -v $VIMTOOL_PLG_SCRIPT/*.tar.gz $VIM_CFG_DIR 1>/dev/null 2>/dev/null
     if [ $? -ne 0 ] ;
     then
         return 2;
@@ -723,11 +724,22 @@ function script_tar_bz2_plugin()
 function script_plugin()
 {
     echo "function script_plugin()>>> script plugins"
-    script_tar_bz2_plugin
-    script_tar_gz_plugin
-    script_tar_plugin
-    script_zip_plugin
-    script_vim_plugin
+    [ -d ~/.vim ] 
+    if [ $? -ne 0 ] ;
+    then
+        mkdir -p ~/.vim
+    fi
+
+    cd plugin/script/
+    tar -czvf ../vimtool-plugins.tar.gz ./
+    tar -xzvf ../vimtool-plugins.tar.gz -C ~/.vim/
+    rm -rf ../vimtool-plugins.tar.gz
+    cd ../../
+#   script_tar_bz2_plugin
+#   script_tar_gz_plugin
+#   script_tar_plugin
+#   script_zip_plugin
+#   script_vim_plugin
     return 0
 }
 
