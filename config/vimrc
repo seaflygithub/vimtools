@@ -122,7 +122,7 @@ filetype indent on
 set number		    "Show line number
 "set nonumber		"Don't show line number
 "set nohlsearch 	"No high light search key word(s)
-"colorscheme evening	"Set colorscheme (Default evening)
+colorscheme evening	"Set colorscheme (Default evening)
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 " Use Unix as the standard file type
@@ -154,18 +154,18 @@ set expandtab
 set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
+set softtabstop=4
+set backspace=2
 set tabstop=4
+set showmatch
+set showcmd
+set incsearch
+set nowrap
+set sidescroll=1
+
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
-
-
-
-
-
-
-
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -460,7 +460,7 @@ map <F12> :WMToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "project.sh: configuration for vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F3> :set tags+=~/.vim/systags,./tags,./filenametags<cr>
+map <F3> :set tags=~/.vim/systags,./tags,/usr/include/tags,./filenametags<cr>
 map <F4> :cscope add ./cscope.out ./<cr>
 
 """"""""""""""""""""""""""""""""""""""
@@ -510,7 +510,6 @@ nmap <F9>   :TrinityToggleSourceExplorer<CR>
 nmap <F10>  :TrinityToggleTagList<CR>
 " Open and close the NERD_tree.vim separately 
 nmap <F11>  :TrinityToggleNERDTree<CR>
-
 
 
 "Adding Brief Headers(You can modify it)
