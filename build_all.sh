@@ -264,6 +264,7 @@ function only_vim()
 {
     if [ $HOSTOS == "ubuntu" ] ;
     then
+	echo "HOSTOS:$HOSTOS"
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
@@ -272,24 +273,18 @@ function only_vim()
         fi
 
         $SUDO apt-get install vim
-        $SUDO apt-get install vim-gocomplete
-        $SUDO apt-get install vim-syntax-gtk
-        $SUDO apt-get install vim-tiny
-        $SUDO apt-get install vim-vim-youcompleteme
-        $SUDO apt-get install vim-python-jedi
-        $SUDO apt-get install vim-scripts
-        $SUDO apt-get install vim-syntax-go
-        $SUDO apt-get install vim-syntax-docker
         $SUDO apt-get install vim-gnome
-        $SUDO apt-get install vim-doc
-        $SUDO apt-get install vim-dbg
-        $SUDO apt-get install vim-common
-        $SUDO apt-get install vim-gtk
-        $SUDO apt-get install vim-gui-common
-        $SUDO apt-get install vim-vimerl
-        $SUDO apt-get install vim-vimerl-syntax
-        $SUDO apt-get install vim-outliner
-        $SUDO apt-get install vim-runtime
+	$SUDO apt-get install vim-gocomplete
+	$SUDO apt-get install vim-gtk
+	$SUDO apt-get install vim-python-jedi
+	$SUDO apt-get install vim-scripts
+	$SUDO apt-get install vim-syntax-go
+	$SUDO apt-get install vim-syntax-docker
+	$SUDO apt-get install vim-syntax-gtk
+	$SUDO apt-get install vim-tiny
+	$SUDO apt-get install vim-vimerl
+	$SUDO apt-get install vim-vimerl-syntax
+	$SUDO apt-get install vim-youcompleteme
         return 0
     fi
 
@@ -441,6 +436,7 @@ function source_plugin()
     echo "function source_plugin()>>>  script plugins"
     if [ $HOSTOS == "ubuntu" ] ;
     then
+	echo "HOSTOS:$HOSTOS"
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
@@ -662,6 +658,7 @@ function config_vimrc()
 
     if  [ $HOSTOS  ==  "ubuntu"  ] ;
     then
+	echo "HOSTOS:$HOSTOS"
         sed -i  '/colorscheme/d' ~/.vimrc
     fi
 
