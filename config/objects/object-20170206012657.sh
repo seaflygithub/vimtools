@@ -39,7 +39,6 @@ ctags -RV \
     --c++-kinds=+p \
     --fields=+iaS \
     --extra=+q .
-#   --languages=Asm,Awk,C,C++,C#,HTML,Java,JavaScript,Make,PHP,Sh,python \
 #    --etags-include=~/.vim/systags \
 #ctags -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q --language-force=C++ -f cpp cpp_src
 

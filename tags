@@ -4,27 +4,130 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-build_all_help	build_all	/^function build_all_help()$/;"	f
-build_vimconf_dir	build_all	/^function build_vimconf_dir()$/;"	f
-complete_install	build_all	/^function complete_install()$/;"	f
-config_object	build_all	/^function config_object()$/;"	f
-config_vimrc	build_all	/^function config_vimrc()$/;"	f
-debug_vimtool	build_all	/^function debug_vimtool()$/;"	f
-install_config	build_all	/^function install_config()$/;"	f
-install_plugin	build_all	/^function install_plugin()$/;"	f
-install_vim	build_all	/^function install_vim()$/;"	f
-install_vimtool	build_all	/^function install_vimtool()$/;"	f
-no_vim	build_all	/^function no_vim()$/;"	f
-only_vim	build_all	/^function only_vim()$/;"	f
-script_plugin	build_all	/^function script_plugin()$/;"	f
-script_tar_bz2_plugin	build_all	/^function script_tar_bz2_plugin()$/;"	f
-script_tar_gz_plugin	build_all	/^function script_tar_gz_plugin()$/;"	f
-script_tar_plugin	build_all	/^function script_tar_plugin()$/;"	f
-script_vim_plugin	build_all	/^function script_vim_plugin()$/;"	f
-script_zip_plugin	build_all	/^function script_zip_plugin()$/;"	f
-source_plugin	build_all	/^function source_plugin()$/;"	f
-source_tar_bz2_plugin	build_all	/^function source_tar_bz2_plugin()$/;"	f
-source_tar_gz_plugin	build_all	/^function source_tar_gz_plugin()$/;"	f
-source_tar_plugin	build_all	/^function source_tar_plugin()$/;"	f
-source_zip_plugin	build_all	/^function source_zip_plugin()$/;"	f
-vimtool_finish	build_all	/^function vimtool_finish()$/;"	f
+AddToParent	plugin/script/autoload/Reflection.java	/^    public static void AddToParent(Hashtable map, String parent, String child) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child)
+INDEX_CLASS	plugin/script/autoload/Reflection.java	/^    private static int INDEX_CLASS = 1;$/;"	f	class:Reflection	file:	access:private
+INDEX_PACKAGE	plugin/script/autoload/Reflection.java	/^    private static int INDEX_PACKAGE = 0;$/;"	f	class:Reflection	file:	access:private
+KEY_DECLARING_CLASS	plugin/script/autoload/Reflection.java	/^    static final String KEY_DECLARING_CLASS	= "'c':";	\/\/ "'declaringclass':";$/;"	f	class:Reflection	access:default
+KEY_DESCRIPTION	plugin/script/autoload/Reflection.java	/^    static final String KEY_DESCRIPTION		= "'d':";	\/\/ "'description':";$/;"	f	class:Reflection	access:default
+KEY_MODIFIER	plugin/script/autoload/Reflection.java	/^    static final String KEY_MODIFIER		= "'m':";	\/\/ "'modifier':";$/;"	f	class:Reflection	access:default
+KEY_NAME	plugin/script/autoload/Reflection.java	/^    static final String KEY_NAME		= "'n':";	\/\/ "'name':";$/;"	f	class:Reflection	access:default
+KEY_PARAMETERTYPES	plugin/script/autoload/Reflection.java	/^    static final String KEY_PARAMETERTYPES	= "'p':";	\/\/ "'parameterTypes':";$/;"	f	class:Reflection	access:default
+KEY_RETURNTYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_RETURNTYPE		= "'r':";	\/\/ "'returnType':";$/;"	f	class:Reflection	access:default
+KEY_TYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_TYPE		= "'t':";	\/\/ "'type':";$/;"	f	class:Reflection	access:default
+NEWLINE	plugin/script/autoload/Reflection.java	/^    static final String NEWLINE = "";	\/\/ "\\r\\n"$/;"	f	class:Reflection	access:default
+OPTION_ALL	plugin/script/autoload/Reflection.java	/^    static final int OPTION_ALL			= 31;	\/\/ compound all$/;"	f	class:Reflection	access:default
+OPTION_CONSTRUCTOR	plugin/script/autoload/Reflection.java	/^    static final int OPTION_CONSTRUCTOR		= 16;$/;"	f	class:Reflection	access:default
+OPTION_FIELD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_FIELD		=  1;$/;"	f	class:Reflection	access:default
+OPTION_INSTANCE	plugin/script/autoload/Reflection.java	/^    static final int OPTION_INSTANCE		= 15;	\/\/ compound instance$/;"	f	class:Reflection	access:default
+OPTION_METHOD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_METHOD		=  2;$/;"	f	class:Reflection	access:default
+OPTION_SAME_PACKAGE	plugin/script/autoload/Reflection.java	/^    static final int OPTION_SAME_PACKAGE	= 64;$/;"	f	class:Reflection	access:default
+OPTION_STATIC	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC		= 12;	\/\/ compound static$/;"	f	class:Reflection	access:default
+OPTION_STATIC_FIELD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_FIELD	=  4;$/;"	f	class:Reflection	access:default
+OPTION_STATIC_METHOD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_METHOD	=  8;$/;"	f	class:Reflection	access:default
+OPTION_SUPER	plugin/script/autoload/Reflection.java	/^    static final int OPTION_SUPER		= 32;$/;"	f	class:Reflection	access:default
+RETURN_ALL_PACKAGE_INFO	plugin/script/autoload/Reflection.java	/^    static final int RETURN_ALL_PACKAGE_INFO	= 0x1000;$/;"	f	class:Reflection	access:default
+Reflection	plugin/script/autoload/Reflection.java	/^class Reflection {$/;"	c
+Reflection.AddToParent	plugin/script/autoload/Reflection.java	/^    public static void AddToParent(Hashtable map, String parent, String child) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child)
+Reflection.INDEX_CLASS	plugin/script/autoload/Reflection.java	/^    private static int INDEX_CLASS = 1;$/;"	f	class:Reflection	file:	access:private
+Reflection.INDEX_PACKAGE	plugin/script/autoload/Reflection.java	/^    private static int INDEX_PACKAGE = 0;$/;"	f	class:Reflection	file:	access:private
+Reflection.KEY_DECLARING_CLASS	plugin/script/autoload/Reflection.java	/^    static final String KEY_DECLARING_CLASS	= "'c':";	\/\/ "'declaringclass':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_DESCRIPTION	plugin/script/autoload/Reflection.java	/^    static final String KEY_DESCRIPTION		= "'d':";	\/\/ "'description':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_MODIFIER	plugin/script/autoload/Reflection.java	/^    static final String KEY_MODIFIER		= "'m':";	\/\/ "'modifier':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_NAME	plugin/script/autoload/Reflection.java	/^    static final String KEY_NAME		= "'n':";	\/\/ "'name':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_PARAMETERTYPES	plugin/script/autoload/Reflection.java	/^    static final String KEY_PARAMETERTYPES	= "'p':";	\/\/ "'parameterTypes':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_RETURNTYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_RETURNTYPE		= "'r':";	\/\/ "'returnType':";$/;"	f	class:Reflection	access:default
+Reflection.KEY_TYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_TYPE		= "'t':";	\/\/ "'type':";$/;"	f	class:Reflection	access:default
+Reflection.NEWLINE	plugin/script/autoload/Reflection.java	/^    static final String NEWLINE = "";	\/\/ "\\r\\n"$/;"	f	class:Reflection	access:default
+Reflection.OPTION_ALL	plugin/script/autoload/Reflection.java	/^    static final int OPTION_ALL			= 31;	\/\/ compound all$/;"	f	class:Reflection	access:default
+Reflection.OPTION_CONSTRUCTOR	plugin/script/autoload/Reflection.java	/^    static final int OPTION_CONSTRUCTOR		= 16;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_FIELD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_FIELD		=  1;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_INSTANCE	plugin/script/autoload/Reflection.java	/^    static final int OPTION_INSTANCE		= 15;	\/\/ compound instance$/;"	f	class:Reflection	access:default
+Reflection.OPTION_METHOD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_METHOD		=  2;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_SAME_PACKAGE	plugin/script/autoload/Reflection.java	/^    static final int OPTION_SAME_PACKAGE	= 64;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_STATIC	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC		= 12;	\/\/ compound static$/;"	f	class:Reflection	access:default
+Reflection.OPTION_STATIC_FIELD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_FIELD	=  4;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_STATIC_METHOD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_METHOD	=  8;$/;"	f	class:Reflection	access:default
+Reflection.OPTION_SUPER	plugin/script/autoload/Reflection.java	/^    static final int OPTION_SUPER		= 32;$/;"	f	class:Reflection	access:default
+Reflection.RETURN_ALL_PACKAGE_INFO	plugin/script/autoload/Reflection.java	/^    static final int RETURN_ALL_PACKAGE_INFO	= 0x1000;$/;"	f	class:Reflection	access:default
+Reflection.STRATEGY_ALPHABETIC	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_ALPHABETIC	= 128;$/;"	f	class:Reflection	access:default
+Reflection.STRATEGY_DEFAULT	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_DEFAULT		= 512;$/;"	f	class:Reflection	access:default
+Reflection.STRATEGY_HIERARCHY	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_HIERARCHY		= 256;$/;"	f	class:Reflection	access:default
+Reflection.VERSION	plugin/script/autoload/Reflection.java	/^    static final String VERSION	= "0.77";$/;"	f	class:Reflection	access:default
+Reflection.addClasspathesFromDir	plugin/script/autoload/Reflection.java	/^    private static void addClasspathesFromDir(String dirpath) {$/;"	m	class:Reflection	file:	access:private	signature:(String dirpath)
+Reflection.appendDeclaredMembers	plugin/script/autoload/Reflection.java	/^    private static void appendDeclaredMembers(Hashtable map, Class clazz, StringBuffer sb) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz, StringBuffer sb)
+Reflection.appendListFromFolder	plugin/script/autoload/Reflection.java	/^    public static void appendListFromFolder(Hashtable subpackages, Hashtable classes, String path, String prefix) {$/;"	m	class:Reflection	access:public	signature:(Hashtable subpackages, Hashtable classes, String path, String prefix)
+Reflection.appendListFromJar	plugin/script/autoload/Reflection.java	/^    public static void appendListFromJar(Hashtable subpackages, Hashtable classes, String path, String prefix) {$/;"	m	class:Reflection	access:public	signature:(Hashtable subpackages, Hashtable classes, String path, String prefix)
+Reflection.appendListFromJar	plugin/script/autoload/Reflection.java	/^    public static void appendListFromJar(String path, Hashtable map) {$/;"	m	class:Reflection	access:public	signature:(String path, Hashtable map)
+Reflection.appendModifier	plugin/script/autoload/Reflection.java	/^    private static void appendModifier(StringBuffer sb, int modifier) {$/;"	m	class:Reflection	file:	access:private	signature:(StringBuffer sb, int modifier)
+Reflection.appendParameterTypes	plugin/script/autoload/Reflection.java	/^    private static void appendParameterTypes(StringBuffer sb, Class[] paramTypes) {$/;"	m	class:Reflection	file:	access:private	signature:(StringBuffer sb, Class[] paramTypes)
+Reflection.collectClassPath	plugin/script/autoload/Reflection.java	/^    private static Hashtable collectClassPath() {$/;"	m	class:Reflection	file:	access:private	signature:()
+Reflection.debug	plugin/script/autoload/Reflection.java	/^    static void debug(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+Reflection.debug_mode	plugin/script/autoload/Reflection.java	/^    static boolean debug_mode = false;$/;"	f	class:Reflection	access:default
+Reflection.existed	plugin/script/autoload/Reflection.java	/^    public static boolean existed(String fqn) {$/;"	m	class:Reflection	access:public	signature:(String fqn)
+Reflection.existedAndRead	plugin/script/autoload/Reflection.java	/^    public static String existedAndRead(String fqns) {$/;"	m	class:Reflection	access:public	signature:(String fqns)
+Reflection.getClassInfo	plugin/script/autoload/Reflection.java	/^    public static String getClassInfo(String className) {$/;"	m	class:Reflection	access:public	signature:(String className)
+Reflection.getPackageList	plugin/script/autoload/Reflection.java	/^    private static String getPackageList(String fqn) {$/;"	m	class:Reflection	file:	access:private	signature:(String fqn)
+Reflection.getPackageList	plugin/script/autoload/Reflection.java	/^    public static String getPackageList() {$/;"	m	class:Reflection	access:public	signature:()
+Reflection.htClasspath	plugin/script/autoload/Reflection.java	/^    static Hashtable htClasspath = new Hashtable();$/;"	f	class:Reflection	access:default
+Reflection.isBlank	plugin/script/autoload/Reflection.java	/^    private static boolean isBlank(String str) {$/;"	m	class:Reflection	file:	access:private	signature:(String str)
+Reflection.main	plugin/script/autoload/Reflection.java	/^    public static void main(String[] args) {$/;"	m	class:Reflection	access:public	signature:(String[] args)
+Reflection.output	plugin/script/autoload/Reflection.java	/^    static void output(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+Reflection.putClassInfo	plugin/script/autoload/Reflection.java	/^    private static void putClassInfo(Hashtable map, Class clazz) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz)
+Reflection.putItem	plugin/script/autoload/Reflection.java	/^    public static void putItem(Hashtable map, String parent, String child, int index) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child, int index)
+Reflection.putPackageInfo	plugin/script/autoload/Reflection.java	/^    private static void putPackageInfo(Hashtable map, String name) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, String name)
+Reflection.usage	plugin/script/autoload/Reflection.java	/^    private static void usage() {$/;"	m	class:Reflection	file:	access:private	signature:()
+STRATEGY_ALPHABETIC	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_ALPHABETIC	= 128;$/;"	f	class:Reflection	access:default
+STRATEGY_DEFAULT	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_DEFAULT		= 512;$/;"	f	class:Reflection	access:default
+STRATEGY_HIERARCHY	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_HIERARCHY		= 256;$/;"	f	class:Reflection	access:default
+VERSION	plugin/script/autoload/Reflection.java	/^    static final String VERSION	= "0.77";$/;"	f	class:Reflection	access:default
+addClasspathesFromDir	plugin/script/autoload/Reflection.java	/^    private static void addClasspathesFromDir(String dirpath) {$/;"	m	class:Reflection	file:	access:private	signature:(String dirpath)
+appendDeclaredMembers	plugin/script/autoload/Reflection.java	/^    private static void appendDeclaredMembers(Hashtable map, Class clazz, StringBuffer sb) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz, StringBuffer sb)
+appendListFromFolder	plugin/script/autoload/Reflection.java	/^    public static void appendListFromFolder(Hashtable subpackages, Hashtable classes, String path, String prefix) {$/;"	m	class:Reflection	access:public	signature:(Hashtable subpackages, Hashtable classes, String path, String prefix)
+appendListFromJar	plugin/script/autoload/Reflection.java	/^    public static void appendListFromJar(Hashtable subpackages, Hashtable classes, String path, String prefix) {$/;"	m	class:Reflection	access:public	signature:(Hashtable subpackages, Hashtable classes, String path, String prefix)
+appendListFromJar	plugin/script/autoload/Reflection.java	/^    public static void appendListFromJar(String path, Hashtable map) {$/;"	m	class:Reflection	access:public	signature:(String path, Hashtable map)
+appendModifier	plugin/script/autoload/Reflection.java	/^    private static void appendModifier(StringBuffer sb, int modifier) {$/;"	m	class:Reflection	file:	access:private	signature:(StringBuffer sb, int modifier)
+appendParameterTypes	plugin/script/autoload/Reflection.java	/^    private static void appendParameterTypes(StringBuffer sb, Class[] paramTypes) {$/;"	m	class:Reflection	file:	access:private	signature:(StringBuffer sb, Class[] paramTypes)
+build_all_help	build_all.sh	/^function build_all_help()$/;"	f
+build_vimconf_dir	build_all.sh	/^function build_vimconf_dir()$/;"	f
+collectClassPath	plugin/script/autoload/Reflection.java	/^    private static Hashtable collectClassPath() {$/;"	m	class:Reflection	file:	access:private	signature:()
+complete_install	build_all.sh	/^function complete_install()$/;"	f
+config_object	build_all.sh	/^function config_object()$/;"	f
+config_vimrc	build_all.sh	/^function config_vimrc()$/;"	f
+debug	plugin/script/autoload/Reflection.java	/^    static void debug(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+debug_mode	plugin/script/autoload/Reflection.java	/^    static boolean debug_mode = false;$/;"	f	class:Reflection	access:default
+debug_vimtool	build_all.sh	/^function debug_vimtool()$/;"	f
+existed	plugin/script/autoload/Reflection.java	/^    public static boolean existed(String fqn) {$/;"	m	class:Reflection	access:public	signature:(String fqn)
+existedAndRead	plugin/script/autoload/Reflection.java	/^    public static String existedAndRead(String fqns) {$/;"	m	class:Reflection	access:public	signature:(String fqns)
+getClassInfo	plugin/script/autoload/Reflection.java	/^    public static String getClassInfo(String className) {$/;"	m	class:Reflection	access:public	signature:(String className)
+getPackageList	plugin/script/autoload/Reflection.java	/^    private static String getPackageList(String fqn) {$/;"	m	class:Reflection	file:	access:private	signature:(String fqn)
+getPackageList	plugin/script/autoload/Reflection.java	/^    public static String getPackageList() {$/;"	m	class:Reflection	access:public	signature:()
+htClasspath	plugin/script/autoload/Reflection.java	/^    static Hashtable htClasspath = new Hashtable();$/;"	f	class:Reflection	access:default
+install_config	build_all.sh	/^function install_config()$/;"	f
+install_plugin	build_all.sh	/^function install_plugin()$/;"	f
+install_vim	build_all.sh	/^function install_vim()$/;"	f
+install_vimtool	build_all.sh	/^function install_vimtool()$/;"	f
+isBlank	plugin/script/autoload/Reflection.java	/^    private static boolean isBlank(String str) {$/;"	m	class:Reflection	file:	access:private	signature:(String str)
+main	plugin/script/autoload/Reflection.java	/^    public static void main(String[] args) {$/;"	m	class:Reflection	access:public	signature:(String[] args)
+match	plugin/script/syntax_checkers/python/codec.py	/^        match = re.match(r"#\\s*coding\\s*:\\s*(?P<coding>\\w+)", text[0])$/;"	v
+no_vim	build_all.sh	/^function no_vim()$/;"	f
+only_vim	build_all.sh	/^function only_vim()$/;"	f
+output	plugin/script/autoload/Reflection.java	/^    static void output(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+putClassInfo	plugin/script/autoload/Reflection.java	/^    private static void putClassInfo(Hashtable map, Class clazz) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz)
+putItem	plugin/script/autoload/Reflection.java	/^    public static void putItem(Hashtable map, String parent, String child, int index) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child, int index)
+putPackageInfo	plugin/script/autoload/Reflection.java	/^    private static void putPackageInfo(Hashtable map, String name) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, String name)
+script_plugin	build_all.sh	/^function script_plugin()$/;"	f
+script_tar_bz2_plugin	build_all.sh	/^function script_tar_bz2_plugin()$/;"	f
+script_tar_gz_plugin	build_all.sh	/^function script_tar_gz_plugin()$/;"	f
+script_tar_plugin	build_all.sh	/^function script_tar_plugin()$/;"	f
+script_vim_plugin	build_all.sh	/^function script_vim_plugin()$/;"	f
+script_zip_plugin	build_all.sh	/^function script_zip_plugin()$/;"	f
+source_plugin	build_all.sh	/^function source_plugin()$/;"	f
+source_tar_bz2_plugin	build_all.sh	/^function source_tar_bz2_plugin()$/;"	f
+source_tar_gz_plugin	build_all.sh	/^function source_tar_gz_plugin()$/;"	f
+source_tar_plugin	build_all.sh	/^function source_tar_plugin()$/;"	f
+source_zip_plugin	build_all.sh	/^function source_zip_plugin()$/;"	f
+text	plugin/script/syntax_checkers/python/codec.py	/^            text = codecs.lookup(match.groupdict()["coding"]).incrementaldecoder().decode($/;"	v
+text	plugin/script/syntax_checkers/python/codec.py	/^        text = ''.join(text).encode('utf-8')$/;"	v
+text	plugin/script/syntax_checkers/python/codec.py	/^        text = fle.readlines()$/;"	v
+usage	plugin/script/autoload/Reflection.java	/^    private static void usage() {$/;"	m	class:Reflection	file:	access:private	signature:()
+vimtool_finish	build_all.sh	/^function vimtool_finish()$/;"	f
