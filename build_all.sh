@@ -1,6 +1,6 @@
 #!/bin/bash
 # build_all.sh
-# Copyright (c) 2017 SeaflyDennis<seafly0616@mail>
+# Copyright (c) 2017 SeaflyDennis <seafly0616@qq.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,12 +14,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#!/bin/bash
-#Warning:package name mustn't be illegal characters or space blank
-
-#--------------------------------------------------------------------------
+#---------------------------------------
 #(configuration item)
-#--------------------------------------------------------------------------
+#---------------------------------------------
 CUR=
 MAKE=make
 MKCLEAN=distclean
@@ -47,12 +44,15 @@ VIMTOOL_CONFIG=$VIMTOOL_ROOT/config
 VIMRC=vimrc                         #config/vimrc
 OBJECT_TOOL=object.sh               #config/object.sh
 VIM_CFG_DIR=$HOME/.vim
+HOME_VIMRC=$HOME/.vimrc
 VIM_CFG_DIR_PLUGIN=$VIM_CFG_DIR/plugin
 VIM_CFG_DIR_DOC=$VIM_CFG_DIR/doc
 VIM_CFG_DIR_AUTOLOAD=$VIM_CFG_DIR/autoload
 OBJECT_TOOL_PATH=/usr/bin
 TEMP_FILE=$HOME/seafly_temp
-
+VIMRCS=$VIMTOOL_CONFIG/vimrcs
+VIMRCLIST=`ls ${VIMRCS}`
+VIM_HEADER=""
 TAR=tar
 UNZIP=unzip
 DEL_DIR="rm -rf"
@@ -638,8 +638,40 @@ function install_plugin()
 #Install vimtool/config/object.sh configuration files"
 function config_object()
 {
-    echo "function config_object()>>>Install object configuration files"
+    echo "function config_object()"
     $SUDO cp -v $VIMTOOL_CONFIG/$OBJECT_TOOL $OBJECT_TOOL_PATH
+    return 0
+}
+
+function init_vimrc()
+{
+    cat /dev/null > $HOME_VIMRC
+    return 0
+}
+
+function combine_vimrcs()
+{
+    init_vimrc
+    for vimrc in $VIMRCLIST
+    do
+        if [ $vimrc == "vim-header.vimrc" ] ;
+        then
+            echo "jump:$vimrc"
+            VIM_HEADER=$vimrc
+            vimrc=""
+            continue
+        fi
+        cat $VIMRCS/$vimrc >> $HOME_VIMRC
+        echo "cat $VIMRCS/$vimrc >> $HOME_VIMRC"
+    done
+    cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC
+    echo "cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC"
+
+    if  [ $HOSTOS  ==  "ubuntu"  ] ;
+    then
+	echo "HOSTOS:$HOSTOS"
+        sed -i  '/colorscheme/d' ~/.vimrc
+    fi
     return 0
 }
 
@@ -647,7 +679,11 @@ function config_object()
 function config_vimrc()
 {
     echo "function config_vimrc()>>>Install vimrc configuration file"
+
+    combine_vimrcs
+
     cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
+
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
@@ -773,16 +809,17 @@ function install_vimtool()
     return 0
 }
 
-#--------------------------------------------------------------------------
+#---------------------------------------
 #开发调试部分
-#--------------------------------------------------------------------------
+#-----------------------------------------
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "configlen: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-#--------------------------------------------------------------------------
+combine_vimrcs
+#-----------------------------------------------
 
-#--------------------------------------------------------------------------
+#--------------------------------------------------
 #函数执行部分
-#--------------------------------------------------------------------------
-install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
-#--------------------------------------------------------------------------
+#------------------------------------------------
+#install_vimtool $1
+#----------------------------------------------

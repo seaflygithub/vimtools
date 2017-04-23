@@ -10,5 +10,5 @@ do
         continue
     fi
     echo "get:$vimrc" >> ./vimrc
-#   cat "config/vimrcs/$vimrc" >> ./vimrc
+    #cat "config/vimrcs/$vimrc" >> ./vimrc
 done
