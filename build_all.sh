@@ -271,8 +271,10 @@ function only_vim()
             exit 1
         fi
 
-        $SUDO apt-get install vim
-        $SUDO apt-get install vim-gnome
+    $SUDO apt-get install vim
+    $SUDO apt-get install vim-nox
+    $SUDO apt-get install vim-athena
+    $SUDO apt-get install vim-gnome
 	$SUDO apt-get install vim-gocomplete
 	$SUDO apt-get install vim-gtk
 	$SUDO apt-get install vim-python-jedi
@@ -814,7 +816,8 @@ function install_vimtool()
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "configlen: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-combine_vimrcs
+script_plugin
+config_vimrc
 #-----------------------------------------------
 
 #--------------------------------------------------
