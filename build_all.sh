@@ -622,6 +622,14 @@ function script_plugin()
     #vimtool-plugins.tar.gz
     echo "cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR"
     cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR
+
+    if  [ $HOSTOS  ==  "ubuntu"  ] ;
+    then
+        echo "HOSTOS:$HOSTOS"
+        pip2 install --user neovim
+        pip3 install --user neovim
+    fi
+
     return 0
 }
 
