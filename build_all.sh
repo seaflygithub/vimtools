@@ -618,12 +618,10 @@ function script_plugin()
         mkdir -p ~/.vim
     fi
 
+    rm -rf $VIM_CFG_DIR/*
     #vimtool-plugins.tar.gz
-    cd plugin/script/
-    tar -czvf ../vimtool-plugins.tar.gz ./
-    tar -xzvf ../vimtool-plugins.tar.gz -C ~/.vim/
-    rm -rf ../vimtool-plugins.tar.gz
-    cd ../../
+    echo "cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR"
+    cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR
     return 0
 }
 
