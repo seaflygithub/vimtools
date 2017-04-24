@@ -73,3 +73,7 @@ autocmd BufReadPost *
      \ endif
 " Remember info about open buffers on close
 "set viminfo^=%
+
+set list lcs=tab:\¦\
+set lcs=tab:\¦\
+set list
