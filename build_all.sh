@@ -211,7 +211,6 @@ function vimtool_finish()
     echo "    (Object configuration: vimtool/config/object.sh)"
     echo "                                    E-mail: seafly0616@qq.com"
     #=================================================================
-    
 }
 
 function build_all_help()
@@ -286,6 +285,7 @@ function only_vim()
 	$SUDO apt-get install vim-vimerl
 	$SUDO apt-get install vim-vimerl-syntax
 	$SUDO apt-get install vim-youcompleteme
+    $SUDO apt-get install python python-lxml build-essential gdb cscope
         return 0
     fi
 
@@ -771,47 +771,47 @@ function install_vimtool()
         build_vimconf_dir
         complete_install
         vimtool_finish
-    else
-        echo "Incomplete installation"
-        if [ $INSTALL_ARG == "only_vim" ] ;
-        then
+        exit 0
+    fi
+    case $INSTALL_ARG in
+        "only_vim" | "vim" | "vi")
             echo "Only install vim editor"
             only_vim
             vimtool_finish
-        elif [ $INSTALL_ARG == "no_vim" ] ;
-        then
+            ;;
+        "no_vim" | "not_vim")
             echo "Only install plugins (both script and source)"
             $DEL_DIR $VIM_CFG_DIR
             build_vimconf_dir
             no_vim
             vimtool_finish
-        elif [ $INSTALL_ARG == "script_plugin" ] ;
-        then
+            ;;
+        "script_plugin" | "script" | "scr_plg")
             echo "Only install  script plugins"
             script_plugin
             vimtool_finish
-        elif [ $INSTALL_ARG == "source_plugin" ] ;
-        then
+            ;;
+        "source_plugin" | "src_plugin" | "src_plg")
             echo "Only install source code plugins"
             source_plugin
             vimtool_finish
-        elif [ $INSTALL_ARG == "update_config" ] ;
-        then
+            ;;
+        "update_config" | "config" | "conf" | "up_conf" | "up_config")
             echo "Only update configuration files"
-            install_config
-            vimtool_finish
-        elif [ $INSTALL_ARG == "help" ] ;
-        then
+            #install_config
+            #vimtool_finish
+            ;;
+        "help" | "?" | "--help" | "-h" | "/?" | "/help" | "/h" | "/H" | "-H")
             echo "Display installation information:"
             build_all_help
-        else
+            ;;
+        *)
             echo "ERROR: $INSTALL_ARG unknown argument!!!"
             echo "Press <Enter> to continue ..."
             read temporary
             build_all_help
             exit 1
-        fi
-    fi
+    esac
 
     return 0
 }
@@ -820,14 +820,15 @@ function install_vimtool()
 #开发调试部分
 #-----------------------------------------
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
-#echo "configlen: ${#VIM_CONFIG[*]}"
+#echo "length: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-script_plugin
-config_vimrc
+#script_plugin
+#config_vimrc
 #-----------------------------------------------
 
 #--------------------------------------------------
 #函数执行部分
 #------------------------------------------------
-#install_vimtool $1
+install_vimtool $1
 #----------------------------------------------
+
