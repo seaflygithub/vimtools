@@ -626,7 +626,7 @@ function script_plugin()
     if  [ $HOSTOS  ==  "ubuntu"  ] ;
     then
         echo "HOSTOS:$HOSTOS"
-        pip2 install --user neovim
+        pip  install --user neovim
         pip3 install --user neovim
     fi
 
