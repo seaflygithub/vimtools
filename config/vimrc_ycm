@@ -220,8 +220,7 @@ imap <c-h> <Left>
 imap <c-l> <Right>
 
 " Ctrl + f 光标跳转到行头
-imap <c-f> <ESC>0i
-
+"imap <c-f> <ESC>0i
 " Ctrl + e 光标跳转到行尾
 imap <c-e> <ESC>$i
 

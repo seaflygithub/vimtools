@@ -1,0 +1,102 @@
+*workspace.txt*          The Vim Workspace Manager     *vim-workspace*
+==============================================================================
+Author: Thaer Khawaja <https://github.com/thaerkh>
+License: Apache 2.0
+==============================================================================
+Table of Contents                                 *workspace-contents*
+
+1.   Workspace Sessions       |workspace-sessions|
+1.1. Hidden Buffers           |workspace-hidden-buffers|
+1.2. Undo History             |workspace-undo-history|
+1.3. Omni Completion          |workspace-omni-completion|
+2.   Autosave                 |workspace-autosave|
+2.1. Untrailing Spaces        |workspace-untrailing-spaces|
+2.2. Ignore List              |workspace-autosave-ignorelist|
+
+==============================================================================
+1. Workspace Sessions                             *workspace-sessions*
+
+This plugin will only maintain sessions that already exist, or if the plugin has
+been toggled on. To do so, command `ToggleWorkspace` will create a session and
+automatically persist your workspace until toggled off.
+If you open Vim with a file as an argument, it will either direct you to that
+file in your session, if it exists, or push it to a new tab in your session.
+Cursor positions will also persist across session reloads.
+
+For convenience, you can bind this command to a shortcut, for instance:
+`nnoremap <leader>s :ToggleWorkspace<CR>`
+
+If you would prefer that a session is automatically created if it doesn't exist,
+you can add the following line to enable the behaviour:
+`let g:workspace_autocreate =1`
+
+The Vim session will be stored in your directory. The filename is set to the
+default session name set by Vim, but can be changed with this configuration:
+`let g:workspace_session_name = 'Session.vim'`
+
+------------------------------------------------------------------------------
+1.1. Hidden Buffers                         *workspace-hidden-buffers*
+Over time, hidden buffers can build up to a point where most are unnecessary,
+with only those currently tied to a tab window being important.
+When called, the command `CloseHiddenBuffers` closes these hidden buffers.
+
+------------------------------------------------------------------------------
+1.2. Undo History                             *workspace-undo-history*
+
+When in a workspace, file undo history is persisted between sessions, without
+needing to keep Vim on.
+
+This feature can also be explicitly enabled or disabled, such as the following:
+`let g:workspace_persist_undo_history = 1`
+
+Undo history will be stored in the local directory as a hidden folder. The
+default can be explicitly configured, and is set to the following:
+`let g:workspace_undodir='.undodir'`
+
+------------------------------------------------------------------------------
+1.3. Omni Completion                       *workspace-omni-completion*
+
+Preview windows will close on InsertLeave, to mitigate the default behaviour
+of being an orphaned window.
+
+==============================================================================
+2. Autosave                                       *workspace-autosave*
+Files edited in a workspace session will autosave on InsertLeave, CursorHold,
+FocusLost, FocusGained, and BufLeave. This will cover most autosave cases in an
+unobtrusive manner.
+
+FocusLost and FocusGained triggers will typically trigger only with GUI versions
+of Vim. However, there are plugins that enables these for the console version
+within Tmux (i.e. sjl/vitality.vim).
+
+This autosave feature enforces a last writer wins policy (eventual consistency).
+
+You can manually enable the autosave feature outside of a workspace session
+with the `ToggleAutosave` command.
+
+If you would like autosave to be always on, even outside of a session, add the
+following to your vimrc: `let g:workspace_autosave_always = 1`
+
+You can explicitly control this feature by setting the configuration to either 1
+(enabled) or 0 (disabled), with the following setting:
+`let g:workspace_autosave = 1`
+
+CursorHold is dependant on Vim's updatetime, which is set to 4 seconds by
+default. The sensible settings provided sets this to 1 second. However, if you
+wolud like your own time configuration, customize the following in your vimrc:
+`set updatetime=4000`
+
+------------------------------------------------------------------------------
+2.1. Untrailing Spaces                   *workspace-untrailing-spaces*
+
+By default, all trailing spaces will be removed upon autosave.
+If you don't prefer this behaviour, add this line:
+`let g:workspace_autosave_untrailspaces = 0`
+
+------------------------------------------------------------------------------
+2.2. Ignore List                       *workspace-autosave-ignorelist*
+
+Git commit filetypes won't autosave (or trim trailing spaces) by default.
+
+You can customize the ignore list as follows:
+`let g:workspace_autosave_ignore = ['gitcommit']`

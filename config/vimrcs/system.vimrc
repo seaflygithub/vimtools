@@ -54,3 +54,14 @@ if MySys() == 'windows'
     source $VIMRUNTIME/mswin.vim
     behave mswin
 endif 
+
+" ----------------------------------------------------
+"  < 判断操作系统是否是 Windows 还是 Linux >
+" ---------------------------------------------------
+let g:iswindows = 0
+let g:islinux = 0
+if(has("win32") || has("win64") || has("win95") || has("win16"))
+    let g:iswindows = 1
+else
+    let g:islinux = 1
+endif

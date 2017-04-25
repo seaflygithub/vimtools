@@ -689,7 +689,7 @@ function config_vimrc()
 
     combine_vimrcs
 
-    cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
+    #cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
 
     echo -e "Please input your name: \c"
     read user_name
@@ -798,8 +798,8 @@ function install_vimtool()
             ;;
         "update_config" | "config" | "conf" | "up_conf" | "up_config")
             echo "Only update configuration files"
-            #install_config
-            #vimtool_finish
+            install_config
+            vimtool_finish
             ;;
         "help" | "?" | "--help" | "-h" | "/?" | "/help" | "/h" | "/H" | "-H")
             echo "Display installation information:"
@@ -812,7 +812,6 @@ function install_vimtool()
             build_all_help
             exit 1
     esac
-
     return 0
 }
 
