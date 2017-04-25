@@ -5,6 +5,25 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 AddToParent	plugin/script/autoload/Reflection.java	/^    public static void AddToParent(Hashtable map, String parent, String child) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child)
+BASE_DIR	plugin/script/deoplete.nvim/test/conftest.py	/^BASE_DIR = os.path.dirname(os.path.dirname(__file__))$/;"	v
+Base	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/base.py	/^class Base(LoggingMixin):$/;"	c	inherits:LoggingMixin
+Base	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^class Base(LoggingMixin):$/;"	c	inherits:LoggingMixin
+Deoplete	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^class Deoplete(logger.LoggingMixin):$/;"	c	inherits:logger.LoggingMixin
+DeopleteHandlers	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^class DeopleteHandlers(object):$/;"	c	inherits:object
+DeopleteLogFilter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^class DeopleteLogFilter(logging.Filter):$/;"	c	inherits:logging.Filter
+DictCacheItem	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^DictCacheItem = namedtuple('DictCacheItem', 'mtime candidates')$/;"	v
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_delimiter.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_paren.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_overlap.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_paren.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_abbr.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_menu.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_full_fuzzy.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_fuzzy.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_head.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_length.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_rank.py	/^class Filter(Base):$/;"	c	inherits:Base
+Filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_word.py	/^class Filter(Base):$/;"	c	inherits:Base
 INDEX_CLASS	plugin/script/autoload/Reflection.java	/^    private static int INDEX_CLASS = 1;$/;"	f	class:Reflection	file:	access:private
 INDEX_PACKAGE	plugin/script/autoload/Reflection.java	/^    private static int INDEX_PACKAGE = 0;$/;"	f	class:Reflection	file:	access:private
 KEY_DECLARING_CLASS	plugin/script/autoload/Reflection.java	/^    static final String KEY_DECLARING_CLASS	= "'c':";	\/\/ "'declaringclass':";$/;"	f	class:Reflection	access:default
@@ -14,6 +33,9 @@ KEY_NAME	plugin/script/autoload/Reflection.java	/^    static final String KEY_NA
 KEY_PARAMETERTYPES	plugin/script/autoload/Reflection.java	/^    static final String KEY_PARAMETERTYPES	= "'p':";	\/\/ "'parameterTypes':";$/;"	f	class:Reflection	access:default
 KEY_RETURNTYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_RETURNTYPE		= "'r':";	\/\/ "'returnType':";$/;"	f	class:Reflection	access:default
 KEY_TYPE	plugin/script/autoload/Reflection.java	/^    static final String KEY_TYPE		= "'t':";	\/\/ "'type':";$/;"	f	class:Reflection	access:default
+LINES_ABOVE	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/around.py	/^LINES_ABOVE = 20$/;"	v
+LINES_BELOW	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/around.py	/^LINES_BELOW = 20$/;"	v
+LoggingMixin	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^class LoggingMixin(object):$/;"	c	inherits:object
 NEWLINE	plugin/script/autoload/Reflection.java	/^    static final String NEWLINE = "";	\/\/ "\\r\\n"$/;"	f	class:Reflection	access:default
 OPTION_ALL	plugin/script/autoload/Reflection.java	/^    static final int OPTION_ALL			= 31;	\/\/ compound all$/;"	f	class:Reflection	access:default
 OPTION_CONSTRUCTOR	plugin/script/autoload/Reflection.java	/^    static final int OPTION_CONSTRUCTOR		= 16;$/;"	f	class:Reflection	access:default
@@ -25,6 +47,7 @@ OPTION_STATIC	plugin/script/autoload/Reflection.java	/^    static final int OPTI
 OPTION_STATIC_FIELD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_FIELD	=  4;$/;"	f	class:Reflection	access:default
 OPTION_STATIC_METHOD	plugin/script/autoload/Reflection.java	/^    static final int OPTION_STATIC_METHOD	=  8;$/;"	f	class:Reflection	access:default
 OPTION_SUPER	plugin/script/autoload/Reflection.java	/^    static final int OPTION_SUPER		= 32;$/;"	f	class:Reflection	access:default
+Process	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^class Process(object):$/;"	c	inherits:object
 RETURN_ALL_PACKAGE_INFO	plugin/script/autoload/Reflection.java	/^    static final int RETURN_ALL_PACKAGE_INFO	= 0x1000;$/;"	f	class:Reflection	access:default
 Reflection	plugin/script/autoload/Reflection.java	/^class Reflection {$/;"	c
 Reflection.AddToParent	plugin/script/autoload/Reflection.java	/^    public static void AddToParent(Hashtable map, String parent, String child) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child)
@@ -79,7 +102,48 @@ Reflection.usage	plugin/script/autoload/Reflection.java	/^    private static voi
 STRATEGY_ALPHABETIC	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_ALPHABETIC	= 128;$/;"	f	class:Reflection	access:default
 STRATEGY_DEFAULT	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_DEFAULT		= 512;$/;"	f	class:Reflection	access:default
 STRATEGY_HIERARCHY	plugin/script/autoload/Reflection.java	/^    static final int STRATEGY_HIERARCHY		= 256;$/;"	f	class:Reflection	access:default
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/around.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/buffer.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/member.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/omni.py	/^class Source(Base):$/;"	c	inherits:Base
+Source	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^class Source(Base):$/;"	c	inherits:Base
+SourceInitError	plugin/script/deoplete.nvim/rplugin/python3/deoplete/exceptions.py	/^class SourceInitError(Exception):$/;"	c	inherits:Exception
+TagsCacheItem	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^TagsCacheItem = namedtuple('TagsCacheItem', 'mtime candidates')$/;"	v
 VERSION	plugin/script/autoload/Reflection.java	/^    static final String VERSION	= "0.77";$/;"	f	class:Reflection	access:default
+__get_dictionaries	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^    def __get_dictionaries(self, context):$/;"	m	class:Source	file:	access:private
+__get_tagfiles	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^    def __get_tagfiles(self, context):$/;"	m	class:Source	file:	access:private
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def __init__(self, vim):$/;"	m	class:DeopleteHandlers	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def __init__(self, vim):$/;"	m	class:Deoplete	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/base.py	/^    def __init__(self, vim):$/;"	m	class:Base	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_delimiter.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_paren.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_overlap.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_paren.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_abbr.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_menu.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_full_fuzzy.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_fuzzy.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_head.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_length.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_rank.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_word.py	/^    def __init__(self, vim):$/;"	m	class:Filter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def __init__(self, vim, name=''):$/;"	m	class:DeopleteLogFilter	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^    def __init__(self, commands, context, cwd):$/;"	m	class:Process	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/around.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^    def __init__(self, vim):$/;"	m	class:Base	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/buffer.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/member.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/omni.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__init__	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^    def __init__(self, vim):$/;"	m	class:Source	access:public
+__longest_path_that_exists	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def __longest_path_that_exists(self, context, input_str):$/;"	m	class:Source	file:	access:private
+__make_cache	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/buffer.py	/^    def __make_cache(self, context, bufnr):$/;"	m	class:Source	file:	access:private
+__make_cache	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^    def __make_cache(self, context):$/;"	m	class:Source	file:	access:private
+__substitute_path	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def __substitute_path(self, context, path):$/;"	m	class:Source	file:	access:private
+_logger	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    _logger = None  # type: logging.Logger$/;"	v	class:LoggingMixin
 addClasspathesFromDir	plugin/script/autoload/Reflection.java	/^    private static void addClasspathesFromDir(String dirpath) {$/;"	m	class:Reflection	file:	access:private	signature:(String dirpath)
 appendDeclaredMembers	plugin/script/autoload/Reflection.java	/^    private static void appendDeclaredMembers(Hashtable map, Class clazz, StringBuffer sb) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz, StringBuffer sb)
 appendListFromFolder	plugin/script/autoload/Reflection.java	/^    public static void appendListFromFolder(Hashtable subpackages, Hashtable classes, String path, String prefix) {$/;"	m	class:Reflection	access:public	signature:(Hashtable subpackages, Hashtable classes, String path, String prefix)
@@ -89,45 +153,162 @@ appendModifier	plugin/script/autoload/Reflection.java	/^    private static void 
 appendParameterTypes	plugin/script/autoload/Reflection.java	/^    private static void appendParameterTypes(StringBuffer sb, Class[] paramTypes) {$/;"	m	class:Reflection	file:	access:private	signature:(StringBuffer sb, Class[] paramTypes)
 build_all_help	build_all.sh	/^function build_all_help()$/;"	f
 build_vimconf_dir	build_all.sh	/^function build_vimconf_dir()$/;"	f
+bytepos2charpos	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def bytepos2charpos(encoding, input, pos):$/;"	f	access:public
+charpos2bytepos	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def charpos2bytepos(encoding, input, pos):$/;"	f	access:public
+charwidth	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def charwidth(c):$/;"	f	access:public
+check_recache	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def check_recache(self, context):$/;"	m	class:Deoplete	access:public
 collectClassPath	plugin/script/autoload/Reflection.java	/^    private static Hashtable collectClassPath() {$/;"	m	class:Reflection	file:	access:private	signature:()
+combine_vimrcs	build_all.sh	/^function combine_vimrcs()$/;"	f
+communicate	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^    def communicate(self, timeout):$/;"	m	class:Process	access:public
 complete_install	build_all.sh	/^function complete_install()$/;"	f
+completion_begin	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def completion_begin(self, context):$/;"	m	class:DeopleteHandlers	access:public
+completion_begin	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def completion_begin(self, context):$/;"	m	class:Deoplete	access:public
 config_object	build_all.sh	/^function config_object()$/;"	f
 config_vimrc	build_all.sh	/^function config_vimrc()$/;"	f
+convert2candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def convert2candidates(l):$/;"	f	access:public
+convert2list	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def convert2list(expr):$/;"	f	access:public
+critical	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def critical(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
 debug	plugin/script/autoload/Reflection.java	/^    static void debug(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+debug	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def debug(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
+debug	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def debug(vim, expr):$/;"	f	access:public
+debug_enabled	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    debug_enabled = False$/;"	v	class:LoggingMixin
 debug_mode	plugin/script/autoload/Reflection.java	/^    static boolean debug_mode = false;$/;"	f	class:Reflection	access:default
 debug_vimtool	build_all.sh	/^function debug_vimtool()$/;"	f
+enable_logging	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def enable_logging(self, level, logfile):$/;"	m	class:DeopleteHandlers	access:public
+enqueue_output	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^    def enqueue_output(self):$/;"	m	class:Process	access:public
+eof	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^    def eof(self):$/;"	m	class:Process	access:public
+error	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def error(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
+error	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def error(vim, expr):$/;"	f	access:public
+error_tb	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def error_tb(vim, msg):$/;"	f	access:public
+error_vim	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def error_vim(vim, msg):$/;"	f	access:public
+escape	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def escape(expr):$/;"	f	access:public
+exception	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def exception(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
 existed	plugin/script/autoload/Reflection.java	/^    public static boolean existed(String fqn) {$/;"	m	class:Reflection	access:public	signature:(String fqn)
 existedAndRead	plugin/script/autoload/Reflection.java	/^    public static String existedAndRead(String fqns) {$/;"	m	class:Reflection	access:public	signature:(String fqns)
+expand	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def expand(path):$/;"	f	access:public
+fatal	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    fatal = critical$/;"	v	class:LoggingMixin
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/base.py	/^    def filter(self, context):$/;"	m	class:Base	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_delimiter.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_paren.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_overlap.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_paren.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_abbr.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_truncate_menu.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_full_fuzzy.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_fuzzy.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_head.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/matcher_length.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_rank.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/sorter_word.py	/^    def filter(self, context):$/;"	m	class:Filter	access:public
+filter	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def filter(self, record):$/;"	m	class:DeopleteLogFilter	access:public
+find_rplugins	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def find_rplugins(context, source):$/;"	f	access:public
+fuzzy_escape	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def fuzzy_escape(string, camelcase):$/;"	f	access:public
+gather_candidate	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^    def gather_candidate(self, context):$/;"	m	class:Base	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/around.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/buffer.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/member.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/omni.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_candidates	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^    def gather_candidates(self, context):$/;"	m	class:Source	access:public
+gather_results	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def gather_results(self, context):$/;"	m	class:Deoplete	access:public
 getClassInfo	plugin/script/autoload/Reflection.java	/^    public static String getClassInfo(String className) {$/;"	m	class:Reflection	access:public	signature:(String className)
+getLogger	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^def getLogger(name):$/;"	f	access:public
 getPackageList	plugin/script/autoload/Reflection.java	/^    private static String getPackageList(String fqn) {$/;"	m	class:Reflection	file:	access:private	signature:(String fqn)
 getPackageList	plugin/script/autoload/Reflection.java	/^    public static String getPackageList() {$/;"	m	class:Reflection	access:public	signature:()
+get_buffer_config	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def get_buffer_config(context, filetype, buffer_var, user_var, default_var):$/;"	f	access:public
+get_complete_position	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^    def get_complete_position(self, context):$/;"	m	class:Base	access:public
+get_complete_position	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def get_complete_position(self, context):$/;"	m	class:Source	access:public
+get_complete_position	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/member.py	/^    def get_complete_position(self, context):$/;"	m	class:Source	access:public
+get_complete_position	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/omni.py	/^    def get_complete_position(self, context):$/;"	m	class:Source	access:public
+get_custom	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def get_custom(custom, source_name, key, default):$/;"	f	access:public
+get_simple_buffer_config	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def get_simple_buffer_config(context, buffer_var, user_var):$/;"	f	access:public
+get_syn_names	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def get_syn_names(vim):$/;"	f	access:public
+getlines	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def getlines(vim, start=1, end='$'):$/;"	f	access:public
+globruntime	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def globruntime(runtimepath, path):$/;"	f	access:public
 htClasspath	plugin/script/autoload/Reflection.java	/^    static Hashtable htClasspath = new Hashtable();$/;"	f	class:Reflection	access:default
+import_plugin	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def import_plugin(path, source, classname):$/;"	f	access:public
+info	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def info(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
+init	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^init = False$/;"	v
+init_python	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def init_python(self, args):$/;"	m	class:DeopleteHandlers	access:public
+init_vimrc	build_all.sh	/^function init_vimrc()$/;"	f
 install_config	build_all.sh	/^function install_config()$/;"	f
 install_plugin	build_all.sh	/^function install_plugin()$/;"	f
 install_vim	build_all.sh	/^function install_vim()$/;"	f
 install_vimtool	build_all.sh	/^function install_vimtool()$/;"	f
 isBlank	plugin/script/autoload/Reflection.java	/^    private static boolean isBlank(String str) {$/;"	m	class:Reflection	file:	access:private	signature:(String str)
+is_skip	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def is_skip(self, context, disabled_syntaxes,$/;"	m	class:Deoplete	access:public
+itersource	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def itersource(self, context):$/;"	m	class:Deoplete	access:public
+kill	plugin/script/deoplete.nvim/rplugin/python3/deoplete/process.py	/^    def kill(self):$/;"	m	class:Process	access:public
+last_find	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_auto_delimiter.py	/^def last_find(s, needles):$/;"	f	access:public
+load_external_module	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def load_external_module(file, module):$/;"	f	access:public
+load_filters	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def load_filters(self, context):$/;"	m	class:Deoplete	access:public
+load_sources	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def load_sources(self, context):$/;"	m	class:Deoplete	access:public
+log_format	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^log_format = '%(asctime)s %(levelname)-8s (%(name)s) %(message)s'$/;"	v
+log_message_cooldown	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^log_message_cooldown = 0.5$/;"	v
+logmethod	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^def logmethod(func):$/;"	f	access:public
 main	plugin/script/autoload/Reflection.java	/^    public static void main(String[] args) {$/;"	m	class:Reflection	access:public	signature:(String[] args)
+manual_completion_begin	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def manual_completion_begin(self, context):$/;"	m	class:DeopleteHandlers	access:public
 match	plugin/script/syntax_checkers/python/codec.py	/^        match = re.match(r"#\\s*coding\\s*:\\s*(?P<coding>\\w+)", text[0])$/;"	v
+merge_results	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def merge_results(self, results, context_input):$/;"	m	class:Deoplete	access:public
 no_vim	build_all.sh	/^function no_vim()$/;"	f
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/__init__.py	/^    def on_event(self, context):$/;"	m	class:DeopleteHandlers	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def on_event(self, context):$/;"	m	class:Deoplete	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^    def on_event(self, context):$/;"	m	class:Base	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/buffer.py	/^    def on_event(self, context):$/;"	m	class:Source	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/dictionary.py	/^    def on_event(self, context):$/;"	m	class:Source	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def on_event(self, context):$/;"	m	class:Source	access:public
+on_event	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^    def on_event(self, context):$/;"	m	class:Source	access:public
+on_init	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/file.py	/^    def on_init(self, context):$/;"	m	class:Source	access:public
+on_init	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/tag.py	/^    def on_init(self, context):$/;"	m	class:Source	access:public
 only_vim	build_all.sh	/^function only_vim()$/;"	f
 output	plugin/script/autoload/Reflection.java	/^    static void output(String s) {$/;"	m	class:Reflection	access:default	signature:(String s)
+overlap_length	plugin/script/deoplete.nvim/rplugin/python3/deoplete/filter/converter_remove_overlap.py	/^def overlap_length(left, right):$/;"	f	access:public
+parse_buffer_pattern	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def parse_buffer_pattern(b, pattern, complete_str):$/;"	f	access:public
+parse_file_pattern	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def parse_file_pattern(f, pattern):$/;"	f	access:public
+position_has_changed	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def position_has_changed(self, tick):$/;"	m	class:Deoplete	access:public
+print	plugin/script/deoplete.nvim/rplugin/python3/deoplete/source/base.py	/^    def print(self, expr):$/;"	m	class:Base	access:public
+profile_end	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def profile_end(self, name):$/;"	m	class:Deoplete	access:public
+profile_start	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def profile_start(self, context, name):$/;"	m	class:Deoplete	access:public
 putClassInfo	plugin/script/autoload/Reflection.java	/^    private static void putClassInfo(Hashtable map, Class clazz) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, Class clazz)
 putItem	plugin/script/autoload/Reflection.java	/^    public static void putItem(Hashtable map, String parent, String child, int index) {$/;"	m	class:Reflection	access:public	signature:(Hashtable map, String parent, String child, int index)
 putPackageInfo	plugin/script/autoload/Reflection.java	/^    private static void putPackageInfo(Hashtable map, String name) {$/;"	m	class:Reflection	file:	access:private	signature:(Hashtable map, String name)
+realpath	plugin/script/deoplete.nvim/vim-themis/bin/themis	/^	realpath() {$/;"	f
+root	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^root = logging.getLogger('deoplete')$/;"	v
 script_plugin	build_all.sh	/^function script_plugin()$/;"	f
 script_tar_bz2_plugin	build_all.sh	/^function script_tar_bz2_plugin()$/;"	f
 script_tar_gz_plugin	build_all.sh	/^function script_tar_gz_plugin()$/;"	f
 script_tar_plugin	build_all.sh	/^function script_tar_plugin()$/;"	f
 script_vim_plugin	build_all.sh	/^function script_vim_plugin()$/;"	f
 script_zip_plugin	build_all.sh	/^function script_zip_plugin()$/;"	f
+set_default	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def set_default(vim, var, val):$/;"	f	access:public
+set_list	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def set_list(vim, variable, keys, list):$/;"	f	access:public
+set_pattern	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def set_pattern(variable, keys, pattern):$/;"	f	access:public
+set_source_attributes	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def set_source_attributes(self, context):$/;"	m	class:Deoplete	access:public
+setup	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^def setup(vim, level, output_file=None):$/;"	f	access:public
 source_plugin	build_all.sh	/^function source_plugin()$/;"	f
 source_tar_bz2_plugin	build_all.sh	/^function source_tar_bz2_plugin()$/;"	f
 source_tar_gz_plugin	build_all.sh	/^function source_tar_gz_plugin()$/;"	f
 source_tar_plugin	build_all.sh	/^function source_tar_plugin()$/;"	f
 source_zip_plugin	build_all.sh	/^function source_zip_plugin()$/;"	f
+strwidth	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def strwidth(string):$/;"	f	access:public
+test_charwidth	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_charwidth():$/;"	f	access:public
+test_custom	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_util.py	/^def test_custom():$/;"	f	access:public
+test_fuzzy_escapse	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_fuzzy_escapse():$/;"	f	access:public
+test_globruntime	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_util.py	/^def test_globruntime():$/;"	f	access:public
+test_overlap_length	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_overlap_length():$/;"	f	access:public
+test_pos	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_util.py	/^def test_pos():$/;"	f	access:public
+test_skipping	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_skipping():$/;"	f	access:public
+test_strwidth	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_strwidth():$/;"	f	access:public
+test_truncate	plugin/script/deoplete.nvim/test/rplugin/python3/deoplete/test_filter.py	/^def test_truncate():$/;"	f	access:public
 text	plugin/script/syntax_checkers/python/codec.py	/^            text = codecs.lookup(match.groupdict()["coding"]).incrementaldecoder().decode($/;"	v
 text	plugin/script/syntax_checkers/python/codec.py	/^        text = ''.join(text).encode('utf-8')$/;"	v
 text	plugin/script/syntax_checkers/python/codec.py	/^        text = fle.readlines()$/;"	v
+truncate	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def truncate(string, max_width):$/;"	f	access:public
+truncate_skipping	plugin/script/deoplete.nvim/rplugin/python3/deoplete/util.py	/^def truncate_skipping(string, max_width, footer, footer_len):$/;"	f	access:public
 usage	plugin/script/autoload/Reflection.java	/^    private static void usage() {$/;"	m	class:Reflection	file:	access:private	signature:()
+use_previous_result	plugin/script/deoplete.nvim/rplugin/python3/deoplete/deoplete.py	/^    def use_previous_result(self, context, result):$/;"	m	class:Deoplete	access:public
 vimtool_finish	build_all.sh	/^function vimtool_finish()$/;"	f
+warn	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    warn = warning$/;"	v	class:LoggingMixin
+warning	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def warning(self, msg, *args, **kwargs):$/;"	m	class:LoggingMixin	access:public
+wrapper	plugin/script/deoplete.nvim/rplugin/python3/deoplete/logger.py	/^    def wrapper(self, *args, **kwargs):$/;"	f	function:logmethod	access:public
