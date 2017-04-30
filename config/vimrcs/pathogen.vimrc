@@ -2,6 +2,7 @@ filetype plugin indent off
 call pathogen#infect()
 filetype plugin indent on
 
+"https://github.com/tpope/vim-pathogen 
 "install new pl
 "DTree插件，只需要进入到~/.vim/bundle/目录，然后执行以下命令：
 "git clone http://github.com/scrooloose/nerdtree.git
