@@ -618,6 +618,7 @@ function script_plugin()
         mkdir -p ~/.vim
     fi
 
+    echo "rm -rf $VIM_CFG_DIR/*"
     rm -rf $VIM_CFG_DIR/*
     #vimtool-plugins.tar.gz
     echo "cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR"
