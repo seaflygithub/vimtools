@@ -55,8 +55,8 @@ set wrap "Wrap lines
 "let  mapleader = “,”  default was "\" as value of mapleader:
 let mapleader = "," "usage: ESC + , + m
 let g:mapleader = ","
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
-set laststatus=2
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
+"set laststatus=2
 set ruler
 
 "fast reloading of the .vimrc:
