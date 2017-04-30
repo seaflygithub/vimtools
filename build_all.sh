@@ -671,6 +671,8 @@ function combine_vimrcs()
         cat $VIMRCS/$vimrc >> $HOME_VIMRC
         echo "cat $VIMRCS/$vimrc >> $HOME_VIMRC"
     done
+    cat $VIMRCS/runtimepath.vimrc >> $HOME_VIMRC
+    echo "cat $VIMRCS/runtimepath.vimrc>> $HOME_VIMRC"
     cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC
     echo "cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC"
 
@@ -821,13 +823,13 @@ function install_vimtool()
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "length: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-#script_plugin
-#config_vimrc
+script_plugin
+config_vimrc
 #-----------------------------------------------
 
 #--------------------------------------------------
 #函数执行部分
 #------------------------------------------------
-install_vimtool $1
+#install_vimtool $1
 #----------------------------------------------
 
