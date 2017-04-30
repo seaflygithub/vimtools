@@ -659,15 +659,32 @@ function init_vimrc()
 function combine_vimrcs()
 {
     init_vimrc
+
+    cat $VIMRCS/vundle.vimrc>> $HOME_VIMRC
+    echo "cat $VIMRCS/vundle.vimrc>> $HOME_VIMRC"
+
     for vimrc in $VIMRCLIST
     do
-        if [ $vimrc == "vim-header.vimrc" ] ;
-        then
-            echo "jump:$vimrc"
-            VIM_HEADER=$vimrc
-            vimrc=""
-            continue
-        fi
+        case vimrc in
+            "vim-header.vimrc")
+                echo "jump:$vimrc"
+                VIM_HEADER=$vimrc
+                vimrc=""
+                continue;;
+            "bundle.vimrc")
+                echo "jump:$vimrc"
+                VIM_HEADER=$vimrc
+                vimrc=""
+                continue;;
+            "runtimepath.vimrc")
+                echo "jump:$vimrc"
+                VIM_HEADER=$vimrc
+                vimrc=""
+                continue;;
+            *)
+                ;;
+        esac
+
         cat $VIMRCS/$vimrc >> $HOME_VIMRC
         echo "cat $VIMRCS/$vimrc >> $HOME_VIMRC"
     done
