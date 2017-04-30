@@ -622,7 +622,7 @@ function script_plugin()
     cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR
 
     #install deoplete.nvim
-    cd ~/.vim/bundle/deoplete.nvim && $SUDO make
+    cd ~/.vim/bundle/deoplete.nvim && make
     if  [ $HOSTOS  ==  "ubuntu"  ] ;
     then
         echo "HOSTOS:$HOSTOS"
