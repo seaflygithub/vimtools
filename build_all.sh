@@ -622,15 +622,15 @@ function script_plugin()
     cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR
 
     #install deoplete.nvim
-    cd ~/.vim/bundle/deoplete.nvim && make
-    if  [ $HOSTOS  ==  "ubuntu"  ] ;
-    then
-        echo "HOSTOS:$HOSTOS"
-        pip  install --user neovim
-        pip3 install --user neovim
-        pip3 install neovim
-        pip3 install --upgrade neovim
-    fi
+    #cd ~/.vim/bundle/deoplete.nvim && make
+    #if  [ $HOSTOS  ==  "ubuntu"  ] ;
+    #then
+        #echo "HOSTOS:$HOSTOS"
+        #pip  install --user neovim
+        #pip3 install --user neovim
+        #pip3 install neovim
+        #pip3 install --upgrade neovim
+    #fi
 
     return 0
 }
