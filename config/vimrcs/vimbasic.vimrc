@@ -2,51 +2,28 @@ set history=700
 syntax enable		"syntax switch enable
 syntax on		    "syntax switch on
 set nocp		    "vi compatible mode
-filetype plugin on 	"Allow file type check
-filetype plugin indent on 	"Allow indent file type check
-filetype indent on
-set number		    "Show line number
-"set nonumber		"Don't show line number
-set hlsearch
-"set nohlsearch 	"No high light search key word(s)
+set hlsearch        "set nohlsearch
 colorscheme evening	"Set colorscheme (Default evening)
-" Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-set completeopt=longest,menu	""Close preview window
-" Set to auto read when a file is changed from the outside
-set autoread
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-"Always show current position
-set ruler
-" Ignore case when searching
-set ignorecase
-" When searching try to be smart about cases 
-set smartcase
-" Highlight search results
-set hlsearch
-" Makes search act like search in modern browsers
-set incsearch
-" For regular expressions turn magic on
-set magic
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
+set ffs=unix,dos,mac    " Use Unix as the standard file type
+set completeopt=longest,menu	" Close preview window
+set autoread " Set to auto read when a file is changed from the outside
+set wildignore=*.o,*~,*.pyc " Ignore compiled files
+set ruler "Always show current position
+set ignorecase " Ignore case when searching
+set smartcase " When searching try to be smart about cases 
+set magic " For regular expressions turn magic on
+set nobackup " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nowb
 set noswapfile
-" Use spaces instead of tabs
-set expandtab
-" Be smart when using tabs ;)
-set smarttab
-" 1 tab == 4 spaces
-set shiftwidth=4
+set expandtab " Use spaces instead of tabs
+set smarttab " Be smart when using tabs ;)
+set shiftwidth=4 " 1 tab == 4 spaces
 set softtabstop=4
 set backspace=2
 set tabstop=4
 set showmatch
 set showcmd
-set incsearch
 set nowrap
 set sidescroll=1
 set ai "Auto indent
@@ -55,9 +32,7 @@ set wrap "Wrap lines
 "let  mapleader = “,”  default was "\" as value of mapleader:
 let mapleader = "," "usage: ESC + , + m
 let g:mapleader = ","
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
-"set laststatus=2
-set ruler
+
 
 "fast reloading of the .vimrc:
 map <silent> <leader>ss :source ~/.vimrc<cr>
@@ -74,9 +49,6 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 "set viminfo^=%
 
-"set list lcs=tab:\¦\
-"set lcs=tab:\¦\
-"set list
 
 
 set tabstop=4         "设置 tab 的宽度
@@ -135,9 +107,9 @@ nmap cS :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号
 nmap cM :%s/\r$//g<CR>:noh<CR>
 
-set ignorecase                                        "搜索模式里忽略大小写
-set smartcase                                         "如果搜索模式包含大写字符，不使用 'ignorecase' 选项，只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用
-" set noincsearch                                       "在输入要搜索的文字时，取消实时匹配
+set ignorecase   "搜索模式里忽略大小写
+set smartcase    "如果搜索模式包含大写字符，不使用 'ignorecase' 选项，只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用
+" set noincsearch   "在输入要搜索的文字时，取消实时匹配
 
 " Ctrl + K 插入模式下光标向上移动
 imap <c-k> <Up>
@@ -167,10 +139,11 @@ au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 80 . 'v.\+', -1)
 " -----------------------------------------------------------------------------
 "  < 界面配置 >
 " -----------------------------------------------------------------------------
-set number                                            "显示行号
+set number                                            "显示行号,set nonumber
 set laststatus=2                                      "启用状态栏信息
-set cmdheight=2                                       "设置命令行的高度为2，默认为1
+set cmdheight=1                                       "设置命令行的高度为2，默认为1
 set cursorline                                        "突出显示当前行
 " set guifont=YaHei_Consolas_Hybrid:h10                 "设置字体:字号（字体名称空格用下划线代替）
 set nowrap                                            "设置不自动换行
 "set shortmess=atI                                     "去掉欢迎界面
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
