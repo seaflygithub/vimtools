@@ -625,10 +625,12 @@ function script_plugin()
     #cd ~/.vim/bundle/deoplete.nvim && make
     #if  [ $HOSTOS  ==  "ubuntu"  ] ;
     #then
-        #echo "HOSTOS:$HOSTOS"
+        echo "HOSTOS:$HOSTOS"
         #pip  install --user neovim
-        #pip3 install --user neovim
-        #pip3 install neovim
+        sudo pip  uninstall neovim
+        sudo pip3 uninstall neovim
+        sudo pip3 uninstall neovim
+        sudo pip3 uninstall neovim
         #pip3 install --upgrade neovim
     #fi
 
@@ -842,13 +844,12 @@ function install_vimtool()
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "length: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-script_plugin
-config_vimrc
+#script_plugin
+#config_vimrc
 #-----------------------------------------------
-
 #--------------------------------------------------
 #函数执行部分
 #------------------------------------------------
-#install_vimtool $1
+install_vimtool $1
 #----------------------------------------------
 
