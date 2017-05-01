@@ -24,7 +24,6 @@ set backspace=2
 set tabstop=4
 set showmatch
 set showcmd
-set nowrap
 set sidescroll=1
 set ai "Auto indent
 set si "Smart indent
