@@ -267,22 +267,22 @@ function only_vim()
             exit 1
         fi
 
-        $SUDO apt-get install vim
-        $SUDO apt-get install vim-nox
-        $SUDO apt-get install vim-athena
-        $SUDO apt-get install vim-gnome
-        $SUDO apt-get install vim-gocomplete
-        $SUDO apt-get install vim-gtk
-        $SUDO apt-get install vim-python-jedi
-        $SUDO apt-get install vim-scripts
-        $SUDO apt-get install vim-syntax-go
-        $SUDO apt-get install vim-syntax-docker
-        $SUDO apt-get install vim-syntax-gtk
-        $SUDO apt-get install vim-tiny
-        $SUDO apt-get install vim-vimerl
-        $SUDO apt-get install vim-vimerl-syntax
-        $SUDO apt-get install vim-youcompleteme
-        $SUDO apt-get install python python-lxml build-essential gdb cscope ctags
+        $SUDO -f apt-get install vim
+        $SUDO -f apt-get install vim-nox
+        $SUDO -f apt-get install vim-athena
+        $SUDO -f apt-get install vim-gnome
+        $SUDO -f apt-get install vim-gocomplete
+        $SUDO -f apt-get install vim-gtk
+        $SUDO -f apt-get install vim-python-jedi
+        $SUDO -f apt-get install vim-scripts
+        $SUDO -f apt-get install vim-syntax-go
+        $SUDO -f apt-get install vim-syntax-docker
+        $SUDO -f apt-get install vim-syntax-gtk
+        $SUDO -f apt-get install vim-tiny
+        $SUDO -f apt-get install vim-vimerl
+        $SUDO -f apt-get install vim-vimerl-syntax
+        $SUDO -f apt-get install vim-youcompleteme
+        $SUDO -f apt-get install python python-lxml build-essential gdb cscope ctags
         return 0
     fi
 
@@ -441,8 +441,8 @@ function source_plugin()
             echo "Error: Network unavailable!"
             exit 1
         fi
-        $SUDO apt-get install ctags
-        $SUDO apt-get install cscope
+        $SUDO -f apt-get install ctags
+        $SUDO -f apt-get install cscope
         return 0
     fi
     source_tar_plugin
@@ -627,10 +627,10 @@ function script_plugin()
     #then
         echo "HOSTOS:$HOSTOS"
         #pip  install --user neovim
-        sudo pip  uninstall neovim
-        sudo pip3 uninstall neovim
-        sudo pip3 uninstall neovim
-        sudo pip3 uninstall neovim
+        #sudo pip  uninstall neovim
+        #sudo pip3 uninstall neovim
+        #sudo pip3 uninstall neovim
+        #sudo pip3 uninstall neovim
         #pip3 install --upgrade neovim
     #fi
 
