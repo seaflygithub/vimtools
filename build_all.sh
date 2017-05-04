@@ -790,7 +790,7 @@ function install_vimtool()
 #--------------------------------------------------------------------------
 #函数执行部分
 #--------------------------------------------------------------------------
-#install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
+install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
 #--------------------------------------------------------------------------
-script_plugin
-config_vimrc
+#script_plugin
+#config_vimrc
