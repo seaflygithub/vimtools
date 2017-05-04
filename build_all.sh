@@ -622,6 +622,7 @@ function script_plugin()
     fi
 
     #vimtool-plugins.tar.gz
+    rm -rf ~/.vim/*
     cd plugin/script/
     tar -czvf ../vimtool-plugins.tar.gz ./
     tar -xzvf ../vimtool-plugins.tar.gz -C ~/.vim/
@@ -662,7 +663,7 @@ function config_vimrc()
 	
 	if [ $HOSTOS == "ubuntu" ] ;
 	then
-		sed -i'/colorscheme/d' ~/.vimrc
+		sed -i '/colorscheme/d' ~/.vimrc
 	fi
 
     return 0
@@ -789,5 +790,7 @@ function install_vimtool()
 #--------------------------------------------------------------------------
 #函数执行部分
 #--------------------------------------------------------------------------
-install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
+#install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
 #--------------------------------------------------------------------------
+script_plugin
+config_vimrc

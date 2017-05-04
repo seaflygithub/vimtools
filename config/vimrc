@@ -1,3 +1,25 @@
+"http://blog.csdn.net/zhaoyw2008/article/details/8012757
+"pathogen: https://github.com/tpope/vim-pathogen
+"git clone http://github.com/scrooloose/nerdtree.git
+call pathogen#infect()
+syntax on  
+filetype plugin indent on 
+
+
+"https://github.com/Yggdroot/indentLine
+let g:indentLine_enabled = 1
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
+
+
+"comments.vim
+"Ctrl + c         comments
+"Ctrl + x         dis-comments
+
+
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vimtool:vimrc: vimtool vimrc configuration file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -416,7 +438,7 @@ map <F12> :WMToggle<CR>
 "It adds your name as author. Default is ''. Empty string means to disable adding it.
 
 "    let g:header_field_author_email = 'your@mail'
-"It adds your email after author name with surrounding `<``>` chars. If you don't define your author name, defined email also won't be shown. Default is ''. Empty string means to disable adding it.
+"It adds your email after author name with surrounding chars. If you don't define your author name, defined email also won't be shown. Default is ''. Empty string means to disable adding it.
 
 "    let g:header_field_timestamp = 0
 "It disables to add timestamp line of generating header date in header. Default is 1.
