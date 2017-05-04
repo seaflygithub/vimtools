@@ -15,8 +15,49 @@ let g:indentLine_color_term = 239
 "comments.vim
 "Ctrl + c         comments
 "Ctrl + x         dis-comments
+"
+
+set ignorecase   "搜索模式里忽略大小写
+set smartcase    "如果搜索模式包含大写字符，不使用 'ignorecase' 选项，只有在输入搜索模式并且打开 'ignorecase' 选项时才会使用
+" set noincsearch   "在输入要搜索的文字时，取消实时匹配
+" Ctrl + K 插入模式下光标向上移动
+imap <c-k> <Up>
+" Ctrl + J 插入模式下光标向下移动
+imap <c-j> <Down>
+" Ctrl + H 插入模式下光标向左移动
+imap <c-h> <Left>
+" Ctrl + L 插入模式下光标向右移动
+imap <c-l> <Right>
+" Ctrl + f 光标跳转到行头
+"imap <c-f> <ESC>0i
+"imap <c-e> <ESC>$i
+" Ctrl + e 光标跳转到行尾
+" 全选
+nmap <c-a> ggVG$
+imap <c-a> <ESC>ggVG$
 
 
+
+" 当文件在外部被修改，自动更新该文件
+set autoread
+" 常规模式下输入 cS 清除行尾空格
+nmap cS :%s/\s\+$//g<CR>:noh<CR>
+" 常规模式下输入 cM 清除行尾 ^M 符号
+nmap cM :%s/\r$//g<CR>:noh<CR>
+
+
+
+" -----------------------------------------------
+"  < 编码配置 >
+" -----------------------------------------------
+" 注：使用utf-8格式后，软件与程序源码、文件路径不能有中文，否则报错
+set encoding=utf-8                                    "设置gvim内部编码，默认不更改
+set fileencoding=utf-8                                "设置当前文件编码，可以更改，如：gbk（同cp936）
+set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1     "设置支持打开的文件的编码
+
+" 文件格式，默认 ffs=dos,unix
+set fileformat=unix                                   "设置新（当前）文件的<EOL>格式，可以更改，如：dos（windows系统常用）
+set fileformats=unix,dos,mac                          "给出文件的<EOL>格式类型
 
 
 
