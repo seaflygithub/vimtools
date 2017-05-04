@@ -623,9 +623,7 @@ function script_plugin()
 
     #vimtool-plugins.tar.gz
     cd plugin/script/
-    tar -czvf ../vimtool-plugins.tar.gz ./
-    tar -xzvf ../vimtool-plugins.tar.gz -C ~/.vim/
-    rm -rf ../vimtool-plugins.tar.gz
+    cp -rvf ./* ~/.vim/
     cd ../../
     return 0
 }
