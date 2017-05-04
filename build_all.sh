@@ -735,7 +735,7 @@ function install_vimtool()
 			complete_install
 			vimtool_finish
 			;;
-		"only_vim")
+		"only_vim" | "vim" | "vi")
 			echo "Only install vim editor"
             only_vim
             vimtool_finish
@@ -747,22 +747,22 @@ function install_vimtool()
             no_vim
             vimtool_finish
 			;;
-		"script_plugin")
+		"script_plugin" | "scr_plg")
 			echo "Only install  script plugins"
             script_plugin
             vimtool_finish
 			;;
-		"source_plugin")
+		"source_plugin" | "src_plg")
 			echo "Only install source code plugins"
             source_plugin
             vimtool_finish
 			;;
-		"update_config")
+		"update_config" | "config" | "cfg" | "vimrc")
 			echo "Only update configuration files"
             install_config
             vimtool_finish
 			;;
-		"help")
+		"help" | "?" | "-H" | "-h" | "/?")
 			echo "Display installation information:"
             build_all_help
 			;;
