@@ -1,7 +1,7 @@
 #!/bin/bash
 # build_all.sh
-# Copyright (c) 2017 SeaflyDennis <seafly0616@qq.com>
-# 
+# Copyright (c) 2017 Your Name <your@mail>
+#
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -14,6 +14,12 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#!/bin/bash
+#Warning:package name mustn't be illegal characters or space blank
+
+#--------------------------------------------------------------------------
+#(configuration item)
+#--------------------------------------------------------------------------
 CUR=
 MAKE=make
 MKCLEAN=distclean
@@ -41,15 +47,12 @@ VIMTOOL_CONFIG=$VIMTOOL_ROOT/config
 VIMRC=vimrc                         #config/vimrc
 OBJECT_TOOL=object.sh               #config/object.sh
 VIM_CFG_DIR=$HOME/.vim
-HOME_VIMRC=$HOME/.vimrc
 VIM_CFG_DIR_PLUGIN=$VIM_CFG_DIR/plugin
 VIM_CFG_DIR_DOC=$VIM_CFG_DIR/doc
 VIM_CFG_DIR_AUTOLOAD=$VIM_CFG_DIR/autoload
 OBJECT_TOOL_PATH=/usr/bin
 TEMP_FILE=$HOME/seafly_temp
-VIMRCS=$VIMTOOL_CONFIG/vimrcs
-VIMRCLIST=`ls ${VIMRCS}`
-VIM_HEADER=""
+
 TAR=tar
 UNZIP=unzip
 DEL_DIR="rm -rf"
@@ -57,6 +60,7 @@ DEL_DIR="rm -rf"
 ARG_DOT_TAR=-xvf            #xxx.tar
 ARG_DOT_TAR_GZ=-xzvf        #xxx.tar.gz  or xxx.tgz
 ARG_DOT_TAR_BZ2=-xjvf       #xxx.tar.bz2
+
 
 #=================================================
 #vim editor
@@ -208,6 +212,7 @@ function vimtool_finish()
     echo "    (Object configuration: vimtool/config/object.sh)"
     echo "                                    E-mail: seafly0616@qq.com"
     #=================================================================
+    
 }
 
 function build_all_help()
@@ -259,7 +264,6 @@ function only_vim()
 {
     if [ $HOSTOS == "ubuntu" ] ;
     then
-        echo "HOSTOS:$HOSTOS"
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
@@ -267,24 +271,25 @@ function only_vim()
             exit 1
         fi
 
-        $SUDO apt-get install -f 
-        $SUDO -f apt-get install vim
-        $SUDO -f apt-get install vim-nox
-        $SUDO -f apt-get install vim-athena
-        $SUDO -f apt-get install vim-gnome
-        $SUDO -f apt-get install vim-gocomplete
-        $SUDO -f apt-get install vim-gtk
-        $SUDO -f apt-get install vim-python-jedi
-        $SUDO -f apt-get install vim-scripts
-        $SUDO -f apt-get install vim-syntax-go
-        $SUDO -f apt-get install vim-syntax-docker
-        $SUDO -f apt-get install vim-syntax-gtk
-        $SUDO -f apt-get install vim-tiny
-        $SUDO -f apt-get install vim-vimerl
-        $SUDO -f apt-get install vim-vimerl-syntax
-        $SUDO -f apt-get install vim-youcompleteme
-        $SUDO -f apt-get install build-essential gdb cscope ctags
-        $SUDO apt-get install -f 
+        $SUDO apt-get install vim
+        $SUDO apt-get install vim-gocomplete
+        $SUDO apt-get install vim-syntax-gtk
+        $SUDO apt-get install vim-tiny
+        $SUDO apt-get install vim-vim-youcompleteme
+        $SUDO apt-get install vim-python-jedi
+        $SUDO apt-get install vim-scripts
+        $SUDO apt-get install vim-syntax-go
+        $SUDO apt-get install vim-syntax-docker
+        $SUDO apt-get install vim-gnome
+        $SUDO apt-get install vim-doc
+        $SUDO apt-get install vim-dbg
+        $SUDO apt-get install vim-common
+        $SUDO apt-get install vim-gtk
+        $SUDO apt-get install vim-gui-common
+        $SUDO apt-get install vim-vimerl
+        $SUDO apt-get install vim-vimerl-syntax
+        $SUDO apt-get install vim-outliner
+        $SUDO apt-get install vim-runtime
         return 0
     fi
 
@@ -436,17 +441,14 @@ function source_plugin()
     echo "function source_plugin()>>>  script plugins"
     if [ $HOSTOS == "ubuntu" ] ;
     then
-	echo "HOSTOS:$HOSTOS"
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
             echo "Error: Network unavailable!"
             exit 1
         fi
-        $SUDO apt-get install -f 
-        $SUDO -f apt-get install ctags
-        $SUDO -f apt-get install cscope
-        $SUDO apt-get install -f 
+        $SUDO apt-get install ctags
+        $SUDO apt-get install cscope
         return 0
     fi
     source_tar_plugin
@@ -619,25 +621,12 @@ function script_plugin()
         mkdir -p ~/.vim
     fi
 
-    echo "rm -rf $VIM_CFG_DIR/*"
-    rm -rf $VIM_CFG_DIR/*
     #vimtool-plugins.tar.gz
-    echo "cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR"
-    cp -rf $VIMTOOL_PLG_SCRIPT/* $VIM_CFG_DIR
-
-    #install deoplete.nvim
-    #cd ~/.vim/bundle/deoplete.nvim && make
-    #if  [ $HOSTOS  ==  "ubuntu"  ] ;
-    #then
-        echo "HOSTOS:$HOSTOS"
-        #pip  install --user neovim
-        #sudo pip  uninstall neovim
-        #sudo pip3 uninstall neovim
-        #sudo pip3 uninstall neovim
-        #sudo pip3 uninstall neovim
-        #pip3 install --upgrade neovim
-    #fi
-
+    cd plugin/script/
+    tar -czvf ../vimtool-plugins.tar.gz ./
+    tar -xzvf ../vimtool-plugins.tar.gz -C ~/.vim/
+    rm -rf ../vimtool-plugins.tar.gz
+    cd ../../
     return 0
 }
 
@@ -653,59 +642,8 @@ function install_plugin()
 #Install vimtool/config/object.sh configuration files"
 function config_object()
 {
-    echo "function config_object()"
+    echo "function config_object()>>>Install object configuration files"
     $SUDO cp -v $VIMTOOL_CONFIG/$OBJECT_TOOL $OBJECT_TOOL_PATH
-    return 0
-}
-
-function init_vimrc()
-{
-    cat /dev/null > $HOME_VIMRC
-    return 0
-}
-
-function combine_vimrcs()
-{
-    init_vimrc
-
-    cat $VIMRCS/vundle.vimrc>> $HOME_VIMRC
-    echo "cat $VIMRCS/vundle.vimrc>> $HOME_VIMRC"
-
-    for vimrc in $VIMRCLIST
-    do
-        case vimrc in
-            "vim-header.vimrc")
-                echo "jump:$vimrc"
-                VIM_HEADER=$vimrc
-                vimrc=""
-                continue;;
-            "bundle.vimrc")
-                echo "jump:$vimrc"
-                VIM_HEADER=$vimrc
-                vimrc=""
-                continue;;
-            "runtimepath.vimrc")
-                echo "jump:$vimrc"
-                VIM_HEADER=$vimrc
-                vimrc=""
-                continue;;
-            *)
-                ;;
-        esac
-
-        cat $VIMRCS/$vimrc >> $HOME_VIMRC
-        echo "cat $VIMRCS/$vimrc >> $HOME_VIMRC"
-    done
-    cat $VIMRCS/runtimepath.vimrc >> $HOME_VIMRC
-    echo "cat $VIMRCS/runtimepath.vimrc>> $HOME_VIMRC"
-    cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC
-    echo "cat $VIMRCS/$VIM_HEADER >> $HOME_VIMRC"
-
-    if  [ $HOSTOS  ==  "ubuntu"  ] ;
-    then
-	echo "HOSTOS:$HOSTOS"
-        sed -i  '/colorscheme/d' ~/.vimrc
-    fi
     return 0
 }
 
@@ -713,24 +651,19 @@ function combine_vimrcs()
 function config_vimrc()
 {
     echo "function config_vimrc()>>>Install vimrc configuration file"
-
-    combine_vimrcs
-
-    #cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
-
+    cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
     read user_email
-
+	
     echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
     echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
-
-    if  [ $HOSTOS  ==  "ubuntu"  ] ;
-    then
-	echo "HOSTOS:$HOSTOS"
-        sed -i  '/colorscheme/d' ~/.vimrc
-    fi
+	
+	if [ $HOSTOS == "ubuntu" ] ;
+	then
+		sed -i'/colorscheme/d' ~/.vimrc
+	fi
 
     return 0
 }
@@ -782,77 +715,79 @@ function build_vimconf_dir()
 #The main function(entry)
 function install_vimtool()
 {
+
+
     echo "function install_vimtool()>>>安装主函数"
     if [ $UID -ne 0 ] ;
     then
         echo "You had better to run build_all as a root user"
+        echo "Press Enter to continue..."
         SUDO=sudo
     fi
 
     INSTALL_ARG=$1
-
-    if [ $# -eq 0 ] ;
-    then
-        echo "Complete installation"
-        $DEL_DIR $VIM_CFG_DIR
-        build_vimconf_dir
-        complete_install
-        vimtool_finish
-        exit 0
-    fi
-    case $INSTALL_ARG in
-        "only_vim" | "vim" | "vi")
-            echo "Only install vim editor"
+	
+	case $INSTALL_ARG in 
+		"")
+			echo "Complete installation"
+			$DEL_DIR $VIM_CFG_DIR
+			build_vimconf_dir
+			complete_install
+			vimtool_finish
+			;;
+		"only_vim")
+			echo "Only install vim editor"
             only_vim
             vimtool_finish
-            ;;
-        "no_vim" | "not_vim")
-            echo "Only install plugins (both script and source)"
+			;;
+		"no_vim")
+			echo "Only install plugins (both script and source)"
             $DEL_DIR $VIM_CFG_DIR
             build_vimconf_dir
             no_vim
             vimtool_finish
-            ;;
-        "script_plugin" | "script" | "scr_plg")
-            echo "Only install  script plugins"
+			;;
+		"script_plugin")
+			echo "Only install  script plugins"
             script_plugin
             vimtool_finish
-            ;;
-        "source_plugin" | "src_plugin" | "src_plg")
-            echo "Only install source code plugins"
+			;;
+		"source_plugin")
+			echo "Only install source code plugins"
             source_plugin
             vimtool_finish
-            ;;
-        "update_config" | "config" | "conf" | "up_conf" | "up_config")
-            echo "Only update configuration files"
+			;;
+		"update_config")
+			echo "Only update configuration files"
             install_config
             vimtool_finish
-            ;;
-        "help" | "?" | "--help" | "-h" | "/?" | "/help" | "/h" | "/H" | "-H")
-            echo "Display installation information:"
+			;;
+		"help")
+			echo "Display installation information:"
             build_all_help
-            ;;
-        *)
-            echo "ERROR: $INSTALL_ARG unknown argument!!!"
+			;;
+		*)
+			echo "ERROR: $INSTALL_ARG unknown argument!!!"
             echo "Press <Enter> to continue ..."
             read temporary
             build_all_help
-            exit 1
-    esac
+			;;
+	esac
+
     return 0
 }
 
-#---------------------------------------
+#--------------------------------------------------------------------------
 #开发调试部分
-#-----------------------------------------
+#--------------------------------------------------------------------------
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
-#echo "length: ${#VIM_CONFIG[*]}"
+#echo "configlen: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-#script_plugin
-#config_vimrc
-#-----------------------------------------------
-#--------------------------------------------------
+#--------------------------------------------------------------------------
+
+
+#--------------------------------------------------------------------------
 #函数执行部分
-#------------------------------------------------
-install_vimtool $1
-#----------------------------------------------
+#--------------------------------------------------------------------------
+install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
+#--------------------------------------------------------------------------
