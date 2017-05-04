@@ -1,10 +1,9 @@
 
-### Note: See doc/vimtool-manual.pdf for detail
+Note: See doc/vimtool-manual.pdf for detail
 
-#### Simple installation information:"
-
-```shell
+Simple installation information:"
     chmod +x ./build_all   (if you can't execute it)
+
     ./build_all               #Complete install vimtool(Recommend first use)"
     ./build_all only_vim      #Only install vim"
     ./build_all no_vim        #Only install plugins"
@@ -12,15 +11,11 @@
     ./build_all source_plugin #Only install script plugins"
     ./build_all update_config #Only install configuration files"
 
-```
-#### Helpful information of first-use"
 
-```shell
+Helpful information of first-use"
     # cd ~/.vim/doc"
     # vim"
-
-```
-
+         "
     Then run following command to load help files"
     :helptags ./ "
     (If you add other new plugins, replay above stage)"
