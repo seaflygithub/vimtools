@@ -267,6 +267,7 @@ function only_vim()
             exit 1
         fi
 
+        $SUDO apt-get install -f 
         $SUDO -f apt-get install vim
         $SUDO -f apt-get install vim-nox
         $SUDO -f apt-get install vim-athena
@@ -282,7 +283,8 @@ function only_vim()
         $SUDO -f apt-get install vim-vimerl
         $SUDO -f apt-get install vim-vimerl-syntax
         $SUDO -f apt-get install vim-youcompleteme
-        $SUDO -f apt-get install python python-lxml build-essential gdb cscope ctags
+        $SUDO -f apt-get install build-essential gdb cscope ctags
+        $SUDO apt-get install -f 
         return 0
     fi
 
@@ -441,8 +443,10 @@ function source_plugin()
             echo "Error: Network unavailable!"
             exit 1
         fi
+        $SUDO apt-get install -f 
         $SUDO -f apt-get install ctags
         $SUDO -f apt-get install cscope
+        $SUDO apt-get install -f 
         return 0
     fi
     source_tar_plugin
