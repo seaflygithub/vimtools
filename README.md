@@ -1,9 +1,13 @@
-
-Note: See doc/vimtool-manual.pdf for detail
+## 获取vimtools
+在本站下载或克隆vimtools如：
+``` shell
+git clone https://github.com/SeaflyDennis/vimtools.git
+```
+克隆后或下载解压zip之后会多出一个vimtools目录，
+目录中默认是vimtools-2017.03分支。
 
 Simple installation information:"
     chmod +x ./build_all   (if you can't execute it)
-
     ./build_all               #Complete install vimtool(Recommend first use)"
     ./build_all only_vim      #Only install vim"
     ./build_all no_vim        #Only install plugins"

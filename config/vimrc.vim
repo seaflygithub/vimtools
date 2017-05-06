@@ -1,3 +1,21 @@
+"https://github.com/mbbill/code_complete
+"code_complete使用说明:
+"1.输入函数名后在输入(，然后按tab键就可以显示函数行参
+"2.常用语句
+"if，while，switch等，输入后，按tab键就行
+"3.其他
+"1.输入in后按tab，就是#include " "
+"2.输入is后按tab，就是#include < >
+"3.输入main后按tab，就是上图所示的那样，main函数就好了
+"4.输入cc后按tab，就是上图中的注释
+"5.输入ff后按tab，就是上图中的头文件，预处理宏
+"6.输入de后按tab，就是宏定义
+"code_complete配置:
+let g:user_defined_snippets = "snippets/custom_snippets.vim"
+let g:user_defined_snippets = ["snippets/c_snippets.vim", "snippets/js_snippets.vim"]
+
+
+
 "http://blog.csdn.net/zhaoyw2008/article/details/8012757
 "pathogen: https://github.com/tpope/vim-pathogen
 "git clone http://github.com/scrooloose/nerdtree.git

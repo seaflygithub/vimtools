@@ -31,6 +31,9 @@
 "
 "           variables:
 "
+"               g:disable_codecomplete
+"                   Disable code_complete, default enabled.
+"
 "               g:completekey
 "                   the key used to complete function
 "                   parameters and key words.
@@ -42,11 +45,18 @@
 "               g:user_defined_snippets
 "                   file name of user defined snippets.
 "
+"               g:CodeComplete_Ignorecase
+"                   use ignore case for keywords.
+
 "           key words:
 "               see "templates" section.
 "==================================================
 
 if v:version < 700
+    finish
+endif
+
+if exists("g:disable_codecomplete")
     finish
 endif
 
@@ -65,7 +75,7 @@ if !exists("g:re")
 endif
 
 if !exists("g:user_defined_snippets")
-    let g:user_defined_snippets = "$VIMRUNTIME/plugin/my_snippets.vim"
+    let g:user_defined_snippets = ""
 endif
 
 " ----------------------------
@@ -154,14 +164,28 @@ endfunction
 function! ExpandTemplate(cword)
     "let cword = substitute(getline('.')[:(col('.')-2)],'\zs.*\W\ze\w*$','','g')
     if has_key(g:template,&ft)
+      if ( exists('g:CodeComplete_Ignorecase') && g:CodeComplete_Ignorecase )
+        if has_key(g:template[&ft],tolower(a:cword))
+            let s:jumppos = line('.')
+            return "\<c-w>" . g:template[&ft][tolower(a:cword)]
+        endif
+      else
         if has_key(g:template[&ft],a:cword)
             let s:jumppos = line('.')
             return "\<c-w>" . g:template[&ft][a:cword]
         endif
+      endif
     endif
-    if has_key(g:template['_'],a:cword)
-        let s:jumppos = line('.')
-        return "\<c-w>" . g:template['_'][a:cword]
+    if ( exists('g:CodeComplete_Ignorecase') && g:CodeComplete_Ignorecase )
+      if has_key(g:template['_'],tolower(a:cword))
+          let s:jumppos = line('.')
+          return "\<c-w>" . g:template['_'][tolower(a:cword)]
+      endif
+    else
+      if has_key(g:template['_'],a:cword)
+          let s:jumppos = line('.')
+          return "\<c-w>" . g:template['_'][a:cword]
+      endif
     endif
     return ''
 endfunction
@@ -264,7 +288,15 @@ let g:template['_']['xt'] = "\<c-r>=strftime(\"%Y-%m-%d %H:%M:%S\")\<cr>"
 
 " ---------------------------------------------
 " load user defined snippets
-exec "silent! runtime ".g:user_defined_snippets
-
+exec "silent! runtime plugin/my_snippets.vim"
+if type(g:user_defined_snippets) == type("")
+  exec "silent! runtime ".g:user_defined_snippets
+  exec "silent! source ".g:user_defined_snippets
+elseif type(g:user_defined_snippets) == type([])
+  for snippet in g:user_defined_snippets
+    exec "silent! runtime ".snippet
+    exec "silent! source ".snippet
+  endfor
+endif
 
 " vim: set fdm=marker et :
