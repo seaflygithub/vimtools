@@ -12,9 +12,6 @@
 "6.输入de后按tab，就是宏定义
 "code_complete配置:
 let g:user_defined_snippets = "snippets/custom_snippets.vim"
-let g:user_defined_snippets = ["snippets/c_snippets.vim", "snippets/js_snippets.vim"]
-
-
 
 "http://blog.csdn.net/zhaoyw2008/article/details/8012757
 "pathogen: https://github.com/tpope/vim-pathogen
