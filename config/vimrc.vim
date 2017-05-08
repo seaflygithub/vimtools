@@ -538,7 +538,7 @@ map <F12> :WMToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "project.sh: configuration for vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F3> :set tags+=~/.vim/systags,./tags,./filenametags<cr>
+map <F3> :set tags=~/.vim/systags,./tags,./filenametags<cr>
 map <F4> :cscope add ./cscope.out ./<cr>
 
 """"""""""""""""""""""""""""""""""""""
