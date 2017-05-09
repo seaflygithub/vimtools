@@ -28,6 +28,7 @@ MKARGS=-j4
 SUDO=
 CONFIG=./configure
 CFG_ARGS=--prefix=/usr
+
 HOSTOS=`uname -v | \
         awk -F ' ' '{print $1}' | \
         awk -F '-' '{print $2}' | \
@@ -293,43 +294,16 @@ function only_vim()
         return 0
     fi
 
+    #redhat or centOS
     echo "function only_vim()>>>only install vim"
-    CUR=$VIMTOOL_VIM
-    cd $CUR                     #vimtool/vim
-    echo "CUR: $CUR"            #CUR: vimtool
-    $TAR_VIM $TAR_VIM_ARGS $VIM
-    cd $VIMTOOL_VIM/$VIM_DIR    #vimtool/vim/vim80
-    $MAKE $MKCLEAN
-    #$VIM_CONFIG     #configuration for python
-    ./configure  \
-        --prefix=/usr  \
-        --with-features=huge  \
-        --enable-rubyinterp  \
-        --enable-pythoninterp=yes  \
-        --enable-python3interp=yes  \
-        --enable-luainterp  \
-        --enable-perlinterp  \
-        --enable-multibyte   \ --enable-cscope \
-        --with-python-config-dir=/usr/lib/python2.6/config
-
-    $MAKE $MKARGS
-    $SUDO $MAKE $MKINSTALL
-    cd $VIMTOOL_VIM
-    $DEL_DIR $VIM_DIR
-
-
-    CUR=$VIMTOOL_VIM
-    cd $CUR                     #vimtool/vim
-    echo "CUR: $CUR"            #CUR: vimtool
-    $TAR_BVI $TAR_BVI_ARGS $BVI
-    cd $VIMTOOL_VIM/$BVI_DIR    #vimtool/vim/vim80
-    $MAKE $MKCLEAN
-    $BVI_CONFIG
-    $MAKE $MKARGS
-    $SUDO $MAKE $MKINSTALL
-    cd $VIMTOOL_VIM
-    $DEL_DIR $BVI_DIR
-
+    $SUDO yum install vim
+    $SUDO yum install vim-X11
+    $SUDO yum install vim-gtk-syntax
+    $SUDO yum install vim-minimal
+    $SUDO yum install golang-vim
+    $SUDO yum install vim-filesystem
+    $SUDO yum install vim-go
+    $SUDO yum install vim-vimoutliner
     echo "only_vim():successfully!"
     return 0
 }
@@ -451,10 +425,11 @@ function source_plugin()
         $SUDO apt-get install cscope
         return 0
     fi
-    source_tar_plugin
-    source_zip_plugin
-    source_tar_gz_plugin
-    source_tar_bz2_plugin
+
+    $SUDO yum install ctags
+    $SUDO yum install ctags-etags
+    $SUDO yum install cscope
+
     return 0
 }
 
@@ -776,19 +751,19 @@ function install_vimtool()
     return 0
 }
 
-#--------------------------------------------------------------------------
+#-----------------------------------------------
 #开发调试部分
-#--------------------------------------------------------------------------
+#---------------------------------------------
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "configlen: ${#VIM_CONFIG[*]}"
 #debug_vimtool           #类似断点:只能执行这个之上代码
-#--------------------------------------------------------------------------
+#----------------------------------------------
 
 
-#--------------------------------------------------------------------------
+#--------------------------------------------------
 #函数执行部分
-#--------------------------------------------------------------------------
+#-------------------------------------------------
 install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
-#--------------------------------------------------------------------------
+#--------------------------------------------------
 #script_plugin
 #config_vimrc
