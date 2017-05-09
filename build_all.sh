@@ -618,6 +618,7 @@ function config_object()
 {
     echo "function config_object()>>>Install object configuration files"
     $SUDO cp -v $VIMTOOL_CONFIG/$OBJECT_TOOL $OBJECT_TOOL_PATH
+    $SUDO chmod 755 /usr/bin/object.sh
     return 0
 }
 
