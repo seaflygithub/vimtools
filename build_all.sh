@@ -272,38 +272,38 @@ function only_vim()
             exit 1
         fi
 
-        $SUDO apt-get install vim
-        $SUDO apt-get install vim-gocomplete
-        $SUDO apt-get install vim-syntax-gtk
-        $SUDO apt-get install vim-tiny
-        $SUDO apt-get install vim-vim-youcompleteme
-        $SUDO apt-get install vim-python-jedi
-        $SUDO apt-get install vim-scripts
-        $SUDO apt-get install vim-syntax-go
-        $SUDO apt-get install vim-syntax-docker
-        $SUDO apt-get install vim-gnome
-        $SUDO apt-get install vim-doc
-        $SUDO apt-get install vim-dbg
-        $SUDO apt-get install vim-common
-        $SUDO apt-get install vim-gtk
-        $SUDO apt-get install vim-gui-common
-        $SUDO apt-get install vim-vimerl
-        $SUDO apt-get install vim-vimerl-syntax
-        $SUDO apt-get install vim-outliner
-        $SUDO apt-get install vim-runtime
+        $SUDO apt-get install -y vim
+        $SUDO apt-get install -y vim-gocomplete
+        $SUDO apt-get install -y vim-syntax-gtk
+        $SUDO apt-get install -y vim-tiny
+        $SUDO apt-get install -y vim-vim-youcompleteme
+        $SUDO apt-get install -y vim-python-jedi
+        $SUDO apt-get install -y vim-scripts
+        $SUDO apt-get install -y vim-syntax-go
+        $SUDO apt-get install -y vim-syntax-docker
+        $SUDO apt-get install -y vim-gnome
+        $SUDO apt-get install -y vim-doc
+        $SUDO apt-get install -y vim-dbg
+        $SUDO apt-get install -y vim-common
+        $SUDO apt-get install -y vim-gtk
+        $SUDO apt-get install -y vim-gui-common
+        $SUDO apt-get install -y vim-vimerl
+        $SUDO apt-get install -y vim-vimerl-syntax
+        $SUDO apt-get install -y vim-outliner
+        $SUDO apt-get install -y vim-runtime
         return 0
     fi
 
     #redhat or centOS
     echo "function only_vim()>>>only install vim"
-    $SUDO yum install vim
-    $SUDO yum install vim-X11
-    $SUDO yum install vim-gtk-syntax
-    $SUDO yum install vim-minimal
-    $SUDO yum install golang-vim
-    $SUDO yum install vim-filesystem
-    $SUDO yum install vim-go
-    $SUDO yum install vim-vimoutliner
+    $SUDO yum install -y vim
+    $SUDO yum install -y vim-X11
+    $SUDO yum install -y vim-gtk-syntax
+    $SUDO yum install -y vim-minimal
+    $SUDO yum install -y golang-vim
+    $SUDO yum install -y vim-filesystem
+    $SUDO yum install -y vim-go
+    $SUDO yum install -y vim-vimoutliner
     echo "only_vim():successfully!"
     return 0
 }
@@ -421,14 +421,16 @@ function source_plugin()
             echo "Error: Network unavailable!"
             exit 1
         fi
-        $SUDO apt-get install ctags
-        $SUDO apt-get install cscope
+        $SUDO apt-get install -y ctags
+        $SUDO apt-get install -y cscope
+        $SUDO apt-get install -y exuberant-ctags
         return 0
     fi
 
-    $SUDO yum install ctags
-    $SUDO yum install ctags-etags
-    $SUDO yum install cscope
+    $SUDO yum install -y ctags
+    $SUDO yum install -y ctags-etags
+    $SUDO yum install -y cscope
+    $SUDO apt-get install -y exuberant-ctags
 
     return 0
 }
