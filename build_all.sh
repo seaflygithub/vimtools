@@ -423,6 +423,7 @@ function source_plugin()
         fi
         $SUDO apt-get install -y ctags
         $SUDO apt-get install -y cscope
+        $SUDO apt-get install -y cscope-el
         $SUDO apt-get install -y exuberant-ctags
         return 0
     fi
@@ -430,7 +431,9 @@ function source_plugin()
     $SUDO yum install -y ctags
     $SUDO yum install -y ctags-etags
     $SUDO yum install -y cscope
-    $SUDO apt-get install -y exuberant-ctags
+    $SUDO yum install -y cscope-el
+    $SUDO yum install -y exuberant-ctags
+
 
     return 0
 }
