@@ -465,7 +465,7 @@ function source_plugin()
                 cd $ctags_src_git && \
                 ./configure --prefix=/usr && \
                 make && $SUDO make install && \
-                cd .. && rm -rf $cscope_src_git
+                cd .. && rm -rf $ctags_src_git
             return 0
         fi
         $SUDO apt-get install -y ctags
@@ -508,27 +508,29 @@ function source_plugin()
 function script_plugin()
 {
     echo "function script_plugin()>>> script plugins"
+    rm -rf $HOME/.vim/*
+    mkdir -p $HOME/.vim
     src_dir=$1    #$SCRIPTS_DIR
     dst_dir=$2    #$HOME/.vim
     #local dst_dir=$CURRENT_DIR/others
     ls $src_dir/*.tar.gz 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.zip | xargs -i -d "\n" tar -xzvf {} -C $dst_dir
+        ls $src_dir/*.tar.gz | xargs -i -d "\n" tar -xzvf {} -C $dst_dir
         ls -shl $src_dir/*.tar.gz
     fi
 
     ls $src_dir/*.tar.bz2  2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.zip | xargs -i -d "\n" tar -xjvf {} -C $dst_dir
+        ls $src_dir/*.tar.bz2 | xargs -i -d "\n" tar -xjvf {} -C $dst_dir
         ls -shl $src_dir/*.tar.bz2
     fi
 
     ls $src_dir/*.tar 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.zip | xargs -i -d "\n" tar -xvf {} -C $dst_dir
+        ls $src_dir/*.tar | xargs -i -d "\n" tar -xvf {} -C $dst_dir
         ls -shl $src_dir/*.tar
     fi
 
@@ -552,7 +554,6 @@ function script_plugin()
 function install_plugin()
 {
     echo "function install_plugin()>>>Install plugins(both source and script)"
-    script_plugin
     script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
     source_plugin
     return 0
@@ -571,7 +572,9 @@ function config_object()
 function config_vimrc()
 {
     echo "function config_vimrc()>>>Install vimrc configuration file"
-    cat $CURRENT_DIR/config/$VIMRC > $HOME/.vimrc
+    echo "function config_vimrc()>>>Install vimrc configuration file"
+    #cat $CURRENT_DIR/config/$VIMRC > $HOME/.vimrc
+    cp -v $CURRENT_DIR/config/$VIMRC $HOME/.vimrc
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
@@ -669,7 +672,7 @@ function install_vimtool()
 			;;
 		"script_plugin" | "scr_plg")
 			echo "Only install  script plugins"
-            script_plugin
+            script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
             vimtool_finish
 			;;
 		"source_plugin" | "src_plg")

@@ -16,7 +16,7 @@ let g:user_defined_snippets = "snippets/custom_snippets.vim"
 "http://blog.csdn.net/zhaoyw2008/article/details/8012757
 "pathogen: https://github.com/tpope/vim-pathogen
 "git clone http://github.com/scrooloose/nerdtree.git
-call pathogen#infect()
+"call pathogen#infect()
 syntax on  
 filetype plugin indent on 
 
