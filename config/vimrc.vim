@@ -16,7 +16,7 @@ let g:user_defined_snippets = "snippets/custom_snippets.vim"
 "http://blog.csdn.net/zhaoyw2008/article/details/8012757
 "pathogen: https://github.com/tpope/vim-pathogen
 "git clone http://github.com/scrooloose/nerdtree.git
-call pathogen#infect()
+"call pathogen#infect()
 syntax on  
 filetype plugin indent on 
 
@@ -50,16 +50,23 @@ imap <c-l> <Right>
 " 全选
 nmap <c-a> ggVG$
 imap <c-a> <ESC>ggVG$
-
-
+" 复制
+nmap <c-c> yw$
+imap <c-c> <ESC>yw$
+" 剪切
+nmap <c-x> c$
+imap <c-x> <ESC>c$
 
 " 当文件在外部被修改，自动更新该文件
 set autoread
-" 常规模式下输入 cS 清除行尾空格
-nmap cS :%s/\s\+$//g<CR>:noh<CR>
-" 常规模式下输入 cM 清除行尾 ^M 符号
-nmap cM :%s/\r$//g<CR>:noh<CR>
-
+" 删除多余空行
+nmap cl :g/^$/d<CR>
+"nmap cb :g/^\s*$/d<CR>    "强烈模式:更狠
+"nmap cb :1,$g/^$/d<CR> "强烈模式
+" 删除行尾空格和tab符号
+nmap cs :%s/^\s\+<CR> :%s/\s\+$<CR>
+" 删除行尾^M符号                
+nmap cm :1,$s/\r//g<CR>
 
 
 " -----------------------------------------------
@@ -76,62 +83,59 @@ set fileformats=unix,dos,mac                          "给出文件的<EOL>格�
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vimtool:vimrc: vimtool vimrc configuration file
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim: vim's basic configuration for object-management
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set history=700
+syntax enable		"syntax switch enable
+syntax on		    "syntax switch on
+set nocp		    "vi compatible mode
+" Enable filetype plugins
+filetype plugin on 	"Allow file type check
+filetype plugin indent on 	"Allow indent file type check
+filetype indent on
+set number		    "Show line number
+"set nonumber		"Don't show line number
+"set nohlsearch 	"No high light search key word(s)
+"colorscheme evening	"Set colorscheme (Default evening)
+colorscheme default
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+set completeopt=longest,menu	""Close preview window
+" Set to auto read when a file is changed from the outside
+set autoread
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+"Always show current position
+set ruler
+" Ignore case when searching
+set ignorecase
+" When searching try to be smart about cases
+set smartcase
+" Highlight search results
+set hlsearch
+" Makes search act like search in modern browsers
+set incsearch
+" For regular expressions turn magic on
+set magic
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+" Use spaces instead of tabs
+set expandtab
+" Be smart when using tabs ;)
+set smarttab
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
 
-"2. Set 'omnifunc' option. e.g. >
-setlocal omnifunc=javacomplete#Complete
-"<   Or, use autocmd: >
-    :" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-endif
-"3. Set 'completefunc' option to show parameters information IF YOU LIKE. e.g. >
-setlocal completefunc=javacomplete#CompleteParamsInfo
-"You can map as follows for better display: >
-inoremap <buffer> <C-X><C-U> <C-X><C-U><C-P>
-inoremap <buffer> <C-S-Space> <C-X><C-U><C-P>
 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"tabel: configuration of tabel page
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Platform
-function! MySys()
-  if has("win32")
-    return "windows"
-  else
-    return "linux"
-  endif
-endfunction
-
-function! SwitchToBuf(filename)
-    "let fullfn = substitute(a:filename, "^\\~/", $HOME . "/", "")
-    "find in current tab
-    let bufwinnr = bufwinnr(a:filename)
-    if bufwinnr != -1
-        exec bufwinnr . "wincmd w"
-        return
-    else
-        "Find in each tab
-        tabfirst
-        let tab = 1
-        while tab <= tabpagenr("$")
-            let bufwinnr = bufwinnr(a:filename)
-            if bufwinnr != -1
-                exec "normal " . tab . "gt"
-                exec bufwinnr . "wincmd w"
-                return
-            endif
-            tabnext
-            let tab = tab + 1
-        endwhile
-        "Not exist, new tab
-        exec "tabnew " . a:filename
-    endif
-endfunction
 
 
 
@@ -155,33 +159,6 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 "when .vimrc is edited, reload it.
 autocmd! bufwritepost .vimrc source ~/.vimrc
 "Fast edit vimrc
-if MySys() == 'linux'
-    "Fast reloading of .vimrc
-    map <silent> <leader>ss :source ~/.vimrc<cr>
-    "Fast editing of .vimrc
-    map <silent> <leader>ee :call SwitchToBuf("~/.vimrc")<cr>
-    "When .vimrc is edited, reload it
-    autocmd! bufwritepost .vimrc source ~/.vimrc
-elseif MySys() == 'windows'
-    "Set helplang
-    set helplang=cn
-    "Fast reloading of the _vimrc
-    map <silent> <leader>ss :source ~/_vimrc<cr>
-    "Fast editing of _vimrc
-    map <silent> <leader>ee :call SwitchToBuf("~/_vimrc")<cr>
-    "When _vimrc is edited, reload it
-    autocmd! bufwritepost _vimrc source ~/_vimrc
-endif
-"For windows version
-if MySys() == 'windows'
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif 
-
-
-
-
-
 
 
 
@@ -425,6 +402,314 @@ let g:bufExplorerMaxHeight=30
 let g:miniBufExplorerMoreThanOne=0
 "Press <F12> open the winmanager diagram framework
 map <F12> :WMToggle<CR>
+
+
+
+
+" NOTE: 以下配置有详细说明，一些特性不喜欢可以直接注解掉
+
+"==========================================
+" General Settings 基础设置
+"==========================================
+
+
+" history存储容量
+set history=2000
+
+" 检测文件类型
+filetype on
+" 针对不同的文件类型采用不同的缩进格式
+filetype indent on
+" 允许插件
+filetype plugin on
+" 启动自动补全
+filetype plugin indent on
+
+" 文件修改之后自动载入
+set autoread
+" 启动的时候不显示那个援助乌干达儿童的提示
+set shortmess=atI
+
+" 备份,到另一个位置. 防止误删, 目前是取消备份
+"set backup
+"set backupext=.bak
+"set backupdir=/tmp/vimbk/
+
+" 取消备份。 视情况自己改
+set nobackup
+" 关闭交换文件
+set noswapfile
+
+
+" TODO: remove this, use gundo
+" create undo file
+" if has('persistent_undo')
+  " " How many undos
+  " set undolevels=1000
+  " " number of lines to save for undo
+  " set undoreload=10000
+  " " So is persistent undo ...
+  " "set undofile
+  " set noundofile
+  " " set undodir=/tmp/vimundo/
+" endif
+
+set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
+
+" 突出显示当前列
+"set cursorcolumn
+" 突出显示当前行
+"set cursorline
+
+
+" 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
+" 好处：误删什么的，如果以前屏幕打开，可以找回
+set t_ti= t_te=
+
+
+" 鼠标暂不启用, 键盘党....
+set mouse-=a
+" 启用鼠标
+" set mouse=a
+" Hide the mouse cursor while typing
+" set mousehide
+
+
+" 修复ctrl+m 多光标操作选择的bug，但是改变了ctrl+v进行字符选中时将包含光标下的字符
+"set selection=inclusive
+"set selectmode=mouse,key
+
+" change the terminal's title
+set title
+" 去掉输入错误的提示声音
+set novisualbell
+set noerrorbells
+set t_vb=
+set tm=500
+
+" Remember info about open buffers on close
+set viminfo^=%
+
+" For regular expressions turn magic on
+set magic
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+
+"==========================================
+" Display Settings 展示/排版等界面格式设置
+"==========================================
+
+" 显示当前的行号列号
+set ruler
+" 在状态栏显示正在输入的命令
+set showcmd
+" 左下角显示当前vim模式
+set showmode
+
+" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=7
+
+" set winwidth=79
+
+" 命令行（在状态行下）的高度，默认为1，这里是2
+set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
+" Always show the status line - use 2 lines for the status bar
+set laststatus=2
+
+" 显示行号
+set number
+" 取消换行  (one line out of screen)
+set nowrap
+
+" 括号配对情况, 跳转并高亮一下匹配的括号
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set matchtime=2
+
+
+" 缩进配置
+" Smart indent
+set smartindent
+" 打开自动缩进
+" never add copyindent, case error   " copy the previous indentation on autoindenting
+set autoindent
+
+
+" tab相关变更
+" 设置Tab键的宽度        [等同的空格个数]
+set tabstop=4
+" 每一次缩进对应的空格数
+set shiftwidth=4
+" 按退格键时可以一次删掉 4 个空格
+"set softtabstop=4
+" insert tabs on the start of a line according to shiftwidth, not tabstop 按退格键时可以一次删掉 4 个空格
+set smarttab
+" 将Tab自动转化成空格[需要输入真正的Tab键时，使用 Ctrl+V + Tab]
+set expandtab
+" 缩进时，取整 use multiple of shiftwidth when indenting with '<' and '>'
+set shiftround
+
+" A buffer becomes hidden when it is abandoned
+set hidden
+set wildmode=list:longest
+set ttyfast
+
+
+
+"==========================================
+" FileEncode Settings 文件编码,格式
+"==========================================
+" 设置新文件的编码为 UTF-8
+set encoding=utf-8
+" 自动判断编码时，依次尝试以下编码：
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set helplang=cn
+"set langmenu=zh_CN.UTF-8
+"set enc=2byte-gb18030
+" 下面这句只影响普通模式 (非图形界面) 下的 Vim
+set termencoding=utf-8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" 如遇Unicode值大于255的文本，不必等到空格再折行
+set formatoptions+=m
+" 合并两行中文时，不在中间加空格
+set formatoptions+=B
+
+
+" 自动补全配置
+" 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
+set completeopt=longest,menu
+
+
+" 增强模式中的命令行自动完成操作
+set wildmenu
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc,*.class
+
+
+" 离开插入模式后自动关闭预览窗口
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" 回车即选中当前项
+"inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+
+
+" 打开自动定位到最后编辑的位置, 需要确认 .viminfo 当前用户可写
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+
+"==========================================
+" HotKey Settings  自定义快捷键设置
+"==========================================
+" 主要按键重定义
+" 关闭方向键, 强迫自己用 hjkl
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+
+" F1 - F6 设置
+" F1 废弃这个键,防止调出系统帮助
+" I can type :help on my own, thanks.  Protect your fat fingers from the evils of <F1>
+noremap <F1> <Esc>"
+
+
+" disbale paste mode when leaving insert mode
+au InsertLeave * set nopaste
+
+
+" 分屏窗口移动, Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
+
+" Map ; to : and save a million keystrokes 用于快速进入命令行
+nnoremap ; :
+
+
+
+" 复制选中区到系统剪切板中
+vnoremap <leader>y "+y
+
+
+
+" 保存python文件时删除多余空格
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,shell,vimrc,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+
+
+" 设置可以高亮的关键字
+if has("autocmd")
+  " Highlight TODO, FIXME, NOTE, etc.
+  if v:version > 701
+    autocmd Syntax * call matchadd('Todo',  '\W\zs\(TODO\|FIXME\|CHANGED\|DONE\|XXX\|BUG\|HACK\)')
+    autocmd Syntax * call matchadd('Debug', '\W\zs\(NOTE\|INFO\|IDEA\|NOTICE\)')
+  endif
+endif
+
+
+
+
+"==========================================
+" Theme Settings  主题设置
+"==========================================
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guifont=Monaco:h14
+    if has("gui_gtk2")   "GTK2
+        set guifont=Monaco\ 12,Monospace\ 12
+    endif
+    set guioptions-=T
+    set guioptions+=e
+    set guioptions-=r
+    set guioptions-=L
+    set guitablabel=%M\ %t
+    set showtabline=1
+    set linespace=2
+    set noimd
+    set t_Co=256
+endif
+
+" theme主题
+set background=dark
+set t_Co=256
+
+" 设置标记一列的背景颜色和数字一行颜色一致
+hi! link SignColumn   LineNr
+hi! link ShowMarksHLl DiffAdd
+hi! link ShowMarksHLu DiffChange
+
+" for error highlight，防止错误整行标红导致看不清
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
+
+
+
+
 
 
 

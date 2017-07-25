@@ -21,6 +21,18 @@
 #(configuration item)
 #--------------------------------------------------------------------------
 CUR=
+CURRENT_DIR=`pwd`
+SCRIPTS_DIR=$CURRENT_DIR/plugin/script
+
+vim_src_package=vim-8.0.tar.bz2
+vim_src_git=vim80
+
+cscope_src_package=cscope-15.8b.tar.gz
+cscope_src_git=cscope-15.8b
+
+ctags_src_package=ctags-5.8.tar.gz
+ctags_src_git=ctags-5.8
+
 MAKE=make
 MKCLEAN=distclean
 MKINSTALL=install
@@ -268,42 +280,63 @@ function only_vim()
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
-            echo "Error: Network unavailable!"
-            exit 1
+            echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
+            cd $CURRENT_DIR/vim && \
+                tar -xjvf $vim_src_package && \
+                cd $vim_src_git && \
+                ./configure --prefix=/usr --with-features=huge \
+                --enable-cscope --enable-multibyte && \
+                make && $SUDO make install && \
+                cd .. && rm -rf $vim_src_git
+            return 0
         fi
 
-        $SUDO apt-get install vim
-        $SUDO apt-get install vim-gocomplete
-        $SUDO apt-get install vim-syntax-gtk
-        $SUDO apt-get install vim-tiny
-        $SUDO apt-get install vim-vim-youcompleteme
-        $SUDO apt-get install vim-python-jedi
-        $SUDO apt-get install vim-scripts
-        $SUDO apt-get install vim-syntax-go
-        $SUDO apt-get install vim-syntax-docker
-        $SUDO apt-get install vim-gnome
-        $SUDO apt-get install vim-doc
-        $SUDO apt-get install vim-dbg
-        $SUDO apt-get install vim-common
-        $SUDO apt-get install vim-gtk
-        $SUDO apt-get install vim-gui-common
-        $SUDO apt-get install vim-vimerl
-        $SUDO apt-get install vim-vimerl-syntax
-        $SUDO apt-get install vim-outliner
-        $SUDO apt-get install vim-runtime
+        $SUDO apt-get install -y vim
+        $SUDO apt-get install -y vim-gocomplete
+        $SUDO apt-get install -y vim-syntax-gtk
+        $SUDO apt-get install -y vim-tiny
+        $SUDO apt-get install -y vim-vim-youcompleteme
+        $SUDO apt-get install -y vim-python-jedi
+        $SUDO apt-get install -y vim-scripts
+        $SUDO apt-get install -y vim-syntax-go
+        $SUDO apt-get install -y vim-syntax-docker
+        $SUDO apt-get install -y vim-gnome
+        $SUDO apt-get install -y vim-doc
+        $SUDO apt-get install -y vim-dbg
+        $SUDO apt-get install -y vim-common
+        $SUDO apt-get install -y vim-gtk
+        $SUDO apt-get install -y vim-gui-common
+        $SUDO apt-get install -y vim-vimerl
+        $SUDO apt-get install -y vim-vimerl-syntax
+        $SUDO apt-get install -y vim-outliner
+        $SUDO apt-get install -y vim-runtime
         return 0
     fi
 
     #redhat or centOS
+    host www.baidu.com 1>/dev/null 2>/dev/null
+    if [ $? -ne 0 ] ;
+    then
+        echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
+        cd $CURRENT_DIR/vim && \
+            tar -xjvf $vim_src_package && \
+            cd $vim_src_git && \
+            ./configure --prefix=/usr --with-features=huge \
+            --enable-cscope --enable-multibyte && \
+            make && $SUDO make install && \
+            cd .. && rm -rf $vim_src_git
+        return 0
+    fi
+
     echo "function only_vim()>>>only install vim"
-    $SUDO yum install vim
-    $SUDO yum install vim-X11
-    $SUDO yum install vim-gtk-syntax
-    $SUDO yum install vim-minimal
-    $SUDO yum install golang-vim
-    $SUDO yum install vim-filesystem
-    $SUDO yum install vim-go
-    $SUDO yum install vim-vimoutliner
+    $SUDO yum install -y vim
+    $SUDO yum install -y vim-X11
+    $SUDO yum install -y vim-gtk-syntax
+    $SUDO yum install -y vim-minimal
+    $SUDO yum install -y golang-vim
+    $SUDO yum install -y vim-filesystem
+    $SUDO yum install -y vim-go
+    $SUDO yum install -y vim-vimoutliner
     echo "only_vim():successfully!"
     return 0
 }
@@ -419,188 +452,101 @@ function source_plugin()
         if [ $? -ne 0 ] ;
         then
             echo "Error: Network unavailable!"
-            exit 1
+            echo "       Install with local source package!"
+            cd $CURRENT_DIR/plugin/source && \
+                tar -xzvf $cscope_src_package && \
+                cd $cscope_src_git && \
+                ./configure --prefix=/usr && \
+                make && $SUDO make install && \
+                cd .. && rm -rf $cscope_src_git
+
+            cd $CURRENT_DIR/plugin/source && \
+                tar -xzvf $ctags_src_package && \
+                cd $ctags_src_git && \
+                ./configure --prefix=/usr && \
+                make && $SUDO make install && \
+                cd .. && rm -rf $ctags_src_git
+            return 0
         fi
-        $SUDO apt-get install ctags
-        $SUDO apt-get install cscope
+        $SUDO apt-get install -y ctags
+        $SUDO apt-get install -y cscope
+        $SUDO apt-get install -y cscope-el
+        $SUDO apt-get install -y exuberant-ctags
         return 0
     fi
 
-    $SUDO yum install ctags
-    $SUDO yum install ctags-etags
-    $SUDO yum install cscope
-
-    return 0
-}
-
-function script_vim_plugin()
-{
-    echo "function script_vim_plugin()>>>*.vim script plugins"
-    [ -d $VIM_CFG_DIR_PLUGIN ] ;
+    #Redhat CentOS
+    host www.baidu.com 1>/dev/null 2>/dev/null
     if [ $? -ne 0 ] ;
     then
-        mkdir -p $VIM_CFG_DIR_PLUGIN
+        echo "Error: Network unavailable!"
+        echo "       Install with local source package!"
+        cd $CURRENT_DIR/plugin/source && \
+            tar -xzvf $cscope_src_package && \
+            cd $cscope_src_git && \
+            ./configure --prefix=/usr && \
+            make && $SUDO make install && \
+            cd .. && rm -rf $cscope_src_git
+
+        cd $CURRENT_DIR/plugin/source && \
+            tar -xzvf $ctags_src_package && \
+            cd $ctags_src_git && \
+            ./configure --prefix=/usr && \
+            make && $SUDO make install && \
+            cd .. && rm -rf $cscope_src_git
+        return 0
     fi
-    cp -v $VIMTOOL_PLG_SCRIPT/*.vim $VIM_CFG_DIR_PLUGIN
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    return 0
-}
+    $SUDO yum install -y ctags
+    $SUDO yum install -y ctags-etags
+    $SUDO yum install -y cscope
+    $SUDO yum install -y cscope-el
+    $SUDO yum install -y exuberant-ctags
 
-function script_zip_plugin()
-{
-    echo "function script_zip_plugin()>>>*.zip script plugins"
-    [ -d $VIM_CFG_DIR ] ;
-    if [ $? -ne 0 ] ;
-    then
-        mkdir -p $VIM_CFG_DIR
-    fi
-    cp -v $VIMTOOL_PLG_SCRIPT/*.zip $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    cd $VIM_CFG_DIR
-
-    #unzip one by one
-    local value=
-    local list=`ls *.zip`
-    for value in $list
-    do
-        if [ -z $value ] ;
-        then
-            break
-        fi
-        $UNZIP $value
-    done
-
-    $DEL_DIR $VIM_CFG_DIR/*.zip
-
-    return 0
-}
-function script_tar_plugin()
-{
-    echo "function script_tar_plugin()>>>*.tar script plugins"
-    [ -d $VIM_CFG_DIR ] ;
-    if [ $? -ne 0 ] ;
-    then
-        mkdir -p $VIM_CFG_DIR
-    fi
-    cp -v $VIMTOOL_PLG_SCRIPT/*.tar $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    cd $VIM_CFG_DIR
-
-    #decompress *.tar one by one
-    local value=
-    local list=`ls *.tar`
-    for value in $list
-    do
-        if [ -z $value ] ;
-        then
-            break
-        fi
-        $TAR $ARG_DOT_TAR $value
-    done
-
-    $DEL_DIR $VIM_CFG_DIR/*.tar
-
-
-    #Following special vim-header plugins
-    cp -rv $VIMTOOL_PLG_SCRIPT/vim-header* $VIM_CFG_DIR
-    cd $VIM_CFG_DIR
-    $TAR $ARG_DOT_TAR vim-header*.tar
-    cp -rv $VIM_CFG_DIR/vim-header/autoload/* $VIM_CFG_DIR_AUTOLOAD/
-    cp -rv $VIM_CFG_DIR/vim-header/plugin/*   $VIM_CFG_DIR_PLUGIN/
-    cp -rv $VIM_CFG_DIR/vim-header/licensefiles $VIM_CFG_DIR
-
-
-    return 0
-}
-function script_tar_gz_plugin()
-{
-    echo "function script_tar_gz_plugin():*.tar.gz script plugins"
-    [ -d $VIM_CFG_DIR ] ;
-    if [ $? -ne 0 ] ;
-    then
-        mkdir -p $VIM_CFG_DIR
-    fi
-    tar -xzvf $VIMTOOL_PLG_SCRIPT/*.tar.gz -C $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-#   cp -v $VIMTOOL_PLG_SCRIPT/*.tar.gz $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    cd $VIM_CFG_DIR
-
-    #decompress *.tar.gz one by one
-    local value=
-    local list=`ls *.tar.gz` 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    for value in $list
-    do
-        if [ -z $value ] ;
-        then
-            break
-        fi
-        $TAR $ARG_DOT_TAR_GZ $value
-    done
-
-    $DEL_DIR $VIM_CFG_DIR/*.tar.gz
-    return 0
-}
-function script_tar_bz2_plugin()
-{
-    echo "function script_tar_bz2_plugin()>>>*.tar.bz2 script plugins"
-    [ -d $VIM_CFG_DIR ] ;
-    if [ $? -ne 0 ] ;
-    then
-        mkdir -p $VIM_CFG_DIR
-    fi
-    cp -v $VIMTOOL_PLG_SCRIPT/*.tar.bz2 $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
-    then
-        return 2;
-    fi
-    cd $VIM_CFG_DIR
-
-    #decompress *.tar.bz2 one by one
-    local value=
-    local list=`ls *.tar.bz2` 1>/dev/null 2>/dev/null
-    for value in $list
-    do
-        if [ -z $value ] ;
-        then
-            break
-        fi
-        $TAR $ARG_DOT_TAR_BZ2 $value
-    done
-
-    $DEL_DIR $VIM_CFG_DIR/*.tar.bz2
     return 0
 }
 
 function script_plugin()
 {
     echo "function script_plugin()>>> script plugins"
-    [ -d ~/.vim ] 
-    if [ $? -ne 0 ] ;
+    rm -rf $HOME/.vim/*
+    mkdir -p $HOME/.vim
+    src_dir=$1    #$SCRIPTS_DIR
+    dst_dir=$2    #$HOME/.vim
+    #local dst_dir=$CURRENT_DIR/others
+    ls $src_dir/*.tar.gz 2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
     then
-        mkdir -p ~/.vim
+        ls $src_dir/*.tar.gz | xargs -i -d "\n" tar -xzvf {} -C $dst_dir
+        ls -shl $src_dir/*.tar.gz
     fi
 
-    #vimtool-plugins.tar.gz
-    rm -rf ~/.vim/*
-    cd plugin/script/
-    cp -rvf ./* ~/.vim/
-    cd ../../
+    ls $src_dir/*.tar.bz2  2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
+    then
+        ls $src_dir/*.tar.bz2 | xargs -i -d "\n" tar -xjvf {} -C $dst_dir
+        ls -shl $src_dir/*.tar.bz2
+    fi
+
+    ls $src_dir/*.tar 2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
+    then
+        ls $src_dir/*.tar | xargs -i -d "\n" tar -xvf {} -C $dst_dir
+        ls -shl $src_dir/*.tar
+    fi
+
+    ls $src_dir/*.zip 2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
+    then
+        ls $src_dir/*.zip | xargs -i -d "\n" unzip {} -d $dst_dir
+        ls -shl $src_dir/*.zip
+    fi
+
+    ls $src_dir/*.vim 2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
+    then
+        cp -v $src_dir/*.vim $dst_dir/plugin
+        ls -shl $src_dir/*.vim
+    fi
     return 0
 }
 
@@ -608,7 +554,7 @@ function script_plugin()
 function install_plugin()
 {
     echo "function install_plugin()>>>Install plugins(both source and script)"
-    script_plugin
+    script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
     source_plugin
     return 0
 }
@@ -626,7 +572,9 @@ function config_object()
 function config_vimrc()
 {
     echo "function config_vimrc()>>>Install vimrc configuration file"
-    cat $VIMTOOL_CONFIG/$VIMRC > $HOME/.vimrc
+    echo "function config_vimrc()>>>Install vimrc configuration file"
+    #cat $CURRENT_DIR/config/$VIMRC > $HOME/.vimrc
+    cp -v $CURRENT_DIR/config/$VIMRC $HOME/.vimrc
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
@@ -724,7 +672,7 @@ function install_vimtool()
 			;;
 		"script_plugin" | "scr_plg")
 			echo "Only install  script plugins"
-            script_plugin
+            script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
             vimtool_finish
 			;;
 		"source_plugin" | "src_plg")
