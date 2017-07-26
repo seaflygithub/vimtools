@@ -1,6 +1,10 @@
 #!/bin/bash
-# build_all.sh
-# Copyright (c) 2017 Your Name <your@mail>
+# File: build_all.sh
+# Author: SeaflyDennis <seafly0616@qq.com>
+# Date: 2017.07.26
+# Last Modified: 2017.07.26
+
+# Copyright (c) 2017 SeaflyDennis <seafly0616@qq.com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,7 +18,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#!/bin/bash
+
 #Warning:package name mustn't be illegal characters or space blank
 
 #--------------------------------------------------------------------------
@@ -147,36 +151,6 @@ CSCOPE_DIR=cscope-15.8b
 #------------------------------------------------
 function debug_vimtool()
 {
-
-    echo "function debug_vimtool()>>>complete installation total list"
-    read temporary
-    echo "function install_vimtool()>>>installation main function"
-    echo "function install_vimtool()>>>complete installation"
-    echo "function install_vim()>>>install vim"
-    echo "function only_vim()>>>only install vim"
-    echo "function install_plugin()>>>install plugins"
-    echo "function source_plugin()>>>source code plugins"
-    echo "function source_tar_plugin()>>>*.tar format source plugin packages"
-    echo "function source_zip_plugin()>>>*.zip format source plugin packages"
-    echo "function source_tar_gz_plugin()>>>*.tar.gz format source plugin packages"
-    echo "function source_tar_bz2_plugin()>>>*.tar.bz2 format source plugin packages"
-    echo "function script_plugin()>>> script plugins"
-    echo "function script_vim_plugin()>>>*.vim format plugins"
-    echo "function script_tar_plugin()>>>*.tar format plugins"
-    echo "function script_zip_plugin()>>>*.zip format plugins"
-    echo "function script_tar_gz_plugin():*.tar.gz format plugins"
-    echo "function script_tar_bz2_plugin()>>>*.tar.bz2 format plugins"
-    echo "function install_config()>>>install configuration files"
-    echo "function config_object()>>>install object configuration file(s)"
-    echo "function config_vimrc()>>>install vimrc configuration file(s)"
-    echo " "
-    echo " "
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
     echo debugingdebugingdebugingdebugingdebuging ;read debuging
     echo debugingdebugingdebugingdebugingdebuging ;read debuging
     echo debugingdebugingdebugingdebugingdebuging ;read debuging
@@ -184,7 +158,6 @@ function debug_vimtool()
     echo debugingdebugingdebugingdebugingdebuging ;read debuging
     echo debugingdebugingdebugingdebugingdebuging ;read debuging
     exit 0
-    return 0
 }
 
 function vimtool_finish()
@@ -193,39 +166,10 @@ function vimtool_finish()
     #installation finished
     #=================================================================
     echo "CUR: ${CUR}"   #/root/home/user1/vimtool
-    echo "Finish installation! Please read doc/xxx.pdf for reference"
-    echo "Note"
-    echo "    Run vim first time, you need goto ~/.vim/doc, likes following commands:"
-    echo "    # cd ~/.vim/doc"
-    echo "    # vim"
-    echo "         "
-    echo "    and then run following 'vim-command':"
-    echo "    :helptags ./       (It can load help files into vim)"
-    echo "    (If you add other plugins help file(s), replay above stage)"
-    echo " "
-    echo "Press <Enter> look following message...(Press <Ctrl-c> to ignore)"
-    read temporary
-    clear
-    echo "Manual:(Readme!)"
-    echo ""
-    echo "    step01 cd ~/your_object_dir"
-    echo "    step02 run object.sh directly"
-    echo "           (execute object.sh if you want to update object_depend_file)"
-    echo "    step03 run vim"
-    echo "           Press <F3> load tags file"
-    echo "           Press <F4> load cscope file"
-    echo "    "
-    echo "           Press <F12> open the winmanager window(selectable)"
-    echo "    "
-    echo "    After above operations, we have finished initialazation of object"
-    echo "    and then you can see vimtool/doc/xxx.pdf for details"
-    echo " "
-    echo "    (Installation details: vimtool/build_all)"
-    echo "    (Plugin configuration: vimtool/config/vimrc)"
-    echo "    (Object configuration: vimtool/config/object.sh)"
+    echo "Finish installation!"
     echo "                                    E-mail: seafly0616@qq.com"
     #=================================================================
-    
+    return 0;
 }
 
 function build_all_help()
@@ -237,39 +181,7 @@ function build_all_help()
     echo "    ./build_all script_plugin #Only install script plugins"
     echo "    ./build_all source_plugin #Only install source plugins"
     echo "    ./build_all update_config #Only install configuration files"
-
-
-    echo "Helpful information of first-use"
-    echo "    # cd ~/.vim/doc"
-    echo "    # vim"
-    echo "         "
-    echo "    Then run following command to load help files"
-    echo "    :helptags ./ "
-    echo "    (If you add other new plugins, replay above stage)"
-    echo " "
-    echo "Press <Enter> to continue...(Press <Ctrl-c> to ignore)"
-    read temporary
-    clear
-    echo "Manual:(Readme!)"
-    echo ""
-    echo "    step01 cd ~/your_object_dir"
-    echo "    step02 run object.sh directly"
-    echo "           (execute object.sh if you want to update object_depend_file)"
-    echo "    step03 run vim"
-    echo "           Press <F3> load tags file"
-    echo "           Press <F4> load cscope file"
-    echo "    "
-    echo "           Press <F12> open the winmanager window(selectable)"
-    echo "    "
-    echo "    After above operations, we have finished initialazation of object"
-    echo "    and then you can see vimtool/doc/xxx.pdf for details"
-    echo " "
-    echo "    (Installation details: vimtool/build_all)"
-    echo "    (Plugin configuration: vimtool/config/vimrc)"
-    echo "    (Object configuration: vimtool/config/object.sh)"
-    echo "                                    E-mail: seafly0616@qq.com"
-    #=================================================================
-    
+    return 0;
 }
 
 
@@ -280,7 +192,7 @@ function only_vim()
         host www.baidu.com 1>/dev/null 2>/dev/null
         if [ $? -ne 0 ] ;
         then
-            echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
+            echo "网络不通，只能源码方式安装vim了(缺库的话就麻烦咯)"
             cd $CURRENT_DIR/vim && \
                 tar -xjvf $vim_src_package && \
                 cd $vim_src_git && \
@@ -579,10 +491,10 @@ function config_vimrc()
     read user_name
     echo -e "Please input your email: \c"
     read user_email
-	
+
     echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
     echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
-	
+
 	if [ $HOSTOS == "ubuntu" ] ;
 	then
 		sed -i '/colorscheme/d' ~/.vimrc
@@ -639,7 +551,6 @@ function build_vimconf_dir()
 function install_vimtool()
 {
 
-
     echo "function install_vimtool()>>>安装主函数"
     if [ $UID -ne 0 ] ;
     then
@@ -649,8 +560,8 @@ function install_vimtool()
     fi
 
     INSTALL_ARG=$1
-	
-	case $INSTALL_ARG in 
+
+	case $INSTALL_ARG in
 		"")
 			echo "Complete installation"
 			$DEL_DIR $VIM_CFG_DIR

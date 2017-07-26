@@ -30,6 +30,8 @@ git clone -b master https://SeaflyDennis@github.com/SeaflyDennis/vimtools.git
 
 至此，我们成功进入工程环境，接下来我们就可以使用vim管理该工程了。
 
+
+
 # vimtools用户手册
 
 ## 各种窗口模式
@@ -40,5 +42,93 @@ git clone -b master https://SeaflyDennis@github.com/SeaflyDennis/vimtools.git
 - 该窗口打开一个文件：`:edit src2.c`
 - winmanager窗口模式：按`F12`进入该窗口模式，再按`F12`退出该窗口模式
 - sourceinsight窗口模式：按`F8`进入该窗口模式，再按`F8`退出该窗口模式
+
+- F1~F12的功能
+    - F1    --系统默认键,我们不动他
+    - F2    --绑定了插入文件头功能,即按F2即可插入文件头
+    - F3    --导入cscope生成的工程数据库文件,前提是执行了object.sh
+    - F4    --导入ctags生产的taglist依赖文件,前提是执行了object.sh
+    - F5    --执行LookupFile插件来查找文件,前提是执行了object.sh
+    - F6    --闲置
+    - F7    --闲置
+    - F8    --启动sourceinsight窗口模式,前提是执行了object.sh
+    - F9    --闲置
+    - F10   --闲置
+    - F11   --闲置
+    - F12   --启动winmanager窗口模式,前提是执行了object.sh
+
+- 常用快捷键
+    - cl    --ESC模式下直接输入cl即可删除所有空行
+    - cs    --ESC模式下直接输入cs即可删除所有行尾空格和行尾制表符
+    - cm    --ESC模式下直接输入cm即可删除所有行尾^M符(Windows中的回车换行符)
+
+- 快速编辑代码的常用操作
+
+    - https://github.com/mbbill/code_complete
+    - code_complete使用说明:
+    - 输入函数名后在输入(，然后按tab键就可以显示函数行参
+    - if，while，switch等，输入这些关键字后，直接按tab键就行
+    - 输入in后按tab，就是#include " "
+    - 输入is后按tab，就是#include < >
+    - 输入main后按tab，就是上图所示的那样，main函数就好了
+    - 输入cc后按tab，就是上图中的注释
+    - 输入ff后按tab，就是上图中的头文件，预处理宏
+    - 输入de后按tab，就是宏定义
+    - Ctrl + c         --(按V选中)批量注释
+    - Ctrl + x         --(按V选中)批量取消注释
+    - Ctrl + a         --全选(模仿Windos编辑习惯)
+
+- 文件头的配置
+    - 编辑~/.vimrc相应位置即可
+
+E-mail:seafly0616@qq.com
+
+# vimtools开发手册
+
+## vimtools结构简介
+
+- 首先你得有一定vim操作基础，要求基础不多，只要有就行
+- 该强化包支持Ubuntu操作系统,仅适用于PC用户(需要root权限)
+- build_all.sh      --> 安装时候第一个执行的安装脚本
+- config/           --> 该目录里以object.sh,vimrc.vim为核心
+- vim/              --> 该目录存放vim源码包(用于离线安装)
+- doc/              --> 该目录存放用户手册(README.md的PDF版:)
+- plugin/           --> 该目录存放vim插件
+- plugin/script/    --> 该目录存放各种vimscript类型的插件
+- plugin/source/    --> 该目录存放需要编译的插件
+- plugin/script/besides/    --> 该目录存放准备但还没集成到vimtools的插件
+
+## build_all.sh主程结构
+
+- 功能简介：帮助用户自动安装和配置vim
+- 首先判断用户权限,然后填充SUDO变量
+- 首先判断操作系统Ubuntu,还是其他非Ubuntu的Linux(Redhat,CentOS,Fedora,...etc.)
+- 其次是判断网络是否畅通,不畅通安装本地包(却库就麻烦了),否则从网络安装(所以建议网络畅通)
+- 然后switch语句读取用户命令参数来分别执行各自子函数
+- 最后执行完毕退出脚本
+
+## config/vimrc.vim
+
+- 简介：即.vimrc配置文件,这里为了省事集成太多特性(虽然这样不好,以后版本中可能分散管理,毕竟集权主义不好)
+- vimrc基础技能列表：
+    - 绑定快捷键执行函数:map <F6> :call RunCode()<CR>
+    - 绑定组合键: nnoremap %s/\s\+$//g <c-c>s
+    - [Vim中的键映射参考页](http://www.cnblogs.com/softwaretesting/archive/2011/09/28/2194515.html)
+    - 习惯 vim 本来的按键，然后在此基础上增加功能是个不错的习惯。大部分用户也是遵循这个传统。
+    - 一般来说使用vim的人，不喜欢覆盖vim本来的键绑定。尤其是非常基本的按键。
+
+- F1~F12的功能绑定(闲置键可以绑定新功能也能测试新功能)
+    - F1    --系统默认键,我们不动他
+    - F2    --绑定了插入文件头功能,即按F2即可插入文件头
+    - F3    --导入cscope生成的工程数据库文件,前提是执行了object.sh
+    - F4    --导入ctags生产的taglist依赖文件,前提是执行了object.sh
+    - F5    --执行LookupFile插件来查找文件
+    - F6    --闲置
+    - F7    --闲置
+    - F8    --启动sourceinsight窗口模式
+    - F9    --闲置
+    - F10   --闲置
+    - F11   --闲置
+    - F12   --启动winmanager窗口模式
 
 E-mail:seafly0616@qq.com

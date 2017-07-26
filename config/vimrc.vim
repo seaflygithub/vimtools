@@ -17,8 +17,74 @@ let g:user_defined_snippets = "snippets/custom_snippets.vim"
 "pathogen: https://github.com/tpope/vim-pathogen
 "git clone http://github.com/scrooloose/nerdtree.git
 "call pathogen#infect()
-syntax on  
-filetype plugin indent on 
+syntax on
+filetype plugin indent on
+
+"插入头文件管理
+"新建.c,.h,.sh,.java文件，自动插入文件头
+autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec ":call SetTitle()"
+""定义函数SetTitle，自动插入文件头
+func SetTitle()
+	"如果文件类型为.sh文件
+	if &filetype == 'sh'
+		call setline(1,"\##################################################")
+		call append(line("."), "\# Filename: ".expand("%"))
+		call append(line(".")+1, "\# Author: ChrisZZ")
+		call append(line(".")+2, "\# E-mail: zchrissirhcz@163.com")
+		call append(line(".")+3, "\# Created Time: ".strftime("%c"))
+		call append(line(".")+4, "\##################################################")
+		call append(line(".")+5, "\#!/bin/bash")
+		call append(line(".")+6, "")
+	endif
+
+	if &filetype == 'c'
+		call setline(1, "/*")
+		call append(line("."), " * ==================================================")
+		call append(line(".")+1, " *")
+		call append(line(".")+2, " *       Filename:  ".expand("%"))
+		call append(line(".")+3, " *")
+		call append(line(".")+4, " *    Description:  ")
+		call append(line(".")+5, " *")
+		call append(line(".")+6, " *        Version:  0.01")
+		call append(line(".")+7, " *        Created:  ".strftime("%c"))
+		call append(line(".")+8, " *         Author:  ChrisZZ, zchrissirhcz@163.com")
+		call append(line(".")+9," *        Company:  ZJUT")
+		call append(line(".")+10, " *")
+		call append(line(".")+11, " * ==================================================")
+		call append(line(".")+12, " */")
+		call append(line(".")+13, "#include <stdio.h>")
+		call append(line(".")+14, "")
+		call append(line(".")+15, "int main(){")
+		call append(line(".")+16, "")
+		call append(line(".")+17, "	return 0;")
+		call append(line(".")+18, "}")
+	endif
+	if &filetype == 'cpp'
+		call setline(1, "/*")
+		call append(line("."), " * ==================================================")
+		call append(line(".")+1, " *")
+		call append(line(".")+2, " *       Filename:  ".expand("%"))
+		call append(line(".")+3, " *")
+		call append(line(".")+4, " *    Description:  ")
+		call append(line(".")+5, " *")
+		call append(line(".")+6, " *        Version:  0.01")
+		call append(line(".")+7, " *        Created:  ".strftime("%c"))
+		call append(line(".")+8, " *         Author:  ChrisZZ, zchrissirhcz@163.com")
+		call append(line(".")+9," *        Company:  ZJUT")
+		call append(line(".")+10, " *")
+		call append(line(".")+11, " * ==================================================")
+		call append(line(".")+12, " */")
+		call append(line(".")+13, "#include <iostream>")
+		call append(line(".")+14, "using namespace std;")
+		call append(line(".")+15, "int main(){")
+		call append(line(".")+16, "")
+		call append(line(".")+17, "    return 0;")
+		call append(line(".")+18, "}")
+	endif
+	"新建文件后，自动定位到文件末尾
+	autocmd BufNewFile * normal G
+
+endfunc
 
 
 "https://github.com/Yggdroot/indentLine
@@ -26,6 +92,10 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = '|'
 let g:indentLine_color_term = 239
 
+"""""""""""""""""""""""""""""""""""""""""""""
+"my ctags-setting:auto"
+"""""""""""""""""""""""""""""""""""""""""""""
+set autochdir
 
 "comments.vim
 "Ctrl + c         comments
@@ -60,13 +130,45 @@ imap <c-x> <ESC>c$
 " 当文件在外部被修改，自动更新该文件
 set autoread
 " 删除多余空行
-nmap cl :g/^$/d<CR>
+nmap cl :1,$g/^$/d<CR>
+" 删除行尾空格和tab符号
+nmap cs :1,$s/\s\+$//g<CR>
+" 删除行尾^M符号
+nmap cm :1,$s/\r//g<CR>
 "nmap cb :g/^\s*$/d<CR>    "强烈模式:更狠
 "nmap cb :1,$g/^$/d<CR> "强烈模式
-" 删除行尾空格和tab符号
-nmap cs :%s/^\s\+<CR> :%s/\s\+$<CR>
-" 删除行尾^M符号                
-nmap cm :1,$s/\r//g<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 实用功能
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"--------引号 && 括号自动匹配
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+""inoremap { {}<ESC>i
+""inoremap } <c-r>=ClosePair('}')<CR>
+"插入{则为多行的配对方式，插入}为单行的配对
+""imap { {}<ESC>i<CR><ESC>O
+"":inoremap } {}<ESC>i
+"插入大括号 就是录制一个宏
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+":inoremap < <><ESC>i
+":inoremap > <c-r>=ClosePair('>')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+:inoremap ` ``<ESC>i
+function ClosePair(char)
+	if getline('.')[col('.') - 1] == a:char
+		return "\<Right>"
+	else
+		return a:char
+	endif
+endf
+"--------启用代码折叠，用空格键来开关折叠
+set foldenable		     " 打开代码折叠
+set foldmethod=syntax        " 选择代码折叠类型
+set foldlevel=100            " 禁止自动折叠
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zo')<CR>
 
 
 " -----------------------------------------------
@@ -84,7 +186,7 @@ set fileformats=unix,dos,mac                          "给出文件的<EOL>格�
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vim: vim's basic configuration for object-management
+"常用基础配置"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=700
 syntax enable		"syntax switch enable
@@ -117,7 +219,7 @@ set smartcase
 " Highlight search results
 set hlsearch
 " Makes search act like search in modern browsers
-set incsearch
+set incsearch                " 开启实时搜索功能
 " For regular expressions turn magic on
 set magic
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
@@ -134,15 +236,6 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
-
-
-
-
-
-
-
-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,67 +252,6 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 "when .vimrc is edited, reload it.
 autocmd! bufwritepost .vimrc source ~/.vimrc
 "Fast edit vimrc
-
-
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"vim: vim's basic configuration for object-management
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set history=700
-syntax enable		"syntax switch enable
-syntax on		    "syntax switch on
-set nocp		    "vi compatible mode
-" Enable filetype plugins
-filetype plugin on 	"Allow file type check
-filetype plugin indent on 	"Allow indent file type check
-filetype indent on
-set number		    "Show line number
-"set nonumber		"Don't show line number
-"set nohlsearch 	"No high light search key word(s)
-"colorscheme evening	"Set colorscheme (Default evening)
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-set completeopt=longest,menu	""Close preview window
-" Set to auto read when a file is changed from the outside
-set autoread
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-"Always show current position
-set ruler
-" Ignore case when searching
-set ignorecase
-" When searching try to be smart about cases 
-set smartcase
-" Highlight search results
-set hlsearch
-" Makes search act like search in modern browsers
-set incsearch
-" For regular expressions turn magic on
-set magic
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
-set nowb
-set noswapfile
-" Use spaces instead of tabs
-set expandtab
-" Be smart when using tabs ;)
-set smarttab
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
-
-
-
-
-
-
 
 
 
@@ -259,12 +291,6 @@ autocmd BufReadPost *
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
 set laststatus=2
 set ruler
-
-
-
-
-
-
 
 
 
@@ -379,12 +405,6 @@ function! LookupFile_IgnoreCaseFunc(pattern)
     return files
 endfunction
 let g:LookupFile_LookupFunc = 'LookupFile_IgnoreCaseFunc'
-
-
-
-
-
-
 
 
 
@@ -637,8 +657,6 @@ map <C-l> <C-W>l
 " Map ; to : and save a million keystrokes 用于快速进入命令行
 nnoremap ; :
 
-
-
 " 复制选中区到系统剪切板中
 vnoremap <leader>y "+y
 
@@ -808,9 +826,9 @@ highlight SpellLocal term=underline cterm=underline
 "- Apache
 "- GNU
 
-"If you want more filetypes or licenses, 
-"you can open issues or provide any improvements by pull requests on 
-"[alpertuna/vim-header](https://github.com/alpertuna/vim-header). 
+"If you want more filetypes or licenses,
+"you can open issues or provide any improvements by pull requests on
+"[alpertuna/vim-header](https://github.com/alpertuna/vim-header).
 "Also you can correct my English on README file or at comments in source code.
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "vim-header: configuration
@@ -829,49 +847,49 @@ map <F4> :cscope add ./cscope.out ./<cr>
 """"""""""""""""""""""""""""""""""""""
 "SrcExpl: vimrc setting
 """"""""""""""""""""""""""""""""""""""
-" // The switch of the Source Explorer                                         " 
-" nmap <F8> :SrcExplToggle<CR> 
-"                                                                              " 
-" // Set the height of Source Explorer window                                  " 
+" // The switch of the Source Explorer                                         "
+" nmap <F8> :SrcExplToggle<CR>
+"                                                                              "
+" // Set the height of Source Explorer window                                  "
 let g:SrcExpl_winHeight = 8
-"                                                                              " 
-" // Set 100 ms for refreshing the Source Explorer                             " 
+"                                                                              "
+" // Set 100 ms for refreshing the Source Explorer                             "
 let g:SrcExpl_refreshTime = 100
-"                                                                              " 
-" // Set "Enter" key to jump into the exact definition context                 " 
+"                                                                              "
+" // Set "Enter" key to jump into the exact definition context                 "
 let g:SrcExpl_jumpKey = "<ENTER>"
-"                                                                              " 
-" // Set "Space" key for back from the definition context                      " 
+"                                                                              "
+" // Set "Space" key for back from the definition context                      "
 let g:SrcExpl_gobackKey = "<SPACE>"
-"                                                                              " 
-" // In order to avoid conflicts, the Source Explorer should know what plugins " 
-" // except itself are using buffers. And you need add their buffer names into " 
-" // below listaccording to the command ":buffers!"                            " 
-"let g:SrcExpl_pluginList = [ 
-"        \ "__Tag_List__", 
-"        \ "_NERD_tree_" 
-"    \ ] 
-"                                                                              " 
-" // Enable/Disable the local definition searching, and note that this is not  " 
-" // guaranteed to work, the Source Explorer doesn't check the syntax for now. " 
-" // It only searches for a match with the keyword according to command 'gd'   " 
+"                                                                              "
+" // In order to avoid conflicts, the Source Explorer should know what plugins "
+" // except itself are using buffers. And you need add their buffer names into "
+" // below listaccording to the command ":buffers!"                            "
+"let g:SrcExpl_pluginList = [
+"        \ "__Tag_List__",
+"        \ "_NERD_tree_"
+"    \ ]
+"                                                                              "
+" // Enable/Disable the local definition searching, and note that this is not  "
+" // guaranteed to work, the Source Explorer doesn't check the syntax for now. "
+" // It only searches for a match with the keyword according to command 'gd'   "
 let g:SrcExpl_searchLocalDef = 1
 "
 
-" // Set "<F6>" key for displaying the previous definition in the jump list    " 
+" // Set "<F6>" key for displaying the previous definition in the jump list    "
 let g:SrcExpl_prevDefKey = "<F6>"
-"                                                                              " 
-" // Set "<F7>" key for displaying the next definition in the jump list        " 
+"                                                                              "
+" // Set "<F7>" key for displaying the next definition in the jump list        "
 let g:SrcExpl_nextDefKey = "<F7>"
 
 "<F5>       "run LookupFile
-" Open and close all the three plugins on the same time 
+" Open and close all the three plugins on the same time
 nmap <F8>   :TrinityToggleAll<CR>
-" Open and close the srcexpl.vim separately 
+" Open and close the srcexpl.vim separately
 nmap <F9>   :TrinityToggleSourceExplorer<CR>
-" Open and close the taglist.vim separately 
+" Open and close the taglist.vim separately
 nmap <F10>  :TrinityToggleTagList<CR>
-" Open and close the NERD_tree.vim separately 
+" Open and close the NERD_tree.vim separately
 nmap <F11>  :TrinityToggleNERDTree<CR>
 
 
