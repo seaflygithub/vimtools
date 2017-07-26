@@ -29,7 +29,7 @@ CURRENT_DIR=`pwd`
 SCRIPTS_DIR=$CURRENT_DIR/plugin/script
 
 vim_src_package=vim-8.0.tar.bz2
-vim_src_git=vim80
+vim_src_git=${CURRENT_DIR}/vim/vim
 
 cscope_src_package=cscope-15.8b.tar.gz
 cscope_src_git=cscope-15.8b
@@ -45,11 +45,9 @@ SUDO=
 CONFIG=./configure
 CFG_ARGS=--prefix=/usr
 
-network_connected=
-HOSTOS=`uname -v | \
-        awk -F ' ' '{print $1}' | \
-        awk -F '-' '{print $2}' | \
-        tr '[:upper:]' '[:lower:]'`
+network_connected=""
+HOSTOS=""
+
 
 
 #==============================
@@ -69,7 +67,7 @@ VIM_CFG_DIR_PLUGIN=$VIM_CFG_DIR/plugin
 VIM_CFG_DIR_DOC=$VIM_CFG_DIR/doc
 VIM_CFG_DIR_AUTOLOAD=$VIM_CFG_DIR/autoload
 OBJECT_TOOL_PATH=/usr/bin
-TEMP_FILE=$HOME/seafly_temp
+TEMP_FILE=$HOME/seafly_vimtools.temp
 
 TAR=tar
 UNZIP=unzip
@@ -87,35 +85,56 @@ VIM=vim-8.0.tar.bz2             #vim source package name
 TAR_VIM=$TAR                    #decompress package tool
 TAR_VIM_ARGS=$ARG_DOT_TAR_BZ2   #decompress command arguments
 VIM_DIR=vim80                   #vim_dir after decompression
-#auto get python directory name
-list=`ls /usr/lib | grep "python"`
-ls /usr/lib | grep "python" > ${TEMP_FILE}
-python_version=`awk -F . '{print $1}' ${TEMP_FILE}`	#python2
-value=
-ret=
-for value in $list
-do
-    ret=$value
-    echo "$value" > ${TEMP_FILE}
-    value=`awk -F . '{print $1}' ${TEMP_FILE}`
-    if [ "$value" == "${python_version}" ] ;	#main support python2.x  !!!!!!
+
+
+function get_hostos()
+{
+    HOSTOS="`uname -v | \
+        awk -F ' ' '{print $1}' | \
+        awk -F '-' '{print $2}' | \
+        tr '[:upper:]' '[:lower:]'`"
+}
+
+function check_access()
+{
+    echo "function install_vimtool()>>>安装主函数"
+    if [ $UID -ne 0 ] ;
     then
-	break
+        SUDO=sudo
     fi
-done
-PY_VERSION=$ret
-VIM_CONFIG=(./configure \
-    --prefix=/usr \
-    --with-features=huge \
-    --enable-rubyinterp \
-    --enable-pythoninterp=yes \
-    --enable-python3interp=yes \
-    --enable-luainterp \
-    --enable-perlinterp \
-    --enable-multibyte \
-    --enable-cscope \
-    --with-python-config-dir=/usr/lib/python2.6/config)
-#    --with-python-config-dir=/usr/lib/${PY_VERSION}/config)
+}
+
+function get_python_version()
+{
+    # usage: get_python_version python2|python3     --Recommend python2
+    key_word="$1"
+    if [ "${key_word}" = "" ] ;
+    then
+        echo "get_python_version():key_word==NULL"
+        exit 1;
+    fi
+    ls -l /usr/lib | grep "drw" | \
+        grep "${key_word}" | \
+        awk -F ' ' '{print $9}' > ${TEMP_FILE}
+    PY_VERSION=`cat ${TEMP_FILE}`
+    echo "PY_VERSION:${PY_VERSION}"
+    rm -rf ${TEMP_FILE}
+}
+
+
+#VIM_CONFIG=(./configure \
+    #--prefix=/usr \
+    #--with-features=huge \
+    #--enable-rubyinterp \
+    #--enable-pythoninterp=yes \
+    #--enable-python3interp=yes \
+    #--enable-luainterp \
+    #--enable-perlinterp \
+    #--enable-multibyte \
+    #--enable-cscope \
+    #--with-python-config-dir=/usr/lib/python2.6/config)
+    #--with-python-config-dir=/usr/lib/${PY_VERSION}/config)
+
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"        #print all element of array
 #======================================================================
 ####--with-features=huge \
@@ -161,16 +180,16 @@ function debug_vimtool()
     exit 0
 }
 
-function judgement_network_connection()
+function get_network_status()
 {
     host www.baidu.com 1>/dev/null 2>/dev/null
     if [ $? -eq 0 ];
     then
         echo "Success: Network available!"
-        return 1;
+        network_connected=1
     else
         echo "Warning: Network unavailable!"
-        return 0;
+        network_connected=0
     fi
 }
 
@@ -199,31 +218,62 @@ function build_all_help()
     return 0;
 }
 
+function config_and_install_vim()
+{
+    cd ${vim_src_git} ; \
+        make distclean ; \
+        ./configure --prefix=/usr --with-features=huge \
+        --enable-pythoninterp=yes  \
+        --enable-cscope --enable-multibyte \
+        --with-python-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
+        make && $SUDO make install ; \ make distclean
+}
+
+function install_vim_source_package()
+{
+    if [ ${network_connected} -eq 1 ] ;
+    then
+        if [ $? -eq 0 ] ;
+        then
+            cd ${vim_src_git} ; git pull -u origin master
+            config_and_install_vim
+        else
+            git clone -b master https://github.com/vim/vim.git ; \
+                config_and_install_vim
+        fi
+    else
+        config_and_install_vim
+    fi
+}
+
+function install_python_libs()
+{
+    if [ $HOSTOS == "ubuntu" ] ;
+    then
+        $SUDO apt-get install -y libgtk2.0-dev libxt-dev libx11-dev
+        $SUDO apt-get install -y tcl-dev libperl-dev libncurses5-dev
+        $SUDO apt-get install -y python-dev
+        $SUDO apt-get install -y vim-python-jedi
+    fi
+}
 
 function only_vim()
 {
     if [ $HOSTOS == "ubuntu" ] ;
     then
-        host www.baidu.com 1>/dev/null 2>/dev/null
-        if [ $? -ne 0 ] ;
+        if [ $network_connected -ne 0 ] ;
         then
             echo "网络不通，只能源码方式安装vim了(缺库的话就麻烦咯)"
-            cd $CURRENT_DIR/vim && \
-                tar -xjvf $vim_src_package && \
-                cd $vim_src_git && \
-                ./configure --prefix=/usr --with-features=huge \
-                --enable-cscope --enable-multibyte && \
-                make && $SUDO make install && \
-                cd .. && rm -rf $vim_src_git
+            install_vim_source_package
             return 0
         fi
+        install_python_libs
 
         $SUDO apt-get install -y vim
         $SUDO apt-get install -y vim-gocomplete
         $SUDO apt-get install -y vim-syntax-gtk
         $SUDO apt-get install -y vim-tiny
         $SUDO apt-get install -y vim-vim-youcompleteme
-        $SUDO apt-get install -y vim-python-jedi
         $SUDO apt-get install -y vim-scripts
         $SUDO apt-get install -y vim-syntax-go
         $SUDO apt-get install -y vim-syntax-docker
@@ -241,16 +291,10 @@ function only_vim()
     fi
 
     #redhat or centOS
-    if [ $network_connected -ne 0 ] ;
+    if [ $network_connected -ne 1 ] ;
     then
         echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
-        cd $CURRENT_DIR/vim && \
-            tar -xjvf $vim_src_package && \
-            cd $vim_src_git && \
-            ./configure --prefix=/usr --with-features=huge \
-            --enable-cscope --enable-multibyte && \
-            make && $SUDO make install && \
-            cd .. && rm -rf $vim_src_git
+        install_vim_source_package
         return 0
     fi
 
@@ -374,7 +418,7 @@ function source_plugin()
     echo "function source_plugin()>>>  script plugins"
     if [ $HOSTOS == "ubuntu" ] ;
     then
-        if [ $network_connected -ne 0 ] ;
+        if [ $network_connected -ne 1 ] ;
         then
             echo "Error: Network unavailable!"
             echo "       Install with local source package!"
@@ -401,7 +445,7 @@ function source_plugin()
     fi
 
     #Redhat CentOS
-    if [ $network_connected -ne 0 ] ;
+    if [ $network_connected -ne 1 ] ;
     then
         cd $CURRENT_DIR/plugin/source && \
             tar -xzvf $cscope_src_package && \
@@ -544,7 +588,8 @@ function install_vim()
 function complete_install()
 {
     echo "function complete_install()>>>Complete installation function"
-    install_vim             #step01 install vim editor
+    #install_vim             #step01 install vim editor
+    install_vim_source_package
     install_plugin          #step02 install plugin
     install_config          #step03 install configuration file
 }
@@ -564,16 +609,12 @@ function build_vimconf_dir()
 function install_vimtool()
 {
 
-    echo "function install_vimtool()>>>安装主函数"
-    if [ $UID -ne 0 ] ;
-    then
-        echo "You had better to run build_all as a root user"
-        echo "Press Enter to continue..."
-        SUDO=sudo
-    fi
+    get_hostos
+    check_access
+    get_python_version "python2"    # be wrote to PY_VERSION
+    get_network_status
 
-    # judgement of network
-    network_connected=judgement_network_connection
+    install_python_libs
 
     INSTALL_ARG=$1
 
@@ -590,6 +631,9 @@ function install_vimtool()
             only_vim
             vimtool_finish
 			;;
+        "src_vim"|"src_vi"|"source_vim"|"source_vi")
+            install_vim_source_package
+            ;;
 		"no_vim")
 			echo "Only install plugins (both script and source)"
             $DEL_DIR $VIM_CFG_DIR

@@ -130,33 +130,34 @@ imap <c-x> <ESC>c$
 " 当文件在外部被修改，自动更新该文件
 set autoread
 " 删除多余空行
-nmap cl :1,$g/^$/d<CR>
+:nmap cl :1,$g/^$/d
 " 删除行尾空格和tab符号
-nmap cs :1,$s/\s\+$//g<CR>
+:nmap cs :1,$s/\s\+$//g
+"nmap cs :1,$s/\s\+$//g<CR>
 " 删除行尾^M符号
-nmap cm :1,$s/\r//g<CR>
+:nmap cm :1,$s/\r//g
 "nmap cb :g/^\s*$/d<CR>    "强烈模式:更狠
 "nmap cb :1,$g/^$/d<CR> "强烈模式
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 实用功能
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"--------引号 && 括号自动匹配
-:inoremap ( ()<ESC>i
-:inoremap ) <c-r>=ClosePair(')')<CR>
+"--------引号 && 括号自动匹配()
+:inoremap ( ()
+:inoremap ) <c-r>=ClosePair(')')
 ""inoremap { {}<ESC>i
 ""inoremap } <c-r>=ClosePair('}')<CR>
 "插入{则为多行的配对方式，插入}为单行的配对
 ""imap { {}<ESC>i<CR><ESC>O
 "":inoremap } {}<ESC>i
 "插入大括号 就是录制一个宏
-:inoremap [ []<ESC>i
-:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap [ []
+:inoremap ] <c-r>=ClosePair(']')
 ":inoremap < <><ESC>i
 ":inoremap > <c-r>=ClosePair('>')<CR>
-:inoremap " ""<ESC>i
-:inoremap ' ''<ESC>i
-:inoremap ` ``<ESC>i
+:inoremap " ""
+:inoremap ' ''
+:inoremap ` ``
 function ClosePair(char)
 	if getline('.')[col('.') - 1] == a:char
 		return "\<Right>"
@@ -168,7 +169,7 @@ endf
 set foldenable		     " 打开代码折叠
 set foldmethod=syntax        " 选择代码折叠类型
 set foldlevel=100            " 禁止自动折叠
-nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zo')<CR>
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc':'zo')
 
 
 " -----------------------------------------------
@@ -260,8 +261,8 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :call VisualSelection('f')<CR>
-vnoremap <silent> # :call VisualSelection('b')<CR>
+vnoremap <silent> * :call VisualSelection('f')
+vnoremap <silent> # :call VisualSelection('b')
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
 map <c-space> ?
@@ -897,6 +898,19 @@ nmap <F11>  :TrinityToggleNERDTree<CR>
 "#auto update database if cscope connect
 "#easy create new cscope and ctags databse by command :Createtag
 "git clone git@github.com:haolongzhangm/auto_update_cscope_ctags_database.git
+let g:check_update_when_fisrt_load_vim = 1      "  vim check database update when firstly load vim
+let g:auto_run_function_when_cscope_connect = 1 "auto update database during edit you file
+"then you can run command :
+":Manualstartstopautoupdatedatabas
+"to start or stop auto update database
+"#Install before todo
+"-----
+"U need remove old config like:
+"1: remove hard config database in vimrc eg: set tag=tags;
+"2: remove hard config database in vimrc eg: cs add xxx
+"3: also need remove database manage plugn if U used
+"ps: 1 2 3 function already be integrated in
+""auto_update_cscope_ctags_database" ""
 
 
 

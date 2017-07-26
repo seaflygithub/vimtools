@@ -100,12 +100,13 @@ E-mail:seafly0616@qq.com
 
 ## build_all.sh主程结构
 
-- 功能简介：帮助用户自动安装和配置vim
-- 首先判断用户权限,然后填充SUDO变量
-- 首先判断操作系统Ubuntu,还是其他非Ubuntu的Linux(Redhat,CentOS,Fedora,...etc.)
-- 其次是判断网络是否畅通,不畅通安装本地包(却库就麻烦了),否则从网络安装(所以建议网络畅通)
-- 然后switch语句读取用户命令参数来分别执行各自子函数
-- 最后执行完毕退出脚本
+1. 获取操作系统类型:HOSTOS
+2. 检查用户权限:SUDO
+3. 获取python主分支版本号(2.x):PY_VERSION
+4. 获取网络连接状态:network_connected
+5. 安装python库
+6. 通过switch语句读取用户命令参数来分别执行各自子函数
+7. 最后执行完毕退出脚本
 
 ## config/vimrc.vim
 
@@ -121,6 +122,7 @@ E-mail:seafly0616@qq.com
             目录
         - 新插件添加后如果有配置信息就写入config/vimrc.vim文件的适当位置并注明
             插件信息
+**测试图片**
 ![图片范例](./screenshots/test.png)
 
 - F1~F12的功能绑定(闲置键可以绑定新功能也能测试新功能)
