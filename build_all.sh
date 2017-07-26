@@ -45,6 +45,7 @@ SUDO=
 CONFIG=./configure
 CFG_ARGS=--prefix=/usr
 
+network_connected=
 HOSTOS=`uname -v | \
         awk -F ' ' '{print $1}' | \
         awk -F '-' '{print $2}' | \
@@ -160,6 +161,20 @@ function debug_vimtool()
     exit 0
 }
 
+function judgement_network_connection()
+{
+    host www.baidu.com 1>/dev/null 2>/dev/null
+    if [ $? -eq 0 ];
+    then
+        echo "Success: Network available!"
+        return 1;
+    else
+        echo "Warning: Network unavailable!"
+        return 0;
+    fi
+}
+
+
 function vimtool_finish()
 {
     #=================================================================
@@ -226,8 +241,7 @@ function only_vim()
     fi
 
     #redhat or centOS
-    host www.baidu.com 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
+    if [ $network_connected -ne 0 ] ;
     then
         echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
         cd $CURRENT_DIR/vim && \
@@ -360,8 +374,7 @@ function source_plugin()
     echo "function source_plugin()>>>  script plugins"
     if [ $HOSTOS == "ubuntu" ] ;
     then
-        host www.baidu.com 1>/dev/null 2>/dev/null
-        if [ $? -ne 0 ] ;
+        if [ $network_connected -ne 0 ] ;
         then
             echo "Error: Network unavailable!"
             echo "       Install with local source package!"
@@ -388,11 +401,8 @@ function source_plugin()
     fi
 
     #Redhat CentOS
-    host www.baidu.com 1>/dev/null 2>/dev/null
-    if [ $? -ne 0 ] ;
+    if [ $network_connected -ne 0 ] ;
     then
-        echo "Error: Network unavailable!"
-        echo "       Install with local source package!"
         cd $CURRENT_DIR/plugin/source && \
             tar -xzvf $cscope_src_package && \
             cd $cscope_src_git && \
@@ -420,10 +430,10 @@ function source_plugin()
 function script_plugin()
 {
     echo "function script_plugin()>>> script plugins"
-    rm -rf $HOME/.vim/*
-    mkdir -p $HOME/.vim
+
     src_dir=$1    #$SCRIPTS_DIR
     dst_dir=$2    #$HOME/.vim
+
     #local dst_dir=$CURRENT_DIR/others
     ls $src_dir/*.tar.gz 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
@@ -459,6 +469,7 @@ function script_plugin()
         cp -v $src_dir/*.vim $dst_dir/plugin
         ls -shl $src_dir/*.vim
     fi
+
     return 0
 }
 
@@ -540,6 +551,8 @@ function complete_install()
 
 function build_vimconf_dir()
 {
+    rm -rf $HOME/.vim/*
+    mkdir -p $HOME/.vim
     mkdir -p $VIM_CFG_DIR 1>/dev/null 2>/dev/null
     mkdir -p $VIM_CFG_DIR_PLUGIN 1>/dev/null 2>/dev/null
     mkdir -p $VIM_CFG_DIR_AUTOLOAD 1>/dev/null 2>/dev/null
@@ -558,6 +571,9 @@ function install_vimtool()
         echo "Press Enter to continue..."
         SUDO=sudo
     fi
+
+    # judgement of network
+    network_connected=judgement_network_connection
 
     INSTALL_ARG=$1
 
@@ -583,7 +599,7 @@ function install_vimtool()
 			;;
 		"script_plugin" | "scr_plg")
 			echo "Only install  script plugins"
-            script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
+            script_plugin $SCRIPTS_DIR $HOME/.vim
             vimtool_finish
 			;;
 		"source_plugin" | "src_plg")
@@ -601,8 +617,7 @@ function install_vimtool()
             build_all_help
 			;;
 		*)
-			echo "ERROR: $INSTALL_ARG unknown argument!!!"
-            echo "Press <Enter> to continue ..."
+			echo "ERROR: $INSTALL_ARG unknown argument!!!" echo "Press <Enter> to continue ..."
             read temporary
             build_all_help
 			;;
@@ -612,18 +627,16 @@ function install_vimtool()
 }
 
 #-----------------------------------------------
-#开发调试部分
+# debuging
 #---------------------------------------------
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
 #echo "configlen: ${#VIM_CONFIG[*]}"
-#debug_vimtool           #类似断点:只能执行这个之上代码
+#debug_vimtool           #breakpoint function
 #----------------------------------------------
 
 
 #--------------------------------------------------
-#函数执行部分
+# start
 #-------------------------------------------------
-install_vimtool $1      #help, only_vim, source_plugin, update_config, etc.
+install_vimtool $1
 #--------------------------------------------------
-#script_plugin
-#config_vimrc

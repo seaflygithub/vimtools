@@ -116,6 +116,12 @@ E-mail:seafly0616@qq.com
     - [Vim中的键映射参考页](http://www.cnblogs.com/softwaretesting/archive/2011/09/28/2194515.html)
     - 习惯 vim 本来的按键，然后在此基础上增加功能是个不错的习惯。大部分用户也是遵循这个传统。
     - 一般来说使用vim的人，不喜欢覆盖vim本来的键绑定。尤其是非常基本的按键。
+    - 如何添加新vimscript插件
+        - git或[vimscript官网](http://www.vim.org/scripts/index.php)获取新插件,重新打包使其解压后直接包含.vim或plugin
+            目录
+        - 新插件添加后如果有配置信息就写入config/vimrc.vim文件的适当位置并注明
+            插件信息
+![图片范例](./screenshots/test.png)
 
 - F1~F12的功能绑定(闲置键可以绑定新功能也能测试新功能)
     - F1    --系统默认键,我们不动他

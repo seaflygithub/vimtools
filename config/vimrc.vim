@@ -893,6 +893,13 @@ nmap <F10>  :TrinityToggleTagList<CR>
 nmap <F11>  :TrinityToggleNERDTree<CR>
 
 
+"auto load cscope database and ctags databse, even diffrect project swicth(base third part)
+"#auto update database if cscope connect
+"#easy create new cscope and ctags databse by command :Createtag
+"git clone git@github.com:haolongzhangm/auto_update_cscope_ctags_database.git
+
+
+
 
 "Adding Brief Headers(You can modify it)
 "map <F2> :AddHeader<CR>        #Adds brief author information
