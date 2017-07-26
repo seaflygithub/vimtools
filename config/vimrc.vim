@@ -143,8 +143,8 @@ set autoread
 " 实用功能
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "--------引号 && 括号自动匹配()
-:inoremap ( ()
-:inoremap ) <c-r>=ClosePair(')')
+":inoremap ( ()
+":inoremap ) <c-r>=ClosePair(')')
 ""inoremap { {}<ESC>i
 ""inoremap } <c-r>=ClosePair('}')<CR>
 "插入{则为多行的配对方式，插入}为单行的配对
@@ -152,19 +152,19 @@ set autoread
 "":inoremap } {}<ESC>i
 "插入大括号 就是录制一个宏
 :inoremap [ []
-:inoremap ] <c-r>=ClosePair(']')
+":inoremap ] <c-r>=ClosePair(']')
 ":inoremap < <><ESC>i
 ":inoremap > <c-r>=ClosePair('>')<CR>
 :inoremap " ""
 :inoremap ' ''
 :inoremap ` ``
-function ClosePair(char)
-	if getline('.')[col('.') - 1] == a:char
-		return "\<Right>"
-	else
-		return a:char
-	endif
-endf
+"function ClosePair(char)
+	"if getline('.')[col('.') - 1] == a:char
+		"return "\<Right>"
+	"else
+		"return a:char
+	"endif
+"endf
 "--------启用代码折叠，用空格键来开关折叠
 set foldenable		     " 打开代码折叠
 set foldmethod=syntax        " 选择代码折叠类型
@@ -371,7 +371,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "LookupFile: lookupfile plugin configuration
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:LookupFile_TagExpr = '"./filenametags"'
+let g:LookupFile_TagExpr = './filenametags'
 "let g:LookupFile_TagExpr = string('./filenametags')
 """"let g:myLookupFileTagExpr = './filenanmetags'
 """"let g:LookupFile_TagExpr = 'g:myLookupFileTagExpr'
@@ -842,8 +842,8 @@ highlight SpellLocal term=underline cterm=underline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "project.sh: configuration for vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <F3> :set tags=~/.vim/systags,./tags,./filenametags<cr>
-map <F4> :cscope add ./cscope.out ./<cr>
+"map <F3> :set tags=~/.vim/systags,./tags,./filenametags<cr>
+"map <F4> :cscope add ./cscope.out ./<cr>
 
 """"""""""""""""""""""""""""""""""""""
 "SrcExpl: vimrc setting
@@ -898,8 +898,13 @@ nmap <F11>  :TrinityToggleNERDTree<CR>
 "#auto update database if cscope connect
 "#easy create new cscope and ctags databse by command :Createtag
 "git clone git@github.com:haolongzhangm/auto_update_cscope_ctags_database.git
-let g:check_update_when_fisrt_load_vim = 1      "  vim check database update when firstly load vim
+let g:check_update_when_first_load_vim = 1      "(default)vim check database update when firstly load vim
 let g:auto_run_function_when_cscope_connect = 1 "auto update database during edit you file
+let g:auto_update_cscope_ctags_database=1
+let g:Auto_update_cscope_ctags_timer_filter=30    "default 60s
+let g:Auto_update_cscope_ctags_debug_log=0      "default
+let g:Auto_update_cscope_ctags_lock_floor_max=1800  "default
+let g:auto_update_cscope_ctags_backup_run_py_dir_cache='~/.vim/plugin/auto_update_cscope_ctags_backup_run.py'
 "then you can run command :
 ":Manualstartstopautoupdatedatabas
 "to start or stop auto update database
@@ -910,7 +915,6 @@ let g:auto_run_function_when_cscope_connect = 1 "auto update database during edi
 "2: remove hard config database in vimrc eg: cs add xxx
 "3: also need remove database manage plugn if U used
 "ps: 1 2 3 function already be integrated in
-""auto_update_cscope_ctags_database" ""
 
 
 

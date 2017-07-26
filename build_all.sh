@@ -215,7 +215,7 @@ function build_all_help()
     echo "    ./build_all script_plugin #Only install script plugins"
     echo "    ./build_all source_plugin #Only install source plugins"
     echo "    ./build_all update_config #Only install configuration files"
-    return 0;
+    exit 1
 }
 
 function config_and_install_vim()
@@ -246,14 +246,29 @@ function install_vim_source_package()
     fi
 }
 
+#Ubuntu Linux x64
+#https://github.com/Valloric/YouCompleteMe
+function install_youcompleteme()
+{
+    #sudo apt-get install -y build-essential cmake
+    return 0;
+}
+
 function install_python_libs()
 {
     if [ $HOSTOS == "ubuntu" ] ;
     then
-        $SUDO apt-get install -y libgtk2.0-dev libxt-dev libx11-dev
-        $SUDO apt-get install -y tcl-dev libperl-dev libncurses5-dev
-        $SUDO apt-get install -y python-dev
-        $SUDO apt-get install -y vim-python-jedi
+        if [ ${network_connected} -eq 1 ] ;
+        then
+            $SUDO apt-get install -y libgtk2.0-dev libxt-dev libx11-dev
+            $SUDO apt-get install -y tcl-dev libperl-dev libncurses5-dev
+            $SUDO apt-get install -y python-dev
+            $SUDO apt-get install -y vim-python-jedi
+            $SUDO apt-get install -y python-pip python-dev build-essential
+            $SUDO pip install --upgrade pip
+            $SUDO pip install --upgrade virtualenv
+            pip install jedi
+        fi
     fi
 }
 
@@ -614,14 +629,16 @@ function install_vimtool()
     get_python_version "python2"    # be wrote to PY_VERSION
     get_network_status
 
-    install_python_libs
+
 
     INSTALL_ARG=$1
+
 
 	case $INSTALL_ARG in
 		"")
 			echo "Complete installation"
-			$DEL_DIR $VIM_CFG_DIR
+            install_python_libs
+			rm -rf $VIM_CFG_DIR
 			build_vimconf_dir
 			complete_install
 			vimtool_finish
@@ -632,27 +649,32 @@ function install_vimtool()
             vimtool_finish
 			;;
         "src_vim"|"src_vi"|"source_vim"|"source_vi")
+            install_python_libs
             install_vim_source_package
             ;;
 		"no_vim")
 			echo "Only install plugins (both script and source)"
-            $DEL_DIR $VIM_CFG_DIR
+            rm -rf $VIM_CFG_DIR
+            install_python_libs
             build_vimconf_dir
             no_vim
             vimtool_finish
 			;;
 		"script_plugin" | "scr_plg")
 			echo "Only install  script plugins"
+            install_python_libs
             script_plugin $SCRIPTS_DIR $HOME/.vim
             vimtool_finish
 			;;
 		"source_plugin" | "src_plg")
 			echo "Only install source code plugins"
+            install_python_libs
             source_plugin
             vimtool_finish
 			;;
 		"update_config" | "config" | "cfg" | "vimrc")
 			echo "Only update configuration files"
+            install_python_libs
             install_config
             vimtool_finish
 			;;
@@ -661,11 +683,13 @@ function install_vimtool()
             build_all_help
 			;;
 		*)
-			echo "ERROR: $INSTALL_ARG unknown argument!!!" echo "Press <Enter> to continue ..."
-            read temporary
-            build_all_help
-			;;
-	esac
+            $*
+            if [ $? -ne 0 ] ;
+            then
+                build_all_help
+            fi
+            ;;
+    esac
 
     return 0
 }
@@ -682,5 +706,5 @@ function install_vimtool()
 #--------------------------------------------------
 # start
 #-------------------------------------------------
-install_vimtool $1
+install_vimtool $@
 #--------------------------------------------------
