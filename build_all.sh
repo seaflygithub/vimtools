@@ -308,12 +308,13 @@ function only_vim()
     #redhat or centOS
     if [ $network_connected -ne 1 ] ;
     then
-        echo "网络不支持，所以只能源码方式安装vim了(缺库的话就没办法咯)"
+        echo "Warning: Network not available, install_vim_source_package"
         install_vim_source_package
         return 0
     fi
 
     echo "function only_vim()>>>only install vim"
+    install_vim_source_package
     $SUDO yum install -y vim
     $SUDO yum install -y vim-X11
     $SUDO yum install -y vim-gtk-syntax
