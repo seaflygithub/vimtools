@@ -256,7 +256,7 @@ function install_youcompleteme()
 
 function install_python_libs()
 {
-    if [ $HOSTOS == "ubuntu" ] ;
+    if [ $HOSTOS = "ubuntu" ] ;
     then
         if [ ${network_connected} -eq 1 ] ;
         then
@@ -274,7 +274,7 @@ function install_python_libs()
 
 function only_vim()
 {
-    if [ $HOSTOS == "ubuntu" ] ;
+    if [ $HOSTOS = "ubuntu" ] ;
     then
         if [ $network_connected -ne 0 ] ;
         then
@@ -351,10 +351,10 @@ function source_tar_gz_plugin()
         fi
 
         #检查value是否为普通 script plugins
-        if [ $value == "netrw-93.tar.gz" ] ;
+        if [ $value = "netrw-93.tar.gz" ] ;
         then
             echo "$value isn't a source package"
-        elif [ $value == "vimcdoc-1.5.0.tar.gz" ] ;
+        elif [ $value = "vimcdoc-1.5.0.tar.gz" ] ;
         then
             echo "$value isn't a source package"
         else
@@ -432,7 +432,7 @@ function source_zip_plugin()
 function source_plugin()
 {
     echo "function source_plugin()>>>  script plugins"
-    if [ $HOSTOS == "ubuntu" ] ;
+    if [ $HOSTOS = "ubuntu" ] ;
     then
         if [ $network_connected -ne 1 ] ;
         then
@@ -566,7 +566,7 @@ function config_vimrc()
     echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
     echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
 
-	if [ $HOSTOS == "ubuntu" ] ;
+	if [ $HOSTOS = "ubuntu" ] ;
 	then
 		sed -i '/colorscheme/d' ~/.vimrc
 	fi
