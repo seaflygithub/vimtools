@@ -495,31 +495,38 @@ function script_plugin()
     dst_dir=$2    #$HOME/.vim
 
     #local dst_dir=$CURRENT_DIR/others
+    ls $src_dir/*.tgz 2>/dev/null 1>/dev/null
+    if [ $? -eq 0 ]
+    then
+        ls $src_dir/*.tgz | xargs -i -d "\n" tar -xzuvf {} -C $dst_dir
+        ls -shl $src_dir/*.tar.gz
+    fi
+
     ls $src_dir/*.tar.gz 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.tar.gz | xargs -i -d "\n" tar -xzvf {} -C $dst_dir
+        ls $src_dir/*.tar.gz | xargs -i -d "\n" tar -xzuvf {} -C $dst_dir
         ls -shl $src_dir/*.tar.gz
     fi
 
     ls $src_dir/*.tar.bz2  2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.tar.bz2 | xargs -i -d "\n" tar -xjvf {} -C $dst_dir
+        ls $src_dir/*.tar.bz2 | xargs -i -d "\n" tar -xjuvf {} -C $dst_dir
         ls -shl $src_dir/*.tar.bz2
     fi
 
     ls $src_dir/*.tar 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.tar | xargs -i -d "\n" tar -xvf {} -C $dst_dir
+        ls $src_dir/*.tar | xargs -i -d "\n" tar -xuvf {} -C $dst_dir
         ls -shl $src_dir/*.tar
     fi
 
     ls $src_dir/*.zip 2>/dev/null 1>/dev/null
     if [ $? -eq 0 ]
     then
-        ls $src_dir/*.zip | xargs -i -d "\n" unzip {} -d $dst_dir
+        ls $src_dir/*.zip | xargs -i -d "\n" unzip -u {} -d $dst_dir
         ls -shl $src_dir/*.zip
     fi
 
