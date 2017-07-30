@@ -22,11 +22,9 @@ git clone -b master https://SeaflyDennis@github.com/SeaflyDennis/vimtools.git
 
 ### 进入工程环境
 - 步骤01：进入目标工程顶层目录，`cd test_proj`
-- 步骤02：直接执行`object.sh`命令在当前目录生成工程依赖文件
-- 步骤03：启动vim，打开任何一个工程源文件。`vim Makefile`
-- 步骤04：启动vim后，分别按F3，F4导入工程依赖文件，F3，F4分别类似如下vim命令：
-        `:set tags=tags,filenametags,~/.vim/systags`
-        `:cscope add cscope.out ./`
+- 步骤02：启动vim，打开任何一个工程源文件。`vim Makefile`
+- 步骤03：执行vim命令`:Createtag`同步同步工程源文件
+- 步骤04：接下来就可以浏览编辑源代码了，当然有不同窗口布局模式，有winmanager窗口模式(F12), 有sourceinsight窗口模式(F8)
 
 至此，我们成功进入工程环境，接下来我们就可以使用vim管理该工程了。
 
