@@ -35,7 +35,7 @@ After, we can manage our object with vim.
 
 ### sourceinsight-coding Layout
 
-- Document:vimtools-coding-manual.md](https://github.com/SeaflyDennis/vimtools/vimtools-ubuntu/doc/vimtools-coding-manual.md)
+- Document: [vimtools-coding-manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools-coding-manual.md)
 - Introduction: This window can view and coding source code.
 - Layout Adjustment: `<Ctrl-w>>` adjust width, `<Ctrl-w>+` or `:resize +N` adjust high.
 - Frequently-used Operations:
