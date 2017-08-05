@@ -23,7 +23,11 @@ install screenshot:
 
 After, we can manage our object with vim.
 
+**After running `:Createtag` screenshot:**
+![./screenshots/after_run_Createtag.png](./screenshots/after_run_Createtag.png)
 
+**View Linux Kernel code with sourceinsight Layout Screenshot:**
+![./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png](./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png)
 
 # vimtools user's manual
 
