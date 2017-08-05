@@ -248,6 +248,8 @@ set magic
 set nowb
 set expandtab
 set smarttab
+"let  mapleader = “,”  default was "\" as value of mapleader
+let g:mapleader = ","
 "set shortmess=atI   "启动的时候不显示乌干达提示
 "set backup
 "set backupext=.bak
