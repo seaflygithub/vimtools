@@ -15,6 +15,11 @@
 # Date: 2017.08.05
 # Last Modified Date: 2017.08.05
 # Last Modified By: SeaflyDennis <seafly0616@qq.com>
+# File: build_all.sh
+# Author: SeaflyDennis <seafly0616@qq.com>
+# Date: 2017.08.05
+# Last Modified Date: 2017.08.05
+# Last Modified By: SeaflyDennis <seafly0616@qq.com>
 
 HOSTOS=""
 CUR=
@@ -450,10 +455,10 @@ function install_vimtools()
     case $INSTALL_ARG in
         "" | "all")
             echo "Complete installation"
-            #install_python_libs
+            install_python_libs
             flush_vim_conf
-            #install_vim_source_package
-            #install_source_plugins
+            install_vim_source_package
+            install_source_plugins
             install_git_plugins
             install_vimhome_plugins
             enable_plugins
