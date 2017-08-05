@@ -1,0 +1,29 @@
+- Frequently-used Operations:
+    - insert file information head: `<F2>`
+    - insert: type `i`
+    - append: type `a`
+    - append of line: type `A`
+    - new line: type `o`
+    - new line above: type `O`
+    - choose menu: type `<Ctrl-n>` to next, `<Ctrl-p>` to preview.
+    - Select block code: `V` or `<Ctrl-v>`
+    - normal copy: `yy` or `yw` or `""y`
+    - normal paste: `p` or `""p`
+    - Copy to clipboard: `"+y`
+    - Paste from clipboard: `"+p`
+    - save all: `wall` or `wall!` or `wqall`
+    - cl    --Press ESC and type `cl` can clean all blank lines.
+    - cs    --Press ESC and type `cs` can clean all blank space and tab end of a line.
+    - cm    --Press ESC and type `cm` can clean all `^M`(Windows' `\r\n`)
+    - Functions parameters complete: `func_name(` + `<tab>`
+    - if，while，switch complete: `keyword` + `<tab>`
+    - `#include ""` complete: `in` + `<tab>`
+    - `#include <>` complete: `is` + `<tab>`
+    - main Function complete: `main` + `<tab>`
+    - comment /**/ complete: `cc` + `<tab>`
+    - head file (.h) complete: `ff` + `<tab>`
+    - define xxx complete: `de` + `<tab>`
+    - comment code: `<c-c>`
+    - uncomment code: `<c-x>`
+    - Select all: `<c-a>`
+
