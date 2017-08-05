@@ -1,9 +1,8 @@
 " File: config/vimrc.vim
 " Author: SeaflyDennis <seafly0616@qq.com>
-" Date: 2017.08.05
-" Last Modified Date: 2017.08.05
-" Last Modified By: abc <123>
-
+" Date: 2017.08.06
+" Last Modified Date: 2017.08.06
+" Last Modified By: SeaflyDennis <seafly0616@qq.com>
 "=============================================================
 "                       插件管理
 "=============================================================
