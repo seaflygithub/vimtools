@@ -1,26 +1,9 @@
-##################################################
-# Filename: build_all.sh
-# Author: SeaflyDennis
-# E-mail: seafly0616@qq.com
-# Created Time: 2017年08月04日 星期五 17时06分45秒
-##################################################
 #!/bin/bash
 # File: build_all.sh
 # Author: SeaflyDennis <seafly0616@qq.com>
 # Date: 2017.08.05
 # Last Modified Date: 2017.08.05
 # Last Modified By: SeaflyDennis <seafly0616@qq.com>
-# File: build_all.sh
-# Author: SeaflyDennis <seafly0616@qq.com>
-# Date: 2017.08.05
-# Last Modified Date: 2017.08.05
-# Last Modified By: SeaflyDennis <seafly0616@qq.com>
-# File: build_all.sh
-# Author: SeaflyDennis <seafly0616@qq.com>
-# Date: 2017.08.05
-# Last Modified Date: 2017.08.05
-# Last Modified By: SeaflyDennis <seafly0616@qq.com>
-
 HOSTOS=""
 CUR=
 CUR_DIR=`pwd`
@@ -455,10 +438,10 @@ function install_vimtools()
     case $INSTALL_ARG in
         "" | "all")
             echo "Complete installation"
-            install_python_libs
+            #install_python_libs
             flush_vim_conf
-            install_vim_source_package
-            install_source_plugins
+            #install_vim_source_package
+            #install_source_plugins
             install_git_plugins
             install_vimhome_plugins
             enable_plugins
