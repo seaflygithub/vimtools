@@ -25,5 +25,6 @@
     - define xxx complete: `de` + `<tab>`
     - comment code: `<c-c>`
     - uncomment code: `<c-x>`
+    - Select and mark: select + `,m`
     - Select all: `<c-a>`
 
