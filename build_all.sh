@@ -438,10 +438,10 @@ function install_vimtools()
     case $INSTALL_ARG in
         "" | "all")
             echo "Complete installation"
-            install_python_libs
+            #install_python_libs
             flush_vim_conf
-            install_vim_source_package
-            install_source_plugins
+            #install_vim_source_package
+            #install_source_plugins
             install_git_plugins
             install_vimhome_plugins
             enable_plugins
