@@ -37,7 +37,7 @@ After, we can manage our object with vim.
 # Thanks following vim plugins:
 
 |Author                 |Plugin                     |Website                            |
-|  :-------		        |-------:			        |:-------:				            |
+| :-------		        | :-------			        |:-------				            |
 |haolongzhangm          |auto_update_cscope_ctags_database|https://github.com/haolongzhangm/auto_update_cscope_ctags_database |
 |skywind3000            |asyncrun.vim               |https://github.com/skywind3000/asyncrun.vim |
 |SeaflyDennis           |auto_update_cscope_ctags_database|https://github.com/SeaflyDennis/auto_update_cscope_ctags_database |
