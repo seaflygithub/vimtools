@@ -44,5 +44,5 @@ github_areaof_commits.png
 vimhome_online_scripts_website.png
 ![./screenshots/201708061948-vimhome_online_scripts_website.png](./screenshots/201708061948-vimhome_online_scripts_website.png)
 
-auto_update_cscope_ctags_database_github_home_pange.png
+[auto_update_cscope_ctags_database](https://github.com/haolongzhangm/auto_update_cscope_ctags_database)_github_home_pange.png
 ![./screenshots/201708061950-auto_update_cscope_ctags_database_github_home_pange.png](./screenshots/201708061950-auto_update_cscope_ctags_database_github_home_pange.png)
