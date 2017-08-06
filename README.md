@@ -31,7 +31,7 @@ After, we can manage our object with vim.
 
 # vimtools user's manual
 
-![./doc/vimtools_users_manual.md](./doc/vimtools_users_manual.md)
+[./doc/vimtools_users_manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_users_manual.md)
 
 ## Process of development and debuging screenshots:
 
