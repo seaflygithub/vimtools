@@ -36,6 +36,10 @@ After, we can manage our object with vim.
 
 # Thanks following vim plugins:
 
+|作者			|插件			|网址					|
+|  :-------		|-------:			|:-------:				|
+|SeaflyDennis|code_complete|https://github.com/SeaflyDennis/code_complete|
+
 - [auto_update_cscope_ctags_database](https://github.com/haolongzhangm/auto_update_cscope_ctags_database)
 - [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim)
 - [auto_update_cscope_ctags_database](https://github.com/SeaflyDennis/auto_update_cscope_ctags_database)
