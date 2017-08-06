@@ -1,4 +1,4 @@
-" File: config/vimrc.vim
+" File: /home/seafly/github/vimtools/config/vimrc.vim
 " Author: SeaflyDennis <seafly0616@qq.com>
 " Date: 2017.08.06
 " Last Modified Date: 2017.08.06
@@ -84,7 +84,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BO
 set laststatus=1    "命令行高度,默认1
 set noautochdir     "自动改变当前目录位置autochdir
 set history=2000    "保留历史长度
-set nocp		    "vi compatible mode
+set nocp		    "vi compatible mode 该功能每次修改保存文件时自动插入头文件
 set number		    "显示行号&nonumber
 set ruler           "显示当前位置坐标
 set hlsearch        "搜索高亮&nohlsearch
@@ -92,9 +92,9 @@ set ignorecase      "搜索模式里忽略大小写
 set smartcase       "如果搜索模式包含大写字符
 set incsearch       "开启搜索实时匹配功能&noincsearch
 set nobackup        "关闭自动备份
-"set autoread        "文件修改之后自动载入
+set autoread        "文件修改之后自动载入
 set noswapfile      "关闭交换文件
-"set wildmenu        "增强模式中的命令行自动完成操作
+set wildmenu        "增强模式中的命令行自动完成操作
 set shiftwidth=4    "1 tab == 4 spaces
 set tabstop=4       "1 tab == 4 spaces
 set ai              "Auto indent
