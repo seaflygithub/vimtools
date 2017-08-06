@@ -11,7 +11,7 @@ git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtoo
 - 2.Install: `./build_all.sh all`
 
 Install vimtools screenshot:
-![./screenshots/vimtools-ubuntu-install-info.png](./screenshots/vimtools-ubuntu-install-info.png)
+![./screenshots/201708062344-install_vimtools_username_useremail.png](./screenshots/201708062344-install_vimtools_username_useremail.png)
 
 ## usage of vimtools
 
