@@ -421,7 +421,7 @@ nmap <F11>  :TrinityToggleNERDTree<CR>
 let g:check_update_when_first_load_vim = 1      "(default)vim check database update when firstly load vim
 let g:auto_run_function_when_cscope_connect = 1 "auto update database during edit you file
 let g:auto_update_cscope_ctags_database=1
-let g:Auto_update_cscope_ctags_timer_filter=30    "default 60s
+let g:Auto_update_cscope_ctags_timer_filter=60    "default 60s
 let g:Auto_update_cscope_ctags_debug_log=0      "default
 let g:Auto_update_cscope_ctags_lock_floor_max=1800  "default
 let g:auto_update_cscope_ctags_backup_run_py_dir_cache='~/.vim/plugin/auto_update_cscope_ctags_backup_run.py'

@@ -150,7 +150,7 @@ function install_git_plugin()
 function install_git_plugins()
 {
     install_git_plugin "${HOME}/.vimrc" "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
-    #install_git_plugin "${HOME}/.vimrc" "auto_update_cscope_ctags_database" "https://github.com/haolongzhangm/auto_update_cscope_ctags_database"
+    #install_git_plugin "https://github.com/haolongzhangm/auto_update_cscope_ctags_database"
     install_git_plugin "${HOME}/.vimrc" "auto_update_cscope_ctags_database" "https://github.com/SeaflyDennis/auto_update_cscope_ctags_database"
     install_git_plugin "${HOME}/.vimrc" "code_complete" "https://github.com/SeaflyDennis/code_complete"
     install_git_plugin "${HOME}/.vimrc" "minibufexpl.vim" "https://github.com/fholgado/minibufexpl.vim"
