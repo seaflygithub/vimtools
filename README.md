@@ -33,16 +33,40 @@ After, we can manage our object with vim.
 
 [./doc/vimtools_users_manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_users_manual.md)
 
-## Process of development and debuging screenshots:
 
-plugins-modfied-screenshot.png
-![./screenshots/201708061930-plugins-modfied-screenshot.png](./screenshots/201708061930-plugins-modfied-screenshot.png)
+# Thanks following vim plugins:
 
-github_areaof_commits.png
-![./screenshots/201708061942-github_areaof_commits.png](./screenshots/201708061942-github_areaof_commits.png)
-
-vimhome_online_scripts_website.png
-![./screenshots/201708061948-vimhome_online_scripts_website.png](./screenshots/201708061948-vimhome_online_scripts_website.png)
-
-[auto_update_cscope_ctags_database](https://github.com/haolongzhangm/auto_update_cscope_ctags_database)_github_home_pange.png
-![./screenshots/201708061950-auto_update_cscope_ctags_database_github_home_pange.png](./screenshots/201708061950-auto_update_cscope_ctags_database_github_home_pange.png)
+[auto_update_cscope_ctags_database](https://github.com/haolongzhangm/auto_update_cscope_ctags_database)
+[asyncrun.vim](https://github.com/skywind3000/asyncrun.vim)
+[auto_update_cscope_ctags_database](https://github.com/SeaflyDennis/auto_update_cscope_ctags_database)
+[code_complete](https://github.com/SeaflyDennis/code_complete)
+[minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim)
+[minibufexplpp.vim](https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim)
+[nerdtree](https://github.com/scrooloose/nerdtree)
+[SrcExpl](https://github.com/wesleyche/SrcExpl)
+[Trinity](https://github.com/wesleyche/Trinity)
+[vim-header](https://github.com/alpertuna/vim-header)
+[vim-snippets](https://github.com/honza/vim-snippets)
+[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
+[indentLine](https://github.com/Yggdroot/indentLine)
+[tabular](https://github.com/godlygeek/tabular)
+[vim-markdown](https://github.com/plasticboy/vim-markdown)
+[vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+[vim-snippets](https://github.com/honza/vim-snippets)
+[ultisnips](https://github.com/SirVer/ultisnips)
+[mark.vim](https://github.com/Tuxdude/mark.vim)
+[genutils](https://github.com/vim-scripts/genutils)
+[syntastic](https://github.com/vim-syntastic/syntastic)
+[winmanager](https://github.com/vim-scripts/winmanager--Fox)
+[a.vim](https://github.com/csliu/a.vim)
+[bufexplorer](https://github.com/jlanzarotta/bufexplorer)
+[comments.vim](https://github.com/sudar/comments.vim)
+[LookupFile](https://github.com/vim-scripts/lookupfile)
+[omnicppcomplete](https://github.com/vim-scripts/OmniCppComplete)
+[taglist.vim](https://github.com/vim-scripts/taglist.vim)
+[AutoComplPop](https://github.com/vim-scripts/AutoComplPop)
+[vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
+[ex-autocomplpop](https://github.com/exvim/ex-autocomplpop)
+[nerdtree](https://github.com/scrooloose/nerdtree)
+[NERDtree](http://www.vim.org/scripts/script.php?script_id=1658)
+[CodeCommenter](http://www.vim.org/scripts/script.php?script_id=3941)
