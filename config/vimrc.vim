@@ -400,17 +400,17 @@ let g:indentLine_color_term = 239
 "=============================================================
 "                   SourceInsight插件
 "=============================================================
-let g:SrcExpl_winHeight = 8
-let g:SrcExpl_refreshTime = 100
+let g:SrcExpl_winHeight = 15
+let g:SrcExpl_refreshTime = 500
 let g:SrcExpl_jumpKey = "<ENTER>"
 let g:SrcExpl_gobackKey = "<SPACE>"
 let g:SrcExpl_searchLocalDef = 1
-let g:SrcExpl_prevDefKey = "<F6>"
-let g:SrcExpl_nextDefKey = "<F7>"
+"let g:SrcExpl_prevDefKey = "<F6>"
+"let g:SrcExpl_nextDefKey = "<F7>"
 nmap <F8>   :TrinityToggleAll<CR>
-nmap <F9>   :TrinityToggleSourceExplorer<CR>
-nmap <F10>  :TrinityToggleTagList<CR>
-nmap <F11>  :TrinityToggleNERDTree<CR>
+"nmap <F9>   :TrinityToggleSourceExplorer<CR>
+"nmap <F10>  :TrinityToggleTagList<CR>
+"nmap <F11>  :TrinityToggleNERDTree<CR>
 
 
 "=============================================================
