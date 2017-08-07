@@ -4,7 +4,7 @@
 - [Install vimtools](#install-vimtools)
 - [Power on vimtools](#power-on-vimtools)
 - [Power on vimtools](#power-on-vimtools)
-- [vimtools user's manual](#vimtools-user-manual)
+- [vimtools user manual](#vimtools-user-manual)
 - [Thanks following vim plugins](#thanks-following-vim-plugins)
 
 # Get vimtools
@@ -33,7 +33,7 @@ Install vimtools screenshot:
 **View Linux Kernel code with sourceinsight Layout Screenshot:**
 ![./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png](./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png)
 
-# vimtools user's manual
+# vimtools user manual
 
 [./doc/vimtools_users_manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_users_manual.md)
 

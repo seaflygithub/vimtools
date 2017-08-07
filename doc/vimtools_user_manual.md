@@ -1,4 +1,18 @@
 [TOC]
+
+- [Get vimtools](#get-vimtools)
+- [Install vimtools](#install-vimtools)
+- [Power on vimtools](#power-on-vimtools)
+- [Power on vimtools](#power-on-vimtools)
+- [Window Layout Models](#window-layout-models)
+- [sourceinsight-coding Layout](#sourceinsight-coding-layout)
+- [sourceinsight-nerdtree Layout](#sourceinsight-nerdtree-layout)
+- [sourceinsight-taglist Layout](#sourceinsight-taglist-layout)
+- [sourceinsight-minibuf Layout](#sourceinsight-minibuf-layout)
+- [sourceinsight-SrcExpl Layout](#sourceinsight-srcexpl-layout)
+- [Functions of F1~F12](#functions-of-f1~f12)
+- [Other Frequently-used shell commands](#other-frequently-used-shell-commands)
+
 # Get vimtools
 
     git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
@@ -25,7 +39,7 @@
 - winmanager Layout: Press `F12` to open or close winmanager.    -- (WMToggle)
 - sourceinsight Layout: Press `F8` to open or close sourceinsight.    -- (TrinityToggleAll)
 
-## sourceinsight-coding Layout
+# sourceinsight-coding Layout
 
 - Document: Note: `<Ctrl-w>` equal to `<c-w>`
 - Introduction: This window can view and coding source code.
@@ -74,7 +88,7 @@
     - Find text contain symbol1: ESC: `:cs find t text1`
 
 
-## sourceinsight-nerdtree Layout
+# sourceinsight-nerdtree Layout
 
 - Document: [NERDTree.txt](https://github.com/scrooloose/nerdtree/blob/master/doc/NERDTree.txt)
 - Introduction: This window can view the dir-tree and files list.
@@ -93,7 +107,7 @@
     - Recursively refresh the current root: `U`
     - Close the NERDTree window: `q`
 
-## sourceinsight-taglist Layout
+# sourceinsight-taglist Layout
 
 - Document: [taglist.txt](https://github.com/vim-scripts/taglist.vim/blob/master/doc/taglist.txt)
 - Introduction: This window can view the dir-tree and files list.
@@ -111,7 +125,7 @@
     - Close the taglist window: `q`
 
 
-## sourceinsight-minibuf Layout
+# sourceinsight-minibuf Layout
 
 - Document: [minibufexpl.txt](https://github.com/fholgado/minibufexpl.vim/blob/master/doc/minibufexpl.txt)
 - Introduction: This window can view the dir-tree and files list.
@@ -124,7 +138,7 @@
     - Switch to last buf: `bl` or `blast`
 
 
-## sourceinsight-SrcExpl Layout
+# sourceinsight-SrcExpl Layout
 
 - Document: [srcexpl.txt](https://github.com/wesleyche/SrcExpl/blob/master/doc/srcexpl.txt)
 - Introduction: This window can preview the source code
@@ -133,7 +147,8 @@
     - Jump into: `<Enter>`
     - Jump back: `<Space>`
 
-## Functions of F1~F12
+# Functions of F1~F12
+
 - F1~F12 functions:
     - F1    --System default key.
     - F2    --Press `F2` insert head-of-file
