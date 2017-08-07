@@ -116,13 +116,13 @@ CSCOPE_DIR=cscope-15.8b
 
 
 
-#函数功能:安装git方式获取的插件并配置相应rtp至vimrc
+#函数功能:安装git方式获取并拷贝插件到~/.vim/bundle
 #函数用法:install_git_plugin $vimrc $dir $git_addr
 function install_git_plugin()
 {
-    #usage: install_git_plugin vimrc update plg_dir_name plg_git_addr
-    local vimrc="$1"
-    local update=$2	#update = [0|1]
+    #usage: install_git_plugin update plg_dir_name plg_git_addr
+    local download=$1   #download[0|1]
+    local update=$2	    #update = [0|1]
     local plg_dir_name="$3"
     local plg_git_addr="$4"
     local bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
@@ -134,15 +134,22 @@ function install_git_plugin()
         cd ${backup_dir}
         if [ -d ${plg_dir_name} ] ;     #有则更新,没有则clone
         then
-	    if [ ${update} -eq 1 ] ;
-	    then
-		echo "update==1"
+            if [ ${update} -eq 1 ] ;
+            then
+                echo "update==1"
                 cd ${plg_dir_name} ; git pull -u origin master ; git submodule update --init --recursive
             else
-		echo "update==0"
-	    fi
+                echo "update==0"
+            fi
         else
-            git clone -b master ${plg_git_addr}
+            if [ ${download} -eq 1 ] ;
+            then
+                echo "download==1"
+                git clone -b master ${plg_git_addr}
+            else
+                echo "download==0"
+            fi
+
         fi
 
         cd ${backup_dir}
@@ -156,23 +163,22 @@ function install_git_plugin()
 
 function install_git_plugins()
 {
-    install_git_plugin "${HOME}/.vimrc" 0 "asyncrun.vim" "https://SeaflyDennis@github.com/skywind3000/asyncrun.vim"
-    install_git_plugin "${HOME}/.vimrc" 0 "auto_update_cscope_ctags_database" "https://SeaflyDennis@github.com/SeaflyDennis/auto_update_cscope_ctags_database"
-    install_git_plugin "${HOME}/.vimrc" 0 "code_complete" "https://SeaflyDennis@github.com/SeaflyDennis/code_complete"
-    install_git_plugin "${HOME}/.vimrc" 0 "minibufexpl.vim" "https://SeaflyDennis@github.com/fholgado/minibufexpl.vim"
-    install_git_plugin "${HOME}/.vimrc" 0 "nerdtree" "https://SeaflyDennis@github.com/scrooloose/nerdtree"
-    install_git_plugin "${HOME}/.vimrc" 0 "SrcExpl" "https://SeaflyDennis@github.com/wesleyche/SrcExpl"
-    install_git_plugin "${HOME}/.vimrc" 0 "Trinity" "https://SeaflyDennis@github.com/wesleyche/Trinity"
-    install_git_plugin "${HOME}/.vimrc" 0 "vim-header" "https://SeaflyDennis@github.com/alpertuna/vim-header"
-    install_git_plugin "${HOME}/.vimrc" 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
-    install_git_plugin "${HOME}/.vimrc" 0 "indentLine" "https://SeaflyDennis@github.com/Yggdroot/indentLine"
-    install_git_plugin "${HOME}/.vimrc" 0 "tabular" "https://SeaflyDennis@github.com/godlygeek/tabular"
-    install_git_plugin "${HOME}/.vimrc" 0 "vim-markdown" "https://SeaflyDennis@github.com/plasticboy/vim-markdown"
-    install_git_plugin "${HOME}/.vimrc" 0 "vim-multiple-cursors" "https://SeaflyDennis@github.com/terryma/vim-multiple-cursors"
-    install_git_plugin "${HOME}/.vimrc" 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
-    install_git_plugin "${HOME}/.vimrc" 0 "ultisnips" "https://SeaflyDennis@github.com/SirVer/ultisnips"
-    install_git_plugin "${HOME}/.vimrc" 0 "YouCompleteMe" "https://SeaflyDennis@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
-    #install_git_plugin "${HOME}/.vimrc" 
+    install_git_plugin 1 0 "asyncrun.vim" "https://SeaflyDennis@github.com/skywind3000/asyncrun.vim"
+    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://SeaflyDennis@github.com/SeaflyDennis/auto_update_cscope_ctags_database"
+    install_git_plugin 1 0 "code_complete" "https://SeaflyDennis@github.com/SeaflyDennis/code_complete"
+    install_git_plugin 1 0 "minibufexpl.vim" "https://SeaflyDennis@github.com/fholgado/minibufexpl.vim"
+    install_git_plugin 1 0 "nerdtree" "https://SeaflyDennis@github.com/scrooloose/nerdtree"
+    install_git_plugin 1 0 "SrcExpl" "https://SeaflyDennis@github.com/wesleyche/SrcExpl"
+    install_git_plugin 0 0 "Trinity" "https://SeaflyDennis@github.com/wesleyche/Trinity"
+    install_git_plugin 1 0 "vim-header" "https://SeaflyDennis@github.com/alpertuna/vim-header"
+    install_git_plugin 1 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "indentLine" "https://SeaflyDennis@github.com/Yggdroot/indentLine"
+    install_git_plugin 1 0 "tabular" "https://SeaflyDennis@github.com/godlygeek/tabular"
+    install_git_plugin 1 0 "vim-markdown" "https://SeaflyDennis@github.com/plasticboy/vim-markdown"
+    install_git_plugin 1 0 "vim-multiple-cursors" "https://SeaflyDennis@github.com/terryma/vim-multiple-cursors"
+    install_git_plugin 1 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "ultisnips" "https://SeaflyDennis@github.com/SirVer/ultisnips"
+    install_git_plugin 0 0 "YouCompleteMe" "https://SeaflyDennis@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
     return 0
 }
 
@@ -461,7 +467,7 @@ function install_vimtools()
             install_git_plugins
             install_vimhome_plugins
             enable_plugins
-            install_youcomleteme
+            #install_youcomleteme
             config_vimrc
             vimtool_finish
             ;;
