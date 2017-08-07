@@ -5,6 +5,7 @@
 - [Power on vimtools](#power-on-vimtools)
 - [Power on vimtools](#power-on-vimtools)
 - [Window Layout Models](#window-layout-models)
+- [YouCompleteMe User Guide](#youcompleteme-user-guide)
 - [sourceinsight-coding Layout](#sourceinsight-coding-layout)
 - [sourceinsight-nerdtree Layout](#sourceinsight-nerdtree-layout)
 - [sourceinsight-taglist Layout](#sourceinsight-taglist-layout)
@@ -38,6 +39,9 @@
 - Open a file in Layout: `:edit src2.c`
 - winmanager Layout: Press `F12` to open or close winmanager.    -- (WMToggle)
 - sourceinsight Layout: Press `F8` to open or close sourceinsight.    -- (TrinityToggleAll)
+
+# YouCompleteMe User Guide
+
 
 # sourceinsight-coding Layout
 
