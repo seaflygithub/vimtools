@@ -1,5 +1,12 @@
 [TOC]
 
+- [Get vimtools](#get-vimtools)
+- [Install vimtools](#install-vimtools)
+- [Power on vimtools](#power-on-vimtools)
+- [Power on vimtools](#power-on-vimtools)
+- [vimtools user's manual](#vimtools-user-manual)
+- [Thanks following vim plugins](#thanks-following-vim-plugins)
+
 # Get vimtools
 
     git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
@@ -32,9 +39,11 @@ Install vimtools screenshot:
 
 # Thanks following vim plugins:
 
+
 |Author                 |Plugin                     |Website                            |
 | :-------		        | :-------			        |:-------				            |
 |haolongzhangm          |auto_update_cscope_ctags_database|https://github.com/haolongzhangm/auto_update_cscope_ctags_database |
+|YouCompleteMe          |Valloric                   |https://github.com/Valloric/YouCompleteMe |
 |skywind3000            |asyncrun.vim               |https://github.com/skywind3000/asyncrun.vim |
 |SeaflyDennis           |auto_update_cscope_ctags_database|https://github.com/SeaflyDennis/auto_update_cscope_ctags_database |
 |马冬亮(凝霜  Loki)     |code_complete              |https://github.com/SeaflyDennis/code_complete |

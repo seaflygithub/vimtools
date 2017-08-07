@@ -146,3 +146,14 @@
     - F10   --null
     - F11   --null
     - F12   --null
+
+# Other Frequently-used shell commands
+
+- Redirect system manual: `man 2 write | col -b > write.man`
+
+
+
+
+
+
+
