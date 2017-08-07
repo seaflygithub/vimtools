@@ -167,7 +167,7 @@ function install_git_plugins()
     install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://SeaflyDennis@github.com/SeaflyDennis/auto_update_cscope_ctags_database"
     install_git_plugin 1 0 "code_complete" "https://SeaflyDennis@github.com/SeaflyDennis/code_complete"
     install_git_plugin 1 0 "minibufexpl.vim" "https://SeaflyDennis@github.com/fholgado/minibufexpl.vim"
-    install_git_plugin 1 0 "nerdtree" "https://SeaflyDennis@github.com/scrooloose/nerdtree"
+    install_git_plugin 0 0 "nerdtree" "https://SeaflyDennis@github.com/scrooloose/nerdtree"
     install_git_plugin 1 0 "SrcExpl" "https://SeaflyDennis@github.com/wesleyche/SrcExpl"
     install_git_plugin 0 0 "Trinity" "https://SeaflyDennis@github.com/wesleyche/Trinity"
     install_git_plugin 1 0 "vim-header" "https://SeaflyDennis@github.com/alpertuna/vim-header"
@@ -179,6 +179,17 @@ function install_git_plugins()
     install_git_plugin 1 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
     install_git_plugin 1 0 "ultisnips" "https://SeaflyDennis@github.com/SirVer/ultisnips"
     install_git_plugin 0 0 "YouCompleteMe" "https://SeaflyDennis@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
+    install_git_plugin 1 0 "a.vim" "https://SeaflyDennis@github.com/csliu/a.vim"
+    install_git_plugin 1 0 "bufexplorer" "https://SeaflyDennis@github.com/jlanzarotta/bufexplorer"
+    install_git_plugin 1 0 "comments.vim" "https://SeaflyDennis@github.com/sudar/comments.vim"
+    install_git_plugin 1 0 "genutils" "https://SeaflyDennis@github.com/vim-scripts/genutils"
+    install_git_plugin 1 0 "mark.vim" "https://SeaflyDennis@github.com/Tuxdude/mark.vim"
+    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://SeaflyDennis@github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
+    install_git_plugin 1 0 "OmniCppComplete" "https://SeaflyDennis@github.com/vim-scripts/OmniCppComplete"
+    install_git_plugin 1 0 "syntastic" "https://SeaflyDennis@github.com/vim-syntastic/syntastic"
+    install_git_plugin 1 0 "taglist.vim" "https://SeaflyDennis@github.com/vim-scripts/taglist.vim"
+    install_git_plugin 1 0 "vim-autocomplpop" "https://SeaflyDennis@github.com/othree/vim-autocomplpop"
+    install_git_plugin 0 0 "winmanager--Fox" "https://SeaflyDennis@github.com/vim-scripts/winmanager--Fox"
     return 0
 }
 
@@ -389,20 +400,7 @@ function install_vimhome_plugin()
 
 function install_vimhome_plugins()
 {
-    install_vimhome_plugin "a.vim"
-    install_vimhome_plugin "bufexplorer"
-    install_vimhome_plugin "comments.vim"
-    install_vimhome_plugin "genutils"
-    install_vimhome_plugin "LookupFile"
-    install_vimhome_plugin "mark.vim"
-    install_vimhome_plugin "minibufexplpp.vim"
-    install_vimhome_plugin "omnicppcomplete"
-    install_vimhome_plugin "taglist"
-    install_vimhome_plugin "winmanager"
-    install_vimhome_plugin "syntastic"
-    install_vimhome_plugin "vim-autocomplpop"
-    #install_vimhome_plugin
-
+    #install_vimhome_plugin "vim-autocomplpop"
     return 0;
 }
 
