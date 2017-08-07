@@ -10,7 +10,7 @@
 - [sourceinsight-taglist Layout](#sourceinsight-taglist-layout)
 - [sourceinsight-minibuf Layout](#sourceinsight-minibuf-layout)
 - [sourceinsight-SrcExpl Layout](#sourceinsight-srcexpl-layout)
-- [Functions of F1~F12](#functions-of-f1~f12)
+- [Functions of F1-F12](#functions-of-f1-f12)
 - [Other Frequently-used shell commands](#other-frequently-used-shell-commands)
 
 # Get vimtools
@@ -147,9 +147,9 @@
     - Jump into: `<Enter>`
     - Jump back: `<Space>`
 
-# Functions of F1~F12
+# Functions of F1-F12
 
-- F1~F12 functions:
+- F1-F12 functions:
     - F1    --System default key.
     - F2    --Press `F2` insert head-of-file
     - F3    --null
