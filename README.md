@@ -1,27 +1,24 @@
 [TOC]
 
-## Get vimtools
-``` shell
-git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
-```
+# Get vimtools
 
-## Install vimtools
-- 0.Into directory: `cd vimtools`
-- 1.Get simple help: `./build_all.sh --help` or `./build_all.sh -h` or `./build_all.sh ?`
-- 2.Install: `./build_all.sh all`
+    git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
+
+# Install vimtools
+
+1. Get into directory: `cd vimtools`
+2. Get simple help: `./build_all.sh --help` or `./build_all.sh ?` or `./build_all.sh -h`
+3. Install: `./build_all all`
 
 Install vimtools screenshot:
 ![./screenshots/201708062344-install_vimtools_username_useremail.png](./screenshots/201708062344-install_vimtools_username_useremail.png)
 
-## usage of vimtools
+# Power on vimtools
 
-### Build object environment of vim
-- step01: into project root directory:`cd test_proj`
-- step02: run vim and open a source file, such as `vim Makefile`
-- step03: run vim normal command `:Createtag`
-- step04: enjoy yourself!    --(F8)
-
-After, we can manage our object with vim.
+1. Get into your project root directory: such as `cd linux-2.6.39`
+2. Open a arbitrary source file with vim: such as `vim Makefile`
+3. Run vim command: `ESC` + `:Createtag`
+4. Enjoy yourself !    --(Press F8 power on/off sourceinsight Layout)
 
 **After running `:Createtag` screenshot:**
 ![./screenshots/after_run_Createtag.png](./screenshots/after_run_Createtag.png)
@@ -32,7 +29,6 @@ After, we can manage our object with vim.
 # vimtools user's manual
 
 [./doc/vimtools_users_manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_users_manual.md)
-
 
 # Thanks following vim plugins:
 

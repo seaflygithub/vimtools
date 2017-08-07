@@ -1,4 +1,20 @@
 [TOC]
+# Get vimtools
+
+    git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
+
+# Install vimtools
+
+1. Get into directory: `cd vimtools`
+2. Get simple help: `./build_all.sh --help` or `./build_all.sh ?` or `./build_all.sh -h`
+3. Install: `./build_all all`
+
+# Power on vimtools
+
+1. Get into your project root directory: such as `cd linux-2.6.39`
+2. Open a arbitrary source file with vim: such as `vim Makefile`
+3. Run vim command: `ESC` + `:Createtag`
+4. Enjoy yourself !    --(Press F8 power on/off sourceinsight Layout)
 
 # Window Layout Models
 
@@ -11,9 +27,9 @@
 
 ## sourceinsight-coding Layout
 
-- Document:
+- Document: Note: `<Ctrl-w>` equal to `<c-w>`
 - Introduction: This window can view and coding source code.
-- Layout Adjustment: `<Ctrl-w>>` adjust width, `<Ctrl-w>+` or `:resize +N` adjust high.
+- Layout Adjustment: `<c-w>>` adjust width, `<c-w>+` or `:resize +N` adjust high.
 - Frequently-used Operations:
     - insert file information head: `<F2>`
     - insert: type `i`
@@ -21,16 +37,18 @@
     - append of line: type `A`
     - new line: type `o`
     - new line above: type `O`
-    - choose menu: type `<Ctrl-n>` to next, `<Ctrl-p>` to preview.
-    - Select block code: `V` or `<Ctrl-v>`
+    - choose menu: type `<c-n>` to next, `<c-p>` to preview; and press `<ESC>` to select.
+    - Jump to define of symbol: `<c-]>`
+    - Jump back frome symbol: `<c-t>` or `<c-o>`
+    - Select block code: `V` or `<c-v>`
     - normal copy: `yy` or `yw` or `""y`
     - normal paste: `p` or `""p`
     - Copy to clipboard: `"+y`
     - Paste from clipboard: `"+p`
-    - save all: `wall` or `wall!` or `wqall`
-    - cl    --Press ESC and type `cl` can clean all blank lines.
-    - cs    --Press ESC and type `cs` can clean all blank space and tab end of a line.
-    - cm    --Press ESC and type `cm` can clean all `^M`(Windows' `\r\n`)
+    - save all and quit: `qall` or `wall` or `qall!` or `wall!` or `wqall` or `wqall!`
+    - Press ESC and type `cl` clean all blank lines(cautious).
+    - Press ESC and type `cs` clean all `<space>` and `<tab>` end of a line.
+    - Press ESC and type `cm` clean all `^M`(Windows' `\r\n`)
     - Functions parameters complete: `func_name(` + `<tab>`
     - if，while，switch complete: `keyword` + `<tab>`
     - `#include ""` complete: `in` + `<tab>`
@@ -43,6 +61,18 @@
     - uncomment code: `<c-x>`
     - Select and mark: select + `,m`
     - Select all: `<c-a>`
+    - Cscope help: ESC: `:cs help` or `:cs ?`
+    - Show cscope database file: ESC: `:cs show`
+    - Reinit all cscope database: ESC: `:cs reset`
+    - Kill a connection of cscope: ESC: `:cs kill`
+    - Find functions calling this function: ESC: `:cs find c funcname`
+    - Find functions called by this function: ESC: `:cs find d funcname`
+    - Find text with egrep mode: ESC: `:cs find e text1`
+    - Find this file: ESC: `:cs find f filename`
+    - Find this definition: ESC: `:cs find g symbol`
+    - Find files #including this file: ESC: `:cs find i filename`
+    - Find text contain symbol1: ESC: `:cs find t text1`
+
 
 ## sourceinsight-nerdtree Layout
 
@@ -102,7 +132,6 @@
 - Frequently-used Operations:
     - Jump into: `<Enter>`
     - Jump back: `<Space>`
-
 
 ## Functions of F1~F12
 - F1~F12 functions:
