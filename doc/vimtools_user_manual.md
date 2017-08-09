@@ -32,15 +32,17 @@
 
 # Window Layout Models
 
-- Vertical Split Layout: `Ctrl-w v`
-- Horizontal Split Layout: `Ctrl-w s`
-- Changing-over of Layouts: `Ctrl-w [h,j,k,l]`
-- Open a file in Layout: `:edit src2.c`
-- winmanager Layout: Press `F12` to open or close winmanager.    -- (WMToggle)
-- sourceinsight Layout: Press `F8` to open or close sourceinsight.    -- (TrinityToggleAll)
+- Vertical Split Layout: ESC: `Ctrl-w v`
+- Horizontal Split Layout: ESC: `Ctrl-w s`
+- Changing-over of Layouts: ESC: `Ctrl-w [h,j,k,l]`
+- Open a file in Layout: ESC: `:edit src2.c`
+- Adjustment of Layout: ESC: `:help resize`
+- winmanager Layout: ESC: Press `F12` to open or close winmanager.    -- (WMToggle)
+- sourceinsight Layout: ESC: Press `F8` to open or close sourceinsight.    -- (TrinityToggleAll)
 
 # sourceinsight-coding Layout
 
+- Mode: ESC
 - Document: Note: `<Ctrl-w>` equal to `<c-w>`
 - Introduction: This window can view and coding source code.
 - Layout Adjustment: `<c-w>>` adjust width, `<c-w>+` or `:resize +N` adjust high.
@@ -51,7 +53,7 @@
     - append of line: type `A`
     - new line: type `o`
     - new line above: type `O`
-    - choose menu: type `<c-n>` to next, `<c-p>` to preview; and press `<ESC>` to select.
+    - choose menu: NOT_ESC: type `<c-n>` to next, `<c-p>` to preview; and press `<ESC>` to select.
     - Jump to define of symbol: `<c-]>`
     - Jump back frome symbol: `<c-t>` or `<c-o>`
     - Select block code: `V` or `<c-v>`
