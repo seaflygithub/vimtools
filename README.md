@@ -35,7 +35,8 @@ Install vimtools screenshot:
 
 # vimtools user manual
 
-[./doc/vimtools_users_manual.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_user_manual.md)
+[./doc/vim_useful_notebook-CN.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vim_useful_notebook-CN.md)
+[./doc/vimtools_users_manual-EN.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_user_manual-EN.md)
 
 # Thanks following vim plugins:
 
