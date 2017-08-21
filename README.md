@@ -3,7 +3,6 @@
 - [Get vimtools](#get-vimtools)
 - [Install vimtools](#install-vimtools)
 - [Power on vimtools](#power-on-vimtools)
-- [Power on vimtools](#power-on-vimtools)
 - [vimtools user manual](#vimtools-user-manual)
 - [Thanks following vim plugins](#thanks-following-vim-plugins)
 
@@ -15,7 +14,7 @@
 
 1. Get into directory: `cd vimtools`
 2. Get simple help: `./build_all.sh --help` or `./build_all.sh ?` or `./build_all.sh -h`
-3. Install: `./build_all all`
+3. Install: `./build_all.sh all`
 
 Install vimtools screenshot:
 ![./screenshots/201708062344-install_vimtools_username_useremail.png](./screenshots/201708062344-install_vimtools_username_useremail.png)
