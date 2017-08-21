@@ -61,7 +61,7 @@
 ## 获取vimtools工具包
 
 1. 由于本人目前用的是ubuntu系统，因此vimtools目前更趋向于支持ubuntu (2017)
-2. 去后面这个地址获取下载安装：https://github.com/SeaflyDennis/vimtools/tree/vimtools-ubuntu
+2. 去后面这个地址获取下载安装：https://github.com/SeaflyGithub/vimtools/tree/vimtools-ubuntu
 3. 视频教程获取：联系1052061602(QQ)  1989291498(QQ)
 
 ## vim几种常用文件打开方式

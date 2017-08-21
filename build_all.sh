@@ -1,9 +1,9 @@
 #!/bin/bash
 # File: build_all.sh
-# Author: SeaflyDennis <seafly0616@qq.com>
+# Author: SeaflyGithub <seafly0616@qq.com>
 # Date: 2017.08.06
 # Last Modified Date: 2017.08.06
-# Last Modified By: SeaflyDennis <seafly0616@qq.com>
+# Last Modified By: SeaflyGithub <seafly0616@qq.com>
 HOSTOS=""
 CUR=
 CUR_DIR=`pwd`
@@ -163,33 +163,33 @@ function install_git_plugin()
 
 function install_git_plugins()
 {
-    install_git_plugin 1 0 "asyncrun.vim" "https://SeaflyDennis@github.com/skywind3000/asyncrun.vim"
-    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://SeaflyDennis@github.com/SeaflyDennis/auto_update_cscope_ctags_database"
-    install_git_plugin 1 0 "code_complete" "https://SeaflyDennis@github.com/SeaflyDennis/code_complete"
-    install_git_plugin 1 0 "minibufexpl.vim" "https://SeaflyDennis@github.com/fholgado/minibufexpl.vim"
-    install_git_plugin 0 0 "nerdtree" "https://SeaflyDennis@github.com/scrooloose/nerdtree"
-    install_git_plugin 1 0 "SrcExpl" "https://SeaflyDennis@github.com/wesleyche/SrcExpl"
-    install_git_plugin 0 0 "Trinity" "https://SeaflyDennis@github.com/wesleyche/Trinity"
-    install_git_plugin 1 0 "vim-header" "https://SeaflyDennis@github.com/alpertuna/vim-header"
-    install_git_plugin 1 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
-    install_git_plugin 1 0 "indentLine" "https://SeaflyDennis@github.com/Yggdroot/indentLine"
-    install_git_plugin 1 0 "tabular" "https://SeaflyDennis@github.com/godlygeek/tabular"
-    install_git_plugin 1 0 "vim-markdown" "https://SeaflyDennis@github.com/plasticboy/vim-markdown"
-    install_git_plugin 1 0 "vim-multiple-cursors" "https://SeaflyDennis@github.com/terryma/vim-multiple-cursors"
-    install_git_plugin 1 0 "vim-snippets" "https://SeaflyDennis@github.com/honza/vim-snippets"
-    install_git_plugin 1 0 "ultisnips" "https://SeaflyDennis@github.com/SirVer/ultisnips"
-    install_git_plugin 0 0 "YouCompleteMe" "https://SeaflyDennis@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
-    install_git_plugin 1 0 "a.vim" "https://SeaflyDennis@github.com/csliu/a.vim"
-    install_git_plugin 1 0 "bufexplorer" "https://SeaflyDennis@github.com/jlanzarotta/bufexplorer"
-    install_git_plugin 1 0 "comments.vim" "https://SeaflyDennis@github.com/sudar/comments.vim"
-    install_git_plugin 1 0 "genutils" "https://SeaflyDennis@github.com/vim-scripts/genutils"
-    install_git_plugin 1 0 "mark.vim" "https://SeaflyDennis@github.com/Tuxdude/mark.vim"
-    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://SeaflyDennis@github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
-    install_git_plugin 1 0 "OmniCppComplete" "https://SeaflyDennis@github.com/vim-scripts/OmniCppComplete"
-    install_git_plugin 1 0 "syntastic" "https://SeaflyDennis@github.com/vim-syntastic/syntastic"
-    install_git_plugin 1 0 "taglist.vim" "https://SeaflyDennis@github.com/vim-scripts/taglist.vim"
-    install_git_plugin 1 0 "vim-autocomplpop" "https://SeaflyDennis@github.com/othree/vim-autocomplpop"
-    install_git_plugin 0 0 "winmanager--Fox" "https://SeaflyDennis@github.com/vim-scripts/winmanager--Fox"
+    install_git_plugin 1 0 "asyncrun.vim" "https://SeaflyGithub@github.com/skywind3000/asyncrun.vim"
+    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://SeaflyGithub@github.com/SeaflyGithub/auto_update_cscope_ctags_database"
+    install_git_plugin 1 0 "code_complete" "https://SeaflyGithub@github.com/SeaflyGithub/code_complete"
+    install_git_plugin 1 0 "minibufexpl.vim" "https://SeaflyGithub@github.com/fholgado/minibufexpl.vim"
+    install_git_plugin 0 0 "nerdtree" "https://SeaflyGithub@github.com/scrooloose/nerdtree"
+    install_git_plugin 1 0 "SrcExpl" "https://SeaflyGithub@github.com/wesleyche/SrcExpl"
+    install_git_plugin 0 0 "Trinity" "https://SeaflyGithub@github.com/wesleyche/Trinity"
+    install_git_plugin 1 0 "vim-header" "https://SeaflyGithub@github.com/alpertuna/vim-header"
+    install_git_plugin 1 0 "vim-snippets" "https://SeaflyGithub@github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "indentLine" "https://SeaflyGithub@github.com/Yggdroot/indentLine"
+    install_git_plugin 1 0 "tabular" "https://SeaflyGithub@github.com/godlygeek/tabular"
+    install_git_plugin 1 0 "vim-markdown" "https://SeaflyGithub@github.com/plasticboy/vim-markdown"
+    install_git_plugin 1 0 "vim-multiple-cursors" "https://SeaflyGithub@github.com/terryma/vim-multiple-cursors"
+    install_git_plugin 1 0 "vim-snippets" "https://SeaflyGithub@github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "ultisnips" "https://SeaflyGithub@github.com/SirVer/ultisnips"
+    install_git_plugin 0 0 "YouCompleteMe" "https://SeaflyGithub@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
+    install_git_plugin 1 0 "a.vim" "https://SeaflyGithub@github.com/csliu/a.vim"
+    install_git_plugin 1 0 "bufexplorer" "https://SeaflyGithub@github.com/jlanzarotta/bufexplorer"
+    install_git_plugin 1 0 "comments.vim" "https://SeaflyGithub@github.com/sudar/comments.vim"
+    install_git_plugin 1 0 "genutils" "https://SeaflyGithub@github.com/vim-scripts/genutils"
+    install_git_plugin 1 0 "mark.vim" "https://SeaflyGithub@github.com/Tuxdude/mark.vim"
+    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://SeaflyGithub@github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
+    install_git_plugin 1 0 "OmniCppComplete" "https://SeaflyGithub@github.com/vim-scripts/OmniCppComplete"
+    install_git_plugin 1 0 "syntastic" "https://SeaflyGithub@github.com/vim-syntastic/syntastic"
+    install_git_plugin 1 0 "taglist.vim" "https://SeaflyGithub@github.com/vim-scripts/taglist.vim"
+    install_git_plugin 1 0 "vim-autocomplpop" "https://SeaflyGithub@github.com/othree/vim-autocomplpop"
+    install_git_plugin 0 0 "winmanager--Fox" "https://SeaflyGithub@github.com/vim-scripts/winmanager--Fox"
     return 0
 }
 

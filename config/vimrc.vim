@@ -1,8 +1,8 @@
 " File: /home/seafly/github/vimtools/config/vimrc.vim
-" Author: SeaflyDennis <seafly0616@qq.com>
+" Author: SeaflyGithub <seafly0616@qq.com>
 " Date: 2017.08.06
 " Last Modified Date: 2017.08.06
-" Last Modified By: SeaflyDennis <seafly0616@qq.com>
+" Last Modified By: SeaflyGithub <seafly0616@qq.com>
 "=============================================================
 "                       插件管理
 "=============================================================

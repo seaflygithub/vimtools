@@ -15,7 +15,7 @@
 
 # Get vimtools
 
-    git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
+    git clone -b vimtools-ubuntu https://SeaflyGithub@github.com/SeaflyGithub/vimtools
 
 # Install vimtools
 

@@ -9,7 +9,7 @@
 
 # Get vimtools
 
-    git clone -b vimtools-ubuntu https://SeaflyDennis@github.com/SeaflyDennis/vimtools
+    git clone -b vimtools-ubuntu https://SeaflyGithub@github.com/SeaflyGithub/vimtools
 
 # Install vimtools
 
@@ -35,8 +35,8 @@ Install vimtools screenshot:
 
 # vimtools user manual
 
-[./doc/vim_useful_notebook-CN.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vim_useful_notebook-CN.md)
-[./doc/vimtools_users_manual-EN.md](https://github.com/SeaflyDennis/vimtools/blob/vimtools-ubuntu/doc/vimtools_user_manual-EN.md)
+[./doc/vim_useful_notebook-CN.md](https://github.com/SeaflyGithub/vimtools/blob/vimtools-ubuntu/doc/vim_useful_notebook-CN.md)
+[./doc/vimtools_users_manual-EN.md](https://github.com/SeaflyGithub/vimtools/blob/vimtools-ubuntu/doc/vimtools_user_manual-EN.md)
 
 # Thanks following vim plugins:
 
@@ -46,8 +46,8 @@ Install vimtools screenshot:
 |haolongzhangm          |auto_update_cscope_ctags_database|https://github.com/haolongzhangm/auto_update_cscope_ctags_database |
 |YouCompleteMe          |Valloric                   |https://github.com/Valloric/YouCompleteMe |
 |skywind3000            |asyncrun.vim               |https://github.com/skywind3000/asyncrun.vim |
-|SeaflyDennis           |auto_update_cscope_ctags_database|https://github.com/SeaflyDennis/auto_update_cscope_ctags_database |
-|马冬亮(凝霜  Loki)     |code_complete              |https://github.com/SeaflyDennis/code_complete |
+|SeaflyGithub           |auto_update_cscope_ctags_database|https://github.com/SeaflyGithub/auto_update_cscope_ctags_database |
+|马冬亮(凝霜  Loki)     |code_complete              |https://github.com/SeaflyGithub/code_complete |
 |fholgado               |minibufexpl.vim            |https://github.com/fholgado/minibufexpl.vim |
 |vim-scripts            |minibufexplorerpp.vim      |https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim |
 |scrooloose             |nerdtree                   |https://github.com/scrooloose/nerdtree |
