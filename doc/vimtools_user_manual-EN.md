@@ -167,7 +167,10 @@
 # Other Frequently-used shell commands
 
 - Redirect system manual: `man 2 write | col -b > write.man`
-
+- search history command: <c-r> <c-r><c-r> <c-i>
+- Move to the beginning or end of the line: <c-a>......<c-e>
+- use `!$` to use the argument of last command: `ls /usr/include ; cd !$`
+- run last command: `!!`
 
 
 
