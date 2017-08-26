@@ -313,6 +313,17 @@ function install_vim_source_package()
             git clone -b master https://github.com/vim/vim.git
             config_compile_install_vim
         fi
+
+        if [ ${HOSTOS} = "ubuntu" ] ; then
+            ${SUDO} apt-get install -y vim-youcompleteme
+            ${SUDO} apt-get install -y vim-syntax-go
+            ${SUDO} apt-get install -y vim-syntax-gtk
+            ${SUDO} apt-get install -y vim-scripts
+            ${SUDO} apt-get install -y vim-python-jedi
+            ${SUDO} apt-get install -y vim-gtk
+            ${SUDO} apt-get install -y vim-gocomplete
+            ${SUDO} apt-get install -y vim-gnome
+        fi
     else
         config_compile_install_vim
     fi
