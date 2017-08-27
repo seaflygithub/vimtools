@@ -171,6 +171,7 @@
 - Move to the beginning or end of the line: <c-a>......<c-e>
 - use `!$` to use the argument of last command: `ls /usr/include ; cd !$`
 - run last command: `!!`
+- free memory cache: `sudo sh -c "/usr/bin/echo 3 > /proc/sys/vm/drop_caches"`
 
 
 
