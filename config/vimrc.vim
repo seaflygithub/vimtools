@@ -65,7 +65,8 @@ let Tlist_Show_One_File = 1
 let g:bufExplorerMaxHeight=30
 let g:miniBufExplorerMoreThanOne=0
 "Press <F12> open the winmanager diagram framework
-map <F12> :WMToggle<CR>
+"map <F12> :WMToggle<CR>
+nmap <F12>   :WMToggle<CR>
 
 
 "=============================================================
