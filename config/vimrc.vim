@@ -251,6 +251,7 @@ imap <c-x> <ESC>c$
 :nmap cl :1,$g/^$/d
 " 删除行尾空格和tab符号
 :nmap cs :1,$s/\s\+$//g
+:nmap ct :1,$s/\t\+$//g
 "nmap cs :1,$s/\s\+$//g<CR>
 " 删除行尾^M符号
 :nmap cm :1,$s/\r//g
