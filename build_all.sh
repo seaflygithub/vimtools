@@ -185,7 +185,7 @@ function install_git_plugins()
     install_git_plugin 1 0 "genutils" "https://github.com/vim-scripts/genutils"
     install_git_plugin 1 0 "mark.vim" "https://github.com/Tuxdude/mark.vim"
     install_git_plugin 1 0 "minibufexplorerpp.vim" "https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
-    install_git_plugin 1 1 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
+    install_git_plugin 0 0 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
     install_git_plugin 1 0 "syntastic" "https://github.com/vim-syntastic/syntastic"
     install_git_plugin 1 0 "taglist.vim" "https://github.com/vim-scripts/taglist.vim"
     install_git_plugin 1 0 "vim-autocomplpop" "https://github.com/othree/vim-autocomplpop"
