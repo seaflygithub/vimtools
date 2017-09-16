@@ -163,9 +163,9 @@ function install_git_plugin()
 
 function install_git_plugins()
 {
-    install_git_plugin 1 0 "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
-    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://github.com/SeaflyGithub/auto_update_cscope_ctags_database"
-    install_git_plugin 1 0 "code_complete" "https://github.com/SeaflyGithub/code_complete"
+    install_git_plugin 1 1 "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
+    install_git_plugin 1 1 "auto_update_cscope_ctags_database" "https://github.com/SeaflyGithub/auto_update_cscope_ctags_database"
+    install_git_plugin 1 1 "code_complete" "https://github.com/SeaflyGithub/code_complete"
     install_git_plugin 1 0 "minibufexpl.vim" "https://github.com/fholgado/minibufexpl.vim"
     install_git_plugin 0 0 "nerdtree" "https://github.com/scrooloose/nerdtree"
     install_git_plugin 1 0 "SrcExpl" "https://github.com/wesleyche/SrcExpl"
