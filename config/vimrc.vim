@@ -28,6 +28,9 @@ filetype off                  " required
 "code_complete配置:
 let g:user_defined_snippets = "snippets/custom_snippets.vim"
 
+"YouCompleteMe:YCM"
+let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
 
 "=============================================================
 "                       vim插件生效插件

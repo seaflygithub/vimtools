@@ -163,33 +163,33 @@ function install_git_plugin()
 
 function install_git_plugins()
 {
-    install_git_plugin 1 0 "asyncrun.vim" "https://SeaflyGithub@github.com/skywind3000/asyncrun.vim"
-    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://SeaflyGithub@github.com/SeaflyGithub/auto_update_cscope_ctags_database"
-    install_git_plugin 1 0 "code_complete" "https://SeaflyGithub@github.com/SeaflyGithub/code_complete"
-    install_git_plugin 1 0 "minibufexpl.vim" "https://SeaflyGithub@github.com/fholgado/minibufexpl.vim"
-    install_git_plugin 0 0 "nerdtree" "https://SeaflyGithub@github.com/scrooloose/nerdtree"
-    install_git_plugin 1 0 "SrcExpl" "https://SeaflyGithub@github.com/wesleyche/SrcExpl"
-    install_git_plugin 0 0 "Trinity" "https://SeaflyGithub@github.com/wesleyche/Trinity"
-    install_git_plugin 1 0 "vim-header" "https://SeaflyGithub@github.com/alpertuna/vim-header"
-    install_git_plugin 1 0 "vim-snippets" "https://SeaflyGithub@github.com/honza/vim-snippets"
-    install_git_plugin 1 0 "indentLine" "https://SeaflyGithub@github.com/Yggdroot/indentLine"
-    install_git_plugin 1 0 "tabular" "https://SeaflyGithub@github.com/godlygeek/tabular"
-    install_git_plugin 1 0 "vim-markdown" "https://SeaflyGithub@github.com/plasticboy/vim-markdown"
-    install_git_plugin 1 0 "vim-multiple-cursors" "https://SeaflyGithub@github.com/terryma/vim-multiple-cursors"
-    install_git_plugin 1 0 "vim-snippets" "https://SeaflyGithub@github.com/honza/vim-snippets"
-    install_git_plugin 1 0 "ultisnips" "https://SeaflyGithub@github.com/SirVer/ultisnips"
-    install_git_plugin 0 0 "YouCompleteMe" "https://SeaflyGithub@github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
-    install_git_plugin 1 0 "a.vim" "https://SeaflyGithub@github.com/csliu/a.vim"
-    install_git_plugin 1 0 "bufexplorer" "https://SeaflyGithub@github.com/jlanzarotta/bufexplorer"
-    install_git_plugin 1 0 "comments.vim" "https://SeaflyGithub@github.com/sudar/comments.vim"
-    install_git_plugin 1 0 "genutils" "https://SeaflyGithub@github.com/vim-scripts/genutils"
-    install_git_plugin 1 0 "mark.vim" "https://SeaflyGithub@github.com/Tuxdude/mark.vim"
-    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://SeaflyGithub@github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
-    install_git_plugin 1 0 "OmniCppComplete" "https://SeaflyGithub@github.com/vim-scripts/OmniCppComplete"
-    install_git_plugin 1 0 "syntastic" "https://SeaflyGithub@github.com/vim-syntastic/syntastic"
-    install_git_plugin 1 0 "taglist.vim" "https://SeaflyGithub@github.com/vim-scripts/taglist.vim"
-    install_git_plugin 1 0 "vim-autocomplpop" "https://SeaflyGithub@github.com/othree/vim-autocomplpop"
-    install_git_plugin 0 0 "winmanager--Fox" "https://SeaflyGithub@github.com/vim-scripts/winmanager--Fox"
+    install_git_plugin 1 0 "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
+    install_git_plugin 1 0 "auto_update_cscope_ctags_database" "https://github.com/SeaflyGithub/auto_update_cscope_ctags_database"
+    install_git_plugin 1 0 "code_complete" "https://github.com/SeaflyGithub/code_complete"
+    install_git_plugin 1 0 "minibufexpl.vim" "https://github.com/fholgado/minibufexpl.vim"
+    install_git_plugin 0 0 "nerdtree" "https://github.com/scrooloose/nerdtree"
+    install_git_plugin 1 0 "SrcExpl" "https://github.com/wesleyche/SrcExpl"
+    install_git_plugin 0 0 "Trinity" "https://github.com/wesleyche/Trinity"
+    install_git_plugin 1 0 "vim-header" "https://github.com/alpertuna/vim-header"
+    install_git_plugin 1 0 "vim-snippets" "https://github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "indentLine" "https://github.com/Yggdroot/indentLine"
+    install_git_plugin 1 0 "tabular" "https://github.com/godlygeek/tabular"
+    install_git_plugin 1 0 "vim-markdown" "https://github.com/plasticboy/vim-markdown"
+    install_git_plugin 1 0 "vim-multiple-cursors" "https://github.com/terryma/vim-multiple-cursors"
+    install_git_plugin 1 0 "vim-snippets" "https://github.com/honza/vim-snippets"
+    install_git_plugin 1 0 "ultisnips" "https://github.com/SirVer/ultisnips"
+    install_git_plugin 0 0 "YouCompleteMe" "https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
+    install_git_plugin 1 0 "a.vim" "https://github.com/csliu/a.vim"
+    install_git_plugin 1 0 "bufexplorer" "https://github.com/jlanzarotta/bufexplorer"
+    install_git_plugin 1 0 "comments.vim" "https://github.com/sudar/comments.vim"
+    install_git_plugin 1 0 "genutils" "https://github.com/vim-scripts/genutils"
+    install_git_plugin 1 0 "mark.vim" "https://github.com/Tuxdude/mark.vim"
+    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
+    install_git_plugin 1 1 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
+    install_git_plugin 1 0 "syntastic" "https://github.com/vim-syntastic/syntastic"
+    install_git_plugin 1 0 "taglist.vim" "https://github.com/vim-scripts/taglist.vim"
+    install_git_plugin 1 0 "vim-autocomplpop" "https://github.com/othree/vim-autocomplpop"
+    install_git_plugin 0 0 "winmanager--Fox" "https://github.com/vim-scripts/winmanager--Fox"
     return 0
 }
 
@@ -294,10 +294,14 @@ function config_compile_install_vim()
     cd ${vim_src_git} ; \
         make distclean ; \
         ./configure --prefix=/usr --with-features=huge \
-        --enable-pythoninterp=yes  \
-        --enable-cscope --enable-multibyte \
+        --enable-multibyte \
+        --enable-rubyinterp=yes \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 --enable-cscope \
+        --enable-pythoninterp=yes \
         --with-python-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
-        make && $SUDO make install ; \ make distclean
+        make && ${SUDO} make install ; \ make distclean
 }
 
 #函数功能:通过git获取vim源码包
@@ -305,24 +309,27 @@ function install_vim_source_package()
 {
     if [ ${network_connected} -eq 1 ] ;
     then
-        if [ -d ${CUR_DIR}/vim/vim & "`ls -A ${CUR_DIR}/vim/vim`" != "" ] ;
+        [ -d ${CUR_DIR}/vim/vim ]
+        if [ $? -eq 0 ];
         then
             #cd ${vim_src_git} ; git pull -u origin master
             config_compile_install_vim
         else
-            git clone -b master https://github.com/vim/vim.git
+            cd ${CUR_DIR}/vim ; \
+                git clone -b master https://github.com/vim/vim.git
             config_compile_install_vim
         fi
 
         if [ ${HOSTOS} = "ubuntu" ] ; then
-            ${SUDO} apt-get install -y vim-youcompleteme
-            ${SUDO} apt-get install -y vim-syntax-go
-            ${SUDO} apt-get install -y vim-syntax-gtk
-            ${SUDO} apt-get install -y vim-scripts
-            ${SUDO} apt-get install -y vim-python-jedi
-            ${SUDO} apt-get install -y vim-gtk
-            ${SUDO} apt-get install -y vim-gocomplete
-            ${SUDO} apt-get install -y vim-gnome
+            echo ""
+            #${SUDO} apt-get install -y vim-youcompleteme
+            #${SUDO} apt-get install -y vim-syntax-go
+            #${SUDO} apt-get install -y vim-syntax-gtk
+            #${SUDO} apt-get install -y vim-scripts
+            #${SUDO} apt-get install -y vim-python-jedi
+            #${SUDO} apt-get install -y vim-gtk
+            #${SUDO} apt-get install -y vim-gocomplete
+            #${SUDO} apt-get install -y vim-gnome
         fi
     else
         config_compile_install_vim
