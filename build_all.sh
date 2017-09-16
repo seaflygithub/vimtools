@@ -172,7 +172,7 @@ function install_git_plugins()
     install_git_plugin 0 0 "Trinity" "https://github.com/wesleyche/Trinity"
     install_git_plugin 1 0 "vim-header" "https://github.com/alpertuna/vim-header"
     install_git_plugin 1 0 "vim-snippets" "https://github.com/honza/vim-snippets"
-    install_git_plugin 1 0 "indentLine" "https://github.com/Yggdroot/indentLine"
+    install_git_plugin 1 1 "indentLine" "https://github.com/Yggdroot/indentLine"
     install_git_plugin 1 0 "tabular" "https://github.com/godlygeek/tabular"
     install_git_plugin 1 0 "vim-markdown" "https://github.com/plasticboy/vim-markdown"
     install_git_plugin 1 0 "vim-multiple-cursors" "https://github.com/terryma/vim-multiple-cursors"
