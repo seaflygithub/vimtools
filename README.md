@@ -28,7 +28,7 @@ Install vimtools screenshot:
 4. Enjoy yourself !    --(Press F8 power on/off sourceinsight Layout)
 
 **After running `:Createtag` screenshot:**
-![./screenshots/after_run_Createtag.png](./screenshots/after_run_Createtag.png)
+![./screenshots/after_run_Createtag.gif](./screenshots/after_run_Createtag.gif)
 
 **View Linux Kernel code with sourceinsight Layout Screenshot:**
 ![./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png](./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png)
