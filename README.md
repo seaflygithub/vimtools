@@ -31,7 +31,7 @@ Install vimtools screenshot:
 ![./screenshots/after_run_Createtag.gif](./screenshots/after_run_Createtag.gif)
 
 **View Linux Kernel code with sourceinsight Layout Screenshot:**
-![./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png](./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.png)
+![./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.gif](./screenshots/vimtools-ubuntu-sourceinsight-kernel-screenshot.gif)
 
 # vimtools user manual
 
