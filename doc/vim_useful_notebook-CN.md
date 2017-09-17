@@ -60,6 +60,8 @@
 3. 学习交流群：
     - 嵌入式职场加油站（262047367）、
     - 嵌入式Linux学习交流群（610849576）
+    - 开源Linux技术交流（159879504）
+    - 操作系统开发交流群（148177180）
 
 4. 视频教程获取：联系1052061602(QQ)  1989291498(QQ)
 
@@ -69,6 +71,7 @@
 - vim  file			用vim打开file这个文件
 - vim  -R  file		只读方式打开文件
 - vim  +6  file		打开并定位到第6行
+![./screenshots/vim_open_file.gif](./screenshots/vim_open_file.gif)
 
 ## vim退出时的操作
 
