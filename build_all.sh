@@ -134,7 +134,13 @@ function install_git_plugin()
         cd ${backup_dir}
         if [ -d ${plg_dir_name} ] ;     #有则更新,没有则clone
         then
-            if [ ${update} -eq 1 ] ;
+            file_list=`ls -l ${plg_dir_name} | wc -l`   #检查插件目录是否为空
+            if [ ${file_list} -le 1 ] ;then
+                rm -rf ${backup_dir}/${plg_dir_name}
+                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
+            fi
+
+            if [ ${update} -eq 1 ] ;    #检查更新标志:1则更新，否则不更新
             then
                 echo "update==1"
                 cd ${plg_dir_name} ; git pull -u origin master ; git submodule update --init --recursive
@@ -142,21 +148,19 @@ function install_git_plugin()
                 echo "update==0"
             fi
         else
-            if [ ${download} -eq 1 ] ;
+            if [ ${download} -eq 1 ] ;  #检查下载标志:1则下载，否则不下载
             then
                 echo "download==1"
-                git clone -b master ${plg_git_addr}
+                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
             else
                 echo "download==0"
             fi
 
         fi
 
-        cd ${backup_dir}
-        cp -rv * ${bundle_dir}
+        cd ${backup_dir} ; cp -rv * ${bundle_dir}
     else
-        cd ${backup_dir}
-        cp -rv * ${bundle_dir}
+        cd ${backup_dir} ; cp -rv * ${bundle_dir}
     fi
     return 0
 }

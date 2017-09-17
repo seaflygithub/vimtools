@@ -9,6 +9,7 @@
 # Get vimtools
 
     git clone -b vimtools-ubuntu https://SeaflyGithub@github.com/SeaflyGithub/vimtools
+![./screenshots/get_vimtools.gif](./screenshots/get_vimtools.gif)
 
 # Install vimtools
 

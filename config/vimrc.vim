@@ -108,9 +108,9 @@ set smartindent
 set wrap            " 设置该选项则关闭列限制（长行显示关闭）
 "set nowrap          " 设置该选项则打开列显示（长行显示打开）
 set t_ti= t_te=     "设置退出vim时保留当前画面(防误删)
-set mouse-=a        " 鼠标暂不启用, 键盘党....
-"set mouse=a        "启用鼠标
-"set mousehide      " Hide the mouse cursor while typing
+"set mouse-=a        " 鼠标暂不启用, 键盘党....
+set mouse=a        "启用鼠标
+set mousehide      " Hide the mouse cursor while typing
 set viminfo^=%      " Remember info about open buffers on close
 set magic           " For regular expressions turn magic on
 set backspace=eol,start,indent  " Configure backspace so it acts as it should act
@@ -118,7 +118,8 @@ set whichwrap+=<,>,h,l
 set ruler           " 显示当前的行号列号
 set showcmd         " 在状态栏显示正在输入的命令
 set showmode        " 左下角显示当前vim模式
-set scrolloff=7     " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+set scrolloff=0     " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
+"set scrolloff=7     " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 " set winwidth=79
 set showmatch       " 括号配对情况, 跳转并高亮一下匹配的括号
 set matchtime=2     " How many tenths of a second to blink when matching brackets
