@@ -3,21 +3,19 @@
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.08.06
 # Last Modified Date: 2017.09.27
-# Last Modified By  : seafly <seafly0616>
+# Last Modified By  : seafly <seafly0616@qq.com>
 HOSTOS=""
-CUR=
-CUR_DIR=`pwd`
-CURRENT_DIR=`pwd`
-SCRIPTS_DIR=$CURRENT_DIR/plugin/script
+DIR_CUR=`pwd`
+DIR_SCRIPTS=${DIR_CUR}/plugins/script
+network_connected=""
+HOSTOS=""
 
-vim_src_package=vim-8.0.tar.bz2
-vim_src_git=${CURRENT_DIR}/vim/vim
-
-cscope_src_package=cscope-15.8b.tar.gz
-cscope_src_git=cscope-15.8b
-
-ctags_src_package=ctags-5.8.tar.gz
-ctags_src_git=ctags-5.8
+PKG_VIM=vim-8.0.tar.bz2
+DIR_VIMSRC=${DIR_CUR}/vim/vim
+PKG_CSCOPE_SRC=cscope-15.8b.tar.gz
+DIR_CSCOPE_SRC=cscope-15.8b
+PKG_CTAGS_SRC=ctags-5.8.tar.gz
+DIR_CTAGS_SRC=ctags-5.8
 
 MAKE=make
 MKCLEAN=distclean
@@ -26,11 +24,6 @@ MKARGS=-j4
 SUDO=
 CONFIG=./configure
 CFG_ARGS=--prefix=/usr
-
-network_connected=""
-HOSTOS=""
-
-
 
 #==============================
 #vimtool configuration
@@ -126,7 +119,7 @@ function install_git_plugin()
     local plg_dir_name="$3"
     local plg_git_addr="$4"
     local bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
-    local backup_dir=`cd ${CUR_DIR}/plugins/script/github ; pwd`
+    local backup_dir=`cd ${DIR_CUR}/plugins/script/github ; pwd`
 
     #备份至本地包
     if [ $network_connected -eq 1 ] ;
@@ -295,7 +288,7 @@ function flush_vim_conf()
 #函数功能:配置并编译安装vim编辑器
 function config_compile_install_vim()
 {
-    cd ${vim_src_git} ; \
+    cd ${DIR_VIMSRC} ; \
         make distclean ; \
         ./configure --prefix=/usr --with-features=huge \
         --enable-multibyte \
@@ -311,7 +304,7 @@ function config_compile_install_vim()
 function config_compile_install_vim_for_ycm()
 {
     PY_VERSION="python3.4"
-    cd ${vim_src_git} ; \
+    cd ${DIR_VIMSRC} ; \
         make distclean ; \
         ./configure --prefix=/usr --with-features=huge \
         --enable-multibyte \
@@ -328,13 +321,13 @@ function reinstall_vim_for_ycm()
 {
     if [ ${network_connected} -eq 1 ] ;
     then
-        [ -d ${CUR_DIR}/vim/vim ]
+        [ -d ${DIR_CUR}/vim/vim ]
         if [ $? -eq 0 ];
         then
-            #cd ${vim_src_git} ; git pull -u origin master
+            #cd ${DIR_VIMSRC} ; git pull -u origin master
             config_compile_install_vim_for_ycm
         else
-            cd ${CUR_DIR}/vim ; \
+            cd ${DIR_CUR}/vim ; \
                 git clone -b master https://github.com/vim/vim.git
             config_compile_install_vim_for_ycm
         fi
@@ -361,13 +354,13 @@ function install_vim_source_package()
 {
     if [ ${network_connected} -eq 1 ] ;
     then
-        [ -d ${CUR_DIR}/vim/vim ]
+        [ -d ${DIR_CUR}/vim/vim ]
         if [ $? -eq 0 ];
         then
-            #cd ${vim_src_git} ; git pull -u origin master
+            #cd ${DIR_VIMSRC} ; git pull -u origin master
             config_compile_install_vim
         else
-            cd ${CUR_DIR}/vim ; \
+            cd ${DIR_CUR}/vim ; \
                 git clone -b master https://github.com/vim/vim.git
             config_compile_install_vim
         fi
@@ -390,19 +383,19 @@ function install_vim_source_package()
 
 function config_compile_install_src_plg()
 {
-    cd $CURRENT_DIR/plugin/source && \
-        tar -xzvf $cscope_src_package && \
-        cd $cscope_src_git && \
+    cd $DIR_CUR/plugin/source && \
+        tar -xzvf $PKG_CSCOPE_SRC && \
+        cd $DIR_CSCOPE_SRC && \
         ./configure --prefix=/usr && \
         make && $SUDO make install && \
-        cd .. && rm -rf $cscope_src_git
+        cd .. && rm -rf $DIR_CSCOPE_SRC
 
-    cd $CURRENT_DIR/plugin/source && \
-        tar -xzvf $ctags_src_package && \
-        cd $ctags_src_git && \
+    cd $DIR_CUR/plugin/source && \
+        tar -xzvf $PKG_CTAGS_SRC && \
+        cd $DIR_CTAGS_SRC && \
         ./configure --prefix=/usr && \
         make && $SUDO make install && \
-        cd .. && rm -rf $ctags_src_git
+        cd .. && rm -rf $DIR_CTAGS_SRC
     return 0
 }
 
@@ -460,7 +453,7 @@ function build_all_help()
 #函数用法:$1=plg_dir_name
 function install_vimhome_plugin()
 {
-    local src_dir="${CUR_DIR}/plugins/script/vimhome"
+    local src_dir="${DIR_CUR}/plugins/script/vimhome"
     local dst_dir="${HOME}/.vim/bundle"
     local plg_dir_name="$1"
 
@@ -482,7 +475,7 @@ function enable_plugins()
 
 function config_vimrc()
 {
-    cat $CURRENT_DIR/config/$VIMRC >> $HOME/.vimrc
+    cat ${DIR_CUR}/config/$VIMRC >> $HOME/.vimrc
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
@@ -498,7 +491,7 @@ function vimtool_finish()
     #=================================================================
     #installation finished
     #=================================================================
-    echo "CUR: ${CUR}"   #/root/home/user1/vimtool
+    echo "DIR_CUR: ${DIR_CUR}"   #/root/home/user1/vimtool
     echo "Finish installation!"
     echo "                                    E-mail: seafly0616@qq.com"
     #=================================================================
@@ -521,7 +514,7 @@ function install_latest_libclang()
 function get_ycm_package()
 {
     #通过github方式获取YouCompleteMe
-    cd ${CUR_DIR} ./plugins/script/github ; \
+    cd ${DIR_CUR} ./plugins/script/github ; \
         git clone -b master https://github.com/Valloric/YouCompleteMe ; \
         cp -rvf YouCompleteMe ${HOME}/.vim/bundle/
     cd ${HOME}/.vim/bundle/YouCompleteMe ; \
