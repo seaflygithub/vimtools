@@ -1,9 +1,9 @@
 #!/bin/bash
-# File: build_all.sh
-# Author: SeaflyGithub <seafly0616@qq.com>
-# Date: 2017.08.06
-# Last Modified Date: 2017.08.06
-# Last Modified By: SeaflyGithub <seafly0616@qq.com>
+# File              : build_all.sh
+# Author            : SeaflyGithub <seafly0616@qq.com>
+# Date              : 2017.08.06
+# Last Modified Date: 2017.09.27
+# Last Modified By  : seafly <seafly0616>
 HOSTOS=""
 CUR=
 CUR_DIR=`pwd`
@@ -182,7 +182,7 @@ function install_git_plugins()
     install_git_plugin 0 0 "vim-multiple-cursors" "https://github.com/terryma/vim-multiple-cursors"
     install_git_plugin 1 1 "vim-snippets" "https://github.com/honza/vim-snippets"
     install_git_plugin 1 1 "ultisnips" "https://github.com/SirVer/ultisnips"
-    install_git_plugin 0 0 "YouCompleteMe" "https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64"
+
     install_git_plugin 1 1 "a.vim" "https://github.com/csliu/a.vim"
     install_git_plugin 1 1 "bufexplorer" "https://github.com/jlanzarotta/bufexplorer"
     install_git_plugin 1 1 "comments.vim" "https://github.com/sudar/comments.vim"
@@ -306,6 +306,54 @@ function config_compile_install_vim()
         --enable-pythoninterp=yes \
         --with-python-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
         make && ${SUDO} make install ; \ make distclean
+}
+
+function config_compile_install_vim_for_ycm()
+{
+    PY_VERSION="python3.4"
+    cd ${vim_src_git} ; \
+        make distclean ; \
+        ./configure --prefix=/usr --with-features=huge \
+        --enable-multibyte \
+        --enable-rubyinterp=yes \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 --enable-cscope \
+        --enable-python3interp=yes \
+        --with-python3-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
+        make && ${SUDO} make install ; \ make distclean
+}
+
+function reinstall_vim_for_ycm()
+{
+    if [ ${network_connected} -eq 1 ] ;
+    then
+        [ -d ${CUR_DIR}/vim/vim ]
+        if [ $? -eq 0 ];
+        then
+            #cd ${vim_src_git} ; git pull -u origin master
+            config_compile_install_vim_for_ycm
+        else
+            cd ${CUR_DIR}/vim ; \
+                git clone -b master https://github.com/vim/vim.git
+            config_compile_install_vim_for_ycm
+        fi
+
+        if [ ${HOSTOS} = "ubuntu" ] ; then
+            echo ""
+            #${SUDO} apt-get install -y vim-youcompleteme
+            #${SUDO} apt-get install -y vim-syntax-go
+            #${SUDO} apt-get install -y vim-syntax-gtk
+            #${SUDO} apt-get install -y vim-scripts
+            #${SUDO} apt-get install -y vim-python-jedi
+            #${SUDO} apt-get install -y vim-gtk
+            #${SUDO} apt-get install -y vim-gocomplete
+            #${SUDO} apt-get install -y vim-gnome
+        fi
+    else
+        config_compile_install_vim_for_ycm
+    fi
+
 }
 
 #函数功能:通过git获取vim源码包
@@ -457,13 +505,50 @@ function vimtool_finish()
     return 0;
 }
 
+function install_latest_libclang()
+{
+    #下载安装最新版的libclang（C家族语义化补全）
+    if [ ${HOSTOS} = "ubuntu" ]; then
+        ${SUDO} apt-get install -y \
+            llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
+        ${SUDO} apt-get install -y cmake python3-dev
+    else
+        echo "HOSTOS != ubuntu !!!"
+        exit 1
+    fi
+}
+
+function get_ycm_package()
+{
+    #通过github方式获取YouCompleteMe
+    cd ${CUR_DIR} ./plugins/script/github ; \
+        git clone -b master https://github.com/Valloric/YouCompleteMe ; \
+        cp -rvf YouCompleteMe ${HOME}/.vim/bundle/
+    cd ${HOME}/.vim/bundle/YouCompleteMe ; \
+        git submodule update --init --recursive
+}
+
+function build_ycm_core_lib()
+{
+    #编译构建ycm_core库
+    mkdir ${HOME}/.ycm_build && cd ${HOME}/.ycm_build ; \
+        cmake -G "Unix Makefiles" -DUSE_SYSTEM_BOOST=ON -DEXTERNAL_LIBCLANG_PATH= /usr/lib/x86_64-linux-gnu/libclang-3.9.so . ${HOME}/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp ; \
+        cmake --build . --target ycm_core --config Release
+}
+
+function build_ycm_conf()
+{
+    #配置YCM
+    cp ${HOME}/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ${HOME}/.vim/
+}
+
 function install_youcomleteme()
 {
-    ${SUDO} apt-get install -y build-essential cmake
-    ${SUDO} apt-get install -y python-dev python3-dev
-    cd ${HOME}/.vim/bundle/YouCompleteMe ; \
-	git submodule update --init --recursive; \
-	./install.py --all
+    reinstall_vim_for_ycm
+	get_ycm_package
+	install_latest_libclang
+	build_ycm_core_lib
+	build_ycm_conf
 }
 
 #函数功能:vimtools主函数
@@ -486,8 +571,8 @@ function install_vimtools()
             install_source_plugins
             install_git_plugins
             install_vimhome_plugins
-            enable_plugins
             #install_youcomleteme
+            enable_plugins
             config_vimrc
             vimtool_finish
             ;;
