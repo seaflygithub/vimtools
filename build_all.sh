@@ -1,41 +1,21 @@
 #!/bin/bash
-# File: build_all.sh
-# Author: SeaflyDennis <seafly0616@qq.com>
-# Date: 2017.07.26
-# Last Modified: 2017.07.26
+# File              : build_all.sh
+# Author            : SeaflyGithub <seafly0616@qq.com>
+# Date              : 2017.08.06
+# Last Modified Date: 2017.09.27
+# Last Modified By  : seafly <seafly0616@qq.com>
+HOSTOS=""
+DIR_CUR=`pwd`
+DIR_SCRIPTS=${DIR_CUR}/plugins/script
+network_connected=""
+HOSTOS=""
 
-# Copyright (c) 2017 SeaflyDennis <seafly0616@qq.com>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-#Warning:package name mustn't be illegal characters or space blank
-
-#--------------------------------------------------------------------------
-#(configuration item)
-#--------------------------------------------------------------------------
-CUR=
-CURRENT_DIR=`pwd`
-SCRIPTS_DIR=$CURRENT_DIR/plugin/script
-
-vim_src_package=vim-8.0.tar.bz2
-vim_src_git=${CURRENT_DIR}/vim/vim
-
-cscope_src_package=cscope-15.8b.tar.gz
-cscope_src_git=cscope-15.8b
-
-ctags_src_package=ctags-5.8.tar.gz
-ctags_src_git=ctags-5.8
+PKG_VIM=vim-8.0.tar.bz2
+DIR_VIMSRC=${DIR_CUR}/vim/vim
+PKG_CSCOPE_SRC=cscope-15.8b.tar.gz
+DIR_CSCOPE_SRC=cscope-15.8b
+PKG_CTAGS_SRC=ctags-5.8.tar.gz
+DIR_CTAGS_SRC=ctags-5.8
 
 MAKE=make
 MKCLEAN=distclean
@@ -44,11 +24,6 @@ MKARGS=-j4
 SUDO=
 CONFIG=./configure
 CFG_ARGS=--prefix=/usr
-
-network_connected=""
-HOSTOS=""
-
-
 
 #==============================
 #vimtool configuration
@@ -87,39 +62,6 @@ TAR_VIM_ARGS=$ARG_DOT_TAR_BZ2   #decompress command arguments
 VIM_DIR=vim80                   #vim_dir after decompression
 
 
-function get_hostos()
-{
-    HOSTOS="`uname -v | \
-        awk -F ' ' '{print $1}' | \
-        awk -F '-' '{print $2}' | \
-        tr '[:upper:]' '[:lower:]'`"
-}
-
-function check_access()
-{
-    echo "function install_vimtool()>>>安装主函数"
-    if [ $UID -ne 0 ] ;
-    then
-        SUDO=sudo
-    fi
-}
-
-function get_python_version()
-{
-    # usage: get_python_version python2|python3     --Recommend python2
-    key_word="$1"
-    if [ "${key_word}" = "" ] ;
-    then
-        echo "get_python_version():key_word==NULL"
-        exit 1;
-    fi
-    ls -l /usr/lib | grep "drw" | \
-        grep "${key_word}" | \
-        awk -F ' ' '{print $9}' > ${TEMP_FILE}
-    PY_VERSION=`cat ${TEMP_FILE}`
-    echo "PY_VERSION:${PY_VERSION}"
-    rm -rf ${TEMP_FILE}
-}
 
 
 #VIM_CONFIG=(./configure \
@@ -133,17 +75,17 @@ function get_python_version()
     #--enable-multibyte \
     #--enable-cscope \
     #--with-python-config-dir=/usr/lib/python2.6/config)
-    #--with-python-config-dir=/usr/lib/${PY_VERSION}/config)
+#--with-python-config-dir=/usr/lib/${PY_VERSION}/config)
 
 #echo "VIM_CONFIG: ${VIM_CONFIG[*]}"        #print all element of array
 #======================================================================
 ####--with-features=huge \
-####--with-features=big \
-####--enable-cscope \
-####--enable-multibyte \
+    ####--with-features=big \
+    ####--enable-cscope \
+    ####--enable-multibyte \
 
 
-BVI=bvi-1.4.0-src-11.31.tar.gz             #vim source package name
+    BVI=bvi-1.4.0-src-11.31.tar.gz             #vim source package name
 TAR_BVI=$TAR                    #decompress package tool
 TAR_BVI_ARGS=$ARG_DOT_TAR_GZ   #decompress command arguments
 BVI_DIR=bvi-1.4.0                  #vim_dir after decompression
@@ -166,20 +108,135 @@ TAR_CSCOPE_ARGS=$ARG_DOT_TAR_GZ
 CSCOPE_DIR=cscope-15.8b
 
 
-#------------------------------------------------
-#functions' implement
-#------------------------------------------------
-function debug_vimtool()
+
+#函数功能:安装git方式获取并拷贝插件到~/.vim/bundle
+#函数用法:install_git_plugin $vimrc $dir $git_addr
+function install_git_plugin()
 {
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    echo debugingdebugingdebugingdebugingdebuging ;read debuging
-    exit 0
+    #usage: install_git_plugin update plg_dir_name plg_git_addr
+    local download=$1   #download[0|1]
+    local update=$2	    #update = [0|1]
+    local plg_dir_name="$3"
+    local plg_git_addr="$4"
+    local bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
+    local backup_dir=`cd ${DIR_CUR}/plugins/script/github ; pwd`
+
+    #备份至本地包
+    if [ $network_connected -eq 1 ] ;
+    then
+        cd ${backup_dir}
+        if [ -d ${plg_dir_name} ] ;     #有则更新,没有则clone
+        then
+            file_list=`ls -l ${plg_dir_name} | wc -l`   #检查插件目录是否为空
+            if [ ${file_list} -le 1 ] ;then
+                rm -rf ${backup_dir}/${plg_dir_name}
+                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
+            fi
+
+            if [ ${update} -eq 1 ] ;    #检查更新标志:1则更新，否则不更新
+            then
+                echo "update==1"
+                cd ${plg_dir_name} ; git pull -u origin master ; git submodule update --init --recursive
+            else
+                echo "update==0"
+            fi
+        else
+            if [ ${download} -eq 1 ] ;  #检查下载标志:1则下载，否则不下载
+            then
+                echo "download==1"
+                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
+            else
+                echo "download==0"
+            fi
+
+        fi
+
+        cd ${backup_dir} ; cp -rv * ${bundle_dir}
+    else
+        cd ${backup_dir} ; cp -rv * ${bundle_dir}
+    fi
+    return 0
 }
 
+function install_git_plugins()
+{
+    install_git_plugin 1 1 "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
+    install_git_plugin 1 1 "auto_update_cscope_ctags_database" "https://github.com/SeaflyGithub/auto_update_cscope_ctags_database"
+    install_git_plugin 1 1 "code_complete" "https://github.com/SeaflyGithub/code_complete"
+    install_git_plugin 1 1 "minibufexpl.vim" "https://github.com/fholgado/minibufexpl.vim"
+    install_git_plugin 1 1 "nerdtree" "https://github.com/scrooloose/nerdtree"
+    install_git_plugin 1 1 "SrcExpl" "https://github.com/wesleyche/SrcExpl"
+    install_git_plugin 1 1 "Trinity" "https://github.com/wesleyche/Trinity"
+    install_git_plugin 1 1 "vim-header" "https://github.com/alpertuna/vim-header"
+    install_git_plugin 1 1 "vim-snippets" "https://github.com/honza/vim-snippets"
+    install_git_plugin 1 1 "indentLine" "https://github.com/Yggdroot/indentLine"
+    install_git_plugin 0 0 "tabular" "https://github.com/godlygeek/tabular"
+    install_git_plugin 0 0 "vim-markdown" "https://github.com/plasticboy/vim-markdown"
+    install_git_plugin 0 0 "vim-multiple-cursors" "https://github.com/terryma/vim-multiple-cursors"
+    install_git_plugin 1 1 "vim-snippets" "https://github.com/honza/vim-snippets"
+    install_git_plugin 1 1 "ultisnips" "https://github.com/SirVer/ultisnips"
+
+    install_git_plugin 1 1 "a.vim" "https://github.com/csliu/a.vim"
+    install_git_plugin 1 1 "bufexplorer" "https://github.com/jlanzarotta/bufexplorer"
+    install_git_plugin 1 1 "comments.vim" "https://github.com/sudar/comments.vim"
+    install_git_plugin 1 1 "genutils" "https://github.com/vim-scripts/genutils"
+    install_git_plugin 1 1 "mark.vim" "https://github.com/Tuxdude/mark.vim"
+    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
+    install_git_plugin 0 0 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
+    install_git_plugin 1 1 "syntastic" "https://github.com/vim-syntastic/syntastic"
+    install_git_plugin 1 1 "taglist.vim" "https://github.com/vim-scripts/taglist.vim"
+    install_git_plugin 1 1 "vim-autocomplpop" "https://github.com/othree/vim-autocomplpop"
+    install_git_plugin 1 1 "winmanager--Fox" "https://github.com/vim-scripts/winmanager--Fox"
+    return 0
+}
+
+
+#函数功能:获取当前系统类型(ubuntu)
+#函数用法:get_hostos    结果会存入HOSTOS变量
+function get_hostos()
+{
+    HOSTOS="`uname -v | \
+        awk -F ' ' '{print $1}' | \
+        awk -F '-' '{print $2}' | \
+        tr '[:upper:]' '[:lower:]'`"
+}
+
+#函数功能:检查用户权限是否为root从而决定是否使用sudo
+#函数用法:无返回值,改变SUDO变量,非root用户SUDO="sudo"
+function check_access()
+{
+    echo "function install_vimtool()>>>安装主函数"
+    if [ $UID -ne 0 ] ;
+    then
+        SUDO=sudo
+    fi
+}
+
+
+#函数功能:通过传入主分支获取当前系统支持的python版本
+#函数用法:get_python_version "python2"
+#返回结果:无返回,结果存入PY_VERSION
+function get_python_version()
+{
+    # usage: get_python_version python2|python3     --Recommend python2
+    key_word="$1"
+    if [ "${key_word}" = "" ] ;
+    then
+        echo "get_python_version():key_word==NULL"
+        exit 1;
+    fi
+    ls -l /usr/lib | grep "drw" | \
+        grep "${key_word}" | \
+        awk -F ' ' '{print $9}' > ${TEMP_FILE}
+    PY_VERSION=`cat ${TEMP_FILE}`
+    echo "PY_VERSION:${PY_VERSION}"
+    rm -rf ${TEMP_FILE}
+}
+
+
+#函数功能:判断当前是否联网
+#函数用法:直接调用
+#返回结果:无返回,结果存入network_connected变量
 function get_network_status()
 {
     host www.baidu.com 1>/dev/null 2>/dev/null
@@ -194,66 +251,9 @@ function get_network_status()
 }
 
 
-function vimtool_finish()
-{
-    #=================================================================
-    #installation finished
-    #=================================================================
-    echo "CUR: ${CUR}"   #/root/home/user1/vimtool
-    echo "Finish installation!"
-    echo "                                    E-mail: seafly0616@qq.com"
-    #=================================================================
-    return 0;
-}
-
-function build_all_help()
-{
-    echo "Simple installation information:"
-    echo "    ./build_all               #Complete install vimtool(Recommend first use)"
-    echo "    ./build_all only_vim      #Only install vim"
-    echo "    ./build_all no_vim        #Only install plugins"
-    echo "    ./build_all script_plugin #Only install script plugins"
-    echo "    ./build_all source_plugin #Only install source plugins"
-    echo "    ./build_all update_config #Only install configuration files"
-    exit 1
-}
-
-function config_and_install_vim()
-{
-    cd ${vim_src_git} ; \
-        make distclean ; \
-        ./configure --prefix=/usr --with-features=huge \
-        --enable-pythoninterp=yes  \
-        --enable-cscope --enable-multibyte \
-        --with-python-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
-        make && $SUDO make install ; \ make distclean
-}
-
-function install_vim_source_package()
-{
-    if [ ${network_connected} -eq 1 ] ;
-    then
-        if [ $? -eq 0 ] ;
-        then
-            cd ${vim_src_git} ; git pull -u origin master
-            config_and_install_vim
-        else
-            git clone -b master https://github.com/vim/vim.git ; \
-                config_and_install_vim
-        fi
-    else
-        config_and_install_vim
-    fi
-}
-
-#Ubuntu Linux x64
-#https://github.com/Valloric/YouCompleteMe
-function install_youcompleteme()
-{
-    #sudo apt-get install -y build-essential cmake
-    return 0;
-}
-
+#函数功能:判断当前是否联网
+#函数用法:直接调用
+#返回结果:无返回,结果存入network_connected变量
 function install_python_libs()
 {
     if [ $HOSTOS = "ubuntu" ] ;
@@ -268,189 +268,148 @@ function install_python_libs()
             $SUDO pip install --upgrade pip
             $SUDO pip install --upgrade virtualenv
             pip install jedi
-        fi
-    fi
-}
-
-function only_vim()
-{
-    if [ $HOSTOS = "ubuntu" ] ;
-    then
-        if [ $network_connected -ne 0 ] ;
-        then
-            echo "网络不通，只能源码方式安装vim了(缺库的话就麻烦咯)"
-            install_vim_source_package
-            return 0
-        fi
-        install_python_libs
-
-        $SUDO apt-get install -y vim
-        $SUDO apt-get install -y vim-gocomplete
-        $SUDO apt-get install -y vim-syntax-gtk
-        $SUDO apt-get install -y vim-tiny
-        $SUDO apt-get install -y vim-vim-youcompleteme
-        $SUDO apt-get install -y vim-scripts
-        $SUDO apt-get install -y vim-syntax-go
-        $SUDO apt-get install -y vim-syntax-docker
-        $SUDO apt-get install -y vim-gnome
-        $SUDO apt-get install -y vim-doc
-        $SUDO apt-get install -y vim-dbg
-        $SUDO apt-get install -y vim-common
-        $SUDO apt-get install -y vim-gtk
-        $SUDO apt-get install -y vim-gui-common
-        $SUDO apt-get install -y vim-vimerl
-        $SUDO apt-get install -y vim-vimerl-syntax
-        $SUDO apt-get install -y vim-outliner
-        $SUDO apt-get install -y vim-runtime
-        return 0
-    fi
-
-    #redhat or centOS
-    if [ $network_connected -ne 1 ] ;
-    then
-        echo "Warning: Network not available, install_vim_source_package"
-        install_vim_source_package
-        return 0
-    fi
-
-    echo "function only_vim()>>>only install vim"
-    install_vim_source_package
-    $SUDO yum install -y vim
-    $SUDO yum install -y vim-X11
-    $SUDO yum install -y vim-gtk-syntax
-    $SUDO yum install -y vim-minimal
-    $SUDO yum install -y golang-vim
-    $SUDO yum install -y vim-filesystem
-    $SUDO yum install -y vim-go
-    $SUDO yum install -y vim-vimoutliner
-    echo "only_vim():successfully!"
-    return 0
-}
-
-function source_tar_gz_plugin()
-{
-    echo "function source_tar_gz_plugin()>>>*.tar.gz  script plugins"
-    [ -d $VIM_CFG_DIR ]
-    if [ $? -ne 0 ] ;
-    then
-        mkdir -p $VIM_CFG_DIR
-    fi
-
-    cp -v $VIMTOOL_PLG_SOURCE/*.tar.gz $VIM_CFG_DIR
-    cd $VIM_CFG_DIR
-
-    local value=
-    local value_dir=
-    local list=`ls *.tar.gz`
-    echo "list: $list"
-    for value in $list
-    do
-        if [ -z $value ] ;
-        then
-            break
-        fi
-
-        #检查value是否为普通 script plugins
-        if [ $value = "netrw-93.tar.gz" ] ;
-        then
-            echo "$value isn't a source package"
-        elif [ $value = "vimcdoc-1.5.0.tar.gz" ] ;
-        then
-            echo "$value isn't a source package"
         else
-            echo ""
+            echo "install_python_libs():ubuntu:network unavailable!"
         fi
+    fi
+}
 
-        #解压压缩包
-        $TAR $ARG_DOT_TAR_GZ $value
+function flush_vim_conf()
+{
+    rm -rf ${HOME}/.vim/*
+    rm -rf ${HOME}/.vimrc
+    mkdir -p ${HOME}/.vim/bundle 2>/dev/null 1>&2
+    mkdir -p ${HOME}/.vim/plugin 2>/dev/null 1>&2
+    mkdir -p ${HOME}/.vim/autoload 2>/dev/null 1>&2
+    mkdir -p ${HOME}/.vim/doc 2>/dev/null 1>&2
+}
 
-        #获取压缩包解压之后的目录:这里直接根据命名规则获取
-        #还有其它获取方式等用到再说
-        echo "$value" > $TEMP_FILE
-        echo "value: $value"
-        value_dir=`awk -F . '{print $1}' $TEMP_FILE`
-        value_dir=${value_dir}.
-        value_dir=${value_dir}`awk -F . '{print $2}' $TEMP_FILE`
-        echo "value_dir: $value_dir"
 
-        #测试解压之后的目录的有效性#失败，则通过另一种方式(*)获取
-        cd $VIM_CFG_DIR/$value_dir
-        if [ $? -ne 0 ] ;
+#函数功能:配置并编译安装vim编辑器
+function config_compile_install_vim()
+{
+    cd ${DIR_VIMSRC} ; \
+        make distclean ; \
+        ./configure --prefix=/usr --with-features=huge \
+        --enable-multibyte \
+        --enable-rubyinterp=yes \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 --enable-cscope \
+        --enable-pythoninterp=yes \
+        --with-python-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
+        make && ${SUDO} make install ; \ make distclean
+}
+
+function config_compile_install_vim_for_ycm()
+{
+    PY_VERSION="python3.4"
+    cd ${DIR_VIMSRC} ; \
+        make distclean ; \
+        ./configure --prefix=/usr --with-features=huge \
+        --enable-multibyte \
+        --enable-rubyinterp=yes \
+        --enable-perlinterp=yes \
+        --enable-luainterp=yes \
+        --enable-gui=gtk2 --enable-cscope \
+        --enable-python3interp=yes \
+        --with-python3-config-dir=/usr/lib/${PY_VERSION}/config-x86_64-linux-gnu/ ; \
+        make && ${SUDO} make install ; \ make distclean
+}
+
+function reinstall_vim_for_ycm()
+{
+    if [ ${network_connected} -eq 1 ] ;
+    then
+        [ -d ${DIR_CUR}/vim/vim ]
+        if [ $? -eq 0 ];
         then
-            echo "$value" > $TEMP_FILE
-            value_dir=`awk -F - '{print $1}' $TEMP_FILE`
-            value_dir=${value_dir}*
-            cd ${value_dir}
-            if [ $? -ne 0 ] ;
-            then
-                #手动指定解压之后的目录名:不用写绝对路径:vim80
-                echo    "无法获取解压之后的目录名,"
-                echo    "当前压缩包解压名: $value"
-                echo    "请手动输入当前压缩包解压之后的目录名,"
-                echo -e "(请直接填目录名(相对路径)): \c"
-                read value_dir
-
-            fi
-
+            #cd ${DIR_VIMSRC} ; git pull -u origin master
+            config_compile_install_vim_for_ycm
+        else
+            cd ${DIR_CUR}/vim ; \
+                git clone -b master https://github.com/vim/vim.git
+            config_compile_install_vim_for_ycm
         fi
 
-        #进入解压之后的目录开始配置编译安装
-        cd $VIM_CFG_DIR/$value_dir
-        $CONFIG $CFG_ARGS $CFG_OTHER_ARGS
-        $MAKE $MKARGS
-        $MAKE $MKINSTALL
+        if [ ${HOSTOS} = "ubuntu" ] ; then
+            echo ""
+            #${SUDO} apt-get install -y vim-youcompleteme
+            #${SUDO} apt-get install -y vim-syntax-go
+            #${SUDO} apt-get install -y vim-syntax-gtk
+            #${SUDO} apt-get install -y vim-scripts
+            #${SUDO} apt-get install -y vim-python-jedi
+            #${SUDO} apt-get install -y vim-gtk
+            #${SUDO} apt-get install -y vim-gocomplete
+            #${SUDO} apt-get install -y vim-gnome
+        fi
+    else
+        config_compile_install_vim_for_ycm
+    fi
 
-        #安装完成一个就清除目录和临时文件并为下一个安装做准备
-        cd $VIM_CFG_DIR
-        $DEL_DIR $TEMP_FILE
-        $DEL_DIR $VIM_CFG_DIR/$value_dir
-    done
+}
 
-    $DEL_DIR $VIM_CFG_DIR/*.tar.gz
+#函数功能:通过git获取vim源码包
+function install_vim_source_package()
+{
+    if [ ${network_connected} -eq 1 ] ;
+    then
+        [ -d ${DIR_CUR}/vim/vim ]
+        if [ $? -eq 0 ];
+        then
+            #cd ${DIR_VIMSRC} ; git pull -u origin master
+            config_compile_install_vim
+        else
+            cd ${DIR_CUR}/vim ; \
+                git clone -b master https://github.com/vim/vim.git
+            config_compile_install_vim
+        fi
+
+        if [ ${HOSTOS} = "ubuntu" ] ; then
+            echo ""
+            #${SUDO} apt-get install -y vim-youcompleteme
+            #${SUDO} apt-get install -y vim-syntax-go
+            #${SUDO} apt-get install -y vim-syntax-gtk
+            #${SUDO} apt-get install -y vim-scripts
+            #${SUDO} apt-get install -y vim-python-jedi
+            #${SUDO} apt-get install -y vim-gtk
+            #${SUDO} apt-get install -y vim-gocomplete
+            #${SUDO} apt-get install -y vim-gnome
+        fi
+    else
+        config_compile_install_vim
+    fi
+}
+
+function config_compile_install_src_plg()
+{
+    cd $DIR_CUR/plugin/source && \
+        tar -xzvf $PKG_CSCOPE_SRC && \
+        cd $DIR_CSCOPE_SRC && \
+        ./configure --prefix=/usr && \
+        make && $SUDO make install && \
+        cd .. && rm -rf $DIR_CSCOPE_SRC
+
+    cd $DIR_CUR/plugin/source && \
+        tar -xzvf $PKG_CTAGS_SRC && \
+        cd $DIR_CTAGS_SRC && \
+        ./configure --prefix=/usr && \
+        make && $SUDO make install && \
+        cd .. && rm -rf $DIR_CTAGS_SRC
     return 0
 }
 
-function source_tar_bz2_plugin()
+#函数功能:安装ctags,cscope等
+function install_source_plugins()
 {
-    echo "function source_tar_bz2_plugin()>>>*.tar.bz2  script plugins"
-    return 0
-}
-
-function source_tar_plugin()
-{
-    echo "function source_tar_plugin()>>>*.tar  script plugins"
-
-    return 0
-}
-function source_zip_plugin()
-{
-    echo "function source_zip_plugin()>>>*.zip  script plugins"
-    return 0
-}
-
-#安装  script plugins
-function source_plugin()
-{
-    echo "function source_plugin()>>>  script plugins"
+    echo "function install_source_plugins()>>>  script plugins"
     if [ $HOSTOS = "ubuntu" ] ;
     then
         if [ $network_connected -ne 1 ] ;
         then
             echo "Error: Network unavailable!"
             echo "       Install with local source package!"
-            cd $CURRENT_DIR/plugin/source && \
-                tar -xzvf $cscope_src_package && \
-                cd $cscope_src_git && \
-                ./configure --prefix=/usr && \
-                make && $SUDO make install && \
-                cd .. && rm -rf $cscope_src_git
-
-            cd $CURRENT_DIR/plugin/source && \
-                tar -xzvf $ctags_src_package && \
-                cd $ctags_src_git && \
-                ./configure --prefix=/usr && \
-                make && $SUDO make install && \
-                cd .. && rm -rf $ctags_src_git
+            config_compile_install_src_plg
             return 0
         fi
         $SUDO apt-get install -y ctags
@@ -463,19 +422,13 @@ function source_plugin()
     #Redhat CentOS
     if [ $network_connected -ne 1 ] ;
     then
-        cd $CURRENT_DIR/plugin/source && \
-            tar -xzvf $cscope_src_package && \
-            cd $cscope_src_git && \
-            ./configure --prefix=/usr && \
-            make && $SUDO make install && \
-            cd .. && rm -rf $cscope_src_git
-
-        cd $CURRENT_DIR/plugin/source && \
-            tar -xzvf $ctags_src_package && \
-            cd $ctags_src_git && \
-            ./configure --prefix=/usr && \
-            make && $SUDO make install && \
-            cd .. && rm -rf $cscope_src_git
+        config_compile_install_src_plg
+        return 0
+    fi
+    $SUDO yum install -y ctags
+    if [ $? -ne 0 ] ;
+    then
+        config_compile_install_src_plg
         return 0
     fi
     $SUDO yum install -y ctags
@@ -487,149 +440,112 @@ function source_plugin()
     return 0
 }
 
-function script_plugin()
+
+function build_all_help()
 {
-    echo "function script_plugin()>>> script plugins"
-
-    src_dir=$1    #$SCRIPTS_DIR
-    dst_dir=$2    #$HOME/.vim
-
-    #local dst_dir=$CURRENT_DIR/others
-    ls $src_dir/*.tgz 2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        ls $src_dir/*.tgz | xargs -i -d "\n" tar -xzvf --update {} -C $dst_dir
-        ls -shl $src_dir/*.tar.gz
-    fi
-
-    ls $src_dir/*.tar.gz 2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        ls $src_dir/*.tar.gz | xargs -i -d "\n" tar -xzvf --update {} -C $dst_dir
-        ls -shl $src_dir/*.tar.gz
-    fi
-
-    ls $src_dir/*.tar.bz2  2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        ls $src_dir/*.tar.bz2 | xargs -i -d "\n" tar -xjuvf --update {} -C $dst_dir
-        ls -shl $src_dir/*.tar.bz2
-    fi
-
-    ls $src_dir/*.tar 2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        ls $src_dir/*.tar | xargs -i -d "\n" tar -xuvf --update {} -C $dst_dir
-        ls -shl $src_dir/*.tar
-    fi
-
-    ls $src_dir/*.zip 2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        ls $src_dir/*.zip | xargs -i -d "\n" unzip -uf {} -d $dst_dir
-        ls -shl $src_dir/*.zip
-    fi
-
-    ls $src_dir/*.vim 2>/dev/null 1>/dev/null
-    if [ $? -eq 0 ]
-    then
-        cp -v $src_dir/*.vim $dst_dir/plugin
-        ls -shl $src_dir/*.vim
-    fi
-
-    return 0
+    echo "Simple installation information:"
+    echo "    ./build_all               #Complete install vimtool(Recommend first use)"
+    echo "    ./build_all function_name #execute specifical function"
+    exit 1
 }
 
-#Install plugins(both source and script)"
-function install_plugin()
+#函数功能:安装特定插件,来自vim home
+#函数用法:$1=plg_dir_name
+function install_vimhome_plugin()
 {
-    echo "function install_plugin()>>>Install plugins(both source and script)"
-    script_plugin $SCRIPTS_DIR $HOME/.vim  #安装一些无法git获取plg
-    source_plugin
-    return 0
+    local src_dir="${DIR_CUR}/plugins/script/vimhome"
+    local dst_dir="${HOME}/.vim/bundle"
+    local plg_dir_name="$1"
+
+    cp -rv ${src_dir}/${plg_dir_name} ${dst_dir}
+    #ls $src_dir/*.zip | xargs -i -d "\n" unzip -uf {} -d $dst_dir
 }
 
-#Install vimtool/config/object.sh configuration files"
-function config_object()
+function install_vimhome_plugins()
 {
-    echo "function config_object()>>>Install object configuration files"
-    $SUDO cp -v $VIMTOOL_CONFIG/$OBJECT_TOOL $OBJECT_TOOL_PATH
-    $SUDO chmod 755 /usr/bin/object.sh
-    return 0
+    #install_vimhome_plugin "vim-autocomplpop"
+    return 0;
 }
 
-#Install 'vimtool/config/vimrc' configuration file"
+function enable_plugins()
+{
+    local vimrc="${HOME}/.vimrc"
+    ls ${HOME}/.vim/bundle | xargs -i -d '\n' echo "set rtp+=${HOME}/.vim/bundle/"{} >> ${vimrc}
+}
+
 function config_vimrc()
 {
-    echo "function config_vimrc()>>>Install vimrc configuration file"
-    echo "function config_vimrc()>>>Install vimrc configuration file"
-    #cat $CURRENT_DIR/config/$VIMRC > $HOME/.vimrc
-    cp -v $CURRENT_DIR/config/$VIMRC $HOME/.vimrc
+    cat ${DIR_CUR}/config/$VIMRC >> $HOME/.vimrc
     echo -e "Please input your name: \c"
     read user_name
     echo -e "Please input your email: \c"
     read user_email
-
-    echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
-    echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
-
-	if [ $HOSTOS = "ubuntu" ] ;
-	then
-		sed -i '/colorscheme/d' ~/.vimrc
-	fi
-
+    echo "let g:header_field_author = '${user_name}'" >> ${HOME}/.vimrc
+    echo "let g:header_field_author_email = '${user_email}'" >> ${HOME}/.vimrc
+    #sed -i '/colorscheme/d' ~/.vimrc
     return 0
 }
 
-#Install configuration files"
-function install_config()
+function vimtool_finish()
 {
-    echo "function install_config()>>>Install configuration files"
-    config_object
-    config_vimrc
+    #=================================================================
+    #installation finished
+    #=================================================================
+    echo "DIR_CUR: ${DIR_CUR}"   #/root/home/user1/vimtool
+    echo "Finish installation!"
+    echo "                                    E-mail: seafly0616@qq.com"
+    #=================================================================
+    return 0;
 }
 
-#Don't install vim"
-function no_vim()
+function install_latest_libclang()
 {
-    echo "function no_vim()>>>Dont install vim"
-    CUR=`pwd`
-    echo "CUR: $CUR"
-    install_plugin
-    return 0
+    #下载安装最新版的libclang（C家族语义化补全）
+    if [ ${HOSTOS} = "ubuntu" ]; then
+        ${SUDO} apt-get install -y \
+            llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
+        ${SUDO} apt-get install -y cmake python3-dev
+    else
+        echo "HOSTOS != ubuntu !!!"
+        exit 1
+    fi
 }
 
-#Install vim"
-function install_vim()
+function get_ycm_package()
 {
-    echo "function install_vim()>>>Install vim"
-    only_vim
-    return 0
+    #通过github方式获取YouCompleteMe
+    cd ${DIR_CUR} ./plugins/script/github ; \
+        git clone -b master https://github.com/Valloric/YouCompleteMe ; \
+        cp -rvf YouCompleteMe ${HOME}/.vim/bundle/
+    cd ${HOME}/.vim/bundle/YouCompleteMe ; \
+        git submodule update --init --recursive
 }
 
-#Complete installation function
-function complete_install()
+function build_ycm_core_lib()
 {
-    echo "function complete_install()>>>Complete installation function"
-    #install_vim             #step01 install vim editor
-    install_vim_source_package
-    install_plugin          #step02 install plugin
-    install_config          #step03 install configuration file
+    #编译构建ycm_core库
+    mkdir ${HOME}/.ycm_build && cd ${HOME}/.ycm_build ; \
+        cmake -G "Unix Makefiles" -DUSE_SYSTEM_BOOST=ON -DEXTERNAL_LIBCLANG_PATH= /usr/lib/x86_64-linux-gnu/libclang-3.9.so . ${HOME}/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp ; \
+        cmake --build . --target ycm_core --config Release
 }
 
-function build_vimconf_dir()
+function build_ycm_conf()
 {
-    rm -rf $HOME/.vim/*
-    mkdir -p $HOME/.vim
-    mkdir -p $VIM_CFG_DIR 1>/dev/null 2>/dev/null
-    mkdir -p $VIM_CFG_DIR_PLUGIN 1>/dev/null 2>/dev/null
-    mkdir -p $VIM_CFG_DIR_AUTOLOAD 1>/dev/null 2>/dev/null
-    mkdir -p $VIM_CFG_DIR_DOC 1>/dev/null 2>/dev/null
-    return 0
+    #配置YCM
+    cp ${HOME}/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py ${HOME}/.vim/
 }
 
-#The main function(entry)
-function install_vimtool()
+function install_youcomleteme()
+{
+    reinstall_vim_for_ycm
+	get_ycm_package
+	install_latest_libclang
+	build_ycm_core_lib
+	build_ycm_conf
+}
+
+#函数功能:vimtools主函数
+function install_vimtools()
 {
 
     get_hostos
@@ -637,60 +553,27 @@ function install_vimtool()
     get_python_version "python2"    # be wrote to PY_VERSION
     get_network_status
 
-
-
     INSTALL_ARG=$1
 
-
-	case $INSTALL_ARG in
-		"")
-			echo "Complete installation"
+    case $INSTALL_ARG in
+        "" | "all")
+            echo "Complete installation"
             install_python_libs
-			rm -rf $VIM_CFG_DIR
-			build_vimconf_dir
-			complete_install
-			vimtool_finish
-			;;
-		"only_vim" | "vim" | "vi")
-			echo "Only install vim editor"
-            only_vim
-            vimtool_finish
-			;;
-        "src_vim"|"src_vi"|"source_vim"|"source_vi")
-            install_python_libs
+            flush_vim_conf
             install_vim_source_package
+            install_source_plugins
+            install_git_plugins
+            install_vimhome_plugins
+            #install_youcomleteme
+            enable_plugins
+            config_vimrc
+            vimtool_finish
             ;;
-		"no_vim")
-			echo "Only install plugins (both script and source)"
-            rm -rf $VIM_CFG_DIR
-            install_python_libs
-            build_vimconf_dir
-            no_vim
-            vimtool_finish
-			;;
-		"script_plugin" | "scr_plg")
-			echo "Only install  script plugins"
-            install_python_libs
-            script_plugin $SCRIPTS_DIR $HOME/.vim
-            vimtool_finish
-			;;
-		"source_plugin" | "src_plg")
-			echo "Only install source code plugins"
-            install_python_libs
-            source_plugin
-            vimtool_finish
-			;;
-		"update_config" | "config" | "cfg" | "vimrc")
-			echo "Only update configuration files"
-            install_python_libs
-            install_config
-            vimtool_finish
-			;;
-		"help" | "?" | "-H" | "-h" | "/?")
+		"help" | "--help" | "?" | "-H" | "-h" | "/?")
 			echo "Display installation information:"
             build_all_help
 			;;
-		*)
+        *)
             $*
             if [ $? -ne 0 ] ;
             then
@@ -702,17 +585,4 @@ function install_vimtool()
     return 0
 }
 
-#-----------------------------------------------
-# debuging
-#---------------------------------------------
-#echo "VIM_CONFIG: ${VIM_CONFIG[*]}"
-#echo "configlen: ${#VIM_CONFIG[*]}"
-#debug_vimtool           #breakpoint function
-#----------------------------------------------
-
-
-#--------------------------------------------------
-# start
-#-------------------------------------------------
-install_vimtool $@
-#--------------------------------------------------
+install_vimtools $@
