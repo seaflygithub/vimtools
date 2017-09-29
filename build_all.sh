@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.08.06
-# Last Modified Date: 2017.09.27
-# Last Modified By  : seafly <seafly0616@qq.com>
+# Last Modified Date: 2017.09.29
+# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
 HOSTOS=""
 DIR_CUR=`pwd`
 DIR_SCRIPTS=${DIR_CUR}/plugins/script
@@ -109,7 +109,7 @@ CSCOPE_DIR=cscope-15.8b
 
 
 
-#函数功能:安装git方式获取并拷贝插件到~/.vim/bundle
+#函数功能:git获取,获取之后拷贝到 ~/.vim/bundle
 #函数用法:install_git_plugin $vimrc $dir $git_addr
 function install_git_plugin()
 {
@@ -120,6 +120,9 @@ function install_git_plugin()
     local plg_git_addr="$4"
     local bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
     local backup_dir=`cd ${DIR_CUR}/plugins/script/github ; pwd`
+
+    #clear all git plugins
+    cd ${backup_dir} ; rm -rf *
 
     #备份至本地包
     if [ $network_connected -eq 1 ] ;
@@ -181,7 +184,7 @@ function install_git_plugins()
     install_git_plugin 1 1 "comments.vim" "https://github.com/sudar/comments.vim"
     install_git_plugin 1 1 "genutils" "https://github.com/vim-scripts/genutils"
     install_git_plugin 1 1 "mark.vim" "https://github.com/Tuxdude/mark.vim"
-    install_git_plugin 1 0 "minibufexplorerpp.vim" "https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
+    install_git_plugin 1 1 "minibufexplorerpp.vim" "https://github.com/vim-scripts/minibufexplorerpp/blob/master/plugin/minibufexplpp.vim"
     install_git_plugin 0 0 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
     install_git_plugin 1 1 "syntastic" "https://github.com/vim-syntastic/syntastic"
     install_git_plugin 1 1 "taglist.vim" "https://github.com/vim-scripts/taglist.vim"
@@ -321,27 +324,12 @@ function reinstall_vim_for_ycm()
 {
     if [ ${network_connected} -eq 1 ] ;
     then
-        [ -d ${DIR_CUR}/vim/vim ]
-        if [ $? -eq 0 ];
-        then
-            #cd ${DIR_VIMSRC} ; git pull -u origin master
-            config_compile_install_vim_for_ycm
-        else
-            cd ${DIR_CUR}/vim ; \
-                git clone -b master https://github.com/vim/vim.git
-            config_compile_install_vim_for_ycm
-        fi
+        cd ${DIR_CUR}/vim ; rm -rf vim ; \
+            git clone -b master https://github.com/vim/vim.git
+        config_compile_install_vim_for_ycm
 
         if [ ${HOSTOS} = "ubuntu" ] ; then
             echo ""
-            #${SUDO} apt-get install -y vim-youcompleteme
-            #${SUDO} apt-get install -y vim-syntax-go
-            #${SUDO} apt-get install -y vim-syntax-gtk
-            #${SUDO} apt-get install -y vim-scripts
-            #${SUDO} apt-get install -y vim-python-jedi
-            #${SUDO} apt-get install -y vim-gtk
-            #${SUDO} apt-get install -y vim-gocomplete
-            #${SUDO} apt-get install -y vim-gnome
         fi
     else
         config_compile_install_vim_for_ycm
@@ -354,27 +342,12 @@ function install_vim_source_package()
 {
     if [ ${network_connected} -eq 1 ] ;
     then
-        [ -d ${DIR_CUR}/vim/vim ]
-        if [ $? -eq 0 ];
-        then
-            #cd ${DIR_VIMSRC} ; git pull -u origin master
-            config_compile_install_vim
-        else
-            cd ${DIR_CUR}/vim ; \
-                git clone -b master https://github.com/vim/vim.git
-            config_compile_install_vim
-        fi
+        cd ${DIR_CUR}/vim ; rm -rf vim ; \
+            git clone -b master https://github.com/vim/vim.git
+        config_compile_install_vim
 
         if [ ${HOSTOS} = "ubuntu" ] ; then
             echo ""
-            #${SUDO} apt-get install -y vim-youcompleteme
-            #${SUDO} apt-get install -y vim-syntax-go
-            #${SUDO} apt-get install -y vim-syntax-gtk
-            #${SUDO} apt-get install -y vim-scripts
-            #${SUDO} apt-get install -y vim-python-jedi
-            #${SUDO} apt-get install -y vim-gtk
-            #${SUDO} apt-get install -y vim-gocomplete
-            #${SUDO} apt-get install -y vim-gnome
         fi
     else
         config_compile_install_vim
