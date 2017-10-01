@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.08.06
-# Last Modified Date: 2017.09.29
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.10.01
+# Last Modified By  : seafly <seafly0616@qq.com>
 HOSTOS=""
 DIR_CUR=`pwd`
 DIR_SCRIPTS=${DIR_CUR}/plugins/script
@@ -108,55 +108,48 @@ TAR_CSCOPE_ARGS=$ARG_DOT_TAR_GZ
 CSCOPE_DIR=cscope-15.8b
 
 
-
 #函数功能:git获取,获取之后拷贝到 ~/.vim/bundle
 #函数用法:install_git_plugin $vimrc $dir $git_addr
 function install_git_plugin()
 {
     #usage: install_git_plugin update plg_dir_name plg_git_addr
-    local download=$1   #download[0|1]
-    local update=$2	    #update = [0|1]
-    local plg_dir_name="$3"
-    local plg_git_addr="$4"
-    local bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
-    local backup_dir=`cd ${DIR_CUR}/plugins/script/github ; pwd`
+    download=$1     #download = [0|1]
+    update=$2	    #update = [0|1]
+    plg_dir_name="$3"
+    plg_git_addr="$4"
+    bundle_dir=`cd ${HOME}/.vim/bundle ; pwd`
+    backup_dir=`cd ${DIR_CUR}/plugins/script/github ; pwd`
 
     #clear all git plugins
-    cd ${backup_dir} ; rm -rf *
+    #rm -rf ${backup_dir}/*
+    mkdir -p ${backup_dir}
 
     #备份至本地包
     if [ $network_connected -eq 1 ] ;
     then
-        cd ${backup_dir}
-        if [ -d ${plg_dir_name} ] ;     #有则更新,没有则clone
-        then
-            file_list=`ls -l ${plg_dir_name} | wc -l`   #检查插件目录是否为空
-            if [ ${file_list} -le 1 ] ;then
-                rm -rf ${backup_dir}/${plg_dir_name}
-                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
-            fi
 
-            if [ ${update} -eq 1 ] ;    #检查更新标志:1则更新，否则不更新
-            then
-                echo "update==1"
-                cd ${plg_dir_name} ; git pull -u origin master ; git submodule update --init --recursive
-            else
-                echo "update==0"
+        if [ $download -eq 1 ] ; then
+            echo "download == 1"
+            rm -rf ${backup_dir}/${plg_dir_name}
+            cd ${backup_dir} ; git clone -b master ${plg_git_addr}
+
+            if [ $update -eq 1 ] ; then
+                echo "update == 1"
+                cd ${backup_dir}/${plg_dir_name} ; \
+                    git pull -u origin master ; \
+                    git submodule update --init --recursive
             fi
+        fi
+    else
+        ret=`du -s ${backup_dir} | awk '{print $1}'`
+        if [ $ret -ne 4 ]; then
+            cp -rvf ${backup_dir}/* ${bundle_dir}
         else
-            if [ ${download} -eq 1 ] ;  #检查下载标志:1则下载，否则不下载
-            then
-                echo "download==1"
-                cd ${backup_dir} ; git clone -b master ${plg_git_addr}
-            else
-                echo "download==0"
-            fi
-
+            #blank backup_dir
+            echo "Error: NO network,and no exist plugins!!!"
+            exit 2
         fi
 
-        cd ${backup_dir} ; cp -rv * ${bundle_dir}
-    else
-        cd ${backup_dir} ; cp -rv * ${bundle_dir}
     fi
     return 0
 }
@@ -188,7 +181,7 @@ function install_git_plugins()
     install_git_plugin 0 0 "OmniCppComplete" "https://github.com/vim-scripts/OmniCppComplete"
     install_git_plugin 1 1 "syntastic" "https://github.com/vim-syntastic/syntastic"
     install_git_plugin 1 1 "taglist.vim" "https://github.com/vim-scripts/taglist.vim"
-    install_git_plugin 1 1 "vim-autocomplpop" "https://github.com/othree/vim-autocomplpop"
+    install_git_plugin 0 0 "vim-autocomplpop" "https://github.com/othree/vim-autocomplpop"
     install_git_plugin 1 1 "winmanager--Fox" "https://github.com/vim-scripts/winmanager--Fox"
     return 0
 }
@@ -340,16 +333,15 @@ function reinstall_vim_for_ycm()
 #函数功能:通过git获取vim源码包
 function install_vim_source_package()
 {
+    if [ -d ${DIR_CUR}/vim/vim/src ] ; then
+        config_compile_install_vim
+    fi
+
     if [ ${network_connected} -eq 1 ] ;
     then
-        cd ${DIR_CUR}/vim ; rm -rf vim ; \
+        rm -rf ${DIR_CUR}/vim/vim
+        cd ${DIR_CUR}/vim ; \
             git clone -b master https://github.com/vim/vim.git
-        config_compile_install_vim
-
-        if [ ${HOSTOS} = "ubuntu" ] ; then
-            echo ""
-        fi
-    else
         config_compile_install_vim
     fi
 }
