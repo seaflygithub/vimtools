@@ -4,7 +4,8 @@
 - [vimtools获取](#vimtools获取)
 - [vimtools安装](#vimtools安装)
 - [vimtools快速体验](#vimtools快速体验)
-
+- [vimtools作者信息](#vimtools作者信息)
+- [vimtools使用笔记](#vimtools使用笔记)
 ## vimtools简介
 
     温馨提示：如果觉得好用就推荐给其他同伴吧，顺带有兴趣的帮忙一起维护这个笑容（滑稽）
@@ -19,7 +20,9 @@
 - Ubuntu版分支：`git clone -b vimtools-ubuntu https://github.com/SeaflyGithub/vimtools`
 - sourceinsight版分支：`待定...（上面的Ubuntu分支已经整合了sourceinsight操作特性）`
 - YouCompleteMe版分支：`待定...`
-- 分支说明：由于Python2.x和3.x不兼容，导致YCM(3.x)和SI(2.x)里重要插件不能同时工作；目前Ubuntu版分支最活跃
+- k-vim版分支：`该分支是另一位哥们儿的作品：https://github.com/SeaflyGithub/vimtools/tree/For_k-vim`
+
+**分支说明：**由于`Python2.x`和`Python3.x`不兼容，致YCM(3.x)和SI(2.x)里重要插件不能同时工作；目前Ubuntu版分支最活跃；其次是另一位哥们儿维护的k-vim分支，简单介绍写哥们儿的k-vim分支：`该分支非常强大，集成了YCM(YouCompleteMe)插件的自动安装配置，推荐大家使用`
 
 ## vimtools安装
 
@@ -59,4 +62,9 @@
 - 如果你主要浏览代码建议用SourceInsight窗口布局（按F8打开，再按F8关闭）
 - 如果你主要编辑代码或其他，那么可以根据你的喜好自行定义窗口布局
 
-## 后面更多核心插件的使用笔记链接将会贴到此说明文中
+## vimtools作者信息
+![./image/wechat.png](./image/wechat.png)
+![./image/qq1052.png](./image/qq1052.png)
+
+## vimtools使用笔记
+
