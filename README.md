@@ -63,8 +63,7 @@
 - 如果你主要编辑代码或其他，那么可以根据你的喜好自行定义窗口布局
 
 ## vimtools作者信息
-![./image/wechat.png](./image/wechat.png)
-![./image/qq1052.png](./image/qq1052.png)
+![./image/contact_seafly.png](./image/contact_seafly.png)
 
 ## vimtools使用笔记
 
