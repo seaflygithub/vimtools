@@ -2,7 +2,7 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.08.06
-# Last Modified Date: 2017.10.01
+# Last Modified Date: 2017.10.03 22时23分32秒
 # Last Modified By  : seafly <seafly0616@qq.com>
 HOSTOS=""
 DIR_CUR=`pwd`
@@ -156,6 +156,8 @@ function install_git_plugin()
 
 function install_git_plugins()
 {
+    DIR_PLUGIN_GITHUB="${DIR_CUR}/plugins/script/github"
+    DIR_PLUGIN_BUNDLE="${HOME}/.vim/bundle"
     install_git_plugin 1 1 "asyncrun.vim" "https://github.com/skywind3000/asyncrun.vim"
     install_git_plugin 1 1 "auto_update_cscope_ctags_database" "https://github.com/SeaflyGithub/auto_update_cscope_ctags_database"
     install_git_plugin 1 1 "code_complete" "https://github.com/SeaflyGithub/code_complete"
@@ -164,6 +166,7 @@ function install_git_plugins()
     install_git_plugin 1 1 "SrcExpl" "https://github.com/wesleyche/SrcExpl"
     install_git_plugin 1 1 "Trinity" "https://github.com/wesleyche/Trinity"
     install_git_plugin 1 1 "vim-header" "https://github.com/alpertuna/vim-header"
+        sed -i '25ilet g:header_field_timestamp_format = "%Y.%m.%d %X"' ${DIR_PLUGIN_BUNDLE}/vim-header/autoload/header.vim
     install_git_plugin 1 1 "vim-snippets" "https://github.com/honza/vim-snippets"
     install_git_plugin 1 1 "indentLine" "https://github.com/Yggdroot/indentLine"
     install_git_plugin 0 0 "tabular" "https://github.com/godlygeek/tabular"
