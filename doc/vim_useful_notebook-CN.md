@@ -64,7 +64,7 @@
     - 操作系统开发交流群（148177180）
 
 4. 视频教程获取：联系1052061602(QQ)  1989291498(QQ)
-![./screenshots/contact_seafly.png](./screenshots/contact_seafly.png)
+5. ![./screenshots/contact_seafly.png](./screenshots/contact_seafly.png)
 
 ## vim几种常用文件打开方式
 
