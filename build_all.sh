@@ -3,7 +3,7 @@
 # Author            : Your Name <your@mail>
 # Date              : 2017.10.18
 # Last Modified Date: 2017.10.19
-# Last Modified By  : seafly <seafly0616>
+# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -236,12 +236,33 @@ function install_python_libs()
         echo "install_python_libs(): 正在检查网络连接..."
         host ${NETADDR_PING} 1>/dev/null 2>/dev/null
         if [ $? -eq 0 ] ; then
+
+            grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
+            if [ $? -ne 0 ] ;
+            then
+                ${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
+                ${SUDO} apt-get update
+        fi
             echo "install_python_libs(): 网络畅通,正在准备安装python库..."
-            $SUDO apt-get install -y libgtk2.0-dev libxt-dev libx11-dev
-            $SUDO apt-get install -y tcl-dev libperl-dev libncurses5-dev
+            $SUDO apt-get install -y libpng12-*
+            $SUDO apt-get install -y libgdk-pixbuf2.0-dev 
+            $SUDO apt-get install -y libpango1.0-dev 
+            $SUDO apt-get install -y libcairo2-dev 
+            $SUDO apt-get install -y libgtk2.0-dev 
+            $SUDO apt-get install -y libxt-dev 
+            $SUDO apt-get install -y libx11-dev
+            $SUDO apt-get install -y tcl-dev 
+            $SUDO apt-get install -y libperl-dev 
+            $SUDO apt-get install -y libncurses5-dev
             $SUDO apt-get install -y python-dev
             $SUDO apt-get install -y vim-python-jedi
-            $SUDO apt-get install -y python-pip python-dev build-essential
+            $SUDO apt-get install -y python-pip 
+            $SUDO apt-get install -y python-dev 
+            $SUDO apt-get install -y build-essential
+            if [ $? -ne 0 ]; then
+                echo "install_python_libs(): apt-get install build-essential"
+                exit 1
+            fi
             $SUDO pip install --upgrade pip
             $SUDO pip install --upgrade virtualenv
             pip install jedi
@@ -569,12 +590,39 @@ function install_latest_libclang()
 
             #You should be able to use any of the listed mirrors by adding a line to your /etc/apt/sources.list like this:
             #	deb http://security.ubuntu.com/ubuntu trusty-security main universe
-            ${SUDO} apt-get install -y llvm-3.9 llvm-3.9-dev clang-3.9 libclang-3.9-dev libboost-all-dev
+
+
+
+
+
+            grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
             if [ $? -ne 0 ] ;
             then
                 ${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
                 ${SUDO} apt-get update
-                ${SUDO} apt-get install -y llvm-3.9 llvm-3.9-dev clang-3.9 libclang-3.9-dev libboost-all-dev
+            ${SUDO} apt-get install -y llvm-3.9 
+            ${SUDO} apt-get install -y llvm-3.9-dev 
+            ${SUDO} apt-get install -y clang-3.9 
+            ${SUDO} apt-get install -y libclang-3.9-dev 
+            ${SUDO} apt-get install -y libboost-filesystem-dev
+            ${SUDO} apt-get install -y libboost-iostreams-dev
+            ${SUDO} apt-get install -y libboost-log-dev
+            ${SUDO} apt-get install -y libboost-python-dev
+            ${SUDO} apt-get install -y libboost-regex-dev
+            ${SUDO} apt-get install -y libboost-wave-dev
+            ${SUDO} apt-get install -y libboost-all-dev
+        else
+            ${SUDO} apt-get install -y llvm-3.9 
+            ${SUDO} apt-get install -y llvm-3.9-dev 
+            ${SUDO} apt-get install -y clang-3.9 
+            ${SUDO} apt-get install -y libclang-3.9-dev 
+            ${SUDO} apt-get install -y libboost-filesystem-dev
+            ${SUDO} apt-get install -y libboost-iostreams-dev
+            ${SUDO} apt-get install -y libboost-log-dev
+            ${SUDO} apt-get install -y libboost-python-dev
+            ${SUDO} apt-get install -y libboost-regex-dev
+            ${SUDO} apt-get install -y libboost-wave-dev
+            ${SUDO} apt-get install -y libboost-all-dev
             fi
 
             #${SUDO} apt-get install -y llvm-3.9 clang-3.9 libclang-3.9-dev libboost-all-dev
