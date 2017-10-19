@@ -3,7 +3,7 @@
 # Author            : Your Name <your@mail>
 # Date              : 2017.10.18
 # Last Modified Date: 2017.10.19
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified By  : seafly <seafly0616>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -236,7 +236,7 @@ function install_python_libs()
         echo "install_python_libs(): 正在检查网络连接..."
         host ${NETADDR_PING} 1>/dev/null 2>/dev/null
         if [ $? -eq 0 ] ; then
-
+            echo "install_python_libs(): 正在添加security.ubuntu.com源..."
             grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
             if [ $? -ne 0 ] ;
             then
