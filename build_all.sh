@@ -3,7 +3,7 @@
 # Author            : Your Name <your@mail>
 # Date              : 2017.10.18
 # Last Modified Date: 2017.10.19
-# Last Modified By  : seafly <seafly0616@qq.com>
+# Last Modified By  : seafly <seafly0616>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -57,20 +57,24 @@ function init_vim_configure_dir()
     if [ -d ${DIR_HOME_VIM_BUNDLE}/YouCompleteMe ] ;
     then
         mv ${DIR_HOME_VIM_BUNDLE}/YouCompleteMe ${HOME}
+        mv ${HOME}/.vim ${HOME}/.vim.bak 2>/dev/null 1>/dev/null
+        mv ${HOME}/.vimrc ${HOME}/.vimrc.bak 2>/dev/null 1>/dev/null
+        mkdir -p ${HOME}/.vim/bundle
+        mkdir -p ${HOME}/.vim/plugin
+        mkdir -p ${HOME}/.vim/autoload
+        mkdir -p ${HOME}/.vim/doc
+        mv ${HOME}/YouCompleteMe ${DIR_HOME_VIM_BUNDLE}
+        ${SUDO} cp ${DIR_SCRIPT_PATH}/ycmadd.py /usr/bin/
+        ${SUDO} chmod 777 /usr/bin/ycmadd.py
+        USE_YCM=1
+    else
+        mv ${HOME}/.vim ${HOME}/.vim.bak 2>/dev/null 1>/dev/null
+        mv ${HOME}/.vimrc ${HOME}/.vimrc.bak 2>/dev/null 1>/dev/null
+        mkdir -p ${HOME}/.vim/bundle
+        mkdir -p ${HOME}/.vim/plugin
+        mkdir -p ${HOME}/.vim/autoload
+        mkdir -p ${HOME}/.vim/doc
     fi
-    mv ${HOME}/.vim ${HOME}/.vim.bak 2>/dev/null 1>/dev/null
-    mv ${HOME}/.vimrc ${HOME}/.vimrc.bak 2>/dev/null 1>/dev/null
-    mkdir -p ${HOME}/.vim/bundle
-    mkdir -p ${HOME}/.vim/plugin
-    mkdir -p ${HOME}/.vim/autoload
-    mkdir -p ${HOME}/.vim/doc
-
-    mv ${HOME}/YouCompleteMe ${DIR_HOME_VIM_BUNDLE}
-    ${SUDO} cp ${DIR_SCRIPT_PATH}/ycmadd.py /usr/bin/
-    ${SUDO} chmod 777 /usr/bin/ycmadd.py
-
-    USE_YCM=1
-
     return 0
 }
 
