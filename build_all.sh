@@ -1,10 +1,14 @@
 #!/bin/bash
 # File              : build_all.sh
-# Author            : Your Name <your@mail>
-# Date              : 2017.10.18
-# Last Modified Date: 2017.10.19 05:43:15 PM
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
-
+# Author            : abc <123>
+# Date              : 2017.10.21 15时35分12秒
+# Last Modified Date: 2017.10.21 15时35分12秒
+# Last Modified By  : abc <123>
+# File              : build_all.sh
+# Author            : SeaflyGithub <seafly0616@qq.com>
+# Date              :51 PM
+# Last Modified Date: 2017.10.20 10:30:46 PM
+# Last Modified By  : ]SeaflyGithub <seafly0616@qq.com>
 DIR_CUR="`pwd`"
 SUDO=""
 USE_YCM=0
@@ -68,6 +72,8 @@ function init_vim_configure_dir()
         ${SUDO} chmod 777 /usr/bin/ycmadd.py
         USE_YCM=1
     else
+    	rm -rf ${HOME}/.vim.bak
+    	rm -rf ${HOME}/.vimrc.bak
         mv ${HOME}/.vim ${HOME}/.vim.bak 2>/dev/null 1>/dev/null
         mv ${HOME}/.vimrc ${HOME}/.vimrc.bak 2>/dev/null 1>/dev/null
         mkdir -p ${HOME}/.vim/bundle
@@ -323,6 +329,9 @@ function install_ctags_cscope()
 #参数: $2==插件名&插件顶层目录名
 #参数: $3==插件更新的下载地址
 #参数: $4==插件是否更新,更新是"update"，否则为不更新
+#参数: $5==为插件打补丁的脚本
+#参数: $6==补丁脚本对应解释器（如bash、python等）
+#参数: $7==插件安装至根目录，若为空则默认为~/.vim/bundle，否则由调用者指定，主要针对只能在~/.vim下的特殊插件
 #返回: 0
 function install_script_plugin()
 {
@@ -330,6 +339,9 @@ function install_script_plugin()
     PLUGIN_NAME="$2"
     UPDATE_ADDR="$3"
     ARG_UPDATE="$4"
+    SCRITP_FILE="$5"
+    SCRITP_EXEC="$6"
+    DIR_PLUGIN_ROOT="$7"
     DIR_ABSOLUTE_PATH=${DIR_CUR}/plugins/script/${PLUGIN_NAME}
 
 
@@ -398,15 +410,39 @@ function install_script_plugin()
     fi
 
     # 2.已准备好插件目录和配置文件
-    echo "install_script_plugin(): 正把该插件拷贝至目标目录..."
-    mkdir -p ${DIR_HOME_VIM_BUNDLE} 2>/dev/null 1>/dev/null
-    cp -rf ${DIR_ABSOLUTE_PATH} ${DIR_HOME_VIM_BUNDLE}
+    if [ "${DIR_PLUGIN_ROOT}" = "" ] ; then
+        echo "install_script_plugin(): 可以拷贝到~/.vim/bundle下并使能"
+        echo "install_script_plugin(): 正把该插件拷贝至目标目录..."
+        mkdir -p ${DIR_HOME_VIM_BUNDLE} 2>/dev/null 1>/dev/null
+        cp -rf ${DIR_ABSOLUTE_PATH} ${DIR_HOME_VIM_BUNDLE}
+    else
+        echo "install_script_plugin(): 必须拷贝到~/.vim目录下"
+        echo "install_script_plugin(): 正把该插件拷贝至目标目录..."
+        mkdir -p ${DIR_PLUGIN_ROOT} 2>/dev/null 1>/dev/null
+        cp -rf ${DIR_ABSOLUTE_PATH}/. ${DIR_PLUGIN_ROOT}
+    fi
 
     # 3.把插件配置导入指定文件汇总
     echo "install_script_plugin(): 正在导入该插件配置文件..."
     cat ${DIR_SCRIPT_PATH}/${VIMRC} >> ${GLOBAL_PLUGINS_VIMRC}
 
-    return 0
+    # 4.插件补丁
+    SCRITP_FILE="$5"
+    SCRITP_EXEC="$6"
+    SCRITP_FILE_ABSOLUTE=${DIR_SCRIPT_PATH}/${SCRITP_FILE}
+    if [ "${SCRITP_FILE}" != "" ]; then
+        if [ -f ${DIR_SCRIPT_PATH}/${SCRITP_EXEC} ]; then
+            echo "install_script_plugin(): 获取脚本文件和i脚本解释器..."
+            echo "install_script_plugin(): 正在执行该脚本进行打补丁..."
+            ${SCRITP_EXEC} ${SCRITP_FILE_ABSOLUTE}
+        else
+            echo "install_script_plugin(): 没有指定脚本文件解释器..."
+            return 1
+        fi
+    else
+        return 0
+    fi
+
 }
 
 #名称: install_script_plugins
@@ -427,12 +463,54 @@ function install_script_plugins()
     # 地址: https://github.com/alpertuna/vim-header
     # 用法: ***
     # 配置: *** ***
+    
+    #路径补全插件
+    #https://github.com/vim-scripts/AutoComplPop
+    install_script_plugin \
+        "AutoComplPop.vimrc" \
+        "AutoComplPop" \
+        "https://github.com/vim-scripts/AutoComplPop" \
+        "no-update" \
+        "" \
+        "" \
+        "${HOME}/.vim"
+    
+    #C结构体成员补全
+    install_script_plugin \
+        "omnicppcomplete.vimrc" \
+        "omnicppcomplete" \
+        "https://github.com/vim-scripts/OmniCppComplete" \
+        "no-update" \
+        "" \
+        "" \
+        "${HOME}/.vim"
+
+	#文件快速查找与打开
+    install_script_plugin \
+        "LookupFile.vimrc" \
+        "LookupFile" \
+        "https://github.com/vim-scripts/LookupFile" \
+        "no-update" \
+        "" \
+        ""
+    install_script_plugin \
+        "genutils.vimrc" \
+        "genutils" \
+        "https://github.com/vim-scripts/genutils" \
+        "no-update" \
+        "" \
+        ""
 
     install_script_plugin \
         "auto_update_cscope_ctags_database.vimrc" \
         "auto_update_cscope_ctags_database" \
         "https://github.com/haolongzhangm/auto_update_cscope_ctags_database" \
-        "no-update"
+        "no-update" \
+        "" \
+        "" \
+        ""
+        #"auto_update_cscope_ctags_database.sh" \
+        #"bash"
 
     install_script_plugin \
         "vim-markdown.vimrc" \
@@ -518,12 +596,13 @@ function install_script_plugins()
         "https://github.com/alpertuna/vim-header" \
         "no-update"
     #补丁: vim-header添加对时间的支持（精确到秒）
-    grep -Hn "%Y\.%m\.%d\ %X" ${DIR_HOME_VIM_BUNDLE}/vim-header/autoload/header.vim
-    if [ $? -ne 0 ] ;
-    then
-        sed -i '25ilet g:header_field_timestamp_format = "%Y.%m.%d %X"' ${DIR_HOME_VIM_BUNDLE}/vim-header/autoload/header.vim
+    if [ -f ${DIR_HOME_VIM_BUNDLE}/vim-header/autoload/header.vim ] ; then
+        grep -Hn "%Y\.%m\.%d\ %X" ${DIR_HOME_VIM_BUNDLE}/vim-header/autoload/header.vim
+        if [ $? -ne 0 ] ;
+        then
+            sed -i '25ilet g:header_field_timestamp_format = "%Y.%m.%d %X"' ${DIR_HOME_VIM_BUNDLE}/vim-header/autoload/header.vim
+        fi
     fi
-
 
     # 生成插件使能配置
     echo "install_script_plugins(): 正在使能插件..."
@@ -701,9 +780,9 @@ function install_vimtools()
         "")
             echo "提示: 正在进入完整安装..."
             init_vim_configure_dir
-            install_python_libs
-            install_vim "python2.x" "no-update" "8.0"
-            install_ctags_cscope "update"
+            #install_python_libs
+            #install_vim "python2.x" "no-update" "8.0"
+            #install_ctags_cscope "update"
             init_vimtools_configs
             #install_youcomleteme
             install_script_plugins

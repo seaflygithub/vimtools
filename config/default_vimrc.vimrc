@@ -1,8 +1,8 @@
-" File: /home/seafly/github/vimtools/config/vimrc.vim
-" Author: SeaflyGithub <seafly0616@qq.com>
-" Date: 2017.08.06
-" Last Modified Date: 2017.08.06
-" Last Modified By: SeaflyGithub <seafly0616@qq.com>
+" File              : config/default_vimrc.vimrc
+" Author            : SeaflyGithub <seafly0616@qq.com>
+" Date              : 2017.08.06
+" Last Modified Date: 2017.10.21 15时35分50秒
+" Last Modified By  : abc <123>
 "
 " 插件配置文件vimrc.vim的内容布局
 " 内部配置（vim自带）
@@ -49,7 +49,8 @@
 " 	界面配置
 set ttyfast
 set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致
-set statusline=\ %{HasPaste()}%F%m%r%h[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS(%P):%l/%L,%c]
+set statusline=\ %%F%m%r%h[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS(%P):%l/%L,%c]
+"set statusline=\ %{HasPaste()}%F%m%r%h[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS(%P):%l/%L,%c]
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ [POS:%l/%L,%c]
 "set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P

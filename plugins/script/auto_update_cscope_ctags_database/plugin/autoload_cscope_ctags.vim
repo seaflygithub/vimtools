@@ -6,7 +6,6 @@
 " 20170426 haolong.zhang@ck-telecom.com export for_auto_update_cscope_ctag
 " add this for auto update cscope and ctags tag
 let g:for_auto_update_cscope_ctag = "null"
-let g:python_file = 0
 
 if exists("loaded_autoload_cscope")
 	finish
@@ -150,7 +149,6 @@ function s:Unload_csdb()
       let &csverb = save_csvb
     endif
   endif
-  execute 'set tags ='
 endfunc
 "
 "==
@@ -163,35 +161,29 @@ function s:Cycle_csdb()
         "it is already loaded. don't try to reload it.
       endif
     endif
-    "if readbuffer is python file && at the new dir can not find
-    "databse we will try to load old databse, caused by we need
-    "use old database when in python lib file
     let newcsdbpath = s:Find_in_parent("cscope.out",s:windowdir(),$HOME)
+	let g:for_auto_update_cscope_ctag = newcsdbpath
+    "echo "Found cscope.out at: " . newcsdbpath
+    "echo "Windowdir: " . s:windowdir()
+	"we think ctags file should at the same dir
+	"so try to update ctags file when proj chang from A to B
+	if filereadable(newcsdbpath . "/tags")
+		"echo "Found tags at: " . newcsdbpath
+		execute 'set tags ='. newcsdbpath . '/tags'
+	else
+		"echo "No tags"
+		execute 'set tags ='
+	endif
     if newcsdbpath != "Nothing"
-	    let g:for_auto_update_cscope_ctag = newcsdbpath
-    elseif 0 == g:python_file
-	    let g:for_auto_update_cscope_ctag = "Nothing"
-    endif
-    if g:for_auto_update_cscope_ctag != "Nothing"
-      let g:csdbpath = g:for_auto_update_cscope_ctag
+      let g:csdbpath = newcsdbpath
       if !cscope_connection(3, "out", g:csdbpath)
         let save_csvb = &csverb
         set nocsverb
         exe "cs add " . g:csdbpath . "/cscope.out " .g:csdbpath
         set csverb
         let &csverb = save_csvb
-	"echo "Found cscope.out at: " . g:csdbpath
-	"echo "Windowdir: " . s:windowdir()
-	"we think ctags file should at the same dir
-	"so try to update ctags file when proj chang from A to B
-	if filereadable(g:csdbpath . "/tags")
-		"echo "Found tags at: " . g:csdbpath
-		execute 'set tags ='. g:csdbpath . '/tags'
-	else
-		"echo "No tags"
-		execute 'set tags ='
-	endif
       endif
+      "
     else " No cscope database, undo things. (someone rm-ed it or somesuch)
       call s:Unload_csdb()
     endif
@@ -200,7 +192,6 @@ endfunc
 " auto toggle the menu
 augroup autoload_cscope
  au!
- au BufNewFile,BufEnter *.py let g:python_file=1
  au BufEnter *.[chlysS]  call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
  au BufEnter *.cc      call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
  au BufEnter *.cpp      call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
@@ -238,18 +229,7 @@ augroup autoload_cscope
  au BufEnter *.BUILD    call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
  au BufEnter *.hpp      call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
  au BufEnter *.launch   call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.asm	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.ec	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.pgc	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.m	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.cxx	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.pcc	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.H	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.hh	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.cu	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
- au BufEnter *.prototxt	call <SID>Cycle_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.[chlysS] call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload * let g:python_file=0
  au BufUnload *.cc     call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.cpp     call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.java     call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
@@ -272,7 +252,7 @@ augroup autoload_cscope
  au BufUnload *.idl    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.sh    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.te    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.py    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+ "au BufUnload *.py    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.mak    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.tpl    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.css    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
@@ -287,16 +267,17 @@ augroup autoload_cscope
  au BufUnload *.bzl    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.hpp    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.launch call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.asm	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.ec	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.pgc	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.m	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.cxx	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.pcc	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.H	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.hh	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.cu	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
- au BufUnload *.prototxt	call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
+
+ let g:myLookupFileTagExpr = './filenametags'
+ let g:LookupFile_TagExpr = 'g:myLookupFileTagExpr'
+ let g:LookupFile_MinPatLength = 1               "at least 1 character power find
+ let g:LookupFile_PreserveLastPattern = 0        "don't save last pattern
+ let g:LookupFile_PreservePatternHistory = 1     "save find history
+ let g:LookupFile_AlwaysAcceptFirst = 1          "<Enter> open first match item
+ let g:LookupFile_AllowNewFiles = 0              "Don't allow create no-exist file
+ let g:LookupFile_RecentFileListSize = 30
+ let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.war$\|\.ear$'
+
 augroup END
 
 let &cpo = s:save_cpo

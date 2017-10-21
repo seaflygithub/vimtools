@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # File              : plugins/script/auto_update_cscope_ctags_database/plugin/auto_update_cscope_ctags_backup_run.py
-# Author            : abc123 <[A[A>
-# Date              : 2017.10.21 16时13分23秒
-# Last Modified Date: 2017.10.21 16时13分23秒
-# Last Modified By  : abc123 <[A[A>
+# Author            : abc <def>
+# Date              :46 PM
+# Last Modified Date: 2017.10.21 02:49:44 PM
+# Last Modified By  : aaa <bbbb>
 #by haolong.zhang@ck-telecom.com 20170426
 import os
 import glob
@@ -406,19 +406,16 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         os.system(handle_tags_files_cmd)
 
         #ctags_cmd = "ctags -R --fields=+lafikmnsztS --extra=+fq -L tags.files"
-        ctags_cmd = "ctags -R --file-scope=yes --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
+        if not os.path.exists("~/systags"):
+        ctags_cmd = "ctags -R --file-scope=yes --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q "
+        ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
+        ctags_cmd = ctags_cmd + " /usr/include/*"
+        ctags_cmd = ctags_cmd + " /usr/include/asm/*"
+        ctags_cmd = ctags_cmd + " /usr/include/asm-generic/*"
+        ctags_cmd = ctags_cmd + " /usr/include/linux/*"
+        ctags_cmd = ctags_cmd + " /usr/include/sys/*"
+        ctags_cmd = ctags_cmd + " /usr/include/netinet/* . -L tags.files"
         ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
-
-        if not os.path.exists("systags"):
-            ctags_cmd = ctags_cmd + " ; mv tags mytags"
-            ctags_cmd = ctags_cmd + " ; ctags -R --file-scope=yes --langmap=c:+.h --links=yes"
-            ctags_cmd = ctags_cmd + " --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q"
-            ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
-            ctags_cmd = ctags_cmd + " /usr/include/* ."
-
-        ctags_cmd = ctags_cmd + " ; mv tags systags"
-        ctags_cmd = ctags_cmd + " ; cat systags >> mytags"
-        ctags_cmd = ctags_cmd + " ; mv mytags tags"
         ctags_cmd = ctags_cmd + ' ; echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase" > ./filenametags'
         ctags_cmd = ctags_cmd + ' ; find ./ -type f -printf "%f\t%p\t1\n" | sort -f >> ./filenametags'
 
