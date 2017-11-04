@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# File              : plugins/script/auto_update_cscope_ctags_database/plugin/auto_update_cscope_ctags_backup_run.py
+# File              : auto_update_cscope_ctags_backup_run.py
 # Author            : abc123 <[A[A>
 # Date              : 2017.10.21 16时13分23秒
-# Last Modified Date: 2017.10.21 16时13分23秒
-# Last Modified By  : abc123 <[A[A>
+# Last Modified Date: 2017.10.27 07时02分05秒
+# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
 #by haolong.zhang@ck-telecom.com 20170426
 import os
 import glob
@@ -14,23 +14,24 @@ import getpass
 import threading
 import getopt
 
+# 下面是体系结构的支持
 arch_parameter_list = ['not_kernel', 'alpha', 'arm', 'avr32', \
         'c6x', 'frv', 'hexagon', 'm68k', 'microblaze', 'mn10300', \
         'parisc', 's390', 'sh', 'tile', 'unicore32', 'xtensa', \
         'arc', 'arm64', 'blackfin', 'cris' ,'h8300', 'ia64', \
         'm32r', 'metag', 'mips', 'openrisc', 'powerpc', 'score', \
         'sparc', 'um', 'x86']
+# 针对内核驱动项目: 下面列表末尾添加更多类型支持
 care_file_type = ['*.c', '*.cpp', '*.h', '*.cc', '*.java', '*.sh',
         '*.mk', '*.prop', '*.xml', 'Makefile', '*.rc', 'platform',
         'Drivers', '*.scons', '*.api', '*.tla', '*.smh', '*.smi',
         '*.smt', '*.idl', '*.te', '*.py', '*.S', '*.tpl', '*.css',
         '*.js', '*.txt', '*.proto', '*.md', '*.conf', '*.json',
-        '*.BUILD', '*.bzl', 'BUILD', '*.hpp', '*.launch']
+        '*.BUILD', '*.bzl', 'BUILD', '*.hpp', '*.launch',
+        '*.lds','*.s','*.py']
 
 needed_env_list = ['python', 'cscope', 'sed', 'ctags']
-
 global_back_run_log_file = '/tmp/.Auto_update_cscope_ctags_debug_back_run.log'
-
 global_debug_enable = -1
 
 #you may config this dir, if you change the
@@ -38,7 +39,8 @@ global_debug_enable = -1
 #need config this str
 #global_add_pythonlib = False
 global_add_pythonlib = True
-global_pythonlib_dir_str = ['/usr/lib/', '/usr/local/lib/']
+# 优化: Python库的精确查找
+global_pythonlib_dir_str = ['/usr/lib/python2.7/', '/usr/lib/python3/', '/usr/lib/python3.4/', '/usr/local/lib/']
 
 database_type_list = ['cscope_only', 'cscope_and_ctags']
 support_soft_link_list = ['yes', 'no', 'ignore']
@@ -46,6 +48,7 @@ support_soft_link_list = ['yes', 'no', 'ignore']
 arch_type_str = 'not_kernel'
 database_type_str = 'cscope_and_ctags'
 pwd_dir_str = './'
+
 show_msg_bool = False
 support_soft_link_str = 'ignore'
 
@@ -406,21 +409,28 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         os.system(handle_tags_files_cmd)
 
         #ctags_cmd = "ctags -R --fields=+lafikmnsztS --extra=+fq -L tags.files"
-        ctags_cmd = "ctags -R --file-scope=yes --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
-        ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
 
-        if not os.path.exists("systags"):
-            ctags_cmd = ctags_cmd + " ; mv tags mytags"
+        #修改: 生成一个基于当前工程的数据库tags文件mytags
+        ctags_cmd = "ctags -R -L tags.files --file-scope=yes "
+        ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
+        ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
+        ctags_cmd = ctags_cmd + " ; mv tags objtags"    # 生成工程专属数据库文件
+        dir_obj_root= os.environ['PWD']         # 获取当前工程顶层目录绝对路径
+        dir_home = os.environ['HOME']           # 获取当前用户HOME绝对路径
+        home_systags = dir_home + "/.systags"   # 将C库的数据库文件列为隐藏文件
+        gnome_osd_print('(seafly debug)Project rootdir:' + dir_obj_root)
+
+        if not os.path.exists(home_systags):
             ctags_cmd = ctags_cmd + " ; ctags -R --file-scope=yes --langmap=c:+.h --links=yes"
             ctags_cmd = ctags_cmd + " --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q"
             ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
-            ctags_cmd = ctags_cmd + " /usr/include/* ."
+            ctags_cmd = ctags_cmd + " -f " + home_systags + " /usr/include "
+        ctags_cmd = ctags_cmd + " ; cd " + dir_obj_root + " ;  cat objtags >> tags"
+        ctags_cmd = ctags_cmd + " ; cat " + home_systags + " >> tags"
 
-        ctags_cmd = ctags_cmd + " ; mv tags systags"
-        ctags_cmd = ctags_cmd + " ; cat systags >> mytags"
-        ctags_cmd = ctags_cmd + " ; mv mytags tags"
         ctags_cmd = ctags_cmd + ' ; echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase" > ./filenametags'
-        ctags_cmd = ctags_cmd + ' ; find ./ -type f -printf "%f\t%p\t1\n" | sort -f >> ./filenametags'
+        ctags_cmd = ctags_cmd + " ; find . -type f "
+        ctags_cmd = ctags_cmd + ' -printf "%f\t%p\t1\n" | sort -f >> ./filenametags'
 
         debug_backrun_python_print("show print_message :cmd %s" % ctags_cmd)
         os.system(ctags_cmd)

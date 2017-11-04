@@ -1,5 +1,8 @@
-" Vim global plugin for autoloading cscope databases.
-" Last Change: Wed Jan 26 10:28:52 Jerusalem Standard Time 2011
+" File              : plugins/script/auto_update_cscope_ctags_database/plugin/autoload_cscope_ctags.vim
+" Author            : 吴海飞 <seafly0616@qq.com>
+" Date              : 2017.10.28 11时44分18秒
+" Last Modified Date: 2017.10.28 11时44分18秒
+" Last Modified By  : 吴海飞 <seafly0616@qq.com>
 " Maintainer: Michael Conrad Tadpol Tilsra <tadpol@tadpol.org>
 " Revision: 0.5
 
@@ -174,6 +177,18 @@ function s:Cycle_csdb()
 		"echo "No tags"
 		execute 'set tags ='
 	endif
+
+    let g:myLookupFileTagExpr = './filenametags'
+    let g:easytags_dynamic_files = 1
+    let g:LookupFile_TagExpr = 'g:myLookupFileTagExpr'
+    let g:LookupFile_MinPatLength = 1               "at least 1 character power find
+    let g:LookupFile_PreserveLastPattern = 0        "don't save last pattern
+    let g:LookupFile_PreservePatternHistory = 1     "save find history
+    let g:LookupFile_AlwaysAcceptFirst = 1          "<Enter> open first match item
+    let g:LookupFile_AllowNewFiles = 0              "Don't allow create no-exist file
+    let g:LookupFile_RecentFileListSize = 30
+    let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.war$\|\.ear$'
+
     if newcsdbpath != "Nothing"
       let g:csdbpath = newcsdbpath
       if !cscope_connection(3, "out", g:csdbpath)
@@ -268,15 +283,6 @@ augroup autoload_cscope
  au BufUnload *.hpp    call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
  au BufUnload *.launch call <SID>Unload_csdb() | call <SID>Cycle_macros_menus()
 
- let g:myLookupFileTagExpr = './filenametags'
- let g:LookupFile_TagExpr = 'g:myLookupFileTagExpr'
- let g:LookupFile_MinPatLength = 1               "at least 1 character power find
- let g:LookupFile_PreserveLastPattern = 0        "don't save last pattern
- let g:LookupFile_PreservePatternHistory = 1     "save find history
- let g:LookupFile_AlwaysAcceptFirst = 1          "<Enter> open first match item
- let g:LookupFile_AllowNewFiles = 0              "Don't allow create no-exist file
- let g:LookupFile_RecentFileListSize = 30
- let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.war$\|\.ear$'
 
 augroup END
 

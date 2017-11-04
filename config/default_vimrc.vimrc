@@ -1,8 +1,8 @@
 " File              : config/default_vimrc.vimrc
 " Author            : SeaflyGithub <seafly0616@qq.com>
 " Date              : 2017.08.06
-" Last Modified Date: 2017.10.21 15时35分50秒
-" Last Modified By  : abc <123>
+" Last Modified Date: 2017.10.28 09时51分21秒
+" Last Modified By  : SeaflyGithub <seafly0616@qq.com>
 "
 " 插件配置文件vimrc.vim的内容布局
 " 内部配置（vim自带）
@@ -302,10 +302,10 @@ map <space> /<CR>
 "
 "
 "成对符号自动匹配
-:inoremap " ""
-:inoremap ' ''
-:inoremap ` ``
-:inoremap [ []
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+:inoremap ` ``<ESC>i
+:inoremap [ []<ESC>i
 :inoremap < <><ESC>i
 "
 "

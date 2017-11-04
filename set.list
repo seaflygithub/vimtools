@@ -1,0 +1,263 @@
+'!'=0
+'#'=0
+'$'=4080
+'*'=()
+-=569JNRXghiks
+0=zsh
+'?'=0
+@=()
+ARGC=0
+BG
+CDPATH=''
+CLUTTER_IM_MODULE=xim
+COLORTERM=gnome-terminal
+COLUMNS=80
+COMPIZ_CONFIG_PROFILE=ubuntu
+CPUTYPE=x86_64
+DBUS_SESSION_BUS_ADDRESS='unix:abstract=/tmp/dbus-MSUUx5rCj7'
+DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+DESKTOP_SESSION=ubuntu
+DISPLAY=:0
+EGID=1000
+ERRNO=0
+EUID=1000
+FG
+FIGNORE=''
+FPATH=/home/seafly/.oh-my-zsh/plugins/git:/home/seafly/.oh-my-zsh/functions:/home/seafly/.oh-my-zsh/completions:/usr/local/share/zsh/site-functions:/usr/share/zsh/vendor-functions:/usr/share/zsh/vendor-completions:/usr/share/zsh/functions/Calendar:/usr/share/zsh/functions/Chpwd:/usr/share/zsh/functions/Completion:/usr/share/zsh/functions/Completion/AIX:/usr/share/zsh/functions/Completion/BSD:/usr/share/zsh/functions/Completion/Base:/usr/share/zsh/functions/Completion/Cygwin:/usr/share/zsh/functions/Completion/Darwin:/usr/share/zsh/functions/Completion/Debian:/usr/share/zsh/functions/Completion/Linux:/usr/share/zsh/functions/Completion/Mandriva:/usr/share/zsh/functions/Completion/Redhat:/usr/share/zsh/functions/Completion/Solaris:/usr/share/zsh/functions/Completion/Unix:/usr/share/zsh/functions/Completion/X:/usr/share/zsh/functions/Completion/Zsh:/usr/share/zsh/functions/Completion/openSUSE:/usr/share/zsh/functions/Exceptions:/usr/share/zsh/functions/MIME:/usr/share/zsh/functions/Misc:/usr/share/zsh/functions/Newuser:/usr/share/zsh/functions/Prompts:/usr/share/zsh/functions/TCP:/usr/share/zsh/functions/VCS_Info:/usr/share/zsh/functions/VCS_Info/Backends:/usr/share/zsh/functions/Zftp:/usr/share/zsh/functions/Zle
+FX
+GDMSESSION=ubuntu
+GDM_LANG=en_US
+GID=1000
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GNOME_KEYRING_CONTROL=/run/user/1000/keyring-gbLZgr
+GNOME_KEYRING_PID=549
+GPG_AGENT_INFO=/run/user/1000/keyring-gbLZgr/gpg:0:1
+GTK_IM_MODULE=fcitx
+GTK_MODULES=overlay-scrollbar:unity-gtk-module
+HISTCHARS='!^#'
+HISTCMD=3010
+HISTFILE=/home/seafly/.zsh_history
+HISTSIZE=10000
+HOME=/home/seafly
+HOST=E6220
+IFS='
+'
+IM_CONFIG_PHASE=1
+INSTANCE=Unity
+JOB=gnome-session
+KEYBOARD_HACK=''
+KEYTIMEOUT=40
+LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_ADDRESS=zh_CN.UTF-8
+LC_CTYPE=en_US.UTF-8
+LC_IDENTIFICATION=zh_CN.UTF-8
+LC_MEASUREMENT=zh_CN.UTF-8
+LC_MONETARY=zh_CN.UTF-8
+LC_NAME=zh_CN.UTF-8
+LC_NUMERIC=zh_CN.UTF-8
+LC_PAPER=zh_CN.UTF-8
+LC_TELEPHONE=zh_CN.UTF-8
+LC_TIME=zh_CN.UTF-8
+LESS=-R
+LINENO=10
+LINES=24
+LISTMAX=100
+LOGCHECK=60
+LOGNAME=seafly
+LSCOLORS=Gxfxcxdxbxegedabagacad
+LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+MACHTYPE=x86_64
+MAILCHECK=60
+MAILPATH=''
+MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+MANPATH=''
+MENUSELECT=0
+MODULE_PATH=/usr/lib/x86_64-linux-gnu/zsh/5.0.2
+NULLCMD=cat
+OLDPWD=/home/seafly
+OPTARG=''
+OPTIND=1
+OSTYPE=linux-gnu
+PAGER=less
+PATH=/home/seafly/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+POSTEDIT=''
+POST_1_7_2_GIT=1
+PPID=4074
+PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT2='%_> '
+PROMPT3='?# '
+PROMPT4='+%N:%i> '
+PS1='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PS2='%_> '
+PS3='?# '
+PS4='+%N:%i> '
+PSVAR=''
+PWD=/home/seafly/Tempdata/github/vimtools-ubuntu-SI
+QT4_IM_MODULE=fcitx
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+RANDOM=11999
+READNULLCMD=/usr/bin/pager
+RPROMPT=''
+RPROMPT2=''
+RPS1=''
+RPS2=''
+SAVEHIST=10000
+SCREEN_NO=''
+SECONDS=182
+SELINUX_INIT=YES
+SESSIONTYPE=gnome-session
+SHELL=/bin/zsh
+SHLVL=1
+SHORT_HOST=E6220
+SPROMPT='zsh: correct '\''%R'\'' to '\''%r'\'' [nyae]? '
+SSH_AGENT_LAUNCHER=upstart
+SSH_AGENT_PID=616
+SSH_AUTH_SOCK=/run/user/1000/keyring-gbLZgr/ssh
+TERM=xterm
+TEXTDOMAIN=im-config
+TEXTDOMAINDIR=/usr/share/locale/
+TIMEFMT='%J  %U user %S system %P cpu %*E total'
+TMPPREFIX=/tmp/zsh
+TRY_BLOCK_ERROR=-1
+TTY=/dev/pts/2
+TTYIDLE=-1
+UBUNTU_MENUPROXY=1
+UID=1000
+UPSTART_EVENTS='started starting'
+UPSTART_INSTANCE=''
+UPSTART_JOB=unity-settings-daemon
+UPSTART_SESSION='unix:abstract=/com/ubuntu/upstart-session/1000/553'
+USER=seafly
+USERNAME=seafly
+VENDOR=pc
+VTE_VERSION=3409
+WATCH=''
+WATCHFMT='%n has %a %l from %m.'
+WINDOWID=20971532
+WORDCHARS=''
+XAUTHORITY=/home/seafly/.Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+XDG_CURRENT_DESKTOP=Unity
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/seafly
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SEAT=seat0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+XDG_SESSION_ID=c4
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1
+XDG_VTNR=7
+XMODIFIERS='@im=fcitx'
+ZLS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36::(-default-)rs=0:(-default-)di=01;34:(-default-)ln=01;36:(-default-)mh=00:(-default-)pi=40;33:(-default-)so=01;35:(-default-)do=01;35:(-default-)bd=40;33;01:(-default-)cd=40;33;01:(-default-)or=40;31;01:(-default-)su=37;41:(-default-)sg=30;43:(-default-)ca=30;41:(-default-)tw=30;42:(-default-)ow=34;42:(-default-)st=37;44:(-default-)ex=01;32:(-default-)*.tar=01;31:(-default-)*.tgz=01;31:(-default-)*.arj=01;31:(-default-)*.taz=01;31:(-default-)*.lzh=01;31:(-default-)*.lzma=01;31:(-default-)*.tlz=01;31:(-default-)*.txz=01;31:(-default-)*.zip=01;31:(-default-)*.z=01;31:(-default-)*.Z=01;31:(-default-)*.dz=01;31:(-default-)*.gz=01;31:(-default-)*.lz=01;31:(-default-)*.xz=01;31:(-default-)*.bz2=01;31:(-default-)*.bz=01;31:(-default-)*.tbz=01;31:(-default-)*.tbz2=01;31:(-default-)*.tz=01;31:(-default-)*.deb=01;31:(-default-)*.rpm=01;31:(-default-)*.jar=01;31:(-default-)*.war=01;31:(-default-)*.ear=01;31:(-default-)*.sar=01;31:(-default-)*.rar=01;31:(-default-)*.ace=01;31:(-default-)*.zoo=01;31:(-default-)*.cpio=01;31:(-default-)*.7z=01;31:(-default-)*.rz=01;31:(-default-)*.jpg=01;35:(-default-)*.jpeg=01;35:(-default-)*.gif=01;35:(-default-)*.bmp=01;35:(-default-)*.pbm=01;35:(-default-)*.pgm=01;35:(-default-)*.ppm=01;35:(-default-)*.tga=01;35:(-default-)*.xbm=01;35:(-default-)*.xpm=01;35:(-default-)*.tif=01;35:(-default-)*.tiff=01;35:(-default-)*.png=01;35:(-default-)*.svg=01;35:(-default-)*.svgz=01;35:(-default-)*.mng=01;35:(-default-)*.pcx=01;35:(-default-)*.mov=01;35:(-default-)*.mpg=01;35:(-default-)*.mpeg=01;35:(-default-)*.m2v=01;35:(-default-)*.mkv=01;35:(-default-)*.webm=01;35:(-default-)*.ogm=01;35:(-default-)*.mp4=01;35:(-default-)*.m4v=01;35:(-default-)*.mp4v=01;35:(-default-)*.vob=01;35:(-default-)*.qt=01;35:(-default-)*.nuv=01;35:(-default-)*.wmv=01;35:(-default-)*.asf=01;35:(-default-)*.rm=01;35:(-default-)*.rmvb=01;35:(-default-)*.flc=01;35:(-default-)*.avi=01;35:(-default-)*.fli=01;35:(-default-)*.flv=01;35:(-default-)*.gl=01;35:(-default-)*.dl=01;35:(-default-)*.xcf=01;35:(-default-)*.xwd=01;35:(-default-)*.yuv=01;35:(-default-)*.cgm=01;35:(-default-)*.emf=01;35:(-default-)*.axv=01;35:(-default-)*.anx=01;35:(-default-)*.ogv=01;35:(-default-)*.ogx=01;35:(-default-)*.aac=00;36:(-default-)*.au=00;36:(-default-)*.flac=00;36:(-default-)*.mid=00;36:(-default-)*.midi=00;36:(-default-)*.mka=00;36:(-default-)*.mp3=00;36:(-default-)*.mpc=00;36:(-default-)*.ogg=00;36:(-default-)*.ra=00;36:(-default-)*.wav=00;36:(-default-)*.axa=00;36:(-default-)*.oga=00;36:(-default-)*.spx=00;36:(-default-)*.xspf=00;36'
+ZSH=/home/seafly/.oh-my-zsh
+ZSH_CACHE_DIR=/home/seafly/.oh-my-zsh/cache
+ZSH_COMPDUMP=/home/seafly/.zcompdump-E6220-5.0.2
+ZSH_CUSTOM=/home/seafly/.oh-my-zsh/custom
+ZSH_DISABLE_COMPFIX=true
+ZSH_EVAL_CONTEXT=toplevel
+ZSH_NAME=zsh
+ZSH_PATCHLEVEL=Debian
+ZSH_SPECTRUM_TEXT='Arma virumque cano Troiae qui primus ab oris'
+ZSH_SUBSHELL=1
+ZSH_THEME=robbyrussell
+ZSH_THEME_GIT_PROMPT_CLEAN='%{34m%})'
+ZSH_THEME_GIT_PROMPT_DIRTY='%{34m%}) %{33m%}✗'
+ZSH_THEME_GIT_PROMPT_PREFIX='%{01;34m%}git:(%{31m%}'
+ZSH_THEME_GIT_PROMPT_SUFFIX='%{00m%} '
+ZSH_THEME_TERM_TAB_TITLE_IDLE='%15<..<%~%<<'
+ZSH_THEME_TERM_TITLE_IDLE='%n@%m: %~'
+ZSH_VERSION=5.0.2
+_=set
+__savecursor=0
+__searching=up-line-or-beginning-search
+_cmd_variant=(ls gnu )
+_comp_assocs=('')
+_comp_dumpfile=/home/seafly/.zcompdump-E6220-5.0.2
+_comp_options=(bareglobqual extendedglob glob multibyte nullglob rcexpandparam unset NO_allexport NO_aliases NO_cshnullglob NO_cshjunkiequotes NO_errexit NO_globsubst NO_histsubstpattern NO_ignorebraces NO_ignoreclosebraces NO_kshglob NO_ksharrays NO_kshtypeset NO_markdirs NO_octalzeroes NO_shwordsplit NO_shglob NO_warncreateglobal)
+_comp_setup='local -A _comp_caller_options;
+	     _comp_caller_options=(${(kv)options[@]});
+	     setopt localoptions localtraps ${_comp_options[@]};
+	     local IFS=$'\'' \t\r\n\0'\''
+	     exec </dev/null;
+	     trap - ZERR
+	     local -a reply
+	     local REPLY'
+_compautos=(_call_program +X )
+_comps=(- _precommand -array-value- _value -assign-parameter- _assign -brace-parameter- _brace_parameter -command- _autocd -command-line- _normal -condition- _condition -default- _default -equal- _equal -first- _first -math- _math -parameter- _parameter -redirect- _redirect -redirect-,-default-,-default- _files '-redirect-,<,bunzip2' _bzip2 '-redirect-,<,bzip2' _bzip2 '-redirect-,<,compress' _compress '-redirect-,<,gunzip' _gzip '-redirect-,<,gzip' _gzip '-redirect-,<,uncompress' _compress '-redirect-,<,unxz' _xz '-redirect-,<,xz' _xz '-redirect-,>,bzip2' _bzip2 '-redirect-,>,compress' _compress '-redirect-,>,gzip' _gzip '-redirect-,>,xz' _xz -subscript- _subscript -tilde- _tilde -value- _value -value-,-default-,-command- _zargs -value-,-default-,-default- _value -value-,ADB_TRACE,-default- _adb -value-,ANDROID_LOG_TAGS,-default- _adb -value-,ANDROID_SERIAL,-default- _adb -value-,ANT_ARGS,-default- _ant -value-,CFLAGS,-default- _gcc -value-,CPPFLAGS,-default- _gcc -value-,DISPLAY,-default- _x_display -value-,GREP_OPTIONS,-default- _grep -value-,GZIP,-default- _gzip -value-,LANG,-default- _locales -value-,LANGUAGE,-default- _locales -value-,LDFLAGS,-default- _gcc -value-,LD_DEBUG,-default- _ld_debug -value-,LESS,-default- _less -value-,LESSCHARSET,-default- _less -value-,LPDEST,-default- _printers -value-,P4CLIENT,-default- _perforce -value-,P4MERGE,-default- _perforce -value-,P4PORT,-default- _perforce -value-,P4USER,-default- _perforce -value-,PERLDOC,-default- _perldoc -value-,PRINTER,-default- _printers -value-,PROMPT,-default- _ps1234 -value-,PROMPT2,-default- _ps1234 -value-,PROMPT3,-default- _ps1234 -value-,PROMPT4,-default- _ps1234 -value-,PS1,-default- _ps1234 -value-,PS2,-default- _ps1234 -value-,PS3,-default- _ps1234 -value-,PS4,-default- _ps1234 -value-,RPROMPT,-default- _ps1234 -value-,RPROMPT2,-default- _ps1234 -value-,RPS1,-default- _ps1234 -value-,RPS2,-default- _ps1234 -value-,SPROMPT,-default- _ps1234 -value-,TERM,-default- _terminals -value-,TERMINFO_DIRS,-default- _dir_list -value-,TZ,-default- _time_zone -value-,VALGRIND_OPTS,-default- _valgrind -value-,WWW_HOME,-default- _urls -value-,XML_CATALOG_FILES,-default- _xmlsoft -value-,XZ_DEFAULTS,-default- _xz -value-,XZ_OPT,-default- _xz -vared- _in_vared -zcalc-line- _zcalc_line . _source 5g _go 5l _go 6g _go 6l _go 8g _go 8l _go Mail _mail Mosaic _webbrowser SuSEconfig _SuSEconfig a2dismod _a2utils a2dissite _a2utils a2enmod _a2utils a2ensite _a2utils a2ps _a2ps aaaa _hosts aap _aap acpi _acpi acpitool _acpitool acroread _acroread adb _adb admin _sccs ali _mh alias _alias amaya _webbrowser analyseplugin _analyseplugin animate _imagemagick anno _mh ant _ant antiword _antiword aoss _precommand apache2ctl _apachectl apachectl _apachectl apm _apm appletviewer _java apropos _man apt-cache _apt apt-cdrom _apt apt-config _apt apt-file _apt-file apt-get _apt apt-move _apt-move apt-show-versions _apt-show-versions aptitude _aptitude apvlv _pdf arena _webbrowser arp _arp arping _arping at _at atq _at atrm _at attr _attr auto-apt _auto-apt autoload _typeset awk _awk axi-cache _axi-cache bash _sh batch _at baz _baz beadm _beadm bg _jobs_bg bindkey _bindkey bison _bison bogofilter _bogofilter bogotune _bogofilter bogoutil _bogofilter brctl _brctl btdownloadcurses _bittorrent btdownloadgui _bittorrent btdownloadheadless _bittorrent btlaunchmany _bittorrent btlaunchmanycurses _bittorrent btmakemetafile _bittorrent btreannounce _bittorrent btrename _bittorrent btrfs _btrfs bts _bts btshowmetainfo _bittorrent bttrack _bittorrent bug _bug buildhash _ispell builtin _builtin bunzip2 _bzip2 burst _mh bzcat _bzip2 bzip2 _bzip2 bzip2recover _bzip2 bzr _bzr c++ _gcc cal _cal calendar _calendar catchsegv _precommand cc _gcc ccal _ccal cd _cd cdbs-edit-patch _cdbs-edit-patch cdc _sccs cdcd _cdcd cdr _cdr cdrdao _cdrdao cdrecord _cdrecord certtool _gnutls cftp _twisted chage _users chdir _cd chflags _chflags chfn _users chgrp _chown chimera _webbrowser chkconfig _chkconfig chmod _chmod chown _chown chrt _chrt chsh _users ci _rcs ckeygen _twisted clang _gcc clang++ _gcc clay _clay clear _nothing co _rcs comb _sccs combine _imagemagick comm _comm command _command comp _mh compdef _compdef composite _imagemagick compress _compress conch _twisted config.status _configure configure _configure convert _imagemagick coreadm _coreadm cowsay _cowsay cowthink _cowsay cp _cp cpio _cpio cplay _cplay crsh _cssh cryptsetup _cryptsetup csh _sh cssh _cssh csup _csup curl _urls cut _cut cvs _cvs cvsup _cvsup cygcheck _cygcheck cygcheck.exe _cygcheck cygpath _cygpath cygpath.exe _cygpath cygrunsrv _cygrunsrv cygrunsrv.exe _cygrunsrv cygserver _cygserver cygserver.exe _cygserver cygstart _cygstart cygstart.exe _cygstart dak _dak darcs _darcs date _date dbus-monitor _dbus dbus-send _dbus dch _debchange dchroot _dchroot dchroot-dsa _dchroot-dsa dcop _dcop dcopclient _dcop dcopfind _dcop dcopobject _dcop dcopref _dcop dcopstart _dcop dd _dd debchange _debchange debdiff _debdiff debfoster _debfoster debsign _debsign declare _typeset defaults _defaults delta _sccs devtodo _devtodo df _directories dhclient _dhclient dhclient3 _dhclient dhcpinfo _dhcpinfo dict _dict diff _diff diffstat _diffstat dillo _webbrowser dircmp _directories dirs _dirs disable _disable disown _jobs_fg display _imagemagick dist _mh django-admin _django django-admin.py _django dladm _dladm dlocate _dlocate dmake _make dmidecode _dmidecode docker _docker domainname _yp dosdel _floppy dosread _floppy dpatch-edit-patch _dpatch-edit-patch dpkg _dpkg dpkg-buildpackage _dpkg-buildpackage dpkg-cross _dpkg-cross dpkg-deb _dpkg dpkg-query _dpkg dpkg-reconfigure _dpkg dpkg-repack _dpkg-repack dpkg-source _dpkg_source dput _dput dtrace _dtrace du _du dumpadm _dumpadm dumper _dumper dumper.exe _dumper dupload _dupload dvibook _dvi dviconcat _dvi dvicopy _dvi dvidvi _dvi dvips _dvi dviselect _dvi dvitodvi _dvi dvitype _dvi dwb _webbrowser ecasound _ecasound echotc _echotc echoti _echoti egrep _grep elinks _elinks elm _elm emulate _emulate enable _enable enscript _enscript env _env epdfview _pdf epsffit _psutils espeak _espeak ethtool _ethtool eval _precommand eview _vim evim _vim evince _pdf exec _precommand exim _vim explodepkg _pkgtool export _typeset express _webbrowser extcheck _java extractres _psutils fakeroot _fakeroot false _nothing fc _fc fc-list _xft_fonts fc-match _xft_fonts feh _feh fetch _fetch fetchmail _fetchmail ffmpeg _ffmpeg fg _jobs_fg fgrep _grep figlet _figlet find _find findaffix _ispell finger _finger fink _fink firefox _mozilla fixdlsrps _psutils fixfmps _psutils fixmacps _psutils fixpsditps _psutils fixpspps _psutils fixscribeps _psutils fixtpps _psutils fixwfwps _psutils fixwpps _psutils fixwwps _psutils flasher _flasher flex _flex flist _mh flists _mh float _typeset flowadm _flowadm fmadm _fmadm fned _zed folder _mh folders _mh fortune _fortune forw _mh freebsd-update _freebsd-update fsh _fsh fstat _fstat ftp _hosts functions _typeset fuser _fuser fusermount _fusermount fwhois _whois g++ _gcc galeon _webbrowser gcc _gcc gccgo _go gcore _gcore gcount _git gdb _gdb gdiff _diff gdv _git genisoimage _genisoimage get _sccs getafm _psutils getclip _getclip getclip.exe _getclip getconf _getconf getent _getent getfacl _getfacl getfacl.exe _getfacl getfattr _attr getmail _getmail getopts _vars gex _vim gfg _grep ggf _git ggl _git ggp _git ggpnp _git ggpull _git ggpur _git ggpush _git ggu _git ggv _gnome-gv ghostscript _gs ghostview _pspdf git _git git-buildpackage _git-buildpackage git-cvsserver _git git-receive-pack _git git-shell _git git-svn-dcommit-push _git git-upload-archive _git git-upload-pack _git gitk _git gk _git gke _git gln _ln global _global glp _git gls _ls gm _graphicsmagick gmake _make gmplayer _mplayer gnome-gv _gnome-gv gnupod_INIT _gnupod gnupod_INIT.pl _gnupod gnupod_addsong _gnupod gnupod_addsong.pl _gnupod gnupod_check _gnupod gnupod_check.pl _gnupod gnupod_search _gnupod gnupod_search.pl _gnupod gnutls-cli _gnutls gnutls-cli-debug _gnutls gofmt _go gpg _gpg gpg-zip _gpg gpgv _gpg gphoto2 _gphoto2 gpoat _git gprof _gprof gqview _gqview gradle _gradle gradlew _gradle grail _webbrowser grep _grep grep-excuses _grep-excuses groff _groff groupadd _user_admin groupdel _groups groupmod _user_admin groups _users growisofs _growisofs gs _gs gsbj _pspdf gsdj _pspdf gsdj500 _pspdf gslj _pspdf gslp _pspdf gsnd _pspdf gtar _tar guilt _guilt guilt-add _guilt guilt-applied _guilt guilt-delete _guilt guilt-files _guilt guilt-fold _guilt guilt-fork _guilt guilt-header _guilt guilt-help _guilt guilt-import _guilt guilt-import-commit _guilt guilt-init _guilt guilt-new _guilt guilt-next _guilt guilt-patchbomb _guilt guilt-pop _guilt guilt-prev _guilt guilt-push _guilt guilt-rebase _guilt guilt-refresh _guilt guilt-rm _guilt guilt-series _guilt guilt-status _guilt guilt-top _guilt guilt-unapplied _guilt gunzip _gzip gv _gv gview _vim gvim _vim gvimdiff _vim gzcat _gzip gzilla _webbrowser gzip _gzip hash _hash hdiutil _hdiutil help _sccs hg _hg hilite _precommand history _fc host _hosts hotjava _webbrowser hwinfo _hwinfo iceweasel _mozilla icombine _ispell iconv _iconv id _id identify _imagemagick ifconfig _ifconfig ifdown _net_interfaces iftop _iftop ifup _net_interfaces ijoin _ispell import _imagemagick inc _mh includeres _psutils inetadm _inetadm info _texinfo infocmp _terminals initctl _initctl insmod _modutils install-info _texinfo installpkg _pkgtool integer _typeset invoke-rc.d _invoke-rc.d ionice _ionice ip _ip ipadm _ipadm ipset _ipset iptables _iptables iptables-restore _iptables iptables-save _iptables irssi _irssi ispell _ispell iwconfig _iwconfig jadetex _tex jar _java jarsigner _java java _java javac _java javadoc _java javah _java javap _java jdb _java jobs _jobs_builtin joe _joe join _join keytool _java kfmclient _kfmclient kill _kill killall _killall killall5 _killall kioclient _kfmclient kldload _kld kldunload _kld knock _knock konqueror _webbrowser kpdf _pdf ksh _sh kvno _kvno last _last lastb _last latex _tex latexmk _tex ldd _ldd less _less let _math lftp _ncftp lha _lha light _webbrowser lighty-disable-mod _lighttpd lighty-enable-mod _lighttpd limit _limit linda _linda links _links lintian _lintian lintian-info _lintian linux _uml llvm-g++ _gcc llvm-gcc _gcc ln _ln loadkeys _loadkeys local _typeset locate _locate log _nothing logname _nothing look _look lore _twisted losetup _losetup lp _lp lpadmin _lp lpinfo _lp lpoptions _lp lpq _lp lpr _lp lprm _lp lpstat _lp ls _ls lscfg _lscfg lsdev _lsdev lslv _lslv lsmod _modutils lsof _lsof lspv _lspv lsusb _lsusb lsvg _lsvg lynx _lynx lzcat _xz lzma _xz lzop _lzop m-a _module-assistant madison _madison mail _mail mailx _mail make _make make-kpkg _make-kpkg makeinfo _texinfo makepkg _pkgtool man _man manage.py _django manhole _twisted mark _mh matlab _matlab mattrib _mtools mcd _mtools mcopy _mtools md5sum _md5sum mdadm _mdadm mdel _mtools mdeltree _mtools mdir _mtools mdu _mtools members _members mencal _mencal mere _mere merge _rcs mergechanges _mergechanges metaflac _metaflac mformat _mtools mgv _pspdf mhlist _mh mhmail _mh mhn _mh mhparam _mh mhpath _mh mhshow _mh mhstore _mh mii-tool _mii-tool mkdir _mkdir mkisofs _growisofs mkshortcut _mkshortcut mkshortcut.exe _mkshortcut mktap _twisted mktunes _gnupod mktunes.pl _gnupod mkzsh _mkzsh mkzsh.exe _mkzsh mlabel _mtools mlocate _locate mmd _mtools mmm _webbrowser mmount _mtools mmove _mtools modinfo _modutils modprobe _modutils module _module module-assistant _module-assistant mogrify _imagemagick mondoarchive _mondo montage _imagemagick mosh _mosh mount _mount mozilla _mozilla mozilla-firefox _mozilla mozilla-xremote-client _mozilla mpc _mpc mplayer _mplayer mrd _mtools mread _mtools mren _mtools msgchk _mh mt _mt mtn _monotone mtoolstest _mtools mtr _mtr mtype _mtools munchlist _ispell mush _mail mutt _mutt mx _hosts mysql _mysql_utils mysqladmin _mysql_utils mysqldiff _mysqldiff mysqldump _mysql_utils mysqlimport _mysql_utils mysqlshow _mysql_utils nail _mail native2ascii _java nautilus _nautilus nc _netcat ncal _cal ncftp _ncftp ncl _nedit nedit _nedit nedit-nc _nedit netcat _netcat netrik _webbrowser netscape _netscape netstat _netstat newgrp _groups next _mh nice _nice nkf _nkf nm _nm nmap _nmap nmblookup _samba nmcli _nmcli nocorrect _precommand noglob _precommand nohup _precommand notmuch _notmuch npm _npm ns _hosts nslookup _nslookup ntalk _other_accounts odme _object_classes odmget _object_classes odmshow _object_classes ogg123 _vorbis oggdec _vorbis oggenc _vorbis ogginfo _vorbis okular _okular open _open opera _webbrowser opera-next _webbrowser osc _osc p4 _perforce p4d _perforce pack _pack packf _mh parsehdlist _urpmi passwd _users patch _patch pax _pax pbuilder _pbuilder pcat _pack pcred _pids pdf2dsc _pdf pdf2ps _pdf pdffonts _pdf pdfimages _pdf pdfinfo _pdf pdfjadetex _tex pdflatex _tex pdfopt _pdf pdftex _tex pdftk _pdftk pdftopbm _pdf pdftops _pdf pdftotext _pdf perl _perl perldoc _perldoc pfctl _pfctl pfexec _pfexec pfiles _pids pflags _pids pgrep _pgrep php _php pick _mh pine _pine pinef _pine ping _ping piuparts _piuparts pkg _pkg5 pkg-config _pkg-config pkg_add _bsd_pkg pkg_create _bsd_pkg pkg_delete _bsd_pkg pkg_info _bsd_pkg pkgadd _pkgadd pkginfo _pkginfo pkgrm _pkgrm pkgtool _pkgtool pkill _pgrep pldd _pids pmake _make pman _perl_modules pmap _pids pmcat _perl_modules pmdesc _perl_modules pmeth _perl_modules pmexp _perl_modules pmfunc _perl_modules pmload _perl_modules pmls _perl_modules pmpath _perl_modules pmvers _perl_modules podgrep _perl_modules podpath _perl_modules podtoc _perl_modules poff _pon policytool _java pon _pon popd _directory_stack portaudit _portaudit portlint _portlint portmaster _portmaster portsnap _portsnap postsuper _postfix powerd _powerd prcs _prcs prev _mh print _print printenv _printenv printf _print procstat _procstat prompt _prompt prs _sccs prstat _prstat prt _sccs prun _pids ps _ps ps2ascii _pspdf psbook _psutils pscp _pscp pscp.exe _pscp psig _pids psmerge _psutils psnup _psutils psresize _psutils psselect _psutils pstack _pids pstoedit _pspdf pstop _pids pstops _psutils pstotgif _pspdf ptree _ptree pump _pump pushd _cd putclip _putclip putclip.exe _putclip pwait _pids pwdx _pids pydoc _pydoc pyhtmlizer _twisted python _python qemu _qemu qiv _qiv qtplay _qtplay querybts _bug quilt _quilt r _fc raggle _raggle rake _rake ranlib _ranlib rar _rar rc _sh rcp _rlogin rcs _rcs rcsdiff _rcs read _read readonly _typeset readshortcut _readshortcut readshortcut.exe _readshortcut rebootin _rebootin refile _mh rehash _hash reload _initctl removepkg _pkgtool remsh _rlogin renice _renice repl _mh reportbug _bug reprepro _reprepro restart _initctl retawq _webbrowser rgview _vim rgvim _vim ri _ri rlogin _rlogin rm _rm rmadison _madison rmdel _sccs rmdir _directories rmf _mh rmic _java rmid _java rmiregistry _java rmm _mh rmmod _modutils rpm _rpm rpmbuild _rpmbuild rrdtool _rrdtool rsh _rlogin rsync _rsync rtin _tin rubber _rubber rubber-info _rubber rubber-pipe _rubber ruby _ruby rup _hosts rusage _precommand rview _vim rvim _vim rwho _hosts rxvt _urxvt sabcmd _sablotron sact _sccs savecore _savecore scan _mh sccs _sccs sccsdiff _sccs sched _sched schedtool _schedtool schroot _schroot scp _ssh screen _screen sed _sed serialver _java service _service set _set setfacl _setfacl setfacl.exe _setfacl setfattr _attr setopt _setopt sftp _ssh sh _sh shift _arrays show _mh showchar _psutils showmount _showmount sisu _sisu skipstone _webbrowser slitex _tex slocate _locate slogin _ssh slrn _slrn smbclient _samba smbcontrol _samba smbstatus _samba smit _smit smitty _smit snoop _snoop soa _hosts socket _socket sockstat _sockstat softwareupdate _softwareupdate sort _sort sortm _mh source _source spamassassin _spamassassin sqlite _sqlite sqlite3 _sqlite sqsh _sqsh sr _surfraw srptool _gnutls ssh _ssh ssh-add _ssh ssh-agent _ssh ssh-copy-id _ssh ssh-keygen _ssh sshfs _sshfs star _tar start _initctl stat _stat status _initctl stg _stgit stop _initctl strace _strace strip _strip stty _stty su _su sudo _sudo sudoedit _sudo surfraw _surfraw svcadm _svcadm svccfg _svccfg svcprop _svcprop svcs _svcs svn _subversion svn-buildpackage _svn-buildpackage svnadmin _subversion svnadmin-static _subversion sync _nothing sysctl _sysctl systemctl _systemd systemd-loginctl _systemd talk _other_accounts tap2deb _twisted tap2rpm _twisted tapconvert _twisted tar _tar tardy _tardy tcp_open _tcpsys tcpdump _tcpdump tcptraceroute _tcptraceroute tcsh _sh tda _devtodo tdd _devtodo tde _devtodo tdr _devtodo telnet _telnet tex _tex texi2dvi _texinfo texindex _texinfo tg _topgit tidy _tidy tig _git time _precommand times _nothing tin _tin tkconch _twisted tkinfo _texinfo tkmktap _twisted tla _tla tmux _tmux todo _devtodo todo.sh _todo.sh toilet _toilet totdconfig _totd tpb _tpb tpconfig _tpconfig tpkg-debarch _toolchain-source tpkg-install _toolchain-source tpkg-install-libc _toolchain-source tpkg-make _toolchain-source tpkg-update _toolchain-source tracepath _tracepath tracepath6 _tracepath traceroute _hosts trap _trap tree _tree trial _twisted true _nothing tryaffix _ispell ttyctl _ttyctl tunctl _uml tune2fs _tune2fs tunes2pod _gnupod tunes2pod.pl _gnupod twidge _twidge twistd _twisted txt _hosts type _which typeset _typeset ulimit _ulimit uml_mconsole _uml uml_moo _uml uml_switch _uml umount _mount unace _unace unalias _aliases uname _uname uncompress _compress unexpand _unexpand unfunction _functions unget _sccs unhash _unhash uniq _uniq unison _unison units _units unlimit _limits unlzma _xz unpack _pack unrar _rar unset _vars unsetopt _unsetopt unxz _xz unzip _zip update-alternatives _update-alternatives update-rc.d _update-rc.d upgradepkg _pkgtool urpme _urpmi urpmf _urpmi urpmi _urpmi urpmi.addmedia _urpmi urpmi.removemedia _urpmi urpmi.update _urpmi urpmq _urpmi urxvt _urxvt urxvtc _urxvt uscan _uscan useradd _user_admin userdel _users usermod _user_admin uzbl _uzbl uzbl-browser _uzbl uzbl-tabbed _uzbl val _sccs valgrind _valgrind vared _vared vcsh _vcsh vim _vim vim-addons _vim-addons vimdiff _vim vncserver _vnc vncviewer _vnc vorbiscomment _vorbiscomment vserver _vserver vux _vux vuxctl _vux w3m _w3m wait _wait wajig _wajig wanna-build _wanna-build websetroot _twisted wget _wget what _sccs whatis _man whence _which where _which whereis _whereis which _which whoami _nothing whois _whois whom _mh wiggle _wiggle wodim _cdrecord wpa_cli _wpa_cli write _users_on www _webbrowser xargs _xargs xauth _xauth xclip _xclip xdpyinfo _x_utils xdvi _xdvi xelatex _tex xetex _tex xev _x_utils xfd _x_utils xfig _xfig xfontsel _x_utils xhost _x_utils xkill _x_utils xli _xloadimage xloadimage _xloadimage xlsatoms _x_utils xmllint _xmlsoft xmms2 _xmms2 xmodmap _xmodmap xmosaic _webbrowser xon _x_utils xournal _xournal xpdf _xpdf xping _hosts xprop _x_utils xrandr _xrandr xrdb _x_utils xscreensaver-command _xscreensaver xset _xset xsetbg _xloadimage xsetroot _x_utils xsltproc _xmlsoft xterm _xterm xtightvncviewer _vnc xtp _imagemagick xv _xv xview _xloadimage xvnc4viewer _vnc xvncviewer _vnc xwd _x_utils xwininfo _x_utils xwit _xwit xwud _x_utils xz _xz xzcat _xz yast _yast yast2 _yast ypbind _yp ypcat _yp ypmatch _yp yppasswd _yp yppoll _yp yppush _yp ypserv _yp ypset _yp ypwhich _yp ypxfr _yp ytalk _other_accounts yum _yum zargs _zargs zathura _pspdf zcat _zcat zcompile _zcompile zcp _zmv zdelattr _zattr zdump _zdump zed _zed zen _webbrowser zfs _zfs zgetattr _zattr zip _zip zipinfo _zip zle _zle zlistattr _zattr zln _zmv zlogin _zlogin zmail _mail zmodload _zmodload zmv _zmv zone _hosts zoneadm _zoneadm zpool _zpool zpty _zpty zsetattr _zattr zsh _sh zsh-mime-handler _zsh-mime-handler zstat _stat zstyle _zstyle ztodo _ztodo zxpdf _xpdf zypper _zypper )
+_lastcomp=(all_quotes '\' completer complete context command exact '' ignored 0 insert automenu-unambiguous insert_positions 16 iprefix '' isuffix '' last_prompt yes list ambiguous list_lines 1 list_max 100 nmatches 1 pattern_insert menu prefix b qiprefix '' qisuffix '' restore auto suffix '' tags ' all-files ' to_end match unambiguous build_all.sh unambiguous_cursor 13 unambiguous_positions 12 vared '' )
+_omz_git_git_cmd=git
+_patcomps=('*/(init|rc[0-9S]#).d/*' _init_d 'zf*' _zftp )
+_postpatcomps=('(p[bgpn]m*|*top[bgpn]m)' _pbm '(texi(2*|ndex))' _texi '(tiff*|*2tiff|pal2rgb)' _tiff '*/X11(|R<4->)/*' _x_arguments '-value-,(ftp|http(|s))_proxy,-default-' _urls '-value-,*PATH,-default-' _dir_list '-value-,*path,-default-' _directories '-value-,LC_*,-default-' _locales '-value-,RUBY(LIB|OPT|PATH),-default-' _ruby 'yodl(|2*)' _yodl )
+_services=('-redirect-,<,bunzip2' bunzip2 '-redirect-,<,bzip2' bzip2 '-redirect-,<,compress' compress '-redirect-,<,gunzip' gunzip '-redirect-,<,gzip' gzip '-redirect-,<,uncompress' uncompress '-redirect-,<,unxz' unxz '-redirect-,<,xz' xz '-redirect-,>,bzip2' bunzip2 '-redirect-,>,compress' uncompress '-redirect-,>,gzip' gunzip '-redirect-,>,xz' unxz Mail mail bzcat bunzip2 dch debchange gdv git-diff ggf git-checkout ggl git-checkout ggp git-checkout ggpnp git-checkout ggpull git-checkout ggpur git-checkout ggpush git-checkout ggu git-checkout git-svn-dcommit-push git gk gitk gke gitk glp git-log gnupod_INIT.pl gnupod_INIT gnupod_addsong.pl gnupod_addsong gnupod_check.pl gnupod_check gnupod_search.pl gnupod_search gpoat git-push gzcat gunzip iceweasel firefox lzcat unxz lzma xz mailx mail mktunes.pl mktunes nail mail ncl nc nedit-nc nc pcat unpack remsh rsh slogin ssh svnadmin-static svnadmin tunes2pod.pl tunes2pod unlzma unxz xelatex latex xetex tex xzcat unxz )
+aliases
+argv=()
+bg
+bg_bold
+bg_no_bold
+bold_color
+builtins
+cdpath=()
+color=(00 none 01 bold 02 faint 03 standout 04 underline 05 blink 07 reverse 08 conceal 22 normal 23 no-standout 24 no-underline 25 no-blink 27 no-reverse 28 no-conceal 30 black 31 red 32 green 33 yellow 34 blue 35 magenta 36 cyan 37 white 39 default 40 bg-black 41 bg-red 42 bg-green 43 bg-yellow 44 bg-blue 45 bg-magenta 46 bg-cyan 47 bg-white 49 bg-default bg-black 40 bg-blue 44 bg-cyan 46 bg-default 49 bg-green 42 bg-grey 40 bg-magenta 45 bg-red 41 bg-white 47 bg-yellow 43 black 30 blink 05 blue 34 bold 01 conceal 08 cyan 36 default 39 faint 02 fg-black 30 fg-blue 34 fg-cyan 36 fg-default 39 fg-green 32 fg-grey 30 fg-magenta 35 fg-red 31 fg-white 37 fg-yellow 33 green 32 grey 30 magenta 35 no-blink 25 no-conceal 28 no-reverse 27 no-standout 23 no-underline 24 none 00 normal 22 red 31 reverse 07 standout 03 underline 04 white 37 yellow 33 )
+colour=(00 none 01 bold 02 faint 03 standout 04 underline 05 blink 07 reverse 08 conceal 22 normal 23 no-standout 24 no-underline 25 no-blink 27 no-reverse 28 no-conceal 30 black 31 red 32 green 33 yellow 34 blue 35 magenta 36 cyan 37 white 39 default 40 bg-black 41 bg-red 42 bg-green 43 bg-yellow 44 bg-blue 45 bg-magenta 46 bg-cyan 47 bg-white 49 bg-default bg-black 40 bg-blue 44 bg-cyan 46 bg-default 49 bg-green 42 bg-grey 40 bg-magenta 45 bg-red 41 bg-white 47 bg-yellow 43 black 30 blink 05 blue 34 bold 01 conceal 08 cyan 36 default 39 faint 02 fg-black 30 fg-blue 34 fg-cyan 36 fg-default 39 fg-green 32 fg-grey 30 fg-magenta 35 fg-red 31 fg-white 37 fg-yellow 33 green 32 grey 30 magenta 35 no-blink 25 no-conceal 28 no-reverse 27 no-standout 23 no-underline 24 none 00 normal 22 red 31 reverse 07 standout 03 underline 04 white 37 yellow 33 )
+commands
+comppostfuncs=()
+compprefuncs=()
+custom_config_file=/home/seafly/.oh-my-zsh/custom/lib/theme-and-appearance.zsh
+d=/usr/share/zsh/functions/Zle
+debian_missing_features=()
+dirstack
+dis_aliases
+dis_builtins
+dis_functions
+dis_galiases
+dis_reswords
+dis_saliases
+fg
+fg_bold
+fg_no_bold
+fignore=()
+fpath=(/home/seafly/.oh-my-zsh/plugins/git /home/seafly/.oh-my-zsh/functions /home/seafly/.oh-my-zsh/completions /usr/local/share/zsh/site-functions /usr/share/zsh/vendor-functions /usr/share/zsh/vendor-completions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/AIX /usr/share/zsh/functions/Completion/BSD /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Cygwin /usr/share/zsh/functions/Completion/Darwin /usr/share/zsh/functions/Completion/Debian /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Mandriva /usr/share/zsh/functions/Completion/Redhat /usr/share/zsh/functions/Completion/Solaris /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Completion/openSUSE /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle)
+funcfiletrace
+funcsourcetrace
+funcstack
+functions
+functrace
+galiases
+histchars='!^#'
+history
+historywords
+jobdirs
+jobstates
+jobtexts
+key=(BackSpace	Delete '3~' Down B End F Home H Insert '2~' Left D PageDown '6~' PageUp '5~' Right C Up A )
+keymaps
+langinfo
+mailpath=()
+manpath=()
+module_path=(/usr/lib/x86_64-linux-gnu/zsh/5.0.2)
+modules
+nameddirs
+options
+parameters
+path=(/home/seafly/bin /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games)
+pipestatus=(0)
+plugin=git
+plugins=(git)
+precmd_functions=(omz_termsupport_precmd)
+preexec_functions=(omz_termsupport_preexec)
+prompt='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+psvar=()
+reset_color
+reswords
+ret_status='%(?:%{01;32m%}➜ :%{01;31m%}➜ )'
+saliases
+signals=(EXIT HUP INT QUIT ILL TRAP ABRT BUS FPE KILL USR1 SEGV USR2 PIPE ALRM TERM STKFLT CHLD CONT STOP TSTP TTIN TTOU URG XCPU XFSZ VTALRM PROF WINCH POLL PWR SYS ZERR DEBUG)
+status=0
+termcap
+terminfo
+userdirs
+usergroups
+watch=()
+widgets
+zsh_eval_context=(toplevel)
+zsh_scheduled_events

@@ -12,7 +12,7 @@ FILE_HEAD=${DIR_CUR}/plugins/script/auto_update_cscope_ctags_database.1.py
 FILE_TAIL=${DIR_CUR}/plugins/script/auto_update_cscope_ctags_database.3.py
 FILE_PATCH=${DIR_CUR}/plugins/script/auto_update_cscope_ctags_database.patch.lookupfile.py
 FILE_PATCHED=${DIR_HOME_BUNDLE}/auto_update_cscope_ctags_database/plugin/auto_update_cscope_ctags_backup_run.py
-
+auto_update_cscope_ctags_database.patch.lookupfile.py
 #01.首先判断是否已经具备该插件了
 grep -Hn "auto_update_cscope_ctags_database_patch_lookupfile_py" ${FILE_PATCHED}
 if [ $? -ne 0 ]; then
