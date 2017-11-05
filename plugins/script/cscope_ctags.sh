@@ -2,8 +2,8 @@
 # File              : plugins/script/cscope_ctags.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 11时08分27秒
-# Last Modified Date: 2017.10.27 07时26分06秒
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.11.05 06:12:37
+# Last Modified By  : seafly <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -43,10 +43,8 @@ GLOBAL_DEFAULT_VIMRC=${DIR_CUR}/config/default_vimrc.vimrc
          exit 1
      fi
      echo "install_ctags_cscope(): 正在在线安装最新最新插件..."
-     $SUDO apt-get install -y ctags
-     $SUDO apt-get install -y cscope
-     $SUDO apt-get install -y cscope-el
-     $SUDO apt-get install -y exuberant-ctags
+     $SUDO apt-get install -y ctags     --force-yes
+     $SUDO apt-get install -y cscope    --force-yes
      exit 0
  else
      echo "install_ctags_cscope(): 网络无连接,正在本地化安装..."

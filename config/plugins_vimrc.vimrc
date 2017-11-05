@@ -1,8 +1,8 @@
-" File              : plugins/script/vim-autoformat.vimrc
-" Author            : 吴海飞 <seafly0616@qq.com>
-" Date              : 2017.10.28 12时07分27秒
-" Last Modified Date: 2017.10.28 12时08分07秒
-" Last Modified By  : 吴海飞 <seafly0616@qq.com>
+" File              : config/plugins_vimrc.vimrc
+" Author            : seafly <seafly0616@qq.com>
+" Date              : 2017.11.05 06:13:17
+" Last Modified Date: 2017.11.05 06:13:17
+" Last Modified By  : seafly <seafly0616@qq.com>
 let g:autoformat_autoindent = 1
 let g:autoformat_retab = 1
 let g:autoformat_remove_trailing_spaces = 1
@@ -19,11 +19,6 @@ let g:gitgutter_map_keys = 0    " disable all key mappings
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 let g:gitgutter_override_sign_column_highlight = 0
-if exists('&signcolumn')  " Vim 7.4.2201
-  set signcolumn=yes
-else
-  let g:gitgutter_sign_column_always = 1
-endif
 let g:gitgutter_sign_added = 'xx'
 let g:gitgutter_sign_modified = 'yy'
 let g:gitgutter_sign_removed = 'zz'

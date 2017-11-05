@@ -1,9 +1,9 @@
 #!/bin/bash
-# File              : plugins/script/vim-header.sh
+# File              : plugins/script/vim-header.patch.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时56分35秒
-# Last Modified Date: 2017.10.24
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.11.05 06:22:37
+# Last Modified By  : seafly <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -43,9 +43,7 @@ fi
 # vim-header配置头信息 >> 并追加到配置文件尾部（由此之该插件最后一个配置）
 echo "config_vim_header(): 正在配置用户信息..."
 echo "config_vim_header(): 下面的用户名和邮箱均用在源文件首部..."
-echo -e "请输入源文件作者名: \c"
-read user_name
-echo -e "请输入作者邮箱: \c"
-read user_email
-echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
-echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc
+tail -n 5 ${HOME}/.vimrc
+echo "config_vim_header(): 请手动修改~/.vimrc最后几行的用户名和邮箱"
+#echo "let g:header_field_author = '${user_name}'" >> ~/.vimrc
+#echo "let g:header_field_author_email = '${user_email}'" >> ~/.vimrc

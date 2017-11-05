@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.10.29 09时38分48秒
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.11.05 06:18:50
+# Last Modified By  : seafly <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -187,50 +187,37 @@ function install_vim()
 #参数: 无
 function install_python_libs()
 {
-    echo "install_python_libs(): 正在检查系统属性..."
-    if [ "${HOSTOS}" != "ubuntu" ] ;
-    then
-        echo "install_python_libs(): 该系统不是Ubuntu或debian发行版!"
-        exit 1
-    else
-        echo "install_python_libs(): 正在检查网络连接..."
-        host ${NETADDR_PING} 1>/dev/null 2>/dev/null
-        if [ $? -eq 0 ] ; then
+	echo "install_python_libs(): 正在检查系统属性..."
+		grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
+		if [ $? -ne 0 ] ;
+	then
+		${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
+		${SUDO} apt-get update
+		fi
+		echo "install_python_libs(): 网络畅通,正在准备安装python库..."
 
-            grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
-            if [ $? -ne 0 ] ;
-            then
-                ${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
-                ${SUDO} apt-get update
-            fi
-            echo "install_python_libs(): 网络畅通,正在准备安装python库..."
-            ${SUDO} apt-get install -y libpng12-*
-            ${SUDO} apt-get install -y libgdk-pixbuf2.0-dev 
-            ${SUDO} apt-get install -y libpango1.0-dev 
-            ${SUDO} apt-get install -y libcairo2-dev 
-            ${SUDO} apt-get install -y libgtk2.0-dev 
-            ${SUDO} apt-get install -y libxt-dev 
-            ${SUDO} apt-get install -y libx11-dev
-            ${SUDO} apt-get install -y tcl-dev 
-            ${SUDO} apt-get install -y libperl-dev 
-            ${SUDO} apt-get install -y libncurses5-dev
-            ${SUDO} apt-get install -y python-dev
-            ${SUDO} apt-get install -y vim-python-jedi
-            ${SUDO} apt-get install -y python-pip 
-            ${SUDO} apt-get install -y python-dev 
-            ${SUDO} apt-get install -y build-essential
-            if [ $? -ne 0 ]; then
-                echo "install_python_libs(): apt-get install build-essential"
-                exit 1
-            fi
-            ${SUDO} pip install --upgrade pip
-            ${SUDO} pip install --upgrade virtualenv
-            pip install jedi
-        else
-            echo "install_python_libs(): 请检查网络连接（该Python库安装需要网络）..."
-            exit 1
-        fi
-    fi
+		${SUDO} apt-get install -y libpng12-*
+		${SUDO} apt-get install -y libgdk-pixbuf2.0-dev 
+		${SUDO} apt-get install -y libpango1.0-dev 
+		${SUDO} apt-get install -y libcairo2-dev 
+		${SUDO} apt-get install -y libgtk2.0-dev 
+		${SUDO} apt-get install -y libxt-dev 
+		${SUDO} apt-get install -y libx11-dev
+		${SUDO} apt-get install -y tcl-dev 
+		${SUDO} apt-get install -y libperl-dev 
+		${SUDO} apt-get install -y libncurses5-dev
+		${SUDO} apt-get install -y python-dev
+		${SUDO} apt-get install -y vim-python-jedi
+		${SUDO} apt-get install -y python-pip 
+		${SUDO} apt-get install -y python-dev 
+		${SUDO} apt-get install -y build-essential
+		if [ $? -ne 0 ]; then
+			echo "install_python_libs(): apt-get install build-essential"
+				exit 1
+				fi
+				${SUDO} pip install --upgrade pip
+				${SUDO} pip install --upgrade virtualenv
+				pip install jedi
 }
 
 #名称: install_git_plugin
@@ -1020,6 +1007,3 @@ function install_vimtools()
 
 #vimtools推荐:https://github.com/SpaceVim/SpaceVim
 install_vimtools "$@"
-
-
-
