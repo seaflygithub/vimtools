@@ -1,35 +1,11 @@
-" File              : config/plugins_vimrc.vimrc
-" Author            : seafly <seafly0616@qq.com>
-" Date              : 2017.11.05 06:13:17
-" Last Modified Date: 2017.11.05 06:13:17
-" Last Modified By  : seafly <seafly0616@qq.com>
+" File              : plugins/script/vim-autoformat.vimrc
+" Author            : 吴海飞 <seafly0616@qq.com>
+" Date              : 2017.10.28 12时07分27秒
+" Last Modified Date: 2017.10.28 12时08分07秒
+" Last Modified By  : 吴海飞 <seafly0616@qq.com>
 let g:autoformat_autoindent = 1
 let g:autoformat_retab = 1
 let g:autoformat_remove_trailing_spaces = 1
-" File              : plugins/script/vim-gitgutter.vimrc
-" Author            : 吴海飞 <seafly0616@qq.com>
-" Date              : 2017.10.28 11时35分03秒
-" Last Modified Date: 2017.10.28 11时40分26秒
-" Last Modified By  : 吴海飞 <seafly0616@qq.com>
-let g:gitgutter_enabled = 0
-let g:gitgutter_highlight_lines = 1
-let g:gitgutter_signs = 1
-let g:gitgutter_max_signs = 500  " default value
-let g:gitgutter_map_keys = 0    " disable all key mappings
-let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_sign_added = 'xx'
-let g:gitgutter_sign_modified = 'yy'
-let g:gitgutter_sign_removed = 'zz'
-let g:gitgutter_sign_removed_first_line = '^^'
-let g:gitgutter_sign_modified_removed = 'ww'
-let g:gitgutter_diff_args = '-w'
-
-" Default:
-let g:gitgutter_grep_command = 'grep'
-let g:gitgutter_async = 1
-
 " File              : plugins/script/rainbow.vimrc
 " Author            : 吴海飞 <seafly0616@qq.com>
 " Date              : 2017.10.28 11时28分54秒

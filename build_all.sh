@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.06 08时38分24秒
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.11.06 09时16分20秒
+# Last Modified By  : seafly <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -610,8 +610,8 @@ function install_git_plugins()
     #completes an entire sequence of non-blank characters 
     #https://github.com/inkarkat/vim-WORDComplete
 
-    #Provides auto-balancing and some expansions for parens, quotes, etc
-    #http://github.com/Raimondi/delimitMate
+
+    
 
     #EasyMotion : Vim motions on speed! 
     #https://github.com/Lokaltog/vim-easymotion
@@ -664,6 +664,15 @@ function install_git_plugins()
 
     #收集了一大坨配色
     #http://github.com/biskark/vim-ultimate-colorscheme-utility
+
+    #Provides auto-balancing and some expansions for parens, quotes, etc
+    #http://github.com/Raimondi/delimitMate
+    install_git_plugin \
+        "delimitMate.vimrc" \
+        "delimitMate" \
+        "" \
+        "http://github.com/Raimondi/delimitMate" \
+        "no-update"
 
     #比如c++，会自动调用诸如astyle, clang-format来对代码进行美化
     #https://github.com/Chiel92/vim-autoformat
