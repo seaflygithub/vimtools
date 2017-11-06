@@ -1,8 +1,3 @@
-" File              : plugins/script/vim-gitgutter.vimrc
-" Author            : 吴海飞 <seafly0616@qq.com>
-" Date              : 2017.10.28 11时35分03秒
-" Last Modified Date: 2017.10.28 11时40分26秒
-" Last Modified By  : 吴海飞 <seafly0616@qq.com>
 let g:gitgutter_enabled = 0
 let g:gitgutter_highlight_lines = 1
 let g:gitgutter_signs = 1

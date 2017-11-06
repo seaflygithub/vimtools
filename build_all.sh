@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.05 06:18:50
-# Last Modified By  : seafly <seafly0616@qq.com>
+# Last Modified Date: 2017.11.06 08时38分24秒
+# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -676,12 +676,12 @@ function install_git_plugins()
 
     #shows a git diff in the gutter (sign column) and stages/undoes hunks
     #https://github.com/airblade/vim-gitgutter
-    install_git_plugin \
-        "vim-gitgutter.vimrc" \
-        "vim-gitgutter" \
-        "" \
-        "https://github.com/airblade/vim-gitgutter" \
-        "no-update"
+    #install_git_plugin \
+        #"vim-gitgutter.vimrc" \
+        #"vim-gitgutter" \
+        #"" \
+        #"https://github.com/airblade/vim-gitgutter" \
+        #"no-update"
 
     #通过将不同层次的括号高亮为不同的颜色, 帮助你阅读世界上最复杂的代码
     #https://github.com/luochen1990/rainbow
@@ -936,12 +936,12 @@ function patch_plugins()
 
     #该indentLine补丁是之前rtp值的修复问题:
     #patch_plugin "indentLine.patch.sh" "bash"
-
     #该auto_update_cscope_ctags_database补丁是对于最新插件的新功能补丁添加:
     #patch_plugin "auto_update_cscope_ctags_database.sh" "bash"
-
     #该补丁是安装完成后提示用户填写作者名和邮箱信息
     patch_plugin "vim-header.patch.sh" "bash"
+
+    #patch_plugin "vim-gitgutter.patch.sh" "bash"
 
     return 0
 }
