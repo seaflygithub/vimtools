@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# File              : auto_update_cscope_ctags_backup_run.py
+# File              : plugins/script/auto_update_cscope_ctags_database/plugin/auto_update_cscope_ctags_backup_run.py
 # Author            : abc123 <[A[A>
 # Date              : 2017.10.21 16时13分23秒
-# Last Modified Date: 2017.10.27 07时02分05秒
-# Last Modified By  : SeaflyGithub <seafly0616@qq.com>
+# Last Modified Date: 2017.11.09 11时34分23秒
+# Last Modified By  : seafly <seafly0616@qq.com>
 #by haolong.zhang@ck-telecom.com 20170426
 import os
 import glob
@@ -419,12 +419,13 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         dir_home = os.environ['HOME']           # 获取当前用户HOME绝对路径
         home_systags = dir_home + "/.systags"   # 将C库的数据库文件列为隐藏文件
         gnome_osd_print('(seafly debug)Project rootdir:' + dir_obj_root)
-
         if not os.path.exists(home_systags):
             ctags_cmd = ctags_cmd + " ; ctags -R --file-scope=yes --langmap=c:+.h --links=yes"
             ctags_cmd = ctags_cmd + " --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q"
             ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
             ctags_cmd = ctags_cmd + " -f " + home_systags + " /usr/include "
+        #合并objtags+systags
+        ctags_cmd = ctags_cmd + " ; sed -i '1,6d' " + home_systags
         ctags_cmd = ctags_cmd + " ; cd " + dir_obj_root + " ;  cat objtags >> tags"
         ctags_cmd = ctags_cmd + " ; cat " + home_systags + " >> tags"
 
