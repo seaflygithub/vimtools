@@ -1,3 +1,22 @@
+" File              : plugins/script/winmanager.vimrc
+" Author            : seafly <seafly0616@qq.com>
+" Date              : 2017.11.11 09时55分37秒
+" Last Modified Date: 2017.11.11 09时55分37秒
+" Last Modified By  : seafly <seafly0616@qq.com>
+" File              : plugins/script/winmanager.vimrc
+" Author            : seafly <seafly0616@qq.com>
+" Date              : 2017.11.11 09时55分31秒
+" Last Modified Date: 2017.11.11 09时55分31秒
+" Last Modified By  : seafly <seafly0616@qq.com>
+" 设置winmanager
+" 设置界面分割
+let g:winManagerWindowLayout = "FileExplorer|TagList"
+"设置winmanager的宽度，默认为25
+let g:winManagerWidth = 30
+"定义打开关闭winmanager快捷键为F8
+nmap <silent> <F12> :WMToggle<cr>
+"在进入vim时自动打开winmanager
+let g:AutoOpenWinManager = 1
 " File              : plugins/script/vim-autoformat.vimrc
 " Author            : 吴海飞 <seafly0616@qq.com>
 " Date              : 2017.10.28 12时07分27秒
@@ -218,7 +237,7 @@ nmap <F8>   :TrinityToggleAll<CR>
 " File              : plugins/script/vim-header.vimrc
 " Author            : seafly <seafly0616@qq.com>
 " Date              :52 PM
-" Last Modified Date: 2017.10.18 11:12:01 PM
+" Last Modified Date: 2017.11.06 09时17分28秒
 " Last Modified By  : seafly <seafly0616@qq.com>
 " 插件: vim-header
 " 功能: 自动为源文件添加头部作者信息
@@ -229,7 +248,6 @@ set showcmd         " 在状态栏显示正在输入的命令
 set showmode        " 左下角显示当前vim模式
 let g:header_field_filename = 1
 let g:header_field_timestamp = 1
-let g:header_field_timestamp_format = '%Y.%m.%d'
 map <F2> :AddGNULicense<CR>
 "let g:header_field_author = 'Your Name'
 "let g:header_field_author_email = 'your@mail'

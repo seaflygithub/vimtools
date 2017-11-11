@@ -23,3 +23,4 @@ set rtp+=/home/seafly/.vim/bundle/Trinity
 set rtp+=/home/seafly/.vim/bundle/vim-autoformat
 set rtp+=/home/seafly/.vim/bundle/vim-header
 set rtp+=/home/seafly/.vim/bundle/vim-markdown
+set rtp+=/home/seafly/.vim/bundle/winmanager

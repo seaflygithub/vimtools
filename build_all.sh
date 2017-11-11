@@ -2,7 +2,7 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.06 09时16分20秒
+# Last Modified Date: 2017.11.11 10时01分35秒
 # Last Modified By  : seafly <seafly0616@qq.com>
 
 DIR_CUR="`pwd`"
@@ -664,6 +664,13 @@ function install_git_plugins()
 
     #收集了一大坨配色
     #http://github.com/biskark/vim-ultimate-colorscheme-utility
+
+    install_git_plugin \
+        "winmanager.vimrc" \
+        "winmanager" \
+        "" \
+        "" \
+        "no-update"
 
     #Provides auto-balancing and some expansions for parens, quotes, etc
     #http://github.com/Raimondi/delimitMate
