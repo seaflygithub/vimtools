@@ -2,7 +2,7 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.11 10时14分16秒
+# Last Modified Date: 2017.11.11 10时18分47秒
 # Last Modified By  : Your Name <your@mail>
 
 DIR_CUR="`pwd`"
@@ -986,15 +986,6 @@ function install_vimtools()
             echo "提示: 正在进行vim安装..."
             install_python_libs
             install_vim "python2.x" "no-update" "8.0"
-            ;;
-        "plugins"|"--plugins")
-            echo "提示: 正在进行插件安装..."
-            install_ctags_cscope "no-update"
-            init_vim_configure_dir
-            init_vimtools_configs
-            install_git_plugins
-            patch_plugins
-            #config_vim_header 作为补丁来操作
             ;;
         "--plugins"|"plugins"|"script_plugins"|"script"|"--script"|"--script_plugins")
             echo "提示: 正在进行本地插件安装..."
