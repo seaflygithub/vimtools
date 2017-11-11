@@ -2,8 +2,8 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.11 10时01分35秒
-# Last Modified By  : seafly <seafly0616@qq.com>
+# Last Modified Date: 2017.11.11 10时14分16秒
+# Last Modified By  : Your Name <your@mail>
 
 DIR_CUR="`pwd`"
 SUDO=""
@@ -996,7 +996,7 @@ function install_vimtools()
             patch_plugins
             #config_vim_header 作为补丁来操作
             ;;
-        "script_plugins"|"script"|"--script"|"--script_plugins")
+        "--plugins"|"plugins"|"script_plugins"|"script"|"--script"|"--script_plugins")
             echo "提示: 正在进行本地插件安装..."
             init_vim_configure_dir
             init_vimtools_configs
