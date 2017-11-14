@@ -1,11 +1,5 @@
-" File              : plugins/script/auto_update_cscope_ctags_database/plugin/autoload_cscope_ctags.vim
-" Author            : 吴海飞 <seafly0616@qq.com>
-" Date              : 2017.10.28 11时44分18秒
-" Last Modified Date: 2017.10.28 11时44分18秒
-" Last Modified By  : 吴海飞 <seafly0616@qq.com>
 " Maintainer: Michael Conrad Tadpol Tilsra <tadpol@tadpol.org>
 " Revision: 0.5
-
 " 20170426 haolong.zhang@ck-telecom.com export for_auto_update_cscope_ctag
 " add this for auto update cscope and ctags tag
 let g:for_auto_update_cscope_ctag = "null"
@@ -172,10 +166,11 @@ function s:Cycle_csdb()
 	"so try to update ctags file when proj chang from A to B
 	if filereadable(newcsdbpath . "/tags")
 		"echo "Found tags at: " . newcsdbpath
-		execute 'set tags ='. newcsdbpath . '/tags'
+		execute 'set tags ='. newcsdbpath . '/tags' . ',' . newcsdbpath . '/filenametags'
+        " set tags = ./tags,./filenametags
 	else
 		"echo "No tags"
-		execute 'set tags ='
+		execute 'set tags =' . '/tags'
 	endif
 
     let g:myLookupFileTagExpr = './filenametags'
@@ -194,7 +189,8 @@ function s:Cycle_csdb()
       if !cscope_connection(3, "out", g:csdbpath)
         let save_csvb = &csverb
         set nocsverb
-        exe "cs add " . g:csdbpath . "/cscope.out " .g:csdbpath
+        exe "cs add " . g:csdbpath . "/cscope.out " . g:csdbpath
+        "cs add ./cscope.out .
         set csverb
         let &csverb = save_csvb
       endif
