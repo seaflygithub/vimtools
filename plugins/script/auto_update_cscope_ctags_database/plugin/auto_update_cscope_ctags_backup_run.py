@@ -303,16 +303,16 @@ def clear_lock_i():
 def cscope_task_func(show_message_enable, s_time):
 
     if 'not_kernel' == arch_type_str:
-        not_kernel_cmd = "find"
+        not_kernel_cmd = "find "
         if os.path.exists('./.auto_cscope_ctags/.enable_soft_link_file'):
             not_kernel_cmd = not_kernel_cmd + " -L "
 
-        not_kernel_cmd = not_kernel_cmd + " . -name '*.c' "
+        not_kernel_cmd = not_kernel_cmd + " . -iname '*.c' "
         for i_care_type in care_file_type:
-            not_kernel_cmd = not_kernel_cmd + " -o -name " + '\'' + i_care_type + '\''
+            not_kernel_cmd = not_kernel_cmd + " -o -iname " + i_care_type
 
-        not_kernel_cmd = not_kernel_cmd + " -o -type f -name '*config'"
-        not_kernel_cmd = not_kernel_cmd + "> cscope.files "
+        not_kernel_cmd = not_kernel_cmd + " -o -type f -o -iname '*config'"
+        not_kernel_cmd = not_kernel_cmd + " > cscope.files "
         if global_add_pythonlib:
             if check_include_filetyle_or_not('*.py'):
                 debug_backrun_python_print('find python file, try to add pythonlib file...')
@@ -323,7 +323,7 @@ def cscope_task_func(show_message_enable, s_time):
                             debug_backrun_python_print('now handle pythonlib %s' % dir_i)
                             not_kernel_cmd = not_kernel_cmd + "; find %s -name '*.py' >> cscope.files" % dir_i
 
-        not_kernel_cmd = not_kernel_cmd + ";cscope -bkq -i cscope.files -f cscope.out"
+        not_kernel_cmd = not_kernel_cmd + "; cscope -bkq -i cscope.files -f cscope.out"
         if 0 == show_message_enable:
             not_kernel_cmd = not_kernel_cmd + " 1>/dev/null  2>&1"
         else:
@@ -414,21 +414,35 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         ctags_cmd = "ctags -R -L tags.files --file-scope=yes "
         ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
         ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
-        ctags_cmd = ctags_cmd + " ; mv tags objtags"    # 生成工程专属数据库文件
-        dir_obj_root= os.environ['PWD']         # 获取当前工程顶层目录绝对路径
-        dir_home = os.environ['HOME']           # 获取当前用户HOME绝对路径
-        home_systags = dir_home + "/.systags"   # 将C库的数据库文件列为隐藏文件
-        gnome_osd_print('(seafly debug)Project rootdir:' + dir_obj_root)
+        ctags_cmd = ctags_cmd + " ; mv tags objtags"
+        ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
+        dir_obj_root= os.environ['PWD']
+        dir_home = os.environ['HOME']
+        home_systags = dir_home + "/.systags"
+        gnome_osd_print('(seafly_debug)Project rootdir:' + dir_obj_root)
+
         if not os.path.exists(home_systags):
-            ctags_cmd = ctags_cmd + " ; ctags -R --file-scope=yes --langmap=c:+.h --links=yes"
-            ctags_cmd = ctags_cmd + " --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q"
-            ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
-            ctags_cmd = ctags_cmd + " -f " + home_systags + " /usr/include "
-        #合并objtags+systags
+            ctags_cmd = ctags_cmd + " ; ctags -R "
+            ctags_cmd = ctags_cmd + " --file-scope=yes "
+            ctags_cmd = ctags_cmd + " --langmap=c:+.h "
+            ctags_cmd = ctags_cmd + " --links=yes "
+            ctags_cmd = ctags_cmd + " --c-kinds=+p "
+            ctags_cmd = ctags_cmd + " --c++-kinds=+p "
+            ctags_cmd = ctags_cmd + " --fields=+iaS "
+            ctags_cmd = ctags_cmd + " --extra=+q "
+            ctags_cmd = ctags_cmd + " -I __THROW "
+            ctags_cmd = ctags_cmd + " -I __attribute_pure__ "
+            ctags_cmd = ctags_cmd + " -I __nonnull "
+            ctags_cmd = ctags_cmd + " -I __attribute__ "
+            ctags_cmd = ctags_cmd + " -f " + home_systags
+            ctags_cmd = ctags_cmd + " /usr/include "
+        # combine objtags+systags
         ctags_cmd = ctags_cmd + " ; sed -i '1,6d' " + home_systags
-        ctags_cmd = ctags_cmd + " ; cd " + dir_obj_root + " ;  cat objtags >> tags"
+        ctags_cmd = ctags_cmd + " ; cd " + dir_obj_root
+        ctags_cmd = ctags_cmd + " ; cat objtags >> tags"
         ctags_cmd = ctags_cmd + " ; cat " + home_systags + " >> tags"
 
+        # generate filenametags
         ctags_cmd = ctags_cmd + ' ; echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase" > ./filenametags'
         ctags_cmd = ctags_cmd + " ; find . -type f "
         ctags_cmd = ctags_cmd + ' -printf "%f\t%p\t1\n" | sort -f >> ./filenametags'
