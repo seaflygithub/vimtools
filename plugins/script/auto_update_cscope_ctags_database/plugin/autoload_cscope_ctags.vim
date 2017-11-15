@@ -170,7 +170,7 @@ function s:Cycle_csdb()
         " set tags = ./tags,./filenametags
 	else
 		"echo "No tags"
-		execute 'set tags =' . '/tags'
+		execute 'set tags ='. newcsdbpath . '/tags' . ',' . newcsdbpath . '/filenametags'
 	endif
 
     let g:myLookupFileTagExpr = './filenametags'
