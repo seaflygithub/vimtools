@@ -4,6 +4,7 @@
 - [使用环境](#使用环境)
 - [下载安装](#下载安装)
 - [使用方法](#使用方法)
+- [注意事项](#注意事项)
 - [vimtools-issue](#vimtools-issue)
 - [项目结构](#项目结构)
 - [开发&维护计划](#开发&维护计划)
@@ -51,6 +52,11 @@
   - vim目录: vim常用操作.md
   - plugins目录: 各种插件的使用方法文档说明
 
+## 注意事项
+
+- 保存文件: 保存文件时注意跳转到顶层源文件再执行保存操作
+- NERDTree异常关闭问题: 快速重启F8（即按F8关闭，再按F8启动）
+
 ## vimtools-issue
 
 - Q：修改工程代码保存自动同步更新后tags不见了。。。
@@ -77,6 +83,13 @@
 
 ## 功能列表
 
++ 优化工程自动同步插件（auto_update_cscope_ctags_database）
++ 添加源文件语法检查（syntax_check）
++ 添加路径补齐（AutoComplPop）
++ 添加结构体成员补齐（omnicppcomplete）
++ 添加工程代码文件快速查找（LookupFile、genutils）
++ 添加工程数据库自动检测更新同步（auto_update_cscope_ctags_database）
++ 添加对man在vim中的内嵌（man.vim）
 + 添加文件头自动插入更新插件（vim-header）
 + 添加代码快速编辑插件（code_complete）
 + 添加vim内置异步执行命令（asyncrun.vim）
@@ -89,14 +102,8 @@
 + 添加多标签高亮支持（mark.vim）
 + 添加文件目录管理插件（bufexplorer）
 + 添加多文件名编辑缓冲区（minibufexpl）
-+ 添加缩进对齐线显示（indentLine）
++ 添加缩进对齐线显示（indenjLine）
 + 添加markdown语法支持（vim-markdown）
-+ 添加路径补齐（AutoComplPop）
-+ 添加结构体成员补齐（omnicppcomplete）
-+ 添加工程代码文件快速查找（LookupFile、genutils）
-+ 添加工程数据库自动检测更新同步（auto_update_cscope_ctags_database）
-+ 添加对man在vim中的内嵌（man.vim）
-+ 添加源文件语法检查（待更新...）
 
 ## 遵循的协议
 
