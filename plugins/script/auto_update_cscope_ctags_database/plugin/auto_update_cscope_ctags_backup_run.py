@@ -415,9 +415,17 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         #ctags_cmd = "ctags -R --fields=+lafikmnsztS --extra=+fq -L tags.files"
 
         #修改: 生成一个基于当前工程的数据库tags文件objtags
-        ctags_cmd = "ctags -R -L tags.files --file-scope=yes "
-        ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
+
+        #仅引入列表文件:tags.files
+        ctags_cmd = "ctags --file-scope=yes -L tags.files"
+        ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q "
         ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
+
+        #仅依赖当前目录生成: -R .
+        #ctags_cmd = "ctags -R --file-scope=yes "
+        #ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
+        #ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
+
         ctags_cmd = ctags_cmd + " ; mv tags objtags" + " 2>/dev/null 1>/dev/null"
 
         # generate .systags in HOME
