@@ -1,9 +1,0 @@
-- 插件名: man.vim
-- 作者: created by rich paul
-- 插件地址: http://www.vim.org/scripts/script.php?script_id=5615
-- 插件描述: 在vim中使用man手册
-- 使用方法: This allows you to edit man pages by using: 
-    - :e man:bash
-    - :e man:1:stat " Shows man page for userspace command
-    - :e man:2:stat " Shows man page for system call
-- 整理: seafly
