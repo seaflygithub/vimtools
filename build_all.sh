@@ -187,37 +187,38 @@ function install_vim()
 #参数: 无
 function install_python_libs()
 {
-	echo "install_python_libs(): 正在检查系统属性..."
-		grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
-		if [ $? -ne 0 ] ;
-	then
-		${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
-		${SUDO} apt-get update
-		fi
-		echo "install_python_libs(): 网络畅通,正在准备安装python库..."
+    echo "install_python_libs(): 正在检查系统属性..."
+    grep -Hn "security\.ubuntu\.com/" /etc/apt/sources.list
+    if [ $? -ne 0 ] ;
+    then
+        ${SUDO} sed -i '$adeb http://security.ubuntu.com/ubuntu trusty-security main universe' /etc/apt/sources.list
+        ${SUDO} apt-get update
+    fi
+    echo "install_python_libs(): 网络畅通,正在准备安装python库..."
 
-		${SUDO} apt-get install -y libpng12-*
-		${SUDO} apt-get install -y libgdk-pixbuf2.0-dev 
-		${SUDO} apt-get install -y libpango1.0-dev 
-		${SUDO} apt-get install -y libcairo2-dev 
-		${SUDO} apt-get install -y libgtk2.0-dev 
-		${SUDO} apt-get install -y libxt-dev 
-		${SUDO} apt-get install -y libx11-dev
-		${SUDO} apt-get install -y tcl-dev 
-		${SUDO} apt-get install -y libperl-dev 
-		${SUDO} apt-get install -y libncurses5-dev
-		${SUDO} apt-get install -y python-dev
-		${SUDO} apt-get install -y vim-python-jedi
-		${SUDO} apt-get install -y python-pip 
-		${SUDO} apt-get install -y python-dev 
-		${SUDO} apt-get install -y build-essential
-		if [ $? -ne 0 ]; then
-			echo "install_python_libs(): apt-get install build-essential"
-				exit 1
-				fi
-				${SUDO} pip install --upgrade pip
-				${SUDO} pip install --upgrade virtualenv
-				pip install jedi
+    ${SUDO} apt-get install -y libpng12-*
+    ${SUDO} apt-get install -y libgdk-pixbuf2.0-dev 
+    ${SUDO} apt-get install -y libpango1.0-dev 
+    ${SUDO} apt-get install -y libcairo2-dev 
+    ${SUDO} apt-get install -y libgtk2.0-dev 
+    ${SUDO} apt-get install -y libxt-dev 
+    ${SUDO} apt-get install -y libx11-dev
+    ${SUDO} apt-get install -y tcl-dev 
+    ${SUDO} apt-get install -y libperl-dev 
+    ${SUDO} apt-get install -y libncurses5-dev
+    ${SUDO} apt-get install -y python-dev
+    ${SUDO} apt-get install -y vim-python-jedi
+    ${SUDO} apt-get install -y python-pip 
+    ${SUDO} apt-get install -y python-dev 
+    ${SUDO} apt-get install -y build-essential
+
+    if [ $? -ne 0 ]; then
+        echo "install_python_libs(): apt-get install build-essential"
+        exit 1
+    fi
+    ${SUDO} pip install --upgrade pip
+    ${SUDO} pip install --upgrade virtualenv
+    pip install jedi
 }
 
 #名称: install_git_plugin
@@ -439,22 +440,16 @@ function get_ycm_package()
 #名称: install_youcomleteme
 #功能: 安装YouCompleteMe(YCM)插件
 #参数: 无
-#返回: 0
-#说明: 
 function install_youcomleteme()
 {
     echo "install_youcomleteme(): 正在准备重新编译安装vim编辑器..."
     install_vim "python3.x" "no-update" "8.0"
-
     echo "install_youcomleteme(): 正在准备获取最新YCM源码包..."
     get_ycm_package
-
     echo "install_youcomleteme(): 正在准备安装最新的clang库支持..."
     install_latest_libclang
-
     echo "install_youcomleteme(): 正在准备构建YCM核心支持库..."
     build_ycm_core_lib
-
     echo "install_youcomleteme(): 正在准备创建YCM配置文件..."
     build_ycm_conf
 }
@@ -610,13 +605,8 @@ function install_git_plugins()
     #completes an entire sequence of non-blank characters 
     #https://github.com/inkarkat/vim-WORDComplete
 
-
-    
-
     #EasyMotion : Vim motions on speed! 
     #https://github.com/Lokaltog/vim-easymotion
-
-
 
     #Elegant buffer explorer - takes very little screen space 
     #https://github.com/fholgado/minibufexpl.vim
@@ -645,14 +635,14 @@ function install_git_plugins()
 
     #install_git_plugin函数使用方法:
     #   install_git_plugin \
-    #       "插件配置文件名.vimrc" \（一般为: 插件名.vimrc）
+        #       "插件配置文件名.vimrc" \（一般为: 插件名.vimrc）
     #       "插件名（插件目录名）" \
-    #       "插件获取地址(git)" \
-    #       "是否更新"
+        #       "插件获取地址(git)" \
+        #       "是否更新"
 
     #install_git_plugin参数取值:
     #       "xxx.vimrc" 插件配置，一般为: 插件名.vimrc
-    #       "xxx"       插件目录，一般为: 插件名（插件目录名）
+    #       "xxx"       插件目录，一般为: 插件名（插件目录名）目录为插件顶层目录，且目录下为plugin或after,autoload字样目录或xxx.vim脚本文件
     #       "xxx"       插件运行时(rtp)目录，通常默认为插件顶层目录，也可指定
     #       "git-addr"  插件地址，一般为: 插件的git获取地址
     #       "update"    插件更新，一般为: 是否更新(识别到update则更新为最新,否则不更新)
@@ -919,20 +909,28 @@ function combine_vimrcs()
     cat ${GLOBAL_PLUGINS_VIMRC} >> ${HOME}/.vimrc
 }
 
-
 function build_all_help()
 {
-    echo "获取帮助:	bash ./build_all.sh"
-    echo "全新安装:	bash ./build_all.sh --all"
-    echo "只安装vim:	bash ./build_all.sh --vim"
-    echo "只安装插件:	bash ./build_all.sh --plugins"
-    echo "安装本地插件:	bash ./build_all.sh --script"
+    echo "===============vimtools安装帮助=================="
+    echo "->获取帮助:	bash ./build_all.sh"
+    echo "->全新安装:	bash ./build_all.sh --all"
+    echo "->只安装vim:	bash ./build_all.sh --vim"
+    echo "->只安装插件:	bash ./build_all.sh --plugins"
+    echo "->安装本地插件:	bash ./build_all.sh --script"
+    echo "================================================="
+    echo "->工程管理流程:"
+    echo "->(1) 用户同步工程: Createtag"
+    echo "->    (1) 检查并生成cscope,objtags,~/.systags"
+    echo "->    (2) 合并tags: tags = systags + objtags"
+    echo "->(2) 自动导入工程数据文件(并动态检查更新)"
+    echo "->(3) 更新编程库: 删除~/.systags，重新执行同步操作生成新的.systags"
+    echo "================================================="
     return 0
 }
 
 #名称: patch_plugin
 #功能: 为特殊插件打补丁
-#参数: $1==补丁脚本，脚本里为具体补丁内容，补丁脚本默认规定放在plugins/script/目录下
+#参数: $1==补丁脚本，补丁脚本默认规定放在plugins/script/目录下
 #参数: $2==补丁脚本解释器，如bash,sh,python等.
 #说明: 比如补丁脚本为xxx.sh，那么该函数会自动执行该脚本
 function patch_plugin()
@@ -950,16 +948,12 @@ function patch_plugins()
     #该补丁是安装cscope和ctags工具
     patch_plugin "cscope_ctags.sh" "bash"
 
-    #该indentLine补丁是之前rtp值的修复问题:
-    #patch_plugin "indentLine.patch.sh" "bash"
     #该auto_update_cscope_ctags_database补丁是对于最新插件的新功能补丁添加:
     #patch_plugin "auto_update_cscope_ctags_database.sh" "bash"
+
     #该补丁是安装完成后提示用户填写作者名和邮箱信息
     patch_plugin "vim-header.patch.sh" "bash"
-
     patch_plugin "indentLine.patch.sh" "bash"
-
-    #patch_plugin "vim-gitgutter.patch.sh" "bash"
 
     return 0
 }
@@ -989,7 +983,7 @@ function install_vimtools()
             install_python_libs
             install_vim "python2.x" "no-update" "8.0"
             ;;
-        "--plugins"|"plugins"|"script_plugins"|"script"|"--script"|"--script_plugins")
+        "plugins"|"script_plugins"|"script"|"--script"|"--script_plugins")
             echo "提示: 正在进行本地插件安装..."
             init_vim_configure_dir
             init_vimtools_configs
