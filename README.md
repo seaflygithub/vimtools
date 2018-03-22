@@ -83,6 +83,7 @@
 
 ## 功能列表
 
++ 添加了GTK编程的独立环境配置包(config相关目录:vim_configure_GTK)
 + 优化工程自动同步插件（auto_update_cscope_ctags_database）
 + 添加源文件语法检查（syntax_check）
 + 添加路径补齐（AutoComplPop）
