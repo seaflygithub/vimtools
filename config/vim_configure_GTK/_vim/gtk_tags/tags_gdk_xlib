@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GDK_PIXBUF_XLIB_H	gdk-pixbuf-xlib.h	22;"	d
+XLIB_RGB_DITHER_MAX	gdk-pixbuf-xlibrgb.h	/^  XLIB_RGB_DITHER_MAX$/;"	e	enum:__anon1
+XLIB_RGB_DITHER_NONE	gdk-pixbuf-xlibrgb.h	/^  XLIB_RGB_DITHER_NONE,$/;"	e	enum:__anon1
+XLIB_RGB_DITHER_NORMAL	gdk-pixbuf-xlibrgb.h	/^  XLIB_RGB_DITHER_NORMAL,$/;"	e	enum:__anon1
+XlibRgbCmap	gdk-pixbuf-xlibrgb.h	/^typedef struct _XlibRgbCmap XlibRgbCmap;$/;"	t	typeref:struct:_XlibRgbCmap
+XlibRgbDither	gdk-pixbuf-xlibrgb.h	/^} XlibRgbDither;$/;"	t	typeref:enum:__anon1
+_XlibRgbCmap	gdk-pixbuf-xlibrgb.h	/^struct _XlibRgbCmap {$/;"	s
+__XLIB_RGB_H__	gdk-pixbuf-xlibrgb.h	52;"	d
+colors	gdk-pixbuf-xlibrgb.h	/^  unsigned int colors[256];$/;"	m	struct:_XlibRgbCmap
+gdk_pixbuf_xlib_get_from_drawable	gdk-pixbuf-xlib.h	/^GdkPixbuf *gdk_pixbuf_xlib_get_from_drawable (GdkPixbuf *dest,$/;"	p
+gdk_pixbuf_xlib_init	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_init (Display *display, int screen_num);$/;"	p
+gdk_pixbuf_xlib_init_with_depth	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_init_with_depth (Display *display, int screen_num,$/;"	p
+gdk_pixbuf_xlib_render_pixmap_and_mask	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_render_pixmap_and_mask (GdkPixbuf *pixbuf,$/;"	p
+gdk_pixbuf_xlib_render_threshold_alpha	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_render_threshold_alpha (GdkPixbuf *pixbuf, Pixmap bitmap,$/;"	p
+gdk_pixbuf_xlib_render_to_drawable	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_render_to_drawable (GdkPixbuf *pixbuf,$/;"	p
+gdk_pixbuf_xlib_render_to_drawable_alpha	gdk-pixbuf-xlib.h	/^void gdk_pixbuf_xlib_render_to_drawable_alpha (GdkPixbuf *pixbuf,$/;"	p
+lut	gdk-pixbuf-xlibrgb.h	/^  unsigned char lut[256]; \/* for 8-bit modes *\/$/;"	m	struct:_XlibRgbCmap
+xlib_draw_gray_image	gdk-pixbuf-xlibrgb.h	/^xlib_draw_gray_image (Drawable drawable,$/;"	p
+xlib_draw_indexed_image	gdk-pixbuf-xlibrgb.h	/^xlib_draw_indexed_image (Drawable drawable,$/;"	p
+xlib_draw_rgb_32_image	gdk-pixbuf-xlibrgb.h	/^xlib_draw_rgb_32_image (Drawable drawable,$/;"	p
+xlib_draw_rgb_image	gdk-pixbuf-xlibrgb.h	/^xlib_draw_rgb_image (Drawable drawable,$/;"	p
+xlib_draw_rgb_image_dithalign	gdk-pixbuf-xlibrgb.h	/^xlib_draw_rgb_image_dithalign (Drawable drawable,$/;"	p
+xlib_rgb_cmap_free	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_cmap_free (XlibRgbCmap *cmap);$/;"	p
+xlib_rgb_cmap_new	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_cmap_new (guint32 *colors, int n_colors);$/;"	p
+xlib_rgb_ditherable	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_ditherable (void);$/;"	p
+xlib_rgb_gc_set_background	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_gc_set_background (GC gc, guint32 rgb);$/;"	p
+xlib_rgb_gc_set_foreground	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_gc_set_foreground (GC gc, guint32 rgb);$/;"	p
+xlib_rgb_get_cmap	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_cmap (void);$/;"	p
+xlib_rgb_get_depth	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_depth (void);$/;"	p
+xlib_rgb_get_display	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_display (void);$/;"	p
+xlib_rgb_get_screen	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_screen (void);$/;"	p
+xlib_rgb_get_visual	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_visual (void);$/;"	p
+xlib_rgb_get_visual_info	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_get_visual_info (void);$/;"	p
+xlib_rgb_init	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_init (Display *display, Screen *screen);$/;"	p
+xlib_rgb_init_with_depth	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_init_with_depth (Display *display, Screen *screen, int prefDepth);$/;"	p
+xlib_rgb_set_install	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_set_install (Bool install);$/;"	p
+xlib_rgb_set_min_colors	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_set_min_colors (int min_colors);$/;"	p
+xlib_rgb_set_verbose	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_set_verbose (Bool verbose);$/;"	p
+xlib_rgb_xpixel_from_rgb	gdk-pixbuf-xlibrgb.h	/^xlib_rgb_xpixel_from_rgb (guint32 rgb);$/;"	p

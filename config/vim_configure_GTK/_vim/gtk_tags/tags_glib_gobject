@@ -1,0 +1,1130 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+GBaseFinalizeFunc	gtype.h	/^typedef void   (*GBaseFinalizeFunc)          (gpointer         g_class);$/;"	t
+GBaseInitFunc	gtype.h	/^typedef void   (*GBaseInitFunc)              (gpointer         g_class);$/;"	t
+GBinding	gbinding.h	/^typedef struct _GBinding        GBinding;$/;"	t	typeref:struct:_GBinding
+GBindingFlags	gbinding.h	/^} GBindingFlags;$/;"	t	typeref:enum:__anon7
+GBindingTransformFunc	gbinding.h	/^typedef gboolean (* GBindingTransformFunc) (GBinding     *binding,$/;"	t
+GBoxedCopyFunc	gboxed.h	/^typedef gpointer (*GBoxedCopyFunc) (gpointer boxed);$/;"	t
+GBoxedFreeFunc	gboxed.h	/^typedef void (*GBoxedFreeFunc) (gpointer boxed);$/;"	t
+GCClosure	gclosure.h	/^typedef struct _GCClosure		 GCClosure;$/;"	t	typeref:struct:_GCClosure
+GCallback	gclosure.h	/^typedef void  (*GCallback)              (void);$/;"	t
+GClassFinalizeFunc	gtype.h	/^typedef void   (*GClassFinalizeFunc)         (gpointer         g_class,$/;"	t
+GClassInitFunc	gtype.h	/^typedef void   (*GClassInitFunc)             (gpointer         g_class,$/;"	t
+GClosure	gclosure.h	/^typedef struct _GClosure		 GClosure;$/;"	t	typeref:struct:_GClosure
+GClosureMarshal	gclosure.h	/^typedef void  (*GClosureMarshal)	(GClosure	*closure,$/;"	t
+GClosureNotify	gclosure.h	/^typedef void  (*GClosureNotify)		(gpointer	 data,$/;"	t
+GClosureNotifyData	gclosure.h	/^typedef struct _GClosureNotifyData	 GClosureNotifyData;$/;"	t	typeref:struct:_GClosureNotifyData
+GConnectFlags	gsignal.h	/^} GConnectFlags;$/;"	t	typeref:enum:__anon11
+GEnumClass	genums.h	/^typedef struct _GEnumClass  GEnumClass;$/;"	t	typeref:struct:_GEnumClass
+GEnumValue	genums.h	/^typedef struct _GEnumValue  GEnumValue;$/;"	t	typeref:struct:_GEnumValue
+GFlagsClass	genums.h	/^typedef struct _GFlagsClass GFlagsClass;$/;"	t	typeref:struct:_GFlagsClass
+GFlagsValue	genums.h	/^typedef struct _GFlagsValue GFlagsValue;$/;"	t	typeref:struct:_GFlagsValue
+GInitiallyUnowned	gobject.h	/^typedef struct _GObject                  GInitiallyUnowned;$/;"	t	typeref:struct:_GObject
+GInitiallyUnownedClass	gobject.h	/^typedef struct _GObjectClass             GInitiallyUnownedClass;$/;"	t	typeref:struct:_GObjectClass
+GInstanceInitFunc	gtype.h	/^typedef void   (*GInstanceInitFunc)          (GTypeInstance   *instance,$/;"	t
+GInterfaceFinalizeFunc	gtype.h	/^typedef void   (*GInterfaceFinalizeFunc)     (gpointer         g_iface,$/;"	t
+GInterfaceInfo	gtype.h	/^typedef struct _GInterfaceInfo          GInterfaceInfo;$/;"	t	typeref:struct:_GInterfaceInfo
+GInterfaceInitFunc	gtype.h	/^typedef void   (*GInterfaceInitFunc)         (gpointer         g_iface,$/;"	t
+GOBJECT_VAR	gparamspecs.h	1122;"	d
+GOBJECT_VAR	gparamspecs.h	1126;"	d
+GOBJECT_VAR	gparamspecs.h	1128;"	d
+GOBJECT_VAR	gparamspecs.h	1131;"	d
+GOBJECT_VAR	gparamspecs.h	1135;"	d
+GObject	gobject.h	/^typedef struct _GObject                  GObject;$/;"	t	typeref:struct:_GObject
+GObjectClass	gobject.h	/^typedef struct _GObjectClass             GObjectClass;$/;"	t	typeref:struct:_GObjectClass
+GObjectConstructParam	gobject.h	/^typedef struct _GObjectConstructParam    GObjectConstructParam;$/;"	t	typeref:struct:_GObjectConstructParam
+GObjectFinalizeFunc	gobject.h	/^typedef void (*GObjectFinalizeFunc)     (GObject      *object);$/;"	t
+GObjectGetPropertyFunc	gobject.h	/^typedef void (*GObjectGetPropertyFunc)  (GObject      *object,$/;"	t
+GObjectNotifyContext	gobjectnotifyqueue.c	/^typedef struct _GObjectNotifyContext          GObjectNotifyContext;$/;"	t	typeref:struct:_GObjectNotifyContext	file:
+GObjectNotifyQueue	gobjectnotifyqueue.c	/^typedef struct _GObjectNotifyQueue            GObjectNotifyQueue;$/;"	t	typeref:struct:_GObjectNotifyQueue	file:
+GObjectNotifyQueueDispatcher	gobjectnotifyqueue.c	/^typedef void (*GObjectNotifyQueueDispatcher) (GObject     *object,$/;"	t	file:
+GObjectSetPropertyFunc	gobject.h	/^typedef void (*GObjectSetPropertyFunc)  (GObject      *object,$/;"	t
+GParamFlags	gparam.h	/^} GParamFlags;$/;"	t	typeref:enum:__anon1
+GParamSpec	gparam.h	/^typedef struct _GParamSpec      GParamSpec;$/;"	t	typeref:struct:_GParamSpec
+GParamSpecBoolean	gparamspecs.h	/^typedef struct _GParamSpecBoolean    GParamSpecBoolean;$/;"	t	typeref:struct:_GParamSpecBoolean
+GParamSpecBoxed	gparamspecs.h	/^typedef struct _GParamSpecBoxed      GParamSpecBoxed;$/;"	t	typeref:struct:_GParamSpecBoxed
+GParamSpecChar	gparamspecs.h	/^typedef struct _GParamSpecChar       GParamSpecChar;$/;"	t	typeref:struct:_GParamSpecChar
+GParamSpecClass	gparam.h	/^typedef struct _GParamSpecClass GParamSpecClass;$/;"	t	typeref:struct:_GParamSpecClass
+GParamSpecDouble	gparamspecs.h	/^typedef struct _GParamSpecDouble     GParamSpecDouble;$/;"	t	typeref:struct:_GParamSpecDouble
+GParamSpecEnum	gparamspecs.h	/^typedef struct _GParamSpecEnum       GParamSpecEnum;$/;"	t	typeref:struct:_GParamSpecEnum
+GParamSpecFlags	gparamspecs.h	/^typedef struct _GParamSpecFlags      GParamSpecFlags;$/;"	t	typeref:struct:_GParamSpecFlags
+GParamSpecFloat	gparamspecs.h	/^typedef struct _GParamSpecFloat      GParamSpecFloat;$/;"	t	typeref:struct:_GParamSpecFloat
+GParamSpecGType	gparamspecs.h	/^typedef struct _GParamSpecGType      GParamSpecGType;$/;"	t	typeref:struct:_GParamSpecGType
+GParamSpecInt	gparamspecs.h	/^typedef struct _GParamSpecInt        GParamSpecInt;$/;"	t	typeref:struct:_GParamSpecInt
+GParamSpecInt64	gparamspecs.h	/^typedef struct _GParamSpecInt64      GParamSpecInt64;$/;"	t	typeref:struct:_GParamSpecInt64
+GParamSpecLong	gparamspecs.h	/^typedef struct _GParamSpecLong       GParamSpecLong;$/;"	t	typeref:struct:_GParamSpecLong
+GParamSpecObject	gparamspecs.h	/^typedef struct _GParamSpecObject     GParamSpecObject;$/;"	t	typeref:struct:_GParamSpecObject
+GParamSpecOverride	gparamspecs.h	/^typedef struct _GParamSpecOverride   GParamSpecOverride;$/;"	t	typeref:struct:_GParamSpecOverride
+GParamSpecParam	gparamspecs.h	/^typedef struct _GParamSpecParam      GParamSpecParam;$/;"	t	typeref:struct:_GParamSpecParam
+GParamSpecPointer	gparamspecs.h	/^typedef struct _GParamSpecPointer    GParamSpecPointer;$/;"	t	typeref:struct:_GParamSpecPointer
+GParamSpecPool	gparam.h	/^typedef struct _GParamSpecPool  GParamSpecPool;$/;"	t	typeref:struct:_GParamSpecPool
+GParamSpecString	gparamspecs.h	/^typedef struct _GParamSpecString     GParamSpecString;$/;"	t	typeref:struct:_GParamSpecString
+GParamSpecTypeInfo	gparam.h	/^typedef struct _GParamSpecTypeInfo GParamSpecTypeInfo;$/;"	t	typeref:struct:_GParamSpecTypeInfo
+GParamSpecUChar	gparamspecs.h	/^typedef struct _GParamSpecUChar      GParamSpecUChar;$/;"	t	typeref:struct:_GParamSpecUChar
+GParamSpecUInt	gparamspecs.h	/^typedef struct _GParamSpecUInt       GParamSpecUInt;$/;"	t	typeref:struct:_GParamSpecUInt
+GParamSpecUInt64	gparamspecs.h	/^typedef struct _GParamSpecUInt64     GParamSpecUInt64;$/;"	t	typeref:struct:_GParamSpecUInt64
+GParamSpecULong	gparamspecs.h	/^typedef struct _GParamSpecULong      GParamSpecULong;$/;"	t	typeref:struct:_GParamSpecULong
+GParamSpecUnichar	gparamspecs.h	/^typedef struct _GParamSpecUnichar    GParamSpecUnichar;$/;"	t	typeref:struct:_GParamSpecUnichar
+GParamSpecValueArray	gparamspecs.h	/^typedef struct _GParamSpecValueArray GParamSpecValueArray;$/;"	t	typeref:struct:_GParamSpecValueArray
+GParamSpecVariant	gparamspecs.h	/^typedef struct _GParamSpecVariant    GParamSpecVariant;$/;"	t	typeref:struct:_GParamSpecVariant
+GParameter	gparam.h	/^typedef struct _GParameter	GParameter;$/;"	t	typeref:struct:_GParameter
+GSignalAccumulator	gsignal.h	/^typedef gboolean (*GSignalAccumulator)	(GSignalInvocationHint *ihint,$/;"	t
+GSignalCMarshaller	gsignal.h	/^typedef GClosureMarshal			 GSignalCMarshaller;$/;"	t
+GSignalCVaMarshaller	gsignal.h	/^typedef GVaClosureMarshal		 GSignalCVaMarshaller;$/;"	t
+GSignalEmissionHook	gsignal.h	/^typedef gboolean (*GSignalEmissionHook) (GSignalInvocationHint *ihint,$/;"	t
+GSignalFlags	gsignal.h	/^} GSignalFlags;$/;"	t	typeref:enum:__anon10
+GSignalInvocationHint	gsignal.h	/^typedef struct _GSignalInvocationHint	 GSignalInvocationHint;$/;"	t	typeref:struct:_GSignalInvocationHint
+GSignalMatchType	gsignal.h	/^} GSignalMatchType;$/;"	t	typeref:enum:__anon12
+GSignalQuery	gsignal.h	/^typedef struct _GSignalQuery		 GSignalQuery;$/;"	t	typeref:struct:_GSignalQuery
+GStrv	glib-types.h	/^typedef gchar** GStrv;$/;"	t
+GToggleNotify	gobject.h	/^typedef void (*GToggleNotify) (gpointer      data,$/;"	t
+GType	glib-types.h	/^typedef gsize GType;$/;"	t
+GType	gtype.h	/^typedef gsize                           GType;$/;"	t
+GTypeCValue	gtype.h	/^typedef union  _GTypeCValue             GTypeCValue;$/;"	t	typeref:union:_GTypeCValue
+GTypeClass	gtype.h	/^typedef struct _GTypeClass              GTypeClass;$/;"	t	typeref:struct:_GTypeClass
+GTypeClassCacheFunc	gtype.h	/^typedef gboolean (*GTypeClassCacheFunc)	     (gpointer	       cache_data,$/;"	t
+GTypeDebugFlags	gtype.h	/^} GTypeDebugFlags;$/;"	t	typeref:enum:__anon4
+GTypeFlags	gtype.h	/^} GTypeFlags;$/;"	t	typeref:enum:__anon6
+GTypeFundamentalFlags	gtype.h	/^} GTypeFundamentalFlags;$/;"	t	typeref:enum:__anon5
+GTypeFundamentalInfo	gtype.h	/^typedef struct _GTypeFundamentalInfo    GTypeFundamentalInfo;$/;"	t	typeref:struct:_GTypeFundamentalInfo
+GTypeInfo	gtype.h	/^typedef struct _GTypeInfo               GTypeInfo;$/;"	t	typeref:struct:_GTypeInfo
+GTypeInstance	gtype.h	/^typedef struct _GTypeInstance           GTypeInstance;$/;"	t	typeref:struct:_GTypeInstance
+GTypeInterface	gtype.h	/^typedef struct _GTypeInterface          GTypeInterface;$/;"	t	typeref:struct:_GTypeInterface
+GTypeInterfaceCheckFunc	gtype.h	/^typedef void     (*GTypeInterfaceCheckFunc)  (gpointer	       check_data,$/;"	t
+GTypeModule	gtypemodule.h	/^typedef struct _GTypeModule      GTypeModule;$/;"	t	typeref:struct:_GTypeModule
+GTypeModuleClass	gtypemodule.h	/^typedef struct _GTypeModuleClass GTypeModuleClass;$/;"	t	typeref:struct:_GTypeModuleClass
+GTypePlugin	gtype.h	/^typedef struct _GTypePlugin             GTypePlugin;$/;"	t	typeref:struct:_GTypePlugin
+GTypePluginClass	gtypeplugin.h	/^typedef struct _GTypePluginClass		   GTypePluginClass;$/;"	t	typeref:struct:_GTypePluginClass
+GTypePluginCompleteInterfaceInfo	gtypeplugin.h	/^typedef void  (*GTypePluginCompleteInterfaceInfo) (GTypePlugin     *plugin,$/;"	t
+GTypePluginCompleteTypeInfo	gtypeplugin.h	/^typedef void  (*GTypePluginCompleteTypeInfo)	  (GTypePlugin     *plugin,$/;"	t
+GTypePluginUnuse	gtypeplugin.h	/^typedef void  (*GTypePluginUnuse)		  (GTypePlugin     *plugin);$/;"	t
+GTypePluginUse	gtypeplugin.h	/^typedef void  (*GTypePluginUse)			  (GTypePlugin     *plugin);$/;"	t
+GTypeQuery	gtype.h	/^typedef struct _GTypeQuery		GTypeQuery;$/;"	t	typeref:struct:_GTypeQuery
+GTypeValueTable	gtype.h	/^typedef struct _GTypeValueTable         GTypeValueTable;$/;"	t	typeref:struct:_GTypeValueTable
+GVaClosureMarshal	gclosure.h	/^typedef void (* GVaClosureMarshal) (GClosure *closure,$/;"	t
+GValue	gtype.h	/^typedef struct _GValue                  GValue;$/;"	t	typeref:struct:_GValue
+GValueArray	gvaluearray.h	/^typedef struct _GValueArray GValueArray;$/;"	t	typeref:struct:_GValueArray
+GValueTransform	gvalue.h	/^typedef void (*GValueTransform) (const GValue *src_value,$/;"	t
+GWeakNotify	gobject.h	/^typedef void (*GWeakNotify)		(gpointer      data,$/;"	t
+GWeakRef	gobject.h	/^} GWeakRef;$/;"	t	typeref:struct:__anon8
+G_BINDING	gbinding.h	38;"	d
+G_BINDING_BIDIRECTIONAL	gbinding.h	/^  G_BINDING_BIDIRECTIONAL  = 1 << 0,$/;"	e	enum:__anon7
+G_BINDING_DEFAULT	gbinding.h	/^  G_BINDING_DEFAULT        = 0,$/;"	e	enum:__anon7
+G_BINDING_INVERT_BOOLEAN	gbinding.h	/^  G_BINDING_INVERT_BOOLEAN = 1 << 2$/;"	e	enum:__anon7
+G_BINDING_SYNC_CREATE	gbinding.h	/^  G_BINDING_SYNC_CREATE    = 1 << 1,$/;"	e	enum:__anon7
+G_CALLBACK	gclosure.h	72;"	d
+G_CCLOSURE_SWAP_DATA	gclosure.h	65;"	d
+G_CLOSURE_NEEDS_MARSHAL	gclosure.h	41;"	d
+G_CLOSURE_N_NOTIFIERS	gclosure.h	54;"	d
+G_CONNECT_AFTER	gsignal.h	/^  G_CONNECT_AFTER	= 1 << 0,$/;"	e	enum:__anon11
+G_CONNECT_SWAPPED	gsignal.h	/^  G_CONNECT_SWAPPED	= 1 << 1$/;"	e	enum:__anon11
+G_DEFINE_ABSTRACT_TYPE	gtype.h	1306;"	d
+G_DEFINE_ABSTRACT_TYPE_WITH_CODE	gtype.h	1322;"	d
+G_DEFINE_BOXED_TYPE	gtype.h	1522;"	d
+G_DEFINE_BOXED_TYPE_WITH_CODE	gtype.h	1539;"	d
+G_DEFINE_DYNAMIC_TYPE	gtypemodule.h	104;"	d
+G_DEFINE_DYNAMIC_TYPE_EXTENDED	gtypemodule.h	177;"	d
+G_DEFINE_INTERFACE	gtype.h	1404;"	d
+G_DEFINE_INTERFACE_WITH_CODE	gtype.h	1423;"	d
+G_DEFINE_POINTER_TYPE	gtype.h	1592;"	d
+G_DEFINE_POINTER_TYPE_WITH_CODE	gtype.h	1606;"	d
+G_DEFINE_TYPE	gtype.h	1277;"	d
+G_DEFINE_TYPE_EXTENDED	gtype.h	1385;"	d
+G_DEFINE_TYPE_WITH_CODE	gtype.h	1292;"	d
+G_ENUM_CLASS	genums.h	46;"	d
+G_ENUM_CLASS_TYPE	genums.h	63;"	d
+G_ENUM_CLASS_TYPE_NAME	genums.h	72;"	d
+G_FLAGS_CLASS	genums.h	90;"	d
+G_FLAGS_CLASS_TYPE	genums.h	107;"	d
+G_FLAGS_CLASS_TYPE_NAME	genums.h	116;"	d
+G_IMPLEMENT_INTERFACE	gtype.h	1439;"	d
+G_IMPLEMENT_INTERFACE_DYNAMIC	gtypemodule.h	233;"	d
+G_INITIALLY_UNOWNED	gobject.h	147;"	d
+G_INITIALLY_UNOWNED_CLASS	gobject.h	155;"	d
+G_INITIALLY_UNOWNED_GET_CLASS	gobject.h	179;"	d
+G_IS_BINDING	gbinding.h	39;"	d
+G_IS_ENUM_CLASS	genums.h	54;"	d
+G_IS_FLAGS_CLASS	genums.h	98;"	d
+G_IS_INITIALLY_UNOWNED	gobject.h	162;"	d
+G_IS_INITIALLY_UNOWNED_CLASS	gobject.h	170;"	d
+G_IS_OBJECT	gobject.h	66;"	d
+G_IS_OBJECT_CLASS	gobject.h	74;"	d
+G_IS_PARAM_SPEC	gparam.h	55;"	d
+G_IS_PARAM_SPEC_BOOLEAN	gparamspecs.h	96;"	d
+G_IS_PARAM_SPEC_BOXED	gparamspecs.h	418;"	d
+G_IS_PARAM_SPEC_CHAR	gparamspecs.h	50;"	d
+G_IS_PARAM_SPEC_CLASS	gparam.h	70;"	d
+G_IS_PARAM_SPEC_DOUBLE	gparamspecs.h	349;"	d
+G_IS_PARAM_SPEC_ENUM	gparamspecs.h	280;"	d
+G_IS_PARAM_SPEC_FLAGS	gparamspecs.h	303;"	d
+G_IS_PARAM_SPEC_FLOAT	gparamspecs.h	326;"	d
+G_IS_PARAM_SPEC_GTYPE	gparamspecs.h	547;"	d
+G_IS_PARAM_SPEC_INT	gparamspecs.h	119;"	d
+G_IS_PARAM_SPEC_INT64	gparamspecs.h	211;"	d
+G_IS_PARAM_SPEC_LONG	gparamspecs.h	165;"	d
+G_IS_PARAM_SPEC_OBJECT	gparamspecs.h	493;"	d
+G_IS_PARAM_SPEC_OVERRIDE	gparamspecs.h	519;"	d
+G_IS_PARAM_SPEC_PARAM	gparamspecs.h	395;"	d
+G_IS_PARAM_SPEC_POINTER	gparamspecs.h	441;"	d
+G_IS_PARAM_SPEC_STRING	gparamspecs.h	372;"	d
+G_IS_PARAM_SPEC_UCHAR	gparamspecs.h	73;"	d
+G_IS_PARAM_SPEC_UINT	gparamspecs.h	142;"	d
+G_IS_PARAM_SPEC_UINT64	gparamspecs.h	234;"	d
+G_IS_PARAM_SPEC_ULONG	gparamspecs.h	188;"	d
+G_IS_PARAM_SPEC_UNICHAR	gparamspecs.h	264;"	d
+G_IS_PARAM_SPEC_VALUE_ARRAY	gparamspecs.h	468;"	d
+G_IS_PARAM_SPEC_VARIANT	gparamspecs.h	576;"	d
+G_IS_TYPE_MODULE	gtypemodule.h	37;"	d
+G_IS_TYPE_MODULE_CLASS	gtypemodule.h	38;"	d
+G_IS_TYPE_PLUGIN	gtypeplugin.h	34;"	d
+G_IS_TYPE_PLUGIN_CLASS	gtypeplugin.h	35;"	d
+G_IS_VALUE	gvalue.h	52;"	d
+G_OBJECT	gobject.h	52;"	d
+G_OBJECT_CLASS	gobject.h	59;"	d
+G_OBJECT_CLASS_NAME	gobject.h	121;"	d
+G_OBJECT_CLASS_TYPE	gobject.h	111;"	d
+G_OBJECT_GET_CLASS	gobject.h	83;"	d
+G_OBJECT_TYPE	gobject.h	92;"	d
+G_OBJECT_TYPE_NAME	gobject.h	102;"	d
+G_OBJECT_WARN_INVALID_PROPERTY_ID	gobject.h	560;"	d
+G_OBJECT_WARN_INVALID_PSPEC	gobject.h	538;"	d
+G_PARAM_CONSTRUCT	gparam.h	/^  G_PARAM_CONSTRUCT	      = 1 << 2,$/;"	e	enum:__anon1
+G_PARAM_CONSTRUCT_ONLY	gparam.h	/^  G_PARAM_CONSTRUCT_ONLY      = 1 << 3,$/;"	e	enum:__anon1
+G_PARAM_DEPRECATED	gparam.h	/^  G_PARAM_DEPRECATED          = 1 << 31$/;"	e	enum:__anon1
+G_PARAM_LAX_VALIDATION	gparam.h	/^  G_PARAM_LAX_VALIDATION      = 1 << 4,$/;"	e	enum:__anon1
+G_PARAM_MASK	gparam.h	179;"	d
+G_PARAM_PRIVATE	gparam.h	/^  G_PARAM_PRIVATE	      = G_PARAM_STATIC_NAME,$/;"	e	enum:__anon1
+G_PARAM_READABLE	gparam.h	/^  G_PARAM_READABLE            = 1 << 0,$/;"	e	enum:__anon1
+G_PARAM_READWRITE	gparam.h	164;"	d
+G_PARAM_SPEC	gparam.h	47;"	d
+G_PARAM_SPEC_BOOLEAN	gparamspecs.h	103;"	d
+G_PARAM_SPEC_BOXED	gparamspecs.h	425;"	d
+G_PARAM_SPEC_CHAR	gparamspecs.h	57;"	d
+G_PARAM_SPEC_CLASS	gparam.h	62;"	d
+G_PARAM_SPEC_DOUBLE	gparamspecs.h	356;"	d
+G_PARAM_SPEC_ENUM	gparamspecs.h	287;"	d
+G_PARAM_SPEC_FLAGS	gparamspecs.h	310;"	d
+G_PARAM_SPEC_FLOAT	gparamspecs.h	333;"	d
+G_PARAM_SPEC_GET_CLASS	gparam.h	77;"	d
+G_PARAM_SPEC_GTYPE	gparamspecs.h	556;"	d
+G_PARAM_SPEC_INT	gparamspecs.h	126;"	d
+G_PARAM_SPEC_INT64	gparamspecs.h	218;"	d
+G_PARAM_SPEC_LONG	gparamspecs.h	172;"	d
+G_PARAM_SPEC_OBJECT	gparamspecs.h	500;"	d
+G_PARAM_SPEC_OVERRIDE	gparamspecs.h	528;"	d
+G_PARAM_SPEC_PARAM	gparamspecs.h	402;"	d
+G_PARAM_SPEC_POINTER	gparamspecs.h	448;"	d
+G_PARAM_SPEC_STRING	gparamspecs.h	379;"	d
+G_PARAM_SPEC_TYPE	gparam.h	87;"	d
+G_PARAM_SPEC_TYPE_NAME	gparam.h	94;"	d
+G_PARAM_SPEC_UCHAR	gparamspecs.h	80;"	d
+G_PARAM_SPEC_UINT	gparamspecs.h	149;"	d
+G_PARAM_SPEC_UINT64	gparamspecs.h	241;"	d
+G_PARAM_SPEC_ULONG	gparamspecs.h	195;"	d
+G_PARAM_SPEC_UNICHAR	gparamspecs.h	255;"	d
+G_PARAM_SPEC_VALUE_ARRAY	gparamspecs.h	477;"	d
+G_PARAM_SPEC_VALUE_TYPE	gparam.h	101;"	d
+G_PARAM_SPEC_VARIANT	gparamspecs.h	585;"	d
+G_PARAM_STATIC_BLURB	gparam.h	/^  G_PARAM_STATIC_BLURB	      = 1 << 7,$/;"	e	enum:__anon1
+G_PARAM_STATIC_NAME	gparam.h	/^  G_PARAM_STATIC_NAME	      = 1 << 5,$/;"	e	enum:__anon1
+G_PARAM_STATIC_NICK	gparam.h	/^  G_PARAM_STATIC_NICK	      = 1 << 6,$/;"	e	enum:__anon1
+G_PARAM_STATIC_STRINGS	gparam.h	172;"	d
+G_PARAM_USER_SHIFT	gparam.h	186;"	d
+G_PARAM_WRITABLE	gparam.h	/^  G_PARAM_WRITABLE            = 1 << 1,$/;"	e	enum:__anon1
+G_SIGNAL_ACTION	gsignal.h	/^  G_SIGNAL_ACTION	= 1 << 5,$/;"	e	enum:__anon10
+G_SIGNAL_DEPRECATED	gsignal.h	/^  G_SIGNAL_DEPRECATED   = 1 << 8$/;"	e	enum:__anon10
+G_SIGNAL_DETAILED	gsignal.h	/^  G_SIGNAL_DETAILED	= 1 << 4,$/;"	e	enum:__anon10
+G_SIGNAL_FLAGS_MASK	gsignal.h	146;"	d
+G_SIGNAL_MATCH_CLOSURE	gsignal.h	/^  G_SIGNAL_MATCH_CLOSURE   = 1 << 2,$/;"	e	enum:__anon12
+G_SIGNAL_MATCH_DATA	gsignal.h	/^  G_SIGNAL_MATCH_DATA	   = 1 << 4,$/;"	e	enum:__anon12
+G_SIGNAL_MATCH_DETAIL	gsignal.h	/^  G_SIGNAL_MATCH_DETAIL	   = 1 << 1,$/;"	e	enum:__anon12
+G_SIGNAL_MATCH_FUNC	gsignal.h	/^  G_SIGNAL_MATCH_FUNC	   = 1 << 3,$/;"	e	enum:__anon12
+G_SIGNAL_MATCH_ID	gsignal.h	/^  G_SIGNAL_MATCH_ID	   = 1 << 0,$/;"	e	enum:__anon12
+G_SIGNAL_MATCH_MASK	gsignal.h	189;"	d
+G_SIGNAL_MATCH_UNBLOCKED	gsignal.h	/^  G_SIGNAL_MATCH_UNBLOCKED = 1 << 5$/;"	e	enum:__anon12
+G_SIGNAL_MUST_COLLECT	gsignal.h	/^  G_SIGNAL_MUST_COLLECT = 1 << 7,$/;"	e	enum:__anon10
+G_SIGNAL_NO_HOOKS	gsignal.h	/^  G_SIGNAL_NO_HOOKS	= 1 << 6,$/;"	e	enum:__anon10
+G_SIGNAL_NO_RECURSE	gsignal.h	/^  G_SIGNAL_NO_RECURSE	= 1 << 3,$/;"	e	enum:__anon10
+G_SIGNAL_RUN_CLEANUP	gsignal.h	/^  G_SIGNAL_RUN_CLEANUP	= 1 << 2,$/;"	e	enum:__anon10
+G_SIGNAL_RUN_FIRST	gsignal.h	/^  G_SIGNAL_RUN_FIRST	= 1 << 0,$/;"	e	enum:__anon10
+G_SIGNAL_RUN_LAST	gsignal.h	/^  G_SIGNAL_RUN_LAST	= 1 << 1,$/;"	e	enum:__anon10
+G_SIGNAL_TYPE_STATIC_SCOPE	gsignal.h	211;"	d
+G_TYPE_ARRAY	glib-types.h	115;"	d
+G_TYPE_BINDING	gbinding.h	37;"	d
+G_TYPE_BINDING_FLAGS	gbinding.h	35;"	d
+G_TYPE_BOOLEAN	gtype.h	91;"	d
+G_TYPE_BOXED	gtype.h	169;"	d
+G_TYPE_BYTES	glib-types.h	142;"	d
+G_TYPE_BYTE_ARRAY	glib-types.h	124;"	d
+G_TYPE_CHAR	gtype.h	79;"	d
+G_TYPE_CHECK_CLASS_CAST	gtype.h	537;"	d
+G_TYPE_CHECK_CLASS_TYPE	gtype.h	550;"	d
+G_TYPE_CHECK_INSTANCE	gtype.h	469;"	d
+G_TYPE_CHECK_INSTANCE_CAST	gtype.h	482;"	d
+G_TYPE_CHECK_INSTANCE_TYPE	gtype.h	494;"	d
+G_TYPE_CHECK_VALUE	gtype.h	562;"	d
+G_TYPE_CHECK_VALUE_TYPE	gtype.h	575;"	d
+G_TYPE_CLASS_GET_PRIVATE	gtype.h	642;"	d
+G_TYPE_CLOSURE	gboxed.h	99;"	d
+G_TYPE_DATE	glib-types.h	41;"	d
+G_TYPE_DATE_TIME	glib-types.h	169;"	d
+G_TYPE_DEBUG_MASK	gtype.h	/^  G_TYPE_DEBUG_MASK	= 0x03$/;"	e	enum:__anon4
+G_TYPE_DEBUG_NONE	gtype.h	/^  G_TYPE_DEBUG_NONE	= 0,$/;"	e	enum:__anon4
+G_TYPE_DEBUG_OBJECTS	gtype.h	/^  G_TYPE_DEBUG_OBJECTS	= 1 << 0,$/;"	e	enum:__anon4
+G_TYPE_DEBUG_SIGNALS	gtype.h	/^  G_TYPE_DEBUG_SIGNALS	= 1 << 1,$/;"	e	enum:__anon4
+G_TYPE_DOUBLE	gtype.h	151;"	d
+G_TYPE_ENUM	gtype.h	133;"	d
+G_TYPE_ERROR	glib-types.h	160;"	d
+G_TYPE_FLAGS	gtype.h	139;"	d
+G_TYPE_FLAG_ABSTRACT	gtype.h	/^  G_TYPE_FLAG_ABSTRACT		= (1 << 4),$/;"	e	enum:__anon6
+G_TYPE_FLAG_CLASSED	gtype.h	/^  G_TYPE_FLAG_CLASSED           = (1 << 0),$/;"	e	enum:__anon5
+G_TYPE_FLAG_DEEP_DERIVABLE	gtype.h	/^  G_TYPE_FLAG_DEEP_DERIVABLE    = (1 << 3)$/;"	e	enum:__anon5
+G_TYPE_FLAG_DERIVABLE	gtype.h	/^  G_TYPE_FLAG_DERIVABLE         = (1 << 2),$/;"	e	enum:__anon5
+G_TYPE_FLAG_INSTANTIATABLE	gtype.h	/^  G_TYPE_FLAG_INSTANTIATABLE    = (1 << 1),$/;"	e	enum:__anon5
+G_TYPE_FLAG_RESERVED_ID_BIT	gtype.h	1720;"	d
+G_TYPE_FLAG_VALUE_ABSTRACT	gtype.h	/^  G_TYPE_FLAG_VALUE_ABSTRACT	= (1 << 5)$/;"	e	enum:__anon6
+G_TYPE_FLOAT	gtype.h	145;"	d
+G_TYPE_FROM_CLASS	gtype.h	597;"	d
+G_TYPE_FROM_INSTANCE	gtype.h	586;"	d
+G_TYPE_FROM_INTERFACE	gtype.h	608;"	d
+G_TYPE_FUNDAMENTAL	gtype.h	40;"	d
+G_TYPE_FUNDAMENTAL_MAX	gtype.h	47;"	d
+G_TYPE_FUNDAMENTAL_SHIFT	gtype.h	211;"	d
+G_TYPE_GSTRING	glib-types.h	79;"	d
+G_TYPE_GTYPE	gvaluetypes.h	155;"	d
+G_TYPE_HASH_TABLE	glib-types.h	88;"	d
+G_TYPE_HAS_VALUE_TABLE	gtype.h	373;"	d
+G_TYPE_INITIALLY_UNOWNED	gobject.h	138;"	d
+G_TYPE_INSTANCE_GET_CLASS	gtype.h	511;"	d
+G_TYPE_INSTANCE_GET_INTERFACE	gtype.h	524;"	d
+G_TYPE_INSTANCE_GET_PRIVATE	gtype.h	625;"	d
+G_TYPE_INT	gtype.h	97;"	d
+G_TYPE_INT64	gtype.h	121;"	d
+G_TYPE_INTERFACE	gtype.h	71;"	d
+G_TYPE_INVALID	gtype.h	58;"	d
+G_TYPE_IO_CHANNEL	glib-types.h	176;"	d
+G_TYPE_IO_CONDITION	glib-types.h	183;"	d
+G_TYPE_IS_ABSTRACT	gtype.h	344;"	d
+G_TYPE_IS_BOXED	gboxed.h	35;"	d
+G_TYPE_IS_CLASSED	gtype.h	303;"	d
+G_TYPE_IS_DEEP_DERIVABLE	gtype.h	333;"	d
+G_TYPE_IS_DERIVABLE	gtype.h	323;"	d
+G_TYPE_IS_DERIVED	gtype.h	279;"	d
+G_TYPE_IS_ENUM	genums.h	39;"	d
+G_TYPE_IS_FLAGS	genums.h	83;"	d
+G_TYPE_IS_FUNDAMENTAL	gtype.h	268;"	d
+G_TYPE_IS_INSTANTIATABLE	gtype.h	313;"	d
+G_TYPE_IS_INTERFACE	gtype.h	294;"	d
+G_TYPE_IS_OBJECT	gobject.h	43;"	d
+G_TYPE_IS_PARAM	gparam.h	39;"	d
+G_TYPE_IS_VALUE	gvalue.h	43;"	d
+G_TYPE_IS_VALUE_ABSTRACT	gtype.h	355;"	d
+G_TYPE_IS_VALUE_TYPE	gtype.h	364;"	d
+G_TYPE_KEY_FILE	glib-types.h	228;"	d
+G_TYPE_LONG	gtype.h	109;"	d
+G_TYPE_MAIN_CONTEXT	glib-types.h	210;"	d
+G_TYPE_MAIN_LOOP	glib-types.h	201;"	d
+G_TYPE_MAKE_FUNDAMENTAL	gtype.h	222;"	d
+G_TYPE_MATCH_INFO	glib-types.h	106;"	d
+G_TYPE_MODULE	gtypemodule.h	35;"	d
+G_TYPE_MODULE_CLASS	gtypemodule.h	36;"	d
+G_TYPE_MODULE_GET_CLASS	gtypemodule.h	39;"	d
+G_TYPE_NONE	gtype.h	65;"	d
+G_TYPE_OBJECT	gtype.h	181;"	d
+G_TYPE_PARAM	gtype.h	175;"	d
+G_TYPE_PARAM_BOOLEAN	gparamspecs.h	87;"	d
+G_TYPE_PARAM_BOXED	gparamspecs.h	409;"	d
+G_TYPE_PARAM_CHAR	gparamspecs.h	41;"	d
+G_TYPE_PARAM_DOUBLE	gparamspecs.h	340;"	d
+G_TYPE_PARAM_ENUM	gparamspecs.h	271;"	d
+G_TYPE_PARAM_FLAGS	gparamspecs.h	294;"	d
+G_TYPE_PARAM_FLOAT	gparamspecs.h	317;"	d
+G_TYPE_PARAM_GTYPE	gparamspecs.h	537;"	d
+G_TYPE_PARAM_INT	gparamspecs.h	110;"	d
+G_TYPE_PARAM_INT64	gparamspecs.h	202;"	d
+G_TYPE_PARAM_LONG	gparamspecs.h	156;"	d
+G_TYPE_PARAM_OBJECT	gparamspecs.h	484;"	d
+G_TYPE_PARAM_OVERRIDE	gparamspecs.h	509;"	d
+G_TYPE_PARAM_PARAM	gparamspecs.h	386;"	d
+G_TYPE_PARAM_POINTER	gparamspecs.h	432;"	d
+G_TYPE_PARAM_STRING	gparamspecs.h	363;"	d
+G_TYPE_PARAM_UCHAR	gparamspecs.h	64;"	d
+G_TYPE_PARAM_UINT	gparamspecs.h	133;"	d
+G_TYPE_PARAM_UINT64	gparamspecs.h	225;"	d
+G_TYPE_PARAM_ULONG	gparamspecs.h	179;"	d
+G_TYPE_PARAM_UNICHAR	gparamspecs.h	248;"	d
+G_TYPE_PARAM_VALUE_ARRAY	gparamspecs.h	457;"	d
+G_TYPE_PARAM_VARIANT	gparamspecs.h	565;"	d
+G_TYPE_PLUGIN	gtypeplugin.h	32;"	d
+G_TYPE_PLUGIN_CLASS	gtypeplugin.h	33;"	d
+G_TYPE_PLUGIN_GET_CLASS	gtypeplugin.h	36;"	d
+G_TYPE_POINTER	gtype.h	163;"	d
+G_TYPE_PTR_ARRAY	glib-types.h	133;"	d
+G_TYPE_REGEX	glib-types.h	97;"	d
+G_TYPE_RESERVED_BSE_FIRST	gtype.h	242;"	d
+G_TYPE_RESERVED_BSE_LAST	gtype.h	248;"	d
+G_TYPE_RESERVED_GLIB_FIRST	gtype.h	229;"	d
+G_TYPE_RESERVED_GLIB_LAST	gtype.h	235;"	d
+G_TYPE_RESERVED_USER_FIRST	gtype.h	255;"	d
+G_TYPE_SOURCE	glib-types.h	219;"	d
+G_TYPE_STRING	gtype.h	157;"	d
+G_TYPE_STRV	glib-types.h	72;"	d
+G_TYPE_TYPE_MODULE	gtypemodule.h	34;"	d
+G_TYPE_TYPE_PLUGIN	gtypeplugin.h	31;"	d
+G_TYPE_UCHAR	gtype.h	85;"	d
+G_TYPE_UINT	gtype.h	103;"	d
+G_TYPE_UINT64	gtype.h	127;"	d
+G_TYPE_ULONG	gtype.h	115;"	d
+G_TYPE_VALUE	gboxed.h	107;"	d
+G_TYPE_VALUE_ARRAY	gvaluearray.h	40;"	d
+G_TYPE_VARIANT	gtype.h	199;"	d
+G_TYPE_VARIANT_BUILDER	glib-types.h	192;"	d
+G_TYPE_VARIANT_TYPE	glib-types.h	151;"	d
+G_VALUE_COLLECT	gvaluecollector.h	149;"	d
+G_VALUE_COLLECT_DOUBLE	gvaluecollector.h	/^  G_VALUE_COLLECT_DOUBLE	= 'd',$/;"	e	enum:__anon2
+G_VALUE_COLLECT_FORMAT_MAX_LENGTH	gvaluecollector.h	252;"	d
+G_VALUE_COLLECT_INIT	gvaluecollector.h	90;"	d
+G_VALUE_COLLECT_INT	gvaluecollector.h	/^  G_VALUE_COLLECT_INT		= 'i',$/;"	e	enum:__anon2
+G_VALUE_COLLECT_INT64	gvaluecollector.h	/^  G_VALUE_COLLECT_INT64         = 'q',$/;"	e	enum:__anon2
+G_VALUE_COLLECT_LONG	gvaluecollector.h	/^  G_VALUE_COLLECT_LONG		= 'l',$/;"	e	enum:__anon2
+G_VALUE_COLLECT_POINTER	gvaluecollector.h	/^  G_VALUE_COLLECT_POINTER	= 'p'$/;"	e	enum:__anon2
+G_VALUE_COLLECT_SKIP	gvaluecollector.h	161;"	d
+G_VALUE_HOLDS	gvalue.h	82;"	d
+G_VALUE_HOLDS_BOOLEAN	gvaluetypes.h	59;"	d
+G_VALUE_HOLDS_BOXED	gboxed.h	45;"	d
+G_VALUE_HOLDS_CHAR	gvaluetypes.h	41;"	d
+G_VALUE_HOLDS_DOUBLE	gvaluetypes.h	131;"	d
+G_VALUE_HOLDS_ENUM	genums.h	127;"	d
+G_VALUE_HOLDS_FLAGS	genums.h	136;"	d
+G_VALUE_HOLDS_FLOAT	gvaluetypes.h	122;"	d
+G_VALUE_HOLDS_GTYPE	gvaluetypes.h	165;"	d
+G_VALUE_HOLDS_INT	gvaluetypes.h	68;"	d
+G_VALUE_HOLDS_INT64	gvaluetypes.h	104;"	d
+G_VALUE_HOLDS_LONG	gvaluetypes.h	86;"	d
+G_VALUE_HOLDS_OBJECT	gobject.h	130;"	d
+G_VALUE_HOLDS_PARAM	gparam.h	110;"	d
+G_VALUE_HOLDS_POINTER	gvaluetypes.h	149;"	d
+G_VALUE_HOLDS_STRING	gvaluetypes.h	140;"	d
+G_VALUE_HOLDS_UCHAR	gvaluetypes.h	50;"	d
+G_VALUE_HOLDS_UINT	gvaluetypes.h	77;"	d
+G_VALUE_HOLDS_UINT64	gvaluetypes.h	113;"	d
+G_VALUE_HOLDS_ULONG	gvaluetypes.h	95;"	d
+G_VALUE_HOLDS_VARIANT	gvaluetypes.h	176;"	d
+G_VALUE_INIT	gvalue.h	178;"	d
+G_VALUE_LCOPY	gvaluecollector.h	204;"	d
+G_VALUE_NOCOPY_CONTENTS	gvalue.h	162;"	d
+G_VALUE_TYPE	gvalue.h	61;"	d
+G_VALUE_TYPE_NAME	gvalue.h	70;"	d
+_GCClosure	gclosure.h	/^struct _GCClosure$/;"	s
+_GClosure	gclosure.h	/^struct _GClosure$/;"	s
+_GClosureNotifyData	gclosure.h	/^struct _GClosureNotifyData$/;"	s
+_GEnumClass	genums.h	/^struct	_GEnumClass$/;"	s
+_GEnumValue	genums.h	/^struct _GEnumValue$/;"	s
+_GFlagsClass	genums.h	/^struct	_GFlagsClass$/;"	s
+_GFlagsValue	genums.h	/^struct _GFlagsValue$/;"	s
+_GInterfaceInfo	gtype.h	/^struct _GInterfaceInfo$/;"	s
+_GObject	gobject.h	/^struct  _GObject$/;"	s
+_GObjectClass	gobject.h	/^struct  _GObjectClass$/;"	s
+_GObjectConstructParam	gobject.h	/^struct _GObjectConstructParam$/;"	s
+_GObjectNotifyContext	gobjectnotifyqueue.c	/^struct _GObjectNotifyContext$/;"	s	file:
+_GObjectNotifyQueue	gobjectnotifyqueue.c	/^struct _GObjectNotifyQueue$/;"	s	file:
+_GParamSpec	gparam.h	/^struct _GParamSpec$/;"	s
+_GParamSpecBoolean	gparamspecs.h	/^struct _GParamSpecBoolean$/;"	s
+_GParamSpecBoxed	gparamspecs.h	/^struct _GParamSpecBoxed$/;"	s
+_GParamSpecChar	gparamspecs.h	/^struct _GParamSpecChar$/;"	s
+_GParamSpecClass	gparam.h	/^struct _GParamSpecClass$/;"	s
+_GParamSpecDouble	gparamspecs.h	/^struct _GParamSpecDouble$/;"	s
+_GParamSpecEnum	gparamspecs.h	/^struct _GParamSpecEnum$/;"	s
+_GParamSpecFlags	gparamspecs.h	/^struct _GParamSpecFlags$/;"	s
+_GParamSpecFloat	gparamspecs.h	/^struct _GParamSpecFloat$/;"	s
+_GParamSpecGType	gparamspecs.h	/^struct _GParamSpecGType$/;"	s
+_GParamSpecInt	gparamspecs.h	/^struct _GParamSpecInt$/;"	s
+_GParamSpecInt64	gparamspecs.h	/^struct _GParamSpecInt64$/;"	s
+_GParamSpecLong	gparamspecs.h	/^struct _GParamSpecLong$/;"	s
+_GParamSpecObject	gparamspecs.h	/^struct _GParamSpecObject$/;"	s
+_GParamSpecOverride	gparamspecs.h	/^struct _GParamSpecOverride$/;"	s
+_GParamSpecParam	gparamspecs.h	/^struct _GParamSpecParam$/;"	s
+_GParamSpecPointer	gparamspecs.h	/^struct _GParamSpecPointer$/;"	s
+_GParamSpecString	gparamspecs.h	/^struct _GParamSpecString$/;"	s
+_GParamSpecTypeInfo	gparam.h	/^struct _GParamSpecTypeInfo$/;"	s
+_GParamSpecUChar	gparamspecs.h	/^struct _GParamSpecUChar$/;"	s
+_GParamSpecUInt	gparamspecs.h	/^struct _GParamSpecUInt$/;"	s
+_GParamSpecUInt64	gparamspecs.h	/^struct _GParamSpecUInt64$/;"	s
+_GParamSpecULong	gparamspecs.h	/^struct _GParamSpecULong$/;"	s
+_GParamSpecUnichar	gparamspecs.h	/^struct _GParamSpecUnichar$/;"	s
+_GParamSpecValueArray	gparamspecs.h	/^struct _GParamSpecValueArray$/;"	s
+_GParamSpecVariant	gparamspecs.h	/^struct _GParamSpecVariant$/;"	s
+_GParameter	gparam.h	/^struct _GParameter \/* auxiliary structure for _setv() variants *\/$/;"	s
+_GSignalInvocationHint	gsignal.h	/^struct _GSignalInvocationHint$/;"	s
+_GSignalQuery	gsignal.h	/^struct _GSignalQuery$/;"	s
+_GTypeCValue	gvaluecollector.h	/^union _GTypeCValue$/;"	u
+_GTypeClass	gtype.h	/^struct _GTypeClass$/;"	s
+_GTypeFundamentalInfo	gtype.h	/^struct _GTypeFundamentalInfo$/;"	s
+_GTypeInfo	gtype.h	/^struct _GTypeInfo$/;"	s
+_GTypeInstance	gtype.h	/^struct _GTypeInstance$/;"	s
+_GTypeInterface	gtype.h	/^struct _GTypeInterface$/;"	s
+_GTypeModule	gtypemodule.h	/^struct _GTypeModule $/;"	s
+_GTypeModuleClass	gtypemodule.h	/^struct _GTypeModuleClass$/;"	s
+_GTypePluginClass	gtypeplugin.h	/^struct _GTypePluginClass$/;"	s
+_GTypeQuery	gtype.h	/^struct _GTypeQuery$/;"	s
+_GTypeValueTable	gtype.h	/^struct _GTypeValueTable$/;"	s
+_GValue	gvalue.h	/^struct _GValue$/;"	s
+_GValueArray	gvaluearray.h	/^struct _GValueArray$/;"	s
+_G_DEFINE_BOXED_TYPE_BEGIN	gtype.h	1542;"	d
+_G_DEFINE_BOXED_TYPE_BEGIN	gtype.h	1567;"	d
+_G_DEFINE_INTERFACE_EXTENDED_BEGIN	gtype.h	1480;"	d
+_G_DEFINE_INTERFACE_EXTENDED_END	gtype.h	1501;"	d
+_G_DEFINE_POINTER_TYPE_BEGIN	gtype.h	1608;"	d
+_G_DEFINE_TYPE_EXTENDED_BEGIN	gtype.h	1446;"	d
+_G_DEFINE_TYPE_EXTENDED_END	gtype.h	1472;"	d
+_G_TYPE_CCC	gtype.h	1669;"	d
+_G_TYPE_CCC	gtype.h	1673;"	d
+_G_TYPE_CCT	gtype.h	1690;"	d
+_G_TYPE_CCT	gtype.h	1712;"	d
+_G_TYPE_CHI	gtype.h	1675;"	d
+_G_TYPE_CHV	gtype.h	1676;"	d
+_G_TYPE_CIC	gtype.h	1667;"	d
+_G_TYPE_CIC	gtype.h	1672;"	d
+_G_TYPE_CIT	gtype.h	1680;"	d
+_G_TYPE_CIT	gtype.h	1711;"	d
+_G_TYPE_CVH	gtype.h	1700;"	d
+_G_TYPE_CVH	gtype.h	1713;"	d
+_G_TYPE_IGC	gtype.h	1677;"	d
+_G_TYPE_IGI	gtype.h	1678;"	d
+__GLIB_TYPES_H__	glib-types.h	24;"	d
+__G_BINDING_H__	gbinding.h	28;"	d
+__G_BOXED_H__	gboxed.h	24;"	d
+__G_CLOSURE_H__	gclosure.h	25;"	d
+__G_ENUMS_H__	genums.h	24;"	d
+__G_MARSHAL_H__	gmarshal.h	3;"	d
+__G_OBJECT_H__	gobject.h	24;"	d
+__G_OBJECT_NOTIFY_QUEUE_H__	gobjectnotifyqueue.c	27;"	d	file:
+__G_PARAMSPECS_H__	gparamspecs.h	26;"	d
+__G_PARAM_H__	gparam.h	26;"	d
+__G_SIGNAL_H__	gsignal.h	24;"	d
+__G_SOURCECLOSURE_H__	gsourceclosure.h	24;"	d
+__G_TYPE_H__	gtype.h	24;"	d
+__G_TYPE_MODULE_H__	gtypemodule.h	24;"	d
+__G_TYPE_PLUGIN_H__	gtypeplugin.h	24;"	d
+__G_VALUETYPES_H__	gvaluetypes.h	26;"	d
+__G_VALUE_ARRAY_H__	gvaluearray.h	26;"	d
+__G_VALUE_COLLECTOR_H__	gvaluecollector.h	32;"	d
+__G_VALUE_H__	gvalue.h	26;"	d
+_blurb	gparam.h	/^  gchar         *_blurb;$/;"	m	struct:_GParamSpec
+_g_param_type_register_static_constant	gparam.h	/^GType  _g_param_type_register_static_constant (const gchar              *name,$/;"	p
+_g_signals_destroy	gsignal.h	/^void	 _g_signals_destroy		      (GType		  itype);$/;"	p
+_nick	gparam.h	/^  gchar         *_nick;$/;"	m	struct:_GParamSpec
+_nqueue_trash	gobjectnotifyqueue.c	/^  GTrashStack                 *_nqueue_trash; \/* unused *\/$/;"	m	struct:_GObjectNotifyContext	file:
+base_finalize	gtype.h	/^  GBaseFinalizeFunc      base_finalize;$/;"	m	struct:_GTypeInfo
+base_iface	gtypeplugin.h	/^  GTypeInterface		   base_iface;$/;"	m	struct:_GTypePluginClass
+base_init	gtype.h	/^  GBaseInitFunc          base_init;$/;"	m	struct:_GTypeInfo
+callback	gclosure.h	/^  gpointer	callback;$/;"	m	struct:_GCClosure
+class_data	gtype.h	/^  gconstpointer          class_data;$/;"	m	struct:_GTypeInfo
+class_finalize	gtype.h	/^  GClassFinalizeFunc     class_finalize;$/;"	m	struct:_GTypeInfo
+class_init	gtype.h	/^  GClassInitFunc         class_init;$/;"	m	struct:_GTypeInfo
+class_size	gtype.h	/^  guint		class_size;$/;"	m	struct:_GTypeQuery
+class_size	gtype.h	/^  guint16                class_size;$/;"	m	struct:_GTypeInfo
+closure	gclosure.h	/^  GClosure	closure;$/;"	m	struct:_GCClosure
+collect_format	gtype.h	/^  gchar	    *collect_format;$/;"	m	struct:_GTypeValueTable
+collect_value	gtype.h	/^  gchar*   (*collect_value)      (GValue       *value,$/;"	m	struct:_GTypeValueTable
+complete_interface_info	gtypeplugin.h	/^  GTypePluginCompleteInterfaceInfo complete_interface_info;$/;"	m	struct:_GTypePluginClass
+complete_type_info	gtypeplugin.h	/^  GTypePluginCompleteTypeInfo	   complete_type_info;$/;"	m	struct:_GTypePluginClass
+construct_properties	gobject.h	/^  GSList      *construct_properties;$/;"	m	struct:_GObjectClass
+constructed	gobject.h	/^  void	     (*constructed)		(GObject	*object);$/;"	m	struct:_GObjectClass
+constructor	gobject.h	/^  GObject*   (*constructor)     (GType                  type,$/;"	m	struct:_GObjectClass
+context	gobjectnotifyqueue.c	/^  GObjectNotifyContext *context;$/;"	m	struct:_GObjectNotifyQueue	file:
+cset_first	gparamspecs.h	/^  gchar        *cset_first;$/;"	m	struct:_GParamSpecString
+cset_nth	gparamspecs.h	/^  gchar        *cset_nth;$/;"	m	struct:_GParamSpecString
+data	gclosure.h	/^  \/*< protected >*\/	gpointer data;$/;"	m	struct:_GClosure
+data	gclosure.h	/^  gpointer       data;$/;"	m	struct:_GClosureNotifyData
+data	gvalue.h	/^  } data[2];$/;"	m	struct:_GValue	typeref:union:_GValue::__anon3
+default_value	gparamspecs.h	/^  GVariant     *default_value;$/;"	m	struct:_GParamSpecVariant
+default_value	gparamspecs.h	/^  gboolean      default_value;$/;"	m	struct:_GParamSpecBoolean
+default_value	gparamspecs.h	/^  gchar        *default_value;$/;"	m	struct:_GParamSpecString
+default_value	gparamspecs.h	/^  gdouble       default_value;$/;"	m	struct:_GParamSpecDouble
+default_value	gparamspecs.h	/^  gfloat        default_value;$/;"	m	struct:_GParamSpecFloat
+default_value	gparamspecs.h	/^  gint          default_value;$/;"	m	struct:_GParamSpecEnum
+default_value	gparamspecs.h	/^  gint          default_value;$/;"	m	struct:_GParamSpecInt
+default_value	gparamspecs.h	/^  gint64        default_value;$/;"	m	struct:_GParamSpecInt64
+default_value	gparamspecs.h	/^  gint8         default_value;$/;"	m	struct:_GParamSpecChar
+default_value	gparamspecs.h	/^  glong         default_value;$/;"	m	struct:_GParamSpecLong
+default_value	gparamspecs.h	/^  guint         default_value;$/;"	m	struct:_GParamSpecFlags
+default_value	gparamspecs.h	/^  guint         default_value;$/;"	m	struct:_GParamSpecUInt
+default_value	gparamspecs.h	/^  guint64       default_value;$/;"	m	struct:_GParamSpecUInt64
+default_value	gparamspecs.h	/^  guint8        default_value;$/;"	m	struct:_GParamSpecUChar
+default_value	gparamspecs.h	/^  gulong        default_value;$/;"	m	struct:_GParamSpecULong
+default_value	gparamspecs.h	/^  gunichar      default_value;$/;"	m	struct:_GParamSpecUnichar
+derivative_flag	gclosure.h	/^  volatile         	guint	 derivative_flag : 1;$/;"	m	struct:_GClosure
+detail	gsignal.h	/^  GQuark	detail;$/;"	m	struct:_GSignalInvocationHint
+dispatch_properties_changed	gobject.h	/^  void       (*dispatch_properties_changed) (GObject      *object,$/;"	m	struct:_GObjectClass
+dispatcher	gobjectnotifyqueue.c	/^  GObjectNotifyQueueDispatcher dispatcher;$/;"	m	struct:_GObjectNotifyContext	file:
+dispose	gobject.h	/^  void       (*dispose)			(GObject        *object);$/;"	m	struct:_GObjectClass
+dummy	gparam.h	/^  gpointer	  dummy[4];$/;"	m	struct:_GParamSpecClass
+element_spec	gparamspecs.h	/^  GParamSpec   *element_spec;$/;"	m	struct:_GParamSpecValueArray
+ensure_non_null	gparamspecs.h	/^  guint         ensure_non_null : 1;$/;"	m	struct:_GParamSpecString
+enum_class	gparamspecs.h	/^  GEnumClass   *enum_class;$/;"	m	struct:_GParamSpecEnum
+epsilon	gparamspecs.h	/^  gdouble       epsilon;$/;"	m	struct:_GParamSpecDouble
+epsilon	gparamspecs.h	/^  gfloat        epsilon;$/;"	m	struct:_GParamSpecFloat
+finalize	gobject.h	/^  void       (*finalize)		(GObject        *object);$/;"	m	struct:_GObjectClass
+finalize	gparam.h	/^  void	        (*finalize)		(GParamSpec   *pspec);$/;"	m	struct:_GParamSpecClass
+finalize	gparam.h	/^  void          (*finalize)             (GParamSpec   *pspec); \/* optional *\/$/;"	m	struct:_GParamSpecTypeInfo
+fixed_n_elements	gparamspecs.h	/^  guint		fixed_n_elements;$/;"	m	struct:_GParamSpecValueArray
+flags	gobject.h	/^  gsize		flags;$/;"	m	struct:_GObjectClass
+flags	gparam.h	/^  GParamFlags    flags;$/;"	m	struct:_GParamSpec
+flags_class	gparamspecs.h	/^  GFlagsClass  *flags_class;$/;"	m	struct:_GParamSpecFlags
+floating	gclosure.h	/^  volatile       	guint	 floating : 1;$/;"	m	struct:_GClosure
+freeze_count	gobjectnotifyqueue.c	/^  guint16               freeze_count;$/;"	m	struct:_GObjectNotifyQueue	file:
+g_binding_get_flags	gbinding.h	/^GBindingFlags         g_binding_get_flags           (GBinding *binding);$/;"	p
+g_binding_get_source	gbinding.h	/^GObject *             g_binding_get_source          (GBinding *binding);$/;"	p
+g_binding_get_source_property	gbinding.h	/^const gchar *         g_binding_get_source_property (GBinding *binding);$/;"	p
+g_binding_get_target	gbinding.h	/^GObject *             g_binding_get_target          (GBinding *binding);$/;"	p
+g_binding_get_target_property	gbinding.h	/^const gchar *         g_binding_get_target_property (GBinding *binding);$/;"	p
+g_boxed_copy	gboxed.h	/^gpointer g_boxed_copy                     (GType boxed_type,$/;"	p
+g_boxed_free	gboxed.h	/^void     g_boxed_free                     (GType          boxed_type,$/;"	p
+g_boxed_type_register_static	gboxed.h	/^GType    g_boxed_type_register_static     (const gchar   *name,$/;"	p
+g_cclosure_marshal_BOOLEAN__BOXED_BOXED	gmarshal.h	/^extern void g_cclosure_marshal_BOOLEAN__BOXED_BOXED (GClosure     *closure,$/;"	p
+g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv	gmarshal.h	/^extern void g_cclosure_marshal_BOOLEAN__BOXED_BOXEDv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_BOOLEAN__FLAGS	gmarshal.h	/^extern void g_cclosure_marshal_BOOLEAN__FLAGS (GClosure     *closure,$/;"	p
+g_cclosure_marshal_BOOLEAN__FLAGSv	gmarshal.h	/^extern void g_cclosure_marshal_BOOLEAN__FLAGSv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_BOOL__BOXED_BOXED	gmarshal.h	337;"	d
+g_cclosure_marshal_BOOL__FLAGS	gmarshal.h	306;"	d
+g_cclosure_marshal_STRING__OBJECT_POINTER	gmarshal.h	/^extern void g_cclosure_marshal_STRING__OBJECT_POINTER (GClosure     *closure,$/;"	p
+g_cclosure_marshal_STRING__OBJECT_POINTERv	gmarshal.h	/^extern void g_cclosure_marshal_STRING__OBJECT_POINTERv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__BOOLEAN	gmarshal.h	/^extern void g_cclosure_marshal_VOID__BOOLEAN (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__BOOLEANv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__BOOLEANv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__BOXED	gmarshal.h	/^extern void g_cclosure_marshal_VOID__BOXED (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__BOXEDv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__BOXEDv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__CHAR	gmarshal.h	/^extern void g_cclosure_marshal_VOID__CHAR (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__CHARv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__CHARv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__DOUBLE	gmarshal.h	/^extern void g_cclosure_marshal_VOID__DOUBLE (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__DOUBLEv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__DOUBLEv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__ENUM	gmarshal.h	/^extern void g_cclosure_marshal_VOID__ENUM (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__ENUMv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__ENUMv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__FLAGS	gmarshal.h	/^extern void g_cclosure_marshal_VOID__FLAGS (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__FLAGSv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__FLAGSv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__FLOAT	gmarshal.h	/^extern void g_cclosure_marshal_VOID__FLOAT (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__FLOATv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__FLOATv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__INT	gmarshal.h	/^extern void g_cclosure_marshal_VOID__INT (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__INTv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__INTv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__LONG	gmarshal.h	/^extern void g_cclosure_marshal_VOID__LONG (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__LONGv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__LONGv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__OBJECT	gmarshal.h	/^extern void g_cclosure_marshal_VOID__OBJECT (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__OBJECTv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__OBJECTv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__PARAM	gmarshal.h	/^extern void g_cclosure_marshal_VOID__PARAM (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__PARAMv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__PARAMv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__POINTER	gmarshal.h	/^extern void g_cclosure_marshal_VOID__POINTER (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__POINTERv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__POINTERv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__STRING	gmarshal.h	/^extern void g_cclosure_marshal_VOID__STRING (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__STRINGv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__STRINGv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UCHAR	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UCHAR (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UCHARv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UCHARv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UINT	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UINT (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UINT_POINTER	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UINT_POINTER (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UINT_POINTERv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UINT_POINTERv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__UINTv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__UINTv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__ULONG	gmarshal.h	/^extern void g_cclosure_marshal_VOID__ULONG (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__ULONGv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__ULONGv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__VARIANT	gmarshal.h	/^extern void g_cclosure_marshal_VOID__VARIANT (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__VARIANTv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__VARIANTv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__VOID	gmarshal.h	/^extern void g_cclosure_marshal_VOID__VOID (GClosure     *closure,$/;"	p
+g_cclosure_marshal_VOID__VOIDv	gmarshal.h	/^extern void g_cclosure_marshal_VOID__VOIDv (GClosure     *closure,$/;"	p
+g_cclosure_marshal_generic	gclosure.h	/^void g_cclosure_marshal_generic (GClosure     *closure,$/;"	p
+g_cclosure_marshal_generic_va	gclosure.h	/^void g_cclosure_marshal_generic_va (GClosure *closure,$/;"	p
+g_cclosure_new	gclosure.h	/^GClosure* g_cclosure_new			(GCallback	callback_func,$/;"	p
+g_cclosure_new_object	gobject.h	/^GClosure*   g_cclosure_new_object             (GCallback       callback_func,$/;"	p
+g_cclosure_new_object_swap	gobject.h	/^GClosure*   g_cclosure_new_object_swap        (GCallback       callback_func,$/;"	p
+g_cclosure_new_swap	gclosure.h	/^GClosure* g_cclosure_new_swap			(GCallback	callback_func,$/;"	p
+g_class	gtype.h	/^  GTypeClass *g_class;$/;"	m	struct:_GTypeInstance
+g_clear_object	gobject.h	/^void    g_clear_object (volatile GObject **object_ptr);$/;"	p
+g_clear_object	gobject.h	564;"	d
+g_closure_add_finalize_notifier	gclosure.h	/^void	  g_closure_add_finalize_notifier	(GClosure       *closure,$/;"	p
+g_closure_add_invalidate_notifier	gclosure.h	/^void	  g_closure_add_invalidate_notifier	(GClosure       *closure,$/;"	p
+g_closure_add_marshal_guards	gclosure.h	/^void	  g_closure_add_marshal_guards		(GClosure	*closure,$/;"	p
+g_closure_invalidate	gclosure.h	/^void	  g_closure_invalidate			(GClosure	*closure);$/;"	p
+g_closure_invoke	gclosure.h	/^void	  g_closure_invoke			(GClosure 	*closure,$/;"	p
+g_closure_new_object	gobject.h	/^GClosure*   g_closure_new_object              (guint           sizeof_closure,$/;"	p
+g_closure_new_simple	gclosure.h	/^GClosure* g_closure_new_simple			(guint		 sizeof_closure,$/;"	p
+g_closure_ref	gclosure.h	/^GClosure* g_closure_ref				(GClosure	*closure);$/;"	p
+g_closure_remove_finalize_notifier	gclosure.h	/^void	  g_closure_remove_finalize_notifier	(GClosure       *closure,$/;"	p
+g_closure_remove_invalidate_notifier	gclosure.h	/^void	  g_closure_remove_invalidate_notifier	(GClosure       *closure,$/;"	p
+g_closure_set_marshal	gclosure.h	/^void	  g_closure_set_marshal			(GClosure	*closure,$/;"	p
+g_closure_set_meta_marshal	gclosure.h	/^void	  g_closure_set_meta_marshal		(GClosure       *closure,$/;"	p
+g_closure_sink	gclosure.h	/^void	  g_closure_sink			(GClosure	*closure);$/;"	p
+g_closure_unref	gclosure.h	/^void	  g_closure_unref			(GClosure	*closure);$/;"	p
+g_enum_complete_type_info	genums.h	/^void	g_enum_complete_type_info  (GType	       g_enum_type,$/;"	p
+g_enum_get_value	genums.h	/^GEnumValue*	g_enum_get_value		(GEnumClass	*enum_class,$/;"	p
+g_enum_get_value_by_name	genums.h	/^GEnumValue*	g_enum_get_value_by_name	(GEnumClass	*enum_class,$/;"	p
+g_enum_get_value_by_nick	genums.h	/^GEnumValue*	g_enum_get_value_by_nick	(GEnumClass	*enum_class,$/;"	p
+g_enum_register_static	genums.h	/^GType	g_enum_register_static	   (const gchar	      *name,$/;"	p
+g_flags_complete_type_info	genums.h	/^void	g_flags_complete_type_info (GType	       g_flags_type,$/;"	p
+g_flags_get_first_value	genums.h	/^GFlagsValue*	g_flags_get_first_value		(GFlagsClass	*flags_class,$/;"	p
+g_flags_get_value_by_name	genums.h	/^GFlagsValue*	g_flags_get_value_by_name	(GFlagsClass	*flags_class,$/;"	p
+g_flags_get_value_by_nick	genums.h	/^GFlagsValue*	g_flags_get_value_by_nick	(GFlagsClass	*flags_class,$/;"	p
+g_flags_register_static	genums.h	/^GType	g_flags_register_static	   (const gchar	      *name,$/;"	p
+g_gtype_get_type	gvaluetypes.h	/^GType		      g_gtype_get_type		(void);$/;"	p
+g_initially_unowned_get_type	gobject.h	/^GType       g_initially_unowned_get_type      (void);$/;"	p
+g_instance_type	gtype.h	/^  GType g_instance_type;$/;"	m	struct:_GTypeInterface
+g_object_add_toggle_ref	gobject.h	/^void g_object_add_toggle_ref    (GObject       *object,$/;"	p
+g_object_add_weak_pointer	gobject.h	/^void        g_object_add_weak_pointer         (GObject        *object, $/;"	p
+g_object_bind_property	gbinding.h	/^GBinding *g_object_bind_property               (gpointer               source,$/;"	p
+g_object_bind_property_full	gbinding.h	/^GBinding *g_object_bind_property_full          (gpointer               source,$/;"	p
+g_object_bind_property_with_closures	gbinding.h	/^GBinding *g_object_bind_property_with_closures (gpointer               source,$/;"	p
+g_object_class_find_property	gobject.h	/^GParamSpec* g_object_class_find_property      (GObjectClass   *oclass,$/;"	p
+g_object_class_install_properties	gobject.h	/^void        g_object_class_install_properties (GObjectClass   *oclass,$/;"	p
+g_object_class_install_property	gobject.h	/^void        g_object_class_install_property   (GObjectClass   *oclass,$/;"	p
+g_object_class_list_properties	gobject.h	/^GParamSpec**g_object_class_list_properties    (GObjectClass   *oclass,$/;"	p
+g_object_class_override_property	gobject.h	/^void        g_object_class_override_property  (GObjectClass   *oclass,$/;"	p
+g_object_compat_control	gobject.h	/^gsize	    g_object_compat_control	      (gsize	       what,$/;"	v
+g_object_force_floating	gobject.h	/^void        g_object_force_floating           (GObject        *object);$/;"	p
+g_object_freeze_notify	gobject.h	/^void        g_object_freeze_notify            (GObject        *object);$/;"	p
+g_object_get_data	gobject.h	/^gpointer    g_object_get_data                 (GObject        *object,$/;"	p
+g_object_get_property	gobject.h	/^void        g_object_get_property             (GObject        *object,$/;"	p
+g_object_get_qdata	gobject.h	/^gpointer    g_object_get_qdata                (GObject        *object,$/;"	p
+g_object_get_valist	gobject.h	/^void        g_object_get_valist               (GObject        *object,$/;"	p
+g_object_interface_find_property	gobject.h	/^GParamSpec* g_object_interface_find_property    (gpointer     g_iface,$/;"	p
+g_object_interface_install_property	gobject.h	/^void        g_object_interface_install_property (gpointer     g_iface,$/;"	p
+g_object_interface_list_properties	gobject.h	/^GParamSpec**g_object_interface_list_properties  (gpointer     g_iface,$/;"	p
+g_object_is_floating	gobject.h	/^gboolean    g_object_is_floating    	      (gpointer        object);$/;"	p
+g_object_new	gobject.h	/^gpointer    g_object_new                      (GType           object_type,$/;"	p
+g_object_new_valist	gobject.h	/^GObject*    g_object_new_valist               (GType           object_type,$/;"	p
+g_object_newv	gobject.h	/^gpointer    g_object_newv		      (GType           object_type,$/;"	p
+g_object_notify	gobject.h	/^void        g_object_notify                   (GObject        *object,$/;"	p
+g_object_notify_by_pspec	gobject.h	/^void        g_object_notify_by_pspec          (GObject        *object,$/;"	p
+g_object_notify_queue_add	gobjectnotifyqueue.c	/^g_object_notify_queue_add (GObject            *object,$/;"	f	file:
+g_object_notify_queue_clear	gobjectnotifyqueue.c	/^g_object_notify_queue_clear (GObject            *object,$/;"	f	file:
+g_object_notify_queue_free	gobjectnotifyqueue.c	/^g_object_notify_queue_free (gpointer data)$/;"	f	file:
+g_object_notify_queue_freeze	gobjectnotifyqueue.c	/^g_object_notify_queue_freeze (GObject		   *object,$/;"	f	file:
+g_object_notify_queue_from_object	gobjectnotifyqueue.c	/^g_object_notify_queue_from_object (GObject              *object,$/;"	f	file:
+g_object_notify_queue_thaw	gobjectnotifyqueue.c	/^g_object_notify_queue_thaw (GObject            *object,$/;"	f	file:
+g_object_ref	gobject.h	/^gpointer    g_object_ref                      (gpointer        object);$/;"	p
+g_object_ref_sink	gobject.h	/^gpointer    g_object_ref_sink       	      (gpointer	       object);$/;"	p
+g_object_remove_toggle_ref	gobject.h	/^void g_object_remove_toggle_ref (GObject       *object,$/;"	p
+g_object_remove_weak_pointer	gobject.h	/^void        g_object_remove_weak_pointer      (GObject        *object, $/;"	p
+g_object_run_dispose	gobject.h	/^void        g_object_run_dispose	      (GObject	      *object);$/;"	p
+g_object_set_data	gobject.h	/^void        g_object_set_data                 (GObject        *object,$/;"	p
+g_object_set_data_full	gobject.h	/^void        g_object_set_data_full            (GObject        *object,$/;"	p
+g_object_set_property	gobject.h	/^void        g_object_set_property             (GObject        *object,$/;"	p
+g_object_set_qdata	gobject.h	/^void        g_object_set_qdata                (GObject        *object,$/;"	p
+g_object_set_qdata_full	gobject.h	/^void        g_object_set_qdata_full           (GObject        *object,$/;"	p
+g_object_set_valist	gobject.h	/^void        g_object_set_valist               (GObject        *object,$/;"	p
+g_object_steal_data	gobject.h	/^gpointer    g_object_steal_data               (GObject        *object,$/;"	p
+g_object_steal_qdata	gobject.h	/^gpointer    g_object_steal_qdata              (GObject        *object,$/;"	p
+g_object_thaw_notify	gobject.h	/^void        g_object_thaw_notify              (GObject        *object);$/;"	p
+g_object_unref	gobject.h	/^void        g_object_unref                    (gpointer        object);$/;"	p
+g_object_watch_closure	gobject.h	/^void        g_object_watch_closure            (GObject        *object,$/;"	p
+g_object_weak_ref	gobject.h	/^void	    g_object_weak_ref		      (GObject	      *object,$/;"	p
+g_object_weak_unref	gobject.h	/^void	    g_object_weak_unref		      (GObject	      *object,$/;"	p
+g_param_spec_boolean	gparamspecs.h	/^GParamSpec*	g_param_spec_boolean	 (const gchar	 *name,$/;"	p
+g_param_spec_boxed	gparamspecs.h	/^GParamSpec*	g_param_spec_boxed	 (const gchar	 *name,$/;"	p
+g_param_spec_char	gparamspecs.h	/^GParamSpec*	g_param_spec_char	 (const gchar	 *name,$/;"	p
+g_param_spec_double	gparamspecs.h	/^GParamSpec*	g_param_spec_double	 (const gchar	 *name,$/;"	p
+g_param_spec_enum	gparamspecs.h	/^GParamSpec*	g_param_spec_enum	 (const gchar	 *name,$/;"	p
+g_param_spec_flags	gparamspecs.h	/^GParamSpec*	g_param_spec_flags	 (const gchar	 *name,$/;"	p
+g_param_spec_float	gparamspecs.h	/^GParamSpec*	g_param_spec_float	 (const gchar	 *name,$/;"	p
+g_param_spec_get_blurb	gparam.h	/^const gchar *   g_param_spec_get_blurb          (GParamSpec    *pspec);$/;"	p
+g_param_spec_get_name	gparam.h	/^const gchar *   g_param_spec_get_name           (GParamSpec    *pspec);$/;"	p
+g_param_spec_get_nick	gparam.h	/^const gchar *   g_param_spec_get_nick           (GParamSpec    *pspec);$/;"	p
+g_param_spec_get_qdata	gparam.h	/^gpointer        g_param_spec_get_qdata		(GParamSpec    *pspec,$/;"	p
+g_param_spec_get_redirect_target	gparam.h	/^GParamSpec*     g_param_spec_get_redirect_target (GParamSpec   *pspec);$/;"	p
+g_param_spec_gtype	gparamspecs.h	/^GParamSpec*	g_param_spec_gtype	 (const gchar	 *name,$/;"	p
+g_param_spec_int	gparamspecs.h	/^GParamSpec*	g_param_spec_int	 (const gchar	 *name,$/;"	p
+g_param_spec_int64	gparamspecs.h	/^GParamSpec*	g_param_spec_int64	 (const gchar	 *name,$/;"	p
+g_param_spec_internal	gparam.h	/^gpointer	g_param_spec_internal		(GType	        param_type,$/;"	p
+g_param_spec_long	gparamspecs.h	/^GParamSpec*	g_param_spec_long	 (const gchar	 *name,$/;"	p
+g_param_spec_object	gparamspecs.h	/^GParamSpec*	g_param_spec_object	 (const gchar	 *name,$/;"	p
+g_param_spec_override	gparamspecs.h	/^GParamSpec*	g_param_spec_override    (const gchar    *name,$/;"	p
+g_param_spec_param	gparamspecs.h	/^GParamSpec*	g_param_spec_param	 (const gchar	 *name,$/;"	p
+g_param_spec_pointer	gparamspecs.h	/^GParamSpec*	g_param_spec_pointer	 (const gchar	 *name,$/;"	p
+g_param_spec_pool_insert	gparam.h	/^void		g_param_spec_pool_insert	(GParamSpecPool	*pool,$/;"	p
+g_param_spec_pool_list	gparam.h	/^GParamSpec**	g_param_spec_pool_list		(GParamSpecPool	*pool,$/;"	p
+g_param_spec_pool_list_owned	gparam.h	/^GList*		g_param_spec_pool_list_owned	(GParamSpecPool	*pool,$/;"	p
+g_param_spec_pool_lookup	gparam.h	/^GParamSpec*	g_param_spec_pool_lookup	(GParamSpecPool	*pool,$/;"	p
+g_param_spec_pool_new	gparam.h	/^GParamSpecPool* g_param_spec_pool_new		(gboolean	type_prefixing);$/;"	p
+g_param_spec_pool_remove	gparam.h	/^void		g_param_spec_pool_remove	(GParamSpecPool	*pool,$/;"	p
+g_param_spec_ref	gparam.h	/^GParamSpec*	g_param_spec_ref		(GParamSpec    *pspec);$/;"	p
+g_param_spec_ref_sink	gparam.h	/^GParamSpec*	g_param_spec_ref_sink   	(GParamSpec    *pspec);$/;"	p
+g_param_spec_set_qdata	gparam.h	/^void            g_param_spec_set_qdata		(GParamSpec    *pspec,$/;"	p
+g_param_spec_set_qdata_full	gparam.h	/^void            g_param_spec_set_qdata_full	(GParamSpec    *pspec,$/;"	p
+g_param_spec_sink	gparam.h	/^void		g_param_spec_sink		(GParamSpec    *pspec);$/;"	p
+g_param_spec_steal_qdata	gparam.h	/^gpointer        g_param_spec_steal_qdata	(GParamSpec    *pspec,$/;"	p
+g_param_spec_string	gparamspecs.h	/^GParamSpec*	g_param_spec_string	 (const gchar	 *name,$/;"	p
+g_param_spec_types	gparamspecs.h	/^GOBJECT_VAR GType *g_param_spec_types;$/;"	v
+g_param_spec_uchar	gparamspecs.h	/^GParamSpec*	g_param_spec_uchar	 (const gchar	 *name,$/;"	p
+g_param_spec_uint	gparamspecs.h	/^GParamSpec*	g_param_spec_uint	 (const gchar	 *name,$/;"	p
+g_param_spec_uint64	gparamspecs.h	/^GParamSpec*	g_param_spec_uint64	 (const gchar	 *name,$/;"	p
+g_param_spec_ulong	gparamspecs.h	/^GParamSpec*	g_param_spec_ulong	 (const gchar	 *name,$/;"	p
+g_param_spec_unichar	gparamspecs.h	/^GParamSpec*	g_param_spec_unichar      (const gchar    *name,$/;"	p
+g_param_spec_unref	gparam.h	/^void		g_param_spec_unref		(GParamSpec    *pspec);$/;"	p
+g_param_spec_value_array	gparamspecs.h	/^GParamSpec*	g_param_spec_value_array (const gchar	 *name,$/;"	p
+g_param_spec_variant	gparamspecs.h	/^GParamSpec*	g_param_spec_variant	 (const gchar        *name,$/;"	p
+g_param_type_register_static	gparam.h	/^GType	g_param_type_register_static	(const gchar		  *name,$/;"	p
+g_param_value_convert	gparam.h	/^gboolean	g_param_value_convert		(GParamSpec    *pspec,$/;"	p
+g_param_value_defaults	gparam.h	/^gboolean	g_param_value_defaults		(GParamSpec    *pspec,$/;"	p
+g_param_value_set_default	gparam.h	/^void		g_param_value_set_default	(GParamSpec    *pspec,$/;"	p
+g_param_value_validate	gparam.h	/^gboolean	g_param_value_validate		(GParamSpec    *pspec,$/;"	p
+g_param_values_cmp	gparam.h	/^gint		g_param_values_cmp		(GParamSpec    *pspec,$/;"	p
+g_pointer_type_register_static	gvaluetypes.h	/^GType                 g_pointer_type_register_static (const gchar *name);$/;"	p
+g_signal_accumulator_first_wins	gsignal.h	/^gboolean g_signal_accumulator_first_wins   (GSignalInvocationHint *ihint,$/;"	p
+g_signal_accumulator_true_handled	gsignal.h	/^gboolean g_signal_accumulator_true_handled (GSignalInvocationHint *ihint,$/;"	p
+g_signal_add_emission_hook	gsignal.h	/^gulong	g_signal_add_emission_hook	    (guint		  signal_id,$/;"	p
+g_signal_chain_from_overridden	gsignal.h	/^void    g_signal_chain_from_overridden        (const GValue      *instance_and_params,$/;"	p
+g_signal_chain_from_overridden_handler	gsignal.h	/^void   g_signal_chain_from_overridden_handler (gpointer           instance,$/;"	p
+g_signal_connect	gsignal.h	439;"	d
+g_signal_connect_after	gsignal.h	454;"	d
+g_signal_connect_closure	gsignal.h	/^gulong	 g_signal_connect_closure	      (gpointer		  instance,$/;"	p
+g_signal_connect_closure_by_id	gsignal.h	/^gulong	 g_signal_connect_closure_by_id	      (gpointer		  instance,$/;"	p
+g_signal_connect_data	gsignal.h	/^gulong	 g_signal_connect_data		      (gpointer		  instance,$/;"	p
+g_signal_connect_object	gobject.h	/^gulong	    g_signal_connect_object           (gpointer	       instance,$/;"	p
+g_signal_connect_swapped	gsignal.h	470;"	d
+g_signal_emit	gsignal.h	/^void                  g_signal_emit         (gpointer            instance,$/;"	p
+g_signal_emit_by_name	gsignal.h	/^void                  g_signal_emit_by_name (gpointer            instance,$/;"	p
+g_signal_emit_valist	gsignal.h	/^void                  g_signal_emit_valist  (gpointer            instance,$/;"	p
+g_signal_emitv	gsignal.h	/^void                  g_signal_emitv        (const GValue       *instance_and_params,$/;"	p
+g_signal_get_invocation_hint	gsignal.h	/^GSignalInvocationHint* g_signal_get_invocation_hint (gpointer    instance);$/;"	p
+g_signal_handler_block	gsignal.h	/^void	 g_signal_handler_block		      (gpointer		  instance,$/;"	p
+g_signal_handler_disconnect	gsignal.h	/^void	 g_signal_handler_disconnect	      (gpointer		  instance,$/;"	p
+g_signal_handler_find	gsignal.h	/^gulong	 g_signal_handler_find		      (gpointer		  instance,$/;"	p
+g_signal_handler_is_connected	gsignal.h	/^gboolean g_signal_handler_is_connected	      (gpointer		  instance,$/;"	p
+g_signal_handler_unblock	gsignal.h	/^void	 g_signal_handler_unblock	      (gpointer		  instance,$/;"	p
+g_signal_handlers_block_by_func	gsignal.h	511;"	d
+g_signal_handlers_block_matched	gsignal.h	/^guint	 g_signal_handlers_block_matched      (gpointer		  instance,$/;"	p
+g_signal_handlers_destroy	gsignal.h	/^void	 g_signal_handlers_destroy	      (gpointer		  instance);$/;"	p
+g_signal_handlers_disconnect_by_data	gsignal.h	498;"	d
+g_signal_handlers_disconnect_by_func	gsignal.h	482;"	d
+g_signal_handlers_disconnect_matched	gsignal.h	/^guint	 g_signal_handlers_disconnect_matched (gpointer		  instance,$/;"	p
+g_signal_handlers_unblock_by_func	gsignal.h	525;"	d
+g_signal_handlers_unblock_matched	gsignal.h	/^guint	 g_signal_handlers_unblock_matched    (gpointer		  instance,$/;"	p
+g_signal_has_handler_pending	gsignal.h	/^gboolean g_signal_has_handler_pending	      (gpointer		  instance,$/;"	p
+g_signal_list_ids	gsignal.h	/^guint*                g_signal_list_ids     (GType               itype,$/;"	p
+g_signal_lookup	gsignal.h	/^guint                 g_signal_lookup       (const gchar        *name,$/;"	p
+g_signal_name	gsignal.h	/^const gchar *         g_signal_name         (guint               signal_id);$/;"	p
+g_signal_new	gsignal.h	/^guint                 g_signal_new          (const gchar        *signal_name,$/;"	p
+g_signal_new_class_handler	gsignal.h	/^guint            g_signal_new_class_handler (const gchar        *signal_name,$/;"	p
+g_signal_new_valist	gsignal.h	/^guint                 g_signal_new_valist   (const gchar        *signal_name,$/;"	p
+g_signal_newv	gsignal.h	/^guint                 g_signal_newv         (const gchar        *signal_name,$/;"	p
+g_signal_override_class_closure	gsignal.h	/^void    g_signal_override_class_closure       (guint              signal_id,$/;"	p
+g_signal_override_class_handler	gsignal.h	/^void    g_signal_override_class_handler       (const gchar       *signal_name,$/;"	p
+g_signal_parse_name	gsignal.h	/^gboolean	      g_signal_parse_name   (const gchar	*detailed_signal,$/;"	p
+g_signal_query	gsignal.h	/^void                  g_signal_query        (guint               signal_id,$/;"	p
+g_signal_remove_emission_hook	gsignal.h	/^void	g_signal_remove_emission_hook	    (guint		  signal_id,$/;"	p
+g_signal_set_va_marshaller	gsignal.h	/^void             g_signal_set_va_marshaller (guint              signal_id,$/;"	p
+g_signal_stop_emission	gsignal.h	/^void	g_signal_stop_emission		    (gpointer		  instance,$/;"	p
+g_signal_stop_emission_by_name	gsignal.h	/^void	g_signal_stop_emission_by_name	    (gpointer		  instance,$/;"	p
+g_signal_type_cclosure_new	gclosure.h	/^GClosure* g_signal_type_cclosure_new		(GType          itype,$/;"	p
+g_source_set_closure	gsourceclosure.h	/^void g_source_set_closure        (GSource  *source,$/;"	p
+g_source_set_dummy_callback	gsourceclosure.h	/^void g_source_set_dummy_callback (GSource  *source);$/;"	p
+g_strdup_value_contents	gvaluetypes.h	/^gchar*                g_strdup_value_contents   (const GValue *value);$/;"	p
+g_type	gtype.h	/^  GType g_type;         \/* iface type *\/$/;"	m	struct:_GTypeInterface
+g_type	gtype.h	/^  GType g_type;$/;"	m	struct:_GTypeClass
+g_type	gvalue.h	/^  GType		g_type;$/;"	m	struct:_GValue
+g_type_add_class_cache_func	gtype.h	/^void		 g_type_add_class_cache_func    (gpointer	     cache_data,$/;"	p
+g_type_add_class_private	gtype.h	/^void      g_type_add_class_private      (GType    		     class_type,$/;"	p
+g_type_add_interface_check	gtype.h	/^void             g_type_add_interface_check     (gpointer	         check_data,$/;"	p
+g_type_add_interface_dynamic	gtype.h	/^void  g_type_add_interface_dynamic	(GType			     instance_type,$/;"	p
+g_type_add_interface_static	gtype.h	/^void  g_type_add_interface_static	(GType			     instance_type,$/;"	p
+g_type_check_class_cast	gtype.h	/^GTypeClass*      g_type_check_class_cast        (GTypeClass         *g_class,$/;"	p
+g_type_check_instance_cast	gtype.h	/^GTypeInstance*   g_type_check_instance_cast     (GTypeInstance      *instance,$/;"	p
+g_type_children	gtype.h	/^GType*                g_type_children                (GType            type,$/;"	p
+g_type_class	genums.h	/^  GTypeClass   g_type_class;$/;"	m	struct:_GFlagsClass
+g_type_class	genums.h	/^  GTypeClass  g_type_class;$/;"	m	struct:_GEnumClass
+g_type_class	gobject.h	/^  GTypeClass   g_type_class;$/;"	m	struct:_GObjectClass
+g_type_class	gparam.h	/^  GTypeClass      g_type_class;$/;"	m	struct:_GParamSpecClass
+g_type_class_add_private	gtype.h	/^void     g_type_class_add_private       (gpointer                    g_class,$/;"	p
+g_type_class_get_private	gtype.h	/^gpointer  g_type_class_get_private      (GTypeClass 		    *klass,$/;"	p
+g_type_class_peek	gtype.h	/^gpointer              g_type_class_peek              (GType            type);$/;"	p
+g_type_class_peek_parent	gtype.h	/^gpointer              g_type_class_peek_parent       (gpointer         g_class);$/;"	p
+g_type_class_peek_static	gtype.h	/^gpointer              g_type_class_peek_static       (GType            type);$/;"	p
+g_type_class_ref	gtype.h	/^gpointer              g_type_class_ref               (GType            type);$/;"	p
+g_type_class_unref	gtype.h	/^void                  g_type_class_unref             (gpointer         g_class);$/;"	p
+g_type_class_unref_uncached	gtype.h	/^void             g_type_class_unref_uncached    (gpointer            g_class);$/;"	p
+g_type_create_instance	gtype.h	/^GTypeInstance*   g_type_create_instance         (GType               type);$/;"	p
+g_type_default_interface_peek	gtype.h	/^gpointer              g_type_default_interface_peek  (GType            g_type);$/;"	p
+g_type_default_interface_ref	gtype.h	/^gpointer              g_type_default_interface_ref   (GType            g_type);$/;"	p
+g_type_default_interface_unref	gtype.h	/^void                  g_type_default_interface_unref (gpointer         g_iface);$/;"	p
+g_type_depth	gtype.h	/^guint                 g_type_depth                   (GType            type);$/;"	p
+g_type_free_instance	gtype.h	/^void             g_type_free_instance           (GTypeInstance      *instance);$/;"	p
+g_type_from_name	gtype.h	/^GType                 g_type_from_name               (const gchar     *name);$/;"	p
+g_type_fundamental	gtype.h	/^GType		 g_type_fundamental		(GType		     type_id);$/;"	p
+g_type_fundamental_next	gtype.h	/^GType		 g_type_fundamental_next	(void);$/;"	p
+g_type_get_plugin	gtype.h	/^GTypePlugin*	 g_type_get_plugin		(GType		     type);$/;"	p
+g_type_get_qdata	gtype.h	/^gpointer              g_type_get_qdata               (GType            type,$/;"	p
+g_type_init	gtype.h	/^void                  g_type_init                    (void);$/;"	p
+g_type_init_with_debug_flags	gtype.h	/^void                  g_type_init_with_debug_flags   (GTypeDebugFlags  debug_flags);$/;"	p
+g_type_instance	gobject.h	/^  GTypeInstance  g_type_instance;$/;"	m	struct:_GObject
+g_type_instance	gparam.h	/^  GTypeInstance  g_type_instance;$/;"	m	struct:_GParamSpec
+g_type_instance_get_private	gtype.h	/^gpointer g_type_instance_get_private    (GTypeInstance              *instance,$/;"	p
+g_type_interface_add_prerequisite	gtype.h	/^void  g_type_interface_add_prerequisite (GType			     interface_type,$/;"	p
+g_type_interface_get_plugin	gtype.h	/^GTypePlugin*	 g_type_interface_get_plugin	(GType		     instance_type,$/;"	p
+g_type_interface_peek	gtype.h	/^gpointer              g_type_interface_peek          (gpointer         instance_class,$/;"	p
+g_type_interface_peek_parent	gtype.h	/^gpointer              g_type_interface_peek_parent   (gpointer         g_iface);$/;"	p
+g_type_interface_prerequisites	gtype.h	/^GType*g_type_interface_prerequisites    (GType                       interface_type,$/;"	p
+g_type_interfaces	gtype.h	/^GType*                g_type_interfaces              (GType            type,$/;"	p
+g_type_is_a	gtype.h	/^gboolean              g_type_is_a                    (GType            type,$/;"	p
+g_type_module_add_interface	gtypemodule.h	/^void     g_type_module_add_interface  (GTypeModule          *module,$/;"	p
+g_type_module_register_enum	gtypemodule.h	/^GType    g_type_module_register_enum  (GTypeModule          *module,$/;"	p
+g_type_module_register_flags	gtypemodule.h	/^GType    g_type_module_register_flags (GTypeModule          *module,$/;"	p
+g_type_module_register_type	gtypemodule.h	/^GType    g_type_module_register_type  (GTypeModule          *module,$/;"	p
+g_type_module_set_name	gtypemodule.h	/^void     g_type_module_set_name       (GTypeModule          *module,$/;"	p
+g_type_module_unuse	gtypemodule.h	/^void     g_type_module_unuse          (GTypeModule          *module);$/;"	p
+g_type_module_use	gtypemodule.h	/^gboolean g_type_module_use            (GTypeModule          *module);$/;"	p
+g_type_name	gtype.h	/^const gchar *         g_type_name                    (GType            type);$/;"	p
+g_type_name_from_class	gtype.h	/^const gchar *    g_type_name_from_class         (GTypeClass	*g_class);$/;"	p
+g_type_name_from_instance	gtype.h	/^const gchar *    g_type_name_from_instance      (GTypeInstance	*instance);$/;"	p
+g_type_next_base	gtype.h	/^GType                 g_type_next_base               (GType            leaf_type,$/;"	p
+g_type_parent	gtype.h	/^GType                 g_type_parent                  (GType            type);$/;"	p
+g_type_plugin_complete_interface_info	gtypeplugin.h	/^void	g_type_plugin_complete_interface_info	(GTypePlugin     *plugin,$/;"	p
+g_type_plugin_complete_type_info	gtypeplugin.h	/^void	g_type_plugin_complete_type_info	(GTypePlugin     *plugin,$/;"	p
+g_type_plugin_unuse	gtypeplugin.h	/^void	g_type_plugin_unuse			(GTypePlugin	 *plugin);$/;"	p
+g_type_plugin_use	gtypeplugin.h	/^void	g_type_plugin_use			(GTypePlugin	 *plugin);$/;"	p
+g_type_qname	gtype.h	/^GQuark                g_type_qname                   (GType            type);$/;"	p
+g_type_query	gtype.h	/^void		      g_type_query		     (GType	       type,$/;"	p
+g_type_register_dynamic	gtype.h	/^GType g_type_register_dynamic		(GType			     parent_type,$/;"	p
+g_type_register_fundamental	gtype.h	/^GType g_type_register_fundamental	(GType			     type_id,$/;"	p
+g_type_register_static	gtype.h	/^GType g_type_register_static		(GType			     parent_type,$/;"	p
+g_type_register_static_simple	gtype.h	/^GType g_type_register_static_simple     (GType                       parent_type,$/;"	p
+g_type_remove_class_cache_func	gtype.h	/^void		 g_type_remove_class_cache_func (gpointer	     cache_data,$/;"	p
+g_type_remove_interface_check	gtype.h	/^void             g_type_remove_interface_check  (gpointer	         check_data,$/;"	p
+g_type_set_qdata	gtype.h	/^void                  g_type_set_qdata               (GType            type,$/;"	p
+g_type_value_table_peek	gtype.h	/^GTypeValueTable* g_type_value_table_peek        (GType		     type);$/;"	p
+g_value_array_free	gvaluearray.h	/^void		g_value_array_free	     (GValueArray	*value_array);$/;"	v
+g_value_array_get_nth	gvaluearray.h	/^GValue*		g_value_array_get_nth	     (GValueArray	*value_array,$/;"	v
+g_value_array_insert	gvaluearray.h	/^GValueArray*	g_value_array_insert	     (GValueArray	*value_array,$/;"	v
+g_value_array_prepend	gvaluearray.h	/^GValueArray*	g_value_array_prepend	     (GValueArray	*value_array,$/;"	v
+g_value_array_sort	gvaluearray.h	/^GValueArray*	g_value_array_sort	     (GValueArray	*value_array,$/;"	v
+g_value_copy	gvalue.h	/^void            g_value_copy    	(const GValue *src_value,$/;"	p
+g_value_dup_boxed	gboxed.h	/^gpointer g_value_dup_boxed                (const GValue  *value);$/;"	p
+g_value_dup_object	gobject.h	/^gpointer    g_value_dup_object                (const GValue   *value);$/;"	p
+g_value_dup_param	gparam.h	/^GParamSpec*     g_value_dup_param               (const GValue  *value);$/;"	p
+g_value_dup_string	gvaluetypes.h	/^gchar*		      g_value_dup_string	(const GValue *value);$/;"	p
+g_value_dup_variant	gvaluetypes.h	/^GVariant*	      g_value_dup_variant	(const GValue *value);$/;"	p
+g_value_fits_pointer	gvalue.h	/^gboolean	g_value_fits_pointer	(const GValue *value);$/;"	p
+g_value_get_boolean	gvaluetypes.h	/^gboolean	      g_value_get_boolean	(const GValue *value);$/;"	p
+g_value_get_boxed	gboxed.h	/^gpointer g_value_get_boxed                (const GValue  *value);$/;"	v
+g_value_get_char	gvaluetypes.h	/^gchar                 g_value_get_char          (const GValue *value);$/;"	v
+g_value_get_double	gvaluetypes.h	/^gdouble		      g_value_get_double	(const GValue *value);$/;"	p
+g_value_get_enum	genums.h	/^gint            g_value_get_enum        	(const GValue   *value);$/;"	p
+g_value_get_flags	genums.h	/^guint           g_value_get_flags       	(const GValue   *value);$/;"	p
+g_value_get_float	gvaluetypes.h	/^gfloat		      g_value_get_float		(const GValue *value);$/;"	p
+g_value_get_gtype	gvaluetypes.h	/^GType	              g_value_get_gtype	        (const GValue *value);$/;"	p
+g_value_get_int	gvaluetypes.h	/^gint		      g_value_get_int		(const GValue *value);$/;"	p
+g_value_get_int64	gvaluetypes.h	/^gint64		      g_value_get_int64		(const GValue *value);$/;"	p
+g_value_get_long	gvaluetypes.h	/^glong		      g_value_get_long		(const GValue *value);$/;"	p
+g_value_get_object	gobject.h	/^gpointer    g_value_get_object                (const GValue   *value);$/;"	p
+g_value_get_param	gparam.h	/^GParamSpec*     g_value_get_param               (const GValue  *value);$/;"	p
+g_value_get_pointer	gvaluetypes.h	/^gpointer	      g_value_get_pointer	(const GValue *value);$/;"	p
+g_value_get_schar	gvaluetypes.h	/^gint8		      g_value_get_schar		(const GValue *value);$/;"	p
+g_value_get_string	gvaluetypes.h	/^const gchar *         g_value_get_string	(const GValue *value);$/;"	p
+g_value_get_uchar	gvaluetypes.h	/^guchar		      g_value_get_uchar		(const GValue *value);$/;"	p
+g_value_get_uint	gvaluetypes.h	/^guint		      g_value_get_uint		(const GValue *value);$/;"	p
+g_value_get_uint64	gvaluetypes.h	/^guint64		      g_value_get_uint64	(const GValue *value);$/;"	p
+g_value_get_ulong	gvaluetypes.h	/^gulong		      g_value_get_ulong		(const GValue *value);$/;"	p
+g_value_get_variant	gvaluetypes.h	/^GVariant*	      g_value_get_variant	(const GValue *value);$/;"	p
+g_value_init	gvalue.h	/^GValue*         g_value_init	   	(GValue       *value,$/;"	p
+g_value_peek_pointer	gvalue.h	/^gpointer	g_value_peek_pointer	(const GValue *value);$/;"	p
+g_value_register_transform_func	gvalue.h	/^void	g_value_register_transform_func	(GType		 src_type,$/;"	p
+g_value_reset	gvalue.h	/^GValue*         g_value_reset   	(GValue       *value);$/;"	p
+g_value_set_boolean	gvaluetypes.h	/^void		      g_value_set_boolean	(GValue	      *value,$/;"	p
+g_value_set_boxed	gboxed.h	/^void     g_value_set_boxed                (GValue        *value,$/;"	p
+g_value_set_double	gvaluetypes.h	/^void		      g_value_set_double	(GValue	      *value,$/;"	p
+g_value_set_enum	genums.h	/^void            g_value_set_enum        	(GValue         *value,$/;"	p
+g_value_set_flags	genums.h	/^void            g_value_set_flags       	(GValue         *value,$/;"	p
+g_value_set_float	gvaluetypes.h	/^void		      g_value_set_float		(GValue	      *value,$/;"	p
+g_value_set_gtype	gvaluetypes.h	/^void		      g_value_set_gtype	        (GValue	      *value,$/;"	p
+g_value_set_instance	gvalue.h	/^void		g_value_set_instance	(GValue	      *value,$/;"	p
+g_value_set_int	gvaluetypes.h	/^void		      g_value_set_int		(GValue	      *value,$/;"	p
+g_value_set_int64	gvaluetypes.h	/^void		      g_value_set_int64		(GValue	      *value,$/;"	p
+g_value_set_long	gvaluetypes.h	/^void		      g_value_set_long		(GValue	      *value,$/;"	p
+g_value_set_object	gobject.h	/^void        g_value_set_object                (GValue         *value,$/;"	p
+g_value_set_param	gparam.h	/^void            g_value_set_param               (GValue	       *value,$/;"	p
+g_value_set_pointer	gvaluetypes.h	/^void		      g_value_set_pointer	(GValue	      *value,$/;"	p
+g_value_set_schar	gvaluetypes.h	/^void		      g_value_set_schar		(GValue	      *value,$/;"	p
+g_value_set_static_boxed	gboxed.h	/^void     g_value_set_static_boxed         (GValue        *value,$/;"	p
+g_value_set_static_string	gvaluetypes.h	/^void		      g_value_set_static_string (GValue	      *value,$/;"	p
+g_value_set_string	gvaluetypes.h	/^void		      g_value_set_string	(GValue	      *value,$/;"	p
+g_value_set_uchar	gvaluetypes.h	/^void		      g_value_set_uchar		(GValue	      *value,$/;"	p
+g_value_set_uint	gvaluetypes.h	/^void		      g_value_set_uint		(GValue	      *value,$/;"	p
+g_value_set_uint64	gvaluetypes.h	/^void		      g_value_set_uint64	(GValue	      *value,$/;"	p
+g_value_set_ulong	gvaluetypes.h	/^void		      g_value_set_ulong		(GValue	      *value,$/;"	p
+g_value_set_variant	gvaluetypes.h	/^void		      g_value_set_variant	(GValue	      *value,$/;"	p
+g_value_take_boxed	gboxed.h	/^void     g_value_take_boxed               (GValue        *value,$/;"	p
+g_value_take_object	gobject.h	/^void        g_value_take_object               (GValue         *value,$/;"	p
+g_value_take_param	gparam.h	/^void           g_value_take_param               (GValue        *value,$/;"	p
+g_value_take_string	gvaluetypes.h	/^void g_value_take_string		        (GValue		   *value,$/;"	p
+g_value_take_variant	gvaluetypes.h	/^void		      g_value_take_variant	(GValue	      *value,$/;"	p
+g_value_transform	gvalue.h	/^gboolean g_value_transform		(const GValue   *src_value,$/;"	p
+g_value_type_compatible	gvalue.h	/^gboolean g_value_type_compatible	(GType		 src_type,$/;"	p
+g_value_type_transformable	gvalue.h	/^gboolean g_value_type_transformable	(GType           src_type,$/;"	p
+g_value_unset	gvalue.h	/^void            g_value_unset   	(GValue       *value);$/;"	p
+g_weak_ref_clear	gobject.h	/^void     g_weak_ref_clear      (GWeakRef *weak_ref);$/;"	p
+g_weak_ref_get	gobject.h	/^gpointer g_weak_ref_get        (GWeakRef *weak_ref);$/;"	p
+g_weak_ref_init	gobject.h	/^void     g_weak_ref_init       (GWeakRef *weak_ref,$/;"	p
+g_weak_ref_set	gobject.h	/^void     g_weak_ref_set        (GWeakRef *weak_ref,$/;"	p
+gchararray	gvaluetypes.h	/^typedef gchar* gchararray;$/;"	t
+get_property	gobject.h	/^  void       (*get_property)		(GObject        *object,$/;"	m	struct:_GObjectClass
+in_inotify	gclosure.h	/^  volatile       	guint	 in_inotify : 1;$/;"	m	struct:_GClosure
+in_marshal	gclosure.h	/^  volatile       	guint	 in_marshal : 1;$/;"	m	struct:_GClosure
+instance_init	gparam.h	/^  void		(*instance_init)	(GParamSpec   *pspec); \/* optional *\/$/;"	m	struct:_GParamSpecTypeInfo
+instance_init	gtype.h	/^  GInstanceInitFunc      instance_init;$/;"	m	struct:_GTypeInfo
+instance_size	gparam.h	/^  guint16         instance_size;                               \/* obligatory *\/$/;"	m	struct:_GParamSpecTypeInfo
+instance_size	gtype.h	/^  guint		instance_size;$/;"	m	struct:_GTypeQuery
+instance_size	gtype.h	/^  guint16                instance_size;$/;"	m	struct:_GTypeInfo
+interface_data	gtype.h	/^  gpointer               interface_data;$/;"	m	struct:_GInterfaceInfo
+interface_finalize	gtype.h	/^  GInterfaceFinalizeFunc interface_finalize;$/;"	m	struct:_GInterfaceInfo
+interface_infos	gtypemodule.h	/^  GSList *interface_infos;$/;"	m	struct:_GTypeModule
+interface_init	gtype.h	/^  GInterfaceInitFunc     interface_init;$/;"	m	struct:_GInterfaceInfo
+is_a_type	gparamspecs.h	/^  GType         is_a_type;$/;"	m	struct:_GParamSpecGType
+is_invalid	gclosure.h	/^  volatile       	guint	 is_invalid : 1;$/;"	m	struct:_GClosure
+itype	gsignal.h	/^  GType		itype;$/;"	m	struct:_GSignalQuery
+lcopy_format	gtype.h	/^  gchar	    *lcopy_format;$/;"	m	struct:_GTypeValueTable
+lcopy_value	gtype.h	/^  gchar*   (*lcopy_value)        (const GValue *value,$/;"	m	struct:_GTypeValueTable
+load	gtypemodule.h	/^  gboolean (* load)   (GTypeModule *module);$/;"	m	struct:_GTypeModuleClass
+marshal	gclosure.h	/^  \/*< private >*\/	void   (*marshal)  (GClosure       *closure,$/;"	m	struct:_GClosure
+mask	genums.h	/^  guint	       mask;$/;"	m	struct:_GFlagsClass
+maximum	genums.h	/^  gint	      maximum;$/;"	m	struct:_GEnumClass
+maximum	gparamspecs.h	/^  gdouble       maximum;$/;"	m	struct:_GParamSpecDouble
+maximum	gparamspecs.h	/^  gfloat        maximum;$/;"	m	struct:_GParamSpecFloat
+maximum	gparamspecs.h	/^  gint          maximum;$/;"	m	struct:_GParamSpecInt
+maximum	gparamspecs.h	/^  gint64        maximum;$/;"	m	struct:_GParamSpecInt64
+maximum	gparamspecs.h	/^  gint8         maximum;$/;"	m	struct:_GParamSpecChar
+maximum	gparamspecs.h	/^  glong         maximum;$/;"	m	struct:_GParamSpecLong
+maximum	gparamspecs.h	/^  guint         maximum;$/;"	m	struct:_GParamSpecUInt
+maximum	gparamspecs.h	/^  guint64       maximum;$/;"	m	struct:_GParamSpecUInt64
+maximum	gparamspecs.h	/^  guint8        maximum;$/;"	m	struct:_GParamSpecUChar
+maximum	gparamspecs.h	/^  gulong        maximum;$/;"	m	struct:_GParamSpecULong
+meta_marshal_nouse	gclosure.h	/^  volatile       	guint	 meta_marshal_nouse : 1;$/;"	m	struct:_GClosure
+minimum	genums.h	/^  gint	      minimum;$/;"	m	struct:_GEnumClass
+minimum	gparamspecs.h	/^  gdouble       minimum;$/;"	m	struct:_GParamSpecDouble
+minimum	gparamspecs.h	/^  gfloat        minimum;$/;"	m	struct:_GParamSpecFloat
+minimum	gparamspecs.h	/^  gint          minimum;$/;"	m	struct:_GParamSpecInt
+minimum	gparamspecs.h	/^  gint64        minimum;$/;"	m	struct:_GParamSpecInt64
+minimum	gparamspecs.h	/^  gint8         minimum;$/;"	m	struct:_GParamSpecChar
+minimum	gparamspecs.h	/^  glong         minimum;$/;"	m	struct:_GParamSpecLong
+minimum	gparamspecs.h	/^  guint         minimum;$/;"	m	struct:_GParamSpecUInt
+minimum	gparamspecs.h	/^  guint64       minimum;$/;"	m	struct:_GParamSpecUInt64
+minimum	gparamspecs.h	/^  guint8        minimum;$/;"	m	struct:_GParamSpecUChar
+minimum	gparamspecs.h	/^  gulong        minimum;$/;"	m	struct:_GParamSpecULong
+n_fnotifiers	gclosure.h	/^  volatile       	guint	 n_fnotifiers : 2;	\/* finalization notifiers *\/$/;"	m	struct:_GClosure
+n_guards	gclosure.h	/^  volatile       	guint	 n_guards : 1;$/;"	m	struct:_GClosure
+n_inotifiers	gclosure.h	/^  volatile       	guint	 n_inotifiers : 8;	\/* invalidation notifiers *\/$/;"	m	struct:_GClosure
+n_params	gsignal.h	/^  guint		n_params;$/;"	m	struct:_GSignalQuery
+n_prealloced	gvaluearray.h	/^  guint   n_prealloced;$/;"	m	struct:_GValueArray
+n_preallocs	gparam.h	/^  guint16         n_preallocs;                                 \/* optional *\/$/;"	m	struct:_GParamSpecTypeInfo
+n_preallocs	gtype.h	/^  guint16                n_preallocs;$/;"	m	struct:_GTypeInfo
+n_pspecs	gobjectnotifyqueue.c	/^  guint16               n_pspecs;$/;"	m	struct:_GObjectNotifyQueue	file:
+n_values	genums.h	/^  guint	       n_values;$/;"	m	struct:_GFlagsClass
+n_values	genums.h	/^  guint	      n_values;$/;"	m	struct:_GEnumClass
+n_values	gvaluearray.h	/^  guint   n_values;$/;"	m	struct:_GValueArray
+name	gparam.h	/^  const gchar   *name;          \/* interned string *\/$/;"	m	struct:_GParamSpec
+name	gparam.h	/^  const gchar *name;$/;"	m	struct:_GParameter
+name	gtypemodule.h	/^  gchar *name;$/;"	m	struct:_GTypeModule
+notifiers	gclosure.h	/^  \/*< private >*\/	GClosureNotifyData *notifiers;$/;"	m	struct:_GClosure
+notify	gclosure.h	/^  GClosureNotify notify;$/;"	m	struct:_GClosureNotifyData
+notify	gobject.h	/^  void	     (*notify)			(GObject	*object,$/;"	m	struct:_GObjectClass
+notify_lock	gobjectnotifyqueue.c	/^G_LOCK_DEFINE_STATIC(notify_lock);$/;"	v
+null_fold_if_empty	gparamspecs.h	/^  guint         null_fold_if_empty : 1;$/;"	m	struct:_GParamSpecString
+overridden	gparamspecs.h	/^  GParamSpec   *overridden;$/;"	m	struct:_GParamSpecOverride
+owner_type	gparam.h	/^  GType		 owner_type;	\/* class or interface using this property *\/$/;"	m	struct:_GParamSpec
+p	gobject.h	/^    union { gpointer p; } priv;$/;"	m	union:__anon8::__anon9
+padding	gparamspecs.h	/^  gpointer      padding[4];$/;"	m	struct:_GParamSpecVariant
+param_id	gparam.h	/^  guint		 param_id;	\/* sort-criteria *\/$/;"	m	struct:_GParamSpec
+param_types	gsignal.h	/^  const GType  *param_types; \/* mangled with G_SIGNAL_TYPE_STATIC_SCOPE flag *\/$/;"	m	struct:_GSignalQuery
+parent_class	gtypemodule.h	/^  GObjectClass parent_class;$/;"	m	struct:_GTypeModuleClass
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecBoolean
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecBoxed
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecChar
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecDouble
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecEnum
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecFlags
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecFloat
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecGType
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecInt
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecInt64
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecLong
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecObject
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecOverride
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecParam
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecPointer
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecString
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecUChar
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecUInt
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecUInt64
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecULong
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecUnichar
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecValueArray
+parent_instance	gparamspecs.h	/^  GParamSpec    parent_instance;$/;"	m	struct:_GParamSpecVariant
+parent_instance	gtypemodule.h	/^  GObject parent_instance;$/;"	m	struct:_GTypeModule
+pdummy	gobject.h	/^  gpointer	pdummy[6];$/;"	m	struct:_GObjectClass
+priv	gobject.h	/^    union { gpointer p; } priv;$/;"	m	struct:__anon8	typeref:union:__anon8::__anon9
+pspec	gobject.h	/^  GParamSpec *pspec;$/;"	m	struct:_GObjectConstructParam
+pspecs	gobjectnotifyqueue.c	/^  GSList               *pspecs;$/;"	m	struct:_GObjectNotifyQueue	file:
+qdata	gobject.h	/^  GData         *qdata;$/;"	m	struct:_GObject
+qdata	gparam.h	/^  GData		*qdata;$/;"	m	struct:_GParamSpec
+quark_notify_queue	gobjectnotifyqueue.c	/^  GQuark                       quark_notify_queue;$/;"	m	struct:_GObjectNotifyContext	file:
+ref_count	gclosure.h	/^  volatile      	guint	 ref_count : 15;$/;"	m	struct:_GClosure
+ref_count	gobject.h	/^  volatile guint ref_count;$/;"	m	struct:_GObject
+ref_count	gparam.h	/^  guint          ref_count;$/;"	m	struct:_GParamSpec
+reserved1	gtypemodule.h	/^  void (*reserved1) (void);$/;"	m	struct:_GTypeModuleClass
+reserved2	gtypemodule.h	/^  void (*reserved2) (void);$/;"	m	struct:_GTypeModuleClass
+reserved3	gtypemodule.h	/^  void (*reserved3) (void);$/;"	m	struct:_GTypeModuleClass
+reserved4	gtypemodule.h	/^  void (*reserved4) (void);$/;"	m	struct:_GTypeModuleClass
+return_type	gsignal.h	/^  GType		return_type; \/* mangled with G_SIGNAL_TYPE_STATIC_SCOPE flag *\/$/;"	m	struct:_GSignalQuery
+run_type	gsignal.h	/^  GSignalFlags	run_type;$/;"	m	struct:_GSignalInvocationHint
+set_property	gobject.h	/^  void       (*set_property)		(GObject        *object,$/;"	m	struct:_GObjectClass
+signal_flags	gsignal.h	/^  GSignalFlags	signal_flags;$/;"	m	struct:_GSignalQuery
+signal_id	gsignal.h	/^  guint		signal_id;$/;"	m	struct:_GSignalInvocationHint
+signal_id	gsignal.h	/^  guint		signal_id;$/;"	m	struct:_GSignalQuery
+signal_name	gsignal.h	/^  const gchar  *signal_name;$/;"	m	struct:_GSignalQuery
+substitutor	gparamspecs.h	/^  gchar         substitutor;$/;"	m	struct:_GParamSpecString
+type	gparamspecs.h	/^  GVariantType *type;$/;"	m	struct:_GParamSpecVariant
+type	gtype.h	/^  GType		type;$/;"	m	struct:_GTypeQuery
+type_flags	gtype.h	/^  GTypeFundamentalFlags  type_flags;$/;"	m	struct:_GTypeFundamentalInfo
+type_infos	gtypemodule.h	/^  GSList *type_infos;$/;"	m	struct:_GTypeModule
+type_name	gtype.h	/^  const gchar  *type_name;$/;"	m	struct:_GTypeQuery
+unload	gtypemodule.h	/^  void     (* unload) (GTypeModule *module);$/;"	m	struct:_GTypeModuleClass
+unuse_plugin	gtypeplugin.h	/^  GTypePluginUnuse		   unuse_plugin;$/;"	m	struct:_GTypePluginClass
+use_count	gtypemodule.h	/^  guint use_count;$/;"	m	struct:_GTypeModule
+use_plugin	gtypeplugin.h	/^  GTypePluginUse		   use_plugin;$/;"	m	struct:_GTypePluginClass
+v_double	gvalue.h	/^    gdouble	v_double;$/;"	m	union:_GValue::__anon3
+v_double	gvaluecollector.h	/^  gdouble  v_double;$/;"	m	union:_GTypeCValue
+v_float	gvalue.h	/^    gfloat	v_float;$/;"	m	union:_GValue::__anon3
+v_int	gvalue.h	/^    gint	v_int;$/;"	m	union:_GValue::__anon3
+v_int	gvaluecollector.h	/^  gint     v_int;$/;"	m	union:_GTypeCValue
+v_int64	gvalue.h	/^    gint64      v_int64;$/;"	m	union:_GValue::__anon3
+v_int64	gvaluecollector.h	/^  gint64   v_int64;$/;"	m	union:_GTypeCValue
+v_long	gvalue.h	/^    glong	v_long;$/;"	m	union:_GValue::__anon3
+v_long	gvaluecollector.h	/^  glong    v_long;$/;"	m	union:_GTypeCValue
+v_pointer	gvalue.h	/^    gpointer	v_pointer;$/;"	m	union:_GValue::__anon3
+v_pointer	gvaluecollector.h	/^  gpointer v_pointer;$/;"	m	union:_GTypeCValue
+v_uint	gvalue.h	/^    guint	v_uint;$/;"	m	union:_GValue::__anon3
+v_uint64	gvalue.h	/^    guint64     v_uint64;$/;"	m	union:_GValue::__anon3
+v_ulong	gvalue.h	/^    gulong	v_ulong;$/;"	m	union:_GValue::__anon3
+value	genums.h	/^  gint	 value;$/;"	m	struct:_GEnumValue
+value	genums.h	/^  guint	 value;$/;"	m	struct:_GFlagsValue
+value	gobject.h	/^  GValue     *value;$/;"	m	struct:_GObjectConstructParam
+value	gparam.h	/^  GValue       value;$/;"	m	struct:_GParameter
+value_copy	gtype.h	/^  void     (*value_copy)         (const GValue *src_value,$/;"	m	struct:_GTypeValueTable
+value_free	gtype.h	/^  void     (*value_free)         (GValue       *value);$/;"	m	struct:_GTypeValueTable
+value_init	gtype.h	/^  void     (*value_init)         (GValue       *value);$/;"	m	struct:_GTypeValueTable
+value_name	genums.h	/^  const gchar *value_name;$/;"	m	struct:_GEnumValue
+value_name	genums.h	/^  const gchar *value_name;$/;"	m	struct:_GFlagsValue
+value_nick	genums.h	/^  const gchar *value_nick;$/;"	m	struct:_GEnumValue
+value_nick	genums.h	/^  const gchar *value_nick;$/;"	m	struct:_GFlagsValue
+value_peek_pointer	gtype.h	/^  gpointer (*value_peek_pointer) (const GValue *value);$/;"	m	struct:_GTypeValueTable
+value_set_default	gparam.h	/^  void          (*value_set_default)    (GParamSpec   *pspec,  \/* recommended *\/$/;"	m	struct:_GParamSpecTypeInfo
+value_set_default	gparam.h	/^  void          (*value_set_default)    (GParamSpec   *pspec,$/;"	m	struct:_GParamSpecClass
+value_table	gtype.h	/^  const GTypeValueTable	*value_table;$/;"	m	struct:_GTypeInfo
+value_type	gparam.h	/^  GType		  value_type;$/;"	m	struct:_GParamSpecClass
+value_type	gparam.h	/^  GType		 value_type;$/;"	m	struct:_GParamSpec
+value_type	gparam.h	/^  GType           value_type;				       \/* obligatory *\/$/;"	m	struct:_GParamSpecTypeInfo
+value_validate	gparam.h	/^  gboolean      (*value_validate)       (GParamSpec   *pspec,  \/* optional *\/$/;"	m	struct:_GParamSpecTypeInfo
+value_validate	gparam.h	/^  gboolean      (*value_validate)       (GParamSpec   *pspec,$/;"	m	struct:_GParamSpecClass
+values	genums.h	/^  GEnumValue *values;$/;"	m	struct:_GEnumClass
+values	genums.h	/^  GFlagsValue *values;$/;"	m	struct:_GFlagsClass
+values	gvaluearray.h	/^  GValue *values;$/;"	m	struct:_GValueArray
+values_cmp	gparam.h	/^  gint          (*values_cmp)           (GParamSpec   *pspec,  \/* recommended *\/$/;"	m	struct:_GParamSpecTypeInfo
+values_cmp	gparam.h	/^  gint          (*values_cmp)           (GParamSpec   *pspec,$/;"	m	struct:_GParamSpecClass

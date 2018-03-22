@@ -1,0 +1,1332 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+G_GNUC_CONST	pangocairo.h	/^GType         pango_cairo_font_get_type               (void) G_GNUC_CONST;$/;"	v
+PANGO_ALIGN_CENTER	pango-layout.h	/^  PANGO_ALIGN_CENTER,$/;"	e	enum:__anon3
+PANGO_ALIGN_LEFT	pango-layout.h	/^  PANGO_ALIGN_LEFT,$/;"	e	enum:__anon3
+PANGO_ALIGN_RIGHT	pango-layout.h	/^  PANGO_ALIGN_RIGHT$/;"	e	enum:__anon3
+PANGO_ANALYSIS_FLAG_CENTERED_BASELINE	pango-item.h	33;"	d
+PANGO_ASCENT	pango-types.h	82;"	d
+PANGO_ATTR_ABSOLUTE_SIZE	pango-attributes.h	/^  PANGO_ATTR_ABSOLUTE_SIZE,	\/* PangoAttrSize *\/$/;"	e	enum:__anon11
+PANGO_ATTR_BACKGROUND	pango-attributes.h	/^  PANGO_ATTR_BACKGROUND,	\/* PangoAttrColor *\/$/;"	e	enum:__anon11
+PANGO_ATTR_FALLBACK	pango-attributes.h	/^  PANGO_ATTR_FALLBACK,          \/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_FAMILY	pango-attributes.h	/^  PANGO_ATTR_FAMILY,		\/* PangoAttrString *\/$/;"	e	enum:__anon11
+PANGO_ATTR_FONT_DESC	pango-attributes.h	/^  PANGO_ATTR_FONT_DESC,		\/* PangoAttrFontDesc *\/$/;"	e	enum:__anon11
+PANGO_ATTR_FOREGROUND	pango-attributes.h	/^  PANGO_ATTR_FOREGROUND,	\/* PangoAttrColor *\/$/;"	e	enum:__anon11
+PANGO_ATTR_GRAVITY	pango-attributes.h	/^  PANGO_ATTR_GRAVITY,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_GRAVITY_HINT	pango-attributes.h	/^  PANGO_ATTR_GRAVITY_HINT	\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_INDEX_FROM_TEXT_BEGINNING	pango-attributes.h	104;"	d
+PANGO_ATTR_INDEX_TO_TEXT_END	pango-attributes.h	105;"	d
+PANGO_ATTR_INVALID	pango-attributes.h	/^  PANGO_ATTR_INVALID,           \/* 0 is an invalid attribute type *\/$/;"	e	enum:__anon11
+PANGO_ATTR_LANGUAGE	pango-attributes.h	/^  PANGO_ATTR_LANGUAGE,		\/* PangoAttrLanguage *\/$/;"	e	enum:__anon11
+PANGO_ATTR_LETTER_SPACING	pango-attributes.h	/^  PANGO_ATTR_LETTER_SPACING,    \/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_RISE	pango-attributes.h	/^  PANGO_ATTR_RISE,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_SCALE	pango-attributes.h	/^  PANGO_ATTR_SCALE,             \/* PangoAttrFloat *\/$/;"	e	enum:__anon11
+PANGO_ATTR_SHAPE	pango-attributes.h	/^  PANGO_ATTR_SHAPE,		\/* PangoAttrShape *\/$/;"	e	enum:__anon11
+PANGO_ATTR_SIZE	pango-attributes.h	/^  PANGO_ATTR_SIZE,		\/* PangoAttrSize *\/$/;"	e	enum:__anon11
+PANGO_ATTR_STRETCH	pango-attributes.h	/^  PANGO_ATTR_STRETCH,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_STRIKETHROUGH	pango-attributes.h	/^  PANGO_ATTR_STRIKETHROUGH,	\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_STRIKETHROUGH_COLOR	pango-attributes.h	/^  PANGO_ATTR_STRIKETHROUGH_COLOR,\/* PangoAttrColor *\/$/;"	e	enum:__anon11
+PANGO_ATTR_STYLE	pango-attributes.h	/^  PANGO_ATTR_STYLE,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_UNDERLINE	pango-attributes.h	/^  PANGO_ATTR_UNDERLINE,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_UNDERLINE_COLOR	pango-attributes.h	/^  PANGO_ATTR_UNDERLINE_COLOR,	\/* PangoAttrColor *\/$/;"	e	enum:__anon11
+PANGO_ATTR_VARIANT	pango-attributes.h	/^  PANGO_ATTR_VARIANT,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_ATTR_WEIGHT	pango-attributes.h	/^  PANGO_ATTR_WEIGHT,		\/* PangoAttrInt *\/$/;"	e	enum:__anon11
+PANGO_BIDI_TYPE_AL	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_AL,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_AN	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_AN,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_B	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_B,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_BN	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_BN,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_CS	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_CS,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_EN	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_EN,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_ES	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_ES,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_ET	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_ET,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_L	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_L,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_LRE	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_LRE,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_LRO	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_LRO,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_NSM	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_NSM,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_ON	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_ON$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_PDF	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_PDF,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_R	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_R,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_RLE	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_RLE,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_RLO	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_RLO,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_S	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_S,$/;"	e	enum:__anon1
+PANGO_BIDI_TYPE_WS	pango-bidi-type.h	/^  PANGO_BIDI_TYPE_WS,$/;"	e	enum:__anon1
+PANGO_CAIRO_FONT	pangocairo.h	41;"	d
+PANGO_CAIRO_FONT_MAP	pangocairo.h	55;"	d
+PANGO_CONTEXT	pango-context.h	39;"	d
+PANGO_CONTEXT_CLASS	pango-context.h	40;"	d
+PANGO_CONTEXT_GET_CLASS	pango-context.h	43;"	d
+PANGO_COVERAGE_APPROXIMATE	pango-coverage.h	/^  PANGO_COVERAGE_APPROXIMATE,$/;"	e	enum:__anon10
+PANGO_COVERAGE_EXACT	pango-coverage.h	/^  PANGO_COVERAGE_EXACT$/;"	e	enum:__anon10
+PANGO_COVERAGE_FALLBACK	pango-coverage.h	/^  PANGO_COVERAGE_FALLBACK,$/;"	e	enum:__anon10
+PANGO_COVERAGE_NONE	pango-coverage.h	/^  PANGO_COVERAGE_NONE,$/;"	e	enum:__anon10
+PANGO_DESCENT	pango-types.h	83;"	d
+PANGO_DIRECTION_LTR	pango-bidi-type.h	/^  PANGO_DIRECTION_LTR,$/;"	e	enum:__anon2
+PANGO_DIRECTION_NEUTRAL	pango-bidi-type.h	/^  PANGO_DIRECTION_NEUTRAL$/;"	e	enum:__anon2
+PANGO_DIRECTION_RTL	pango-bidi-type.h	/^  PANGO_DIRECTION_RTL,$/;"	e	enum:__anon2
+PANGO_DIRECTION_TTB_LTR	pango-bidi-type.h	/^  PANGO_DIRECTION_TTB_LTR,$/;"	e	enum:__anon2
+PANGO_DIRECTION_TTB_RTL	pango-bidi-type.h	/^  PANGO_DIRECTION_TTB_RTL,$/;"	e	enum:__anon2
+PANGO_DIRECTION_WEAK_LTR	pango-bidi-type.h	/^  PANGO_DIRECTION_WEAK_LTR,$/;"	e	enum:__anon2
+PANGO_DIRECTION_WEAK_RTL	pango-bidi-type.h	/^  PANGO_DIRECTION_WEAK_RTL,$/;"	e	enum:__anon2
+PANGO_ELLIPSIZE_END	pango-layout.h	/^  PANGO_ELLIPSIZE_END$/;"	e	enum:__anon5
+PANGO_ELLIPSIZE_MIDDLE	pango-layout.h	/^  PANGO_ELLIPSIZE_MIDDLE,$/;"	e	enum:__anon5
+PANGO_ELLIPSIZE_NONE	pango-layout.h	/^  PANGO_ELLIPSIZE_NONE,$/;"	e	enum:__anon5
+PANGO_ELLIPSIZE_START	pango-layout.h	/^  PANGO_ELLIPSIZE_START,$/;"	e	enum:__anon5
+PANGO_ENGINE	pango-engine.h	42;"	d
+PANGO_ENGINE_CLASS	pango-engine.h	44;"	d
+PANGO_ENGINE_DEFINE_TYPE	pango-engine.h	274;"	d
+PANGO_ENGINE_GET_CLASS	pango-engine.h	46;"	d
+PANGO_ENGINE_LANG	pango-engine.h	79;"	d
+PANGO_ENGINE_LANG_CLASS	pango-engine.h	81;"	d
+PANGO_ENGINE_LANG_DEFINE_TYPE	pango-engine.h	323;"	d
+PANGO_ENGINE_LANG_GET_CLASS	pango-engine.h	83;"	d
+PANGO_ENGINE_SHAPE	pango-engine.h	133;"	d
+PANGO_ENGINE_SHAPE_CLASS	pango-engine.h	135;"	d
+PANGO_ENGINE_SHAPE_DEFINE_TYPE	pango-engine.h	353;"	d
+PANGO_ENGINE_SHAPE_GET_CLASS	pango-engine.h	137;"	d
+PANGO_ENGINE_TYPE_LANG	pango-engine.h	76;"	d
+PANGO_ENGINE_TYPE_SHAPE	pango-engine.h	130;"	d
+PANGO_FC_DECODER	pangofc-decoder.h	30;"	d
+PANGO_FC_DECODER_CLASS	pangofc-decoder.h	36;"	d
+PANGO_FC_DECODER_GET_CLASS	pangofc-decoder.h	38;"	d
+PANGO_FC_FONT	pangofc-font.h	35;"	d
+PANGO_FC_FONT_CLASS	pangofc-font.h	54;"	d
+PANGO_FC_FONT_GET_CLASS	pangofc-font.h	56;"	d
+PANGO_FC_FONT_MAP	pangofc-fontmap.h	74;"	d
+PANGO_FC_FONT_MAP_CLASS	pangofc-fontmap.h	83;"	d
+PANGO_FC_FONT_MAP_GET_CLASS	pangofc-fontmap.h	85;"	d
+PANGO_FC_GRAVITY	pangofc-fontmap.h	236;"	d
+PANGO_FC_PRGNAME	pangofc-fontmap.h	267;"	d
+PANGO_FC_VERSION	pangofc-fontmap.h	252;"	d
+PANGO_FEATURES_H	pango-features.h	3;"	d
+PANGO_FONT	pango-font.h	310;"	d
+PANGO_FONTSET	pango-fontset.h	37;"	d
+PANGO_FONTSET_CLASS	pango-fontset.h	72;"	d
+PANGO_FONTSET_GET_CLASS	pango-fontset.h	74;"	d
+PANGO_FONTSET_SIMPLE	pango-fontset.h	110;"	d
+PANGO_FONT_CLASS	pango-font.h	332;"	d
+PANGO_FONT_FACE	pango-font.h	258;"	d
+PANGO_FONT_FACE_CLASS	pango-font.h	272;"	d
+PANGO_FONT_FACE_GET_CLASS	pango-font.h	274;"	d
+PANGO_FONT_FAMILY	pango-font.h	204;"	d
+PANGO_FONT_FAMILY_CLASS	pango-font.h	220;"	d
+PANGO_FONT_FAMILY_GET_CLASS	pango-font.h	222;"	d
+PANGO_FONT_GET_CLASS	pango-font.h	334;"	d
+PANGO_FONT_MAP	pango-fontmap.h	31;"	d
+PANGO_FONT_MAP_CLASS	pango-fontmap.h	51;"	d
+PANGO_FONT_MAP_GET_CLASS	pango-fontmap.h	53;"	d
+PANGO_FONT_MASK_FAMILY	pango-font.h	/^  PANGO_FONT_MASK_FAMILY  = 1 << 0,$/;"	e	enum:__anon17
+PANGO_FONT_MASK_GRAVITY	pango-font.h	/^  PANGO_FONT_MASK_GRAVITY = 1 << 6$/;"	e	enum:__anon17
+PANGO_FONT_MASK_SIZE	pango-font.h	/^  PANGO_FONT_MASK_SIZE    = 1 << 5,$/;"	e	enum:__anon17
+PANGO_FONT_MASK_STRETCH	pango-font.h	/^  PANGO_FONT_MASK_STRETCH = 1 << 4,$/;"	e	enum:__anon17
+PANGO_FONT_MASK_STYLE	pango-font.h	/^  PANGO_FONT_MASK_STYLE   = 1 << 1,$/;"	e	enum:__anon17
+PANGO_FONT_MASK_VARIANT	pango-font.h	/^  PANGO_FONT_MASK_VARIANT = 1 << 2,$/;"	e	enum:__anon17
+PANGO_FONT_MASK_WEIGHT	pango-font.h	/^  PANGO_FONT_MASK_WEIGHT  = 1 << 3,$/;"	e	enum:__anon17
+PANGO_FT2_FONT_MAP	pangoft2.h	38;"	d
+PANGO_FT2_IS_FONT_MAP	pangoft2.h	39;"	d
+PANGO_GET_UNKNOWN_GLYPH	pango-font.h	381;"	d
+PANGO_GLYPH_EMPTY	pango-font.h	378;"	d
+PANGO_GLYPH_INVALID_INPUT	pango-font.h	379;"	d
+PANGO_GLYPH_UNKNOWN_FLAG	pango-font.h	380;"	d
+PANGO_GRAVITY_AUTO	pango-gravity.h	/^  PANGO_GRAVITY_AUTO$/;"	e	enum:__anon8
+PANGO_GRAVITY_EAST	pango-gravity.h	/^  PANGO_GRAVITY_EAST,$/;"	e	enum:__anon8
+PANGO_GRAVITY_HINT_LINE	pango-gravity.h	/^  PANGO_GRAVITY_HINT_LINE$/;"	e	enum:__anon9
+PANGO_GRAVITY_HINT_NATURAL	pango-gravity.h	/^  PANGO_GRAVITY_HINT_NATURAL,$/;"	e	enum:__anon9
+PANGO_GRAVITY_HINT_STRONG	pango-gravity.h	/^  PANGO_GRAVITY_HINT_STRONG,$/;"	e	enum:__anon9
+PANGO_GRAVITY_IS_VERTICAL	pango-gravity.h	94;"	d
+PANGO_GRAVITY_NORTH	pango-gravity.h	/^  PANGO_GRAVITY_NORTH,$/;"	e	enum:__anon8
+PANGO_GRAVITY_SOUTH	pango-gravity.h	/^  PANGO_GRAVITY_SOUTH,$/;"	e	enum:__anon8
+PANGO_GRAVITY_WEST	pango-gravity.h	/^  PANGO_GRAVITY_WEST,$/;"	e	enum:__anon8
+PANGO_IS_CAIRO_FONT	pangocairo.h	42;"	d
+PANGO_IS_CAIRO_FONT_MAP	pangocairo.h	56;"	d
+PANGO_IS_CONTEXT	pango-context.h	41;"	d
+PANGO_IS_CONTEXT_CLASS	pango-context.h	42;"	d
+PANGO_IS_ENGINE	pango-engine.h	43;"	d
+PANGO_IS_ENGINE_CLASS	pango-engine.h	45;"	d
+PANGO_IS_ENGINE_LANG	pango-engine.h	80;"	d
+PANGO_IS_ENGINE_LANG_CLASS	pango-engine.h	82;"	d
+PANGO_IS_ENGINE_SHAPE	pango-engine.h	134;"	d
+PANGO_IS_ENGINE_SHAPE_CLASS	pango-engine.h	136;"	d
+PANGO_IS_FC_DECODER	pangofc-decoder.h	31;"	d
+PANGO_IS_FC_DECODER_CLASS	pangofc-decoder.h	37;"	d
+PANGO_IS_FC_FONT	pangofc-font.h	36;"	d
+PANGO_IS_FC_FONT_CLASS	pangofc-font.h	55;"	d
+PANGO_IS_FC_FONT_MAP	pangofc-fontmap.h	75;"	d
+PANGO_IS_FC_FONT_MAP_CLASS	pangofc-fontmap.h	84;"	d
+PANGO_IS_FONT	pango-font.h	311;"	d
+PANGO_IS_FONTSET	pango-fontset.h	38;"	d
+PANGO_IS_FONTSET_CLASS	pango-fontset.h	73;"	d
+PANGO_IS_FONTSET_SIMPLE	pango-fontset.h	111;"	d
+PANGO_IS_FONT_CLASS	pango-font.h	333;"	d
+PANGO_IS_FONT_FACE	pango-font.h	259;"	d
+PANGO_IS_FONT_FACE_CLASS	pango-font.h	273;"	d
+PANGO_IS_FONT_FAMILY	pango-font.h	205;"	d
+PANGO_IS_FONT_FAMILY_CLASS	pango-font.h	221;"	d
+PANGO_IS_FONT_MAP	pango-fontmap.h	32;"	d
+PANGO_IS_FONT_MAP_CLASS	pango-fontmap.h	52;"	d
+PANGO_IS_LAYOUT	pango-layout.h	83;"	d
+PANGO_IS_LAYOUT_CLASS	pango-layout.h	84;"	d
+PANGO_IS_OT_INFO	pango-ot.h	96;"	d
+PANGO_IS_OT_RULESET	pango-ot.h	101;"	d
+PANGO_IS_RENDERER	pango-renderer.h	30;"	d
+PANGO_IS_RENDERER_CLASS	pango-renderer.h	32;"	d
+PANGO_IS_XFT_RENDERER	pangoxft-render.h	43;"	d
+PANGO_IS_XFT_RENDERER_CLASS	pangoxft-render.h	45;"	d
+PANGO_LAYOUT	pango-layout.h	81;"	d
+PANGO_LAYOUT_CLASS	pango-layout.h	82;"	d
+PANGO_LAYOUT_GET_CLASS	pango-layout.h	85;"	d
+PANGO_LBEARING	pango-types.h	84;"	d
+PANGO_MATRIX_INIT	pango-matrix.h	82;"	d
+PANGO_MODULE_ENTRY	pango-engine.h	370;"	d
+PANGO_MODULE_ENTRY	pango-engine.h	374;"	d
+PANGO_OT_ALL_GLYPHS	pango-ot.h	56;"	d
+PANGO_OT_DEFAULT_LANGUAGE	pango-ot.h	59;"	d
+PANGO_OT_INFO	pango-ot.h	95;"	d
+PANGO_OT_NO_FEATURE	pango-ot.h	57;"	d
+PANGO_OT_NO_SCRIPT	pango-ot.h	58;"	d
+PANGO_OT_RULESET	pango-ot.h	100;"	d
+PANGO_OT_TABLE_GPOS	pango-ot.h	/^  PANGO_OT_TABLE_GPOS$/;"	e	enum:__anon6
+PANGO_OT_TABLE_GSUB	pango-ot.h	/^  PANGO_OT_TABLE_GSUB,$/;"	e	enum:__anon6
+PANGO_OT_TAG_DEFAULT_LANGUAGE	pango-ot.h	62;"	d
+PANGO_OT_TAG_DEFAULT_SCRIPT	pango-ot.h	61;"	d
+PANGO_OT_TAG_MAKE	pango-ot.h	37;"	d
+PANGO_OT_TAG_MAKE_FROM_STRING	pango-ot.h	38;"	d
+PANGO_PIXELS	pango-types.h	48;"	d
+PANGO_PIXELS_CEIL	pango-types.h	50;"	d
+PANGO_PIXELS_FLOOR	pango-types.h	49;"	d
+PANGO_RBEARING	pango-types.h	85;"	d
+PANGO_RENDERER	pango-renderer.h	29;"	d
+PANGO_RENDERER_CLASS	pango-renderer.h	31;"	d
+PANGO_RENDERER_GET_CLASS	pango-renderer.h	33;"	d
+PANGO_RENDER_PART_BACKGROUND	pango-renderer.h	/^  PANGO_RENDER_PART_BACKGROUND,$/;"	e	enum:__anon18
+PANGO_RENDER_PART_FOREGROUND	pango-renderer.h	/^  PANGO_RENDER_PART_FOREGROUND,$/;"	e	enum:__anon18
+PANGO_RENDER_PART_STRIKETHROUGH	pango-renderer.h	/^  PANGO_RENDER_PART_STRIKETHROUGH$/;"	e	enum:__anon18
+PANGO_RENDER_PART_UNDERLINE	pango-renderer.h	/^  PANGO_RENDER_PART_UNDERLINE,$/;"	e	enum:__anon18
+PANGO_RENDER_TYPE_FC	pangofc-font.h	50;"	d
+PANGO_RENDER_TYPE_FT2	pangoft2.h	34;"	d
+PANGO_RENDER_TYPE_NONE	pango-engine.h	39;"	d
+PANGO_RENDER_TYPE_X	pangox.h	35;"	d
+PANGO_RENDER_TYPE_XFT	pangoxft.h	35;"	d
+PANGO_SCALE	pango-types.h	47;"	d
+PANGO_SCALE_LARGE	pango-font.h	95;"	d
+PANGO_SCALE_MEDIUM	pango-font.h	94;"	d
+PANGO_SCALE_SMALL	pango-font.h	93;"	d
+PANGO_SCALE_XX_LARGE	pango-font.h	97;"	d
+PANGO_SCALE_XX_SMALL	pango-font.h	91;"	d
+PANGO_SCALE_X_LARGE	pango-font.h	96;"	d
+PANGO_SCALE_X_SMALL	pango-font.h	92;"	d
+PANGO_SCRIPT_ARABIC	pango-script.h	/^      PANGO_SCRIPT_ARABIC,             \/* Arab *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_ARMENIAN	pango-script.h	/^      PANGO_SCRIPT_ARMENIAN,           \/* Armn *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BALINESE	pango-script.h	/^      PANGO_SCRIPT_BALINESE,           \/* Bali *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BENGALI	pango-script.h	/^      PANGO_SCRIPT_BENGALI,            \/* Beng *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BOPOMOFO	pango-script.h	/^      PANGO_SCRIPT_BOPOMOFO,           \/* Bopo *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BRAILLE	pango-script.h	/^      PANGO_SCRIPT_BRAILLE,            \/* Brai *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BUGINESE	pango-script.h	/^      PANGO_SCRIPT_BUGINESE,           \/* Bugi *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_BUHID	pango-script.h	/^      PANGO_SCRIPT_BUHID,              \/* Buhd *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CANADIAN_ABORIGINAL	pango-script.h	/^      PANGO_SCRIPT_CANADIAN_ABORIGINAL, \/* Cans *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CARIAN	pango-script.h	/^      PANGO_SCRIPT_CARIAN,             \/* Cari *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CHAM	pango-script.h	/^      PANGO_SCRIPT_CHAM,               \/* Cham *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CHEROKEE	pango-script.h	/^      PANGO_SCRIPT_CHEROKEE,           \/* Cher *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_COMMON	pango-script.h	/^      PANGO_SCRIPT_COMMON       = 0,   \/* Zyyy *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_COPTIC	pango-script.h	/^      PANGO_SCRIPT_COPTIC,             \/* Qaac *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CUNEIFORM	pango-script.h	/^      PANGO_SCRIPT_CUNEIFORM,          \/* Xsux *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CYPRIOT	pango-script.h	/^      PANGO_SCRIPT_CYPRIOT,            \/* Cprt *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_CYRILLIC	pango-script.h	/^      PANGO_SCRIPT_CYRILLIC,           \/* Cyrl (Cyrs) *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_DESERET	pango-script.h	/^      PANGO_SCRIPT_DESERET,            \/* Dsrt *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_DEVANAGARI	pango-script.h	/^      PANGO_SCRIPT_DEVANAGARI,         \/* Deva *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_ETHIOPIC	pango-script.h	/^      PANGO_SCRIPT_ETHIOPIC,           \/* Ethi *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GEORGIAN	pango-script.h	/^      PANGO_SCRIPT_GEORGIAN,           \/* Geor (Geon, Geoa) *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GLAGOLITIC	pango-script.h	/^      PANGO_SCRIPT_GLAGOLITIC,         \/* Glag *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GOTHIC	pango-script.h	/^      PANGO_SCRIPT_GOTHIC,             \/* Goth *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GREEK	pango-script.h	/^      PANGO_SCRIPT_GREEK,              \/* Grek *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GUJARATI	pango-script.h	/^      PANGO_SCRIPT_GUJARATI,           \/* Gujr *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_GURMUKHI	pango-script.h	/^      PANGO_SCRIPT_GURMUKHI,           \/* Guru *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_HAN	pango-script.h	/^      PANGO_SCRIPT_HAN,                \/* Hani *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_HANGUL	pango-script.h	/^      PANGO_SCRIPT_HANGUL,             \/* Hang *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_HANUNOO	pango-script.h	/^      PANGO_SCRIPT_HANUNOO,            \/* Hano *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_HEBREW	pango-script.h	/^      PANGO_SCRIPT_HEBREW,             \/* Hebr *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_HIRAGANA	pango-script.h	/^      PANGO_SCRIPT_HIRAGANA,           \/* Hira *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_INHERITED	pango-script.h	/^      PANGO_SCRIPT_INHERITED,          \/* Qaai *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_INVALID_CODE	pango-script.h	/^      PANGO_SCRIPT_INVALID_CODE = -1,$/;"	e	enum:__anon19
+PANGO_SCRIPT_KANNADA	pango-script.h	/^      PANGO_SCRIPT_KANNADA,            \/* Knda *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_KATAKANA	pango-script.h	/^      PANGO_SCRIPT_KATAKANA,           \/* Kana *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_KAYAH_LI	pango-script.h	/^      PANGO_SCRIPT_KAYAH_LI,           \/* Kali *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_KHAROSHTHI	pango-script.h	/^      PANGO_SCRIPT_KHAROSHTHI,         \/* Khar *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_KHMER	pango-script.h	/^      PANGO_SCRIPT_KHMER,              \/* Khmr *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LAO	pango-script.h	/^      PANGO_SCRIPT_LAO,                \/* Laoo *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LATIN	pango-script.h	/^      PANGO_SCRIPT_LATIN,              \/* Latn (Latf, Latg) *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LEPCHA	pango-script.h	/^      PANGO_SCRIPT_LEPCHA,             \/* Lepc *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LIMBU	pango-script.h	/^      PANGO_SCRIPT_LIMBU,              \/* Limb *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LINEAR_B	pango-script.h	/^      PANGO_SCRIPT_LINEAR_B,           \/* Linb *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LYCIAN	pango-script.h	/^      PANGO_SCRIPT_LYCIAN,             \/* Lyci *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_LYDIAN	pango-script.h	/^      PANGO_SCRIPT_LYDIAN              \/* Lydi *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_MALAYALAM	pango-script.h	/^      PANGO_SCRIPT_MALAYALAM,          \/* Mlym *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_MONGOLIAN	pango-script.h	/^      PANGO_SCRIPT_MONGOLIAN,          \/* Mong *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_MYANMAR	pango-script.h	/^      PANGO_SCRIPT_MYANMAR,            \/* Mymr *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_NEW_TAI_LUE	pango-script.h	/^      PANGO_SCRIPT_NEW_TAI_LUE,        \/* Talu *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_NKO	pango-script.h	/^      PANGO_SCRIPT_NKO,                \/* Nkoo *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_OGHAM	pango-script.h	/^      PANGO_SCRIPT_OGHAM,              \/* Ogam *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_OLD_ITALIC	pango-script.h	/^      PANGO_SCRIPT_OLD_ITALIC,         \/* Ital *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_OLD_PERSIAN	pango-script.h	/^      PANGO_SCRIPT_OLD_PERSIAN,        \/* Xpeo *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_OL_CHIKI	pango-script.h	/^      PANGO_SCRIPT_OL_CHIKI,           \/* Olck *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_ORIYA	pango-script.h	/^      PANGO_SCRIPT_ORIYA,              \/* Orya *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_OSMANYA	pango-script.h	/^      PANGO_SCRIPT_OSMANYA,            \/* Osma *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_PHAGS_PA	pango-script.h	/^      PANGO_SCRIPT_PHAGS_PA,           \/* Phag *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_PHOENICIAN	pango-script.h	/^      PANGO_SCRIPT_PHOENICIAN,         \/* Phnx *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_REJANG	pango-script.h	/^      PANGO_SCRIPT_REJANG,             \/* Rjng *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_RUNIC	pango-script.h	/^      PANGO_SCRIPT_RUNIC,              \/* Runr *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SAURASHTRA	pango-script.h	/^      PANGO_SCRIPT_SAURASHTRA,         \/* Saur *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SHAVIAN	pango-script.h	/^      PANGO_SCRIPT_SHAVIAN,            \/* Shaw *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SINHALA	pango-script.h	/^      PANGO_SCRIPT_SINHALA,            \/* Sinh *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SUNDANESE	pango-script.h	/^      PANGO_SCRIPT_SUNDANESE,          \/* Sund *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SYLOTI_NAGRI	pango-script.h	/^      PANGO_SCRIPT_SYLOTI_NAGRI,       \/* Sylo *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_SYRIAC	pango-script.h	/^      PANGO_SCRIPT_SYRIAC,             \/* Syrc (Syrj, Syrn, Syre) *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TAGALOG	pango-script.h	/^      PANGO_SCRIPT_TAGALOG,            \/* Tglg *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TAGBANWA	pango-script.h	/^      PANGO_SCRIPT_TAGBANWA,           \/* Tagb *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TAI_LE	pango-script.h	/^      PANGO_SCRIPT_TAI_LE,             \/* Tale *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TAMIL	pango-script.h	/^      PANGO_SCRIPT_TAMIL,              \/* Taml *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TELUGU	pango-script.h	/^      PANGO_SCRIPT_TELUGU,             \/* Telu *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_THAANA	pango-script.h	/^      PANGO_SCRIPT_THAANA,             \/* Thaa *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_THAI	pango-script.h	/^      PANGO_SCRIPT_THAI,               \/* Thai *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TIBETAN	pango-script.h	/^      PANGO_SCRIPT_TIBETAN,            \/* Tibt *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_TIFINAGH	pango-script.h	/^      PANGO_SCRIPT_TIFINAGH,           \/* Tfng *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_UGARITIC	pango-script.h	/^      PANGO_SCRIPT_UGARITIC,           \/* Ugar *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_UNKNOWN	pango-script.h	/^      PANGO_SCRIPT_UNKNOWN,            \/* Zzzz *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_VAI	pango-script.h	/^      PANGO_SCRIPT_VAI,                \/* Vaii *\/$/;"	e	enum:__anon19
+PANGO_SCRIPT_YI	pango-script.h	/^      PANGO_SCRIPT_YI,                 \/* Yiii *\/$/;"	e	enum:__anon19
+PANGO_STRETCH_CONDENSED	pango-font.h	/^  PANGO_STRETCH_CONDENSED,$/;"	e	enum:__anon16
+PANGO_STRETCH_EXPANDED	pango-font.h	/^  PANGO_STRETCH_EXPANDED,$/;"	e	enum:__anon16
+PANGO_STRETCH_EXTRA_CONDENSED	pango-font.h	/^  PANGO_STRETCH_EXTRA_CONDENSED,$/;"	e	enum:__anon16
+PANGO_STRETCH_EXTRA_EXPANDED	pango-font.h	/^  PANGO_STRETCH_EXTRA_EXPANDED,$/;"	e	enum:__anon16
+PANGO_STRETCH_NORMAL	pango-font.h	/^  PANGO_STRETCH_NORMAL,$/;"	e	enum:__anon16
+PANGO_STRETCH_SEMI_CONDENSED	pango-font.h	/^  PANGO_STRETCH_SEMI_CONDENSED,$/;"	e	enum:__anon16
+PANGO_STRETCH_SEMI_EXPANDED	pango-font.h	/^  PANGO_STRETCH_SEMI_EXPANDED,$/;"	e	enum:__anon16
+PANGO_STRETCH_ULTRA_CONDENSED	pango-font.h	/^  PANGO_STRETCH_ULTRA_CONDENSED,$/;"	e	enum:__anon16
+PANGO_STRETCH_ULTRA_EXPANDED	pango-font.h	/^  PANGO_STRETCH_ULTRA_EXPANDED$/;"	e	enum:__anon16
+PANGO_STYLE_ITALIC	pango-font.h	/^  PANGO_STYLE_ITALIC$/;"	e	enum:__anon13
+PANGO_STYLE_NORMAL	pango-font.h	/^  PANGO_STYLE_NORMAL,$/;"	e	enum:__anon13
+PANGO_STYLE_OBLIQUE	pango-font.h	/^  PANGO_STYLE_OBLIQUE,$/;"	e	enum:__anon13
+PANGO_TAB_LEFT	pango-tabs.h	/^  PANGO_TAB_LEFT$/;"	e	enum:__anon7
+PANGO_TYPE_ALIGNMENT	pango-enum-types.h	41;"	d
+PANGO_TYPE_ATTR_LIST	pango-attributes.h	65;"	d
+PANGO_TYPE_ATTR_TYPE	pango-enum-types.h	12;"	d
+PANGO_TYPE_BIDI_TYPE	pango-enum-types.h	17;"	d
+PANGO_TYPE_CAIRO_FONT	pangocairo.h	40;"	d
+PANGO_TYPE_CAIRO_FONT_MAP	pangocairo.h	54;"	d
+PANGO_TYPE_COLOR	pango-attributes.h	41;"	d
+PANGO_TYPE_CONTEXT	pango-context.h	38;"	d
+PANGO_TYPE_COVERAGE_LEVEL	pango-enum-types.h	22;"	d
+PANGO_TYPE_DIRECTION	pango-enum-types.h	19;"	d
+PANGO_TYPE_ELLIPSIZE_MODE	pango-enum-types.h	45;"	d
+PANGO_TYPE_ENGINE	pango-engine.h	41;"	d
+PANGO_TYPE_ENGINE_LANG	pango-engine.h	78;"	d
+PANGO_TYPE_ENGINE_SHAPE	pango-engine.h	132;"	d
+PANGO_TYPE_FC_DECODER	pangofc-decoder.h	29;"	d
+PANGO_TYPE_FC_FONT	pangofc-font.h	34;"	d
+PANGO_TYPE_FC_FONT_MAP	pangofc-fontmap.h	73;"	d
+PANGO_TYPE_FONT	pango-font.h	309;"	d
+PANGO_TYPE_FONTSET	pango-fontset.h	36;"	d
+PANGO_TYPE_FONTSET_SIMPLE	pango-fontset.h	109;"	d
+PANGO_TYPE_FONT_DESCRIPTION	pango-font.h	103;"	d
+PANGO_TYPE_FONT_FACE	pango-font.h	257;"	d
+PANGO_TYPE_FONT_FAMILY	pango-font.h	203;"	d
+PANGO_TYPE_FONT_MAP	pango-fontmap.h	30;"	d
+PANGO_TYPE_FONT_MASK	pango-enum-types.h	33;"	d
+PANGO_TYPE_FONT_METRICS	pango-font.h	166;"	d
+PANGO_TYPE_FT2_FONT_MAP	pangoft2.h	37;"	d
+PANGO_TYPE_GLYPH_ITEM	pango-glyph-item.h	40;"	d
+PANGO_TYPE_GLYPH_ITEM_ITER	pango-glyph-item.h	77;"	d
+PANGO_TYPE_GLYPH_STRING	pango-glyph.h	82;"	d
+PANGO_TYPE_GRAVITY	pango-enum-types.h	36;"	d
+PANGO_TYPE_GRAVITY_HINT	pango-enum-types.h	38;"	d
+PANGO_TYPE_ITEM	pango-item.h	59;"	d
+PANGO_TYPE_LANGUAGE	pango-language.h	32;"	d
+PANGO_TYPE_LAYOUT	pango-layout.h	80;"	d
+PANGO_TYPE_LAYOUT_ITER	pango-layout.h	250;"	d
+PANGO_TYPE_LAYOUT_LINE	pango-layout.h	221;"	d
+PANGO_TYPE_MATRIX	pango-matrix.h	67;"	d
+PANGO_TYPE_OT_INFO	pango-ot.h	94;"	d
+PANGO_TYPE_OT_RULESET	pango-ot.h	99;"	d
+PANGO_TYPE_RENDERER	pango-renderer.h	28;"	d
+PANGO_TYPE_RENDER_PART	pango-enum-types.h	48;"	d
+PANGO_TYPE_SCRIPT	pango-enum-types.h	51;"	d
+PANGO_TYPE_STRETCH	pango-enum-types.h	31;"	d
+PANGO_TYPE_STYLE	pango-enum-types.h	25;"	d
+PANGO_TYPE_TAB_ALIGN	pango-enum-types.h	54;"	d
+PANGO_TYPE_TAB_ARRAY	pango-tabs.h	44;"	d
+PANGO_TYPE_UNDERLINE	pango-enum-types.h	14;"	d
+PANGO_TYPE_VARIANT	pango-enum-types.h	27;"	d
+PANGO_TYPE_WEIGHT	pango-enum-types.h	29;"	d
+PANGO_TYPE_WRAP_MODE	pango-enum-types.h	43;"	d
+PANGO_TYPE_XFT_FONT	pangoxft.h	71;"	d
+PANGO_TYPE_XFT_FONT_MAP	pangoxft.h	38;"	d
+PANGO_TYPE_XFT_RENDERER	pangoxft-render.h	41;"	d
+PANGO_UNDERLINE_DOUBLE	pango-attributes.h	/^  PANGO_UNDERLINE_DOUBLE,$/;"	e	enum:__anon12
+PANGO_UNDERLINE_ERROR	pango-attributes.h	/^  PANGO_UNDERLINE_ERROR$/;"	e	enum:__anon12
+PANGO_UNDERLINE_LOW	pango-attributes.h	/^  PANGO_UNDERLINE_LOW,$/;"	e	enum:__anon12
+PANGO_UNDERLINE_NONE	pango-attributes.h	/^  PANGO_UNDERLINE_NONE,$/;"	e	enum:__anon12
+PANGO_UNDERLINE_SINGLE	pango-attributes.h	/^  PANGO_UNDERLINE_SINGLE,$/;"	e	enum:__anon12
+PANGO_UNITS_ROUND	pango-types.h	60;"	d
+PANGO_UNKNOWN_GLYPH_HEIGHT	pango-font.h	374;"	d
+PANGO_UNKNOWN_GLYPH_WIDTH	pango-font.h	373;"	d
+PANGO_VARIANT_NORMAL	pango-font.h	/^  PANGO_VARIANT_NORMAL,$/;"	e	enum:__anon14
+PANGO_VARIANT_SMALL_CAPS	pango-font.h	/^  PANGO_VARIANT_SMALL_CAPS$/;"	e	enum:__anon14
+PANGO_VERSION	pango-utils.h	120;"	d
+PANGO_VERSION_CHECK	pango-utils.h	126;"	d
+PANGO_VERSION_ENCODE	pango-utils.h	114;"	d
+PANGO_VERSION_MAJOR	pango-features.h	5;"	d
+PANGO_VERSION_MICRO	pango-features.h	7;"	d
+PANGO_VERSION_MINOR	pango-features.h	6;"	d
+PANGO_VERSION_STRING	pango-features.h	9;"	d
+PANGO_WEIGHT_BOLD	pango-font.h	/^  PANGO_WEIGHT_BOLD = 700,$/;"	e	enum:__anon15
+PANGO_WEIGHT_BOOK	pango-font.h	/^  PANGO_WEIGHT_BOOK = 380,$/;"	e	enum:__anon15
+PANGO_WEIGHT_HEAVY	pango-font.h	/^  PANGO_WEIGHT_HEAVY = 900,$/;"	e	enum:__anon15
+PANGO_WEIGHT_LIGHT	pango-font.h	/^  PANGO_WEIGHT_LIGHT = 300,$/;"	e	enum:__anon15
+PANGO_WEIGHT_MEDIUM	pango-font.h	/^  PANGO_WEIGHT_MEDIUM = 500,$/;"	e	enum:__anon15
+PANGO_WEIGHT_NORMAL	pango-font.h	/^  PANGO_WEIGHT_NORMAL = 400,$/;"	e	enum:__anon15
+PANGO_WEIGHT_SEMIBOLD	pango-font.h	/^  PANGO_WEIGHT_SEMIBOLD = 600,$/;"	e	enum:__anon15
+PANGO_WEIGHT_THIN	pango-font.h	/^  PANGO_WEIGHT_THIN = 100,$/;"	e	enum:__anon15
+PANGO_WEIGHT_ULTRABOLD	pango-font.h	/^  PANGO_WEIGHT_ULTRABOLD = 800,$/;"	e	enum:__anon15
+PANGO_WEIGHT_ULTRAHEAVY	pango-font.h	/^  PANGO_WEIGHT_ULTRAHEAVY = 1000$/;"	e	enum:__anon15
+PANGO_WEIGHT_ULTRALIGHT	pango-font.h	/^  PANGO_WEIGHT_ULTRALIGHT = 200,$/;"	e	enum:__anon15
+PANGO_WRAP_CHAR	pango-layout.h	/^  PANGO_WRAP_CHAR,$/;"	e	enum:__anon4
+PANGO_WRAP_WORD	pango-layout.h	/^  PANGO_WRAP_WORD,$/;"	e	enum:__anon4
+PANGO_WRAP_WORD_CHAR	pango-layout.h	/^  PANGO_WRAP_WORD_CHAR$/;"	e	enum:__anon4
+PANGO_XFT_FONT	pangoxft.h	70;"	d
+PANGO_XFT_FONT_MAP	pangoxft.h	39;"	d
+PANGO_XFT_IS_FONT	pangoxft.h	72;"	d
+PANGO_XFT_IS_FONT_MAP	pangoxft.h	40;"	d
+PANGO_XFT_RENDERER	pangoxft-render.h	42;"	d
+PANGO_XFT_RENDERER_CLASS	pangoxft-render.h	44;"	d
+PANGO_XFT_RENDERER_GET_CLASS	pangoxft-render.h	46;"	d
+PANGO_X_GLYPH_INDEX	pangox.h	81;"	d
+PANGO_X_GLYPH_SUBFONT	pangox.h	80;"	d
+PANGO_X_MAKE_GLYPH	pangox.h	79;"	d
+PangoAlignment	pango-layout.h	/^} PangoAlignment;$/;"	t	typeref:enum:__anon3
+PangoAnalysis	pango-item.h	/^typedef struct _PangoAnalysis PangoAnalysis;$/;"	t	typeref:struct:_PangoAnalysis
+PangoAttrClass	pango-attributes.h	/^typedef struct _PangoAttrClass    PangoAttrClass;$/;"	t	typeref:struct:_PangoAttrClass
+PangoAttrColor	pango-attributes.h	/^typedef struct _PangoAttrColor    PangoAttrColor;$/;"	t	typeref:struct:_PangoAttrColor
+PangoAttrDataCopyFunc	pango-attributes.h	/^typedef gpointer (*PangoAttrDataCopyFunc) (gconstpointer data);$/;"	t
+PangoAttrFilterFunc	pango-attributes.h	/^typedef gboolean (*PangoAttrFilterFunc) (PangoAttribute *attribute,$/;"	t
+PangoAttrFloat	pango-attributes.h	/^typedef struct _PangoAttrFloat    PangoAttrFloat;$/;"	t	typeref:struct:_PangoAttrFloat
+PangoAttrFontDesc	pango-attributes.h	/^typedef struct _PangoAttrFontDesc PangoAttrFontDesc;$/;"	t	typeref:struct:_PangoAttrFontDesc
+PangoAttrInt	pango-attributes.h	/^typedef struct _PangoAttrInt      PangoAttrInt;$/;"	t	typeref:struct:_PangoAttrInt
+PangoAttrIterator	pango-attributes.h	/^typedef struct _PangoAttrIterator PangoAttrIterator;$/;"	t	typeref:struct:_PangoAttrIterator
+PangoAttrLanguage	pango-attributes.h	/^typedef struct _PangoAttrLanguage PangoAttrLanguage;$/;"	t	typeref:struct:_PangoAttrLanguage
+PangoAttrList	pango-attributes.h	/^typedef struct _PangoAttrList     PangoAttrList;$/;"	t	typeref:struct:_PangoAttrList
+PangoAttrShape	pango-attributes.h	/^typedef struct _PangoAttrShape    PangoAttrShape;$/;"	t	typeref:struct:_PangoAttrShape
+PangoAttrSize	pango-attributes.h	/^typedef struct _PangoAttrSize     PangoAttrSize;$/;"	t	typeref:struct:_PangoAttrSize
+PangoAttrString	pango-attributes.h	/^typedef struct _PangoAttrString   PangoAttrString;$/;"	t	typeref:struct:_PangoAttrString
+PangoAttrType	pango-attributes.h	/^} PangoAttrType;$/;"	t	typeref:enum:__anon11
+PangoAttribute	pango-attributes.h	/^typedef struct _PangoAttribute    PangoAttribute;$/;"	t	typeref:struct:_PangoAttribute
+PangoBidiType	pango-bidi-type.h	/^} PangoBidiType;$/;"	t	typeref:enum:__anon1
+PangoCairoFont	pangocairo.h	/^typedef struct _PangoCairoFont      PangoCairoFont;$/;"	t	typeref:struct:_PangoCairoFont
+PangoCairoFontMap	pangocairo.h	/^typedef struct _PangoCairoFontMap        PangoCairoFontMap;$/;"	t	typeref:struct:_PangoCairoFontMap
+PangoCairoShapeRendererFunc	pangocairo.h	/^typedef void (* PangoCairoShapeRendererFunc) (cairo_t        *cr,$/;"	t
+PangoColor	pango-attributes.h	/^typedef struct _PangoColor PangoColor;$/;"	t	typeref:struct:_PangoColor
+PangoContext	pango-fontmap.h	/^typedef struct _PangoContext PangoContext;$/;"	t	typeref:struct:_PangoContext
+PangoContextClass	pango-context.h	/^typedef struct _PangoContextClass PangoContextClass;$/;"	t	typeref:struct:_PangoContextClass
+PangoCoverage	pango-coverage.h	/^typedef struct _PangoCoverage PangoCoverage;$/;"	t	typeref:struct:_PangoCoverage
+PangoCoverageLevel	pango-coverage.h	/^} PangoCoverageLevel;$/;"	t	typeref:enum:__anon10
+PangoDirection	pango-bidi-type.h	/^} PangoDirection;$/;"	t	typeref:enum:__anon2
+PangoEllipsizeMode	pango-layout.h	/^} PangoEllipsizeMode;$/;"	t	typeref:enum:__anon5
+PangoEngine	pango-engine.h	/^typedef struct _PangoEngine PangoEngine;$/;"	t	typeref:struct:_PangoEngine
+PangoEngineClass	pango-engine.h	/^typedef struct _PangoEngineClass PangoEngineClass;$/;"	t	typeref:struct:_PangoEngineClass
+PangoEngineInfo	pango-engine.h	/^typedef struct _PangoEngineInfo PangoEngineInfo;$/;"	t	typeref:struct:_PangoEngineInfo
+PangoEngineLang	pango-types.h	/^typedef struct _PangoEngineLang PangoEngineLang;$/;"	t	typeref:struct:_PangoEngineLang
+PangoEngineLangClass	pango-engine.h	/^typedef struct _PangoEngineLangClass PangoEngineLangClass;$/;"	t	typeref:struct:_PangoEngineLangClass
+PangoEngineScriptInfo	pango-engine.h	/^typedef struct _PangoEngineScriptInfo PangoEngineScriptInfo;$/;"	t	typeref:struct:_PangoEngineScriptInfo
+PangoEngineShape	pango-types.h	/^typedef struct _PangoEngineShape PangoEngineShape;$/;"	t	typeref:struct:_PangoEngineShape
+PangoEngineShapeClass	pango-engine.h	/^typedef struct _PangoEngineShapeClass PangoEngineShapeClass;$/;"	t	typeref:struct:_PangoEngineShapeClass
+PangoFT2FontMap	pangoft2.h	/^typedef struct _PangoFT2FontMap      PangoFT2FontMap;$/;"	t	typeref:struct:_PangoFT2FontMap
+PangoFT2SubstituteFunc	pangoft2.h	/^typedef void (*PangoFT2SubstituteFunc) (FcPattern *pattern,$/;"	t
+PangoFcDecoder	pangofc-decoder.h	/^typedef struct _PangoFcDecoder      PangoFcDecoder;$/;"	t	typeref:struct:_PangoFcDecoder
+PangoFcDecoderClass	pangofc-decoder.h	/^typedef struct _PangoFcDecoderClass PangoFcDecoderClass;$/;"	t	typeref:struct:_PangoFcDecoderClass
+PangoFcDecoderFindFunc	pangofc-fontmap.h	/^typedef PangoFcDecoder * (*PangoFcDecoderFindFunc) (FcPattern *pattern,$/;"	t
+PangoFcFont	pangofc-font.h	/^typedef struct _PangoFcFont      PangoFcFont;$/;"	t	typeref:struct:_PangoFcFont
+PangoFcFontClass	pangofc-font.h	/^typedef struct _PangoFcFontClass PangoFcFontClass;$/;"	t	typeref:struct:_PangoFcFontClass
+PangoFcFontKey	pangofc-fontmap.h	/^typedef struct _PangoFcFontKey     PangoFcFontKey;$/;"	t	typeref:struct:_PangoFcFontKey
+PangoFcFontMap	pangofc-fontmap.h	/^typedef struct _PangoFcFontMap        PangoFcFontMap;$/;"	t	typeref:struct:_PangoFcFontMap
+PangoFcFontMapClass	pangofc-fontmap.h	/^typedef struct _PangoFcFontMapClass   PangoFcFontMapClass;$/;"	t	typeref:struct:_PangoFcFontMapClass
+PangoFcFontMapPrivate	pangofc-fontmap.h	/^typedef struct _PangoFcFontMapPrivate PangoFcFontMapPrivate;$/;"	t	typeref:struct:_PangoFcFontMapPrivate
+PangoFcFontsetKey	pangofc-fontmap.h	/^typedef struct _PangoFcFontsetKey  PangoFcFontsetKey;$/;"	t	typeref:struct:_PangoFcFontsetKey
+PangoFont	pango-types.h	/^typedef struct _PangoFont    PangoFont;$/;"	t	typeref:struct:_PangoFont
+PangoFontClass	pango-font.h	/^typedef struct _PangoFontClass       PangoFontClass;$/;"	t	typeref:struct:_PangoFontClass
+PangoFontDescription	pango-font.h	/^typedef struct _PangoFontDescription PangoFontDescription;$/;"	t	typeref:struct:_PangoFontDescription
+PangoFontFace	pango-font.h	/^typedef struct _PangoFontFace        PangoFontFace;$/;"	t	typeref:struct:_PangoFontFace
+PangoFontFaceClass	pango-font.h	/^typedef struct _PangoFontFaceClass   PangoFontFaceClass;$/;"	t	typeref:struct:_PangoFontFaceClass
+PangoFontFamily	pango-font.h	/^typedef struct _PangoFontFamily      PangoFontFamily;$/;"	t	typeref:struct:_PangoFontFamily
+PangoFontFamilyClass	pango-font.h	/^typedef struct _PangoFontFamilyClass PangoFontFamilyClass;$/;"	t	typeref:struct:_PangoFontFamilyClass
+PangoFontMap	pango-types.h	/^typedef struct _PangoFontMap PangoFontMap;$/;"	t	typeref:struct:_PangoFontMap
+PangoFontMapClass	pango-fontmap.h	/^typedef struct _PangoFontMapClass PangoFontMapClass;$/;"	t	typeref:struct:_PangoFontMapClass
+PangoFontMask	pango-font.h	/^} PangoFontMask;$/;"	t	typeref:enum:__anon17
+PangoFontMetrics	pango-font.h	/^typedef struct _PangoFontMetrics PangoFontMetrics;$/;"	t	typeref:struct:_PangoFontMetrics
+PangoFontset	pango-fontset.h	/^typedef struct _PangoFontset        PangoFontset;$/;"	t	typeref:struct:_PangoFontset
+PangoFontsetClass	pango-fontset.h	/^typedef struct _PangoFontsetClass   PangoFontsetClass;$/;"	t	typeref:struct:_PangoFontsetClass
+PangoFontsetForeachFunc	pango-fontset.h	/^typedef gboolean (*PangoFontsetForeachFunc) (PangoFontset  *fontset,$/;"	t
+PangoFontsetSimple	pango-fontset.h	/^typedef struct _PangoFontsetSimple  PangoFontsetSimple;$/;"	t	typeref:struct:_PangoFontsetSimple
+PangoFontsetSimpleClass	pango-fontset.h	/^typedef struct _PangoFontsetSimpleClass  PangoFontsetSimpleClass;$/;"	t	typeref:struct:_PangoFontsetSimpleClass
+PangoFreeGCFunc	pangox.h	/^typedef void (*PangoFreeGCFunc) (PangoContext *context, GC gc);$/;"	t
+PangoGetGCFunc	pangox.h	/^typedef GC (*PangoGetGCFunc) (PangoContext *context, PangoColor *color, GC base_gc);$/;"	t
+PangoGlyph	pango-types.h	/^typedef guint32 PangoGlyph;$/;"	t
+PangoGlyphGeometry	pango-glyph.h	/^typedef struct _PangoGlyphGeometry PangoGlyphGeometry;$/;"	t	typeref:struct:_PangoGlyphGeometry
+PangoGlyphInfo	pango-glyph.h	/^typedef struct _PangoGlyphInfo PangoGlyphInfo;$/;"	t	typeref:struct:_PangoGlyphInfo
+PangoGlyphItem	pango-glyph-item.h	/^typedef struct _PangoGlyphItem PangoGlyphItem;$/;"	t	typeref:struct:_PangoGlyphItem
+PangoGlyphItemIter	pango-glyph-item.h	/^typedef struct _PangoGlyphItemIter PangoGlyphItemIter;$/;"	t	typeref:struct:_PangoGlyphItemIter
+PangoGlyphString	pango-glyph.h	/^typedef struct _PangoGlyphString PangoGlyphString;$/;"	t	typeref:struct:_PangoGlyphString
+PangoGlyphUnit	pango-glyph.h	/^typedef gint32 PangoGlyphUnit;$/;"	t
+PangoGlyphVisAttr	pango-glyph.h	/^typedef struct _PangoGlyphVisAttr PangoGlyphVisAttr;$/;"	t	typeref:struct:_PangoGlyphVisAttr
+PangoGravity	pango-gravity.h	/^} PangoGravity;$/;"	t	typeref:enum:__anon8
+PangoGravityHint	pango-gravity.h	/^} PangoGravityHint;$/;"	t	typeref:enum:__anon9
+PangoIncludedModule	pango-modules.h	/^typedef struct _PangoIncludedModule PangoIncludedModule;$/;"	t	typeref:struct:_PangoIncludedModule
+PangoItem	pango-item.h	/^typedef struct _PangoItem PangoItem;$/;"	t	typeref:struct:_PangoItem
+PangoLanguage	pango-language.h	/^typedef struct _PangoLanguage PangoLanguage;$/;"	t	typeref:struct:_PangoLanguage
+PangoLayout	pango-layout.h	/^typedef struct _PangoLayout      PangoLayout;$/;"	t	typeref:struct:_PangoLayout
+PangoLayoutClass	pango-layout.h	/^typedef struct _PangoLayoutClass PangoLayoutClass;$/;"	t	typeref:struct:_PangoLayoutClass
+PangoLayoutIter	pango-layout.h	/^typedef struct _PangoLayoutIter PangoLayoutIter;$/;"	t	typeref:struct:_PangoLayoutIter
+PangoLayoutLine	pango-layout.h	/^typedef struct _PangoLayoutLine  PangoLayoutLine;$/;"	t	typeref:struct:_PangoLayoutLine
+PangoLayoutRun	pango-layout.h	/^typedef PangoGlyphItem PangoLayoutRun;$/;"	t
+PangoLogAttr	pango-types.h	/^typedef struct _PangoLogAttr PangoLogAttr;$/;"	t	typeref:struct:_PangoLogAttr
+PangoMap	pango-modules.h	/^typedef struct _PangoMap PangoMap;$/;"	t	typeref:struct:_PangoMap
+PangoMapEntry	pango-modules.h	/^typedef struct _PangoMapEntry PangoMapEntry;$/;"	t	typeref:struct:_PangoMapEntry
+PangoMatrix	pango-matrix.h	/^typedef struct _PangoMatrix    PangoMatrix;$/;"	t	typeref:struct:_PangoMatrix
+PangoOTBuffer	pango-ot.h	/^typedef struct _PangoOTBuffer     PangoOTBuffer;$/;"	t	typeref:struct:_PangoOTBuffer
+PangoOTFeatureMap	pango-ot.h	/^typedef struct _PangoOTFeatureMap PangoOTFeatureMap;$/;"	t	typeref:struct:_PangoOTFeatureMap
+PangoOTGlyph	pango-ot.h	/^typedef struct _PangoOTGlyph      PangoOTGlyph;$/;"	t	typeref:struct:_PangoOTGlyph
+PangoOTInfo	pango-ot.h	/^typedef struct _PangoOTInfo       PangoOTInfo;$/;"	t	typeref:struct:_PangoOTInfo
+PangoOTRuleset	pango-ot.h	/^typedef struct _PangoOTRuleset    PangoOTRuleset;$/;"	t	typeref:struct:_PangoOTRuleset
+PangoOTRulesetDescription	pango-ot.h	/^typedef struct _PangoOTRulesetDescription PangoOTRulesetDescription;$/;"	t	typeref:struct:_PangoOTRulesetDescription
+PangoOTTableType	pango-ot.h	/^} PangoOTTableType;$/;"	t	typeref:enum:__anon6
+PangoOTTag	pango-ot.h	/^typedef guint32 PangoOTTag;$/;"	t
+PangoRectangle	pango-types.h	/^typedef struct _PangoRectangle PangoRectangle;$/;"	t	typeref:struct:_PangoRectangle
+PangoRenderPart	pango-renderer.h	/^} PangoRenderPart;$/;"	t	typeref:enum:__anon18
+PangoRenderer	pango-renderer.h	/^typedef struct _PangoRenderer        PangoRenderer;$/;"	t	typeref:struct:_PangoRenderer
+PangoRendererClass	pango-renderer.h	/^typedef struct _PangoRendererClass   PangoRendererClass;$/;"	t	typeref:struct:_PangoRendererClass
+PangoRendererPrivate	pango-renderer.h	/^typedef struct _PangoRendererPrivate PangoRendererPrivate;$/;"	t	typeref:struct:_PangoRendererPrivate
+PangoScript	pango-script.h	/^} PangoScript;$/;"	t	typeref:enum:__anon19
+PangoScriptIter	pango-script.h	/^typedef struct _PangoScriptIter PangoScriptIter;$/;"	t	typeref:struct:_PangoScriptIter
+PangoStretch	pango-font.h	/^} PangoStretch;$/;"	t	typeref:enum:__anon16
+PangoStyle	pango-font.h	/^} PangoStyle;$/;"	t	typeref:enum:__anon13
+PangoTabAlign	pango-tabs.h	/^} PangoTabAlign;$/;"	t	typeref:enum:__anon7
+PangoTabArray	pango-tabs.h	/^typedef struct _PangoTabArray PangoTabArray;$/;"	t	typeref:struct:_PangoTabArray
+PangoUnderline	pango-attributes.h	/^} PangoUnderline;$/;"	t	typeref:enum:__anon12
+PangoVariant	pango-font.h	/^} PangoVariant;$/;"	t	typeref:enum:__anon14
+PangoWeight	pango-font.h	/^} PangoWeight;$/;"	t	typeref:enum:__anon15
+PangoWrapMode	pango-layout.h	/^} PangoWrapMode;$/;"	t	typeref:enum:__anon4
+PangoXFontCache	pangox.h	/^typedef struct _PangoXFontCache PangoXFontCache;$/;"	t	typeref:struct:_PangoXFontCache
+PangoXSubfont	pangox.h	/^typedef guint16 PangoXSubfont;$/;"	t
+PangoXftFont	pangoxft.h	/^typedef struct _PangoXftFont    PangoXftFont;$/;"	t	typeref:struct:_PangoXftFont
+PangoXftFontMap	pangoxft.h	/^typedef struct _PangoXftFontMap      PangoXftFontMap;$/;"	t	typeref:struct:_PangoXftFontMap
+PangoXftRenderer	pangoxft-render.h	/^typedef struct _PangoXftRenderer        PangoXftRenderer;$/;"	t	typeref:struct:_PangoXftRenderer
+PangoXftRendererClass	pangoxft-render.h	/^typedef struct _PangoXftRendererClass   PangoXftRendererClass;$/;"	t	typeref:struct:_PangoXftRendererClass
+PangoXftRendererPrivate	pangoxft-render.h	/^typedef struct _PangoXftRendererPrivate PangoXftRendererPrivate;$/;"	t	typeref:struct:_PangoXftRendererPrivate
+PangoXftSubstituteFunc	pangoxft.h	/^typedef void (*PangoXftSubstituteFunc) (FcPattern *pattern,$/;"	t
+_PANGO_MODULE_ENTRY2	pango-engine.h	371;"	d
+_PANGO_MODULE_ENTRY3	pango-engine.h	372;"	d
+_PangoAnalysis	pango-item.h	/^struct _PangoAnalysis$/;"	s
+_PangoAttrClass	pango-attributes.h	/^struct _PangoAttrClass$/;"	s
+_PangoAttrColor	pango-attributes.h	/^struct _PangoAttrColor$/;"	s
+_PangoAttrFloat	pango-attributes.h	/^struct _PangoAttrFloat$/;"	s
+_PangoAttrFontDesc	pango-attributes.h	/^struct _PangoAttrFontDesc$/;"	s
+_PangoAttrInt	pango-attributes.h	/^struct _PangoAttrInt$/;"	s
+_PangoAttrLanguage	pango-attributes.h	/^struct _PangoAttrLanguage$/;"	s
+_PangoAttrShape	pango-attributes.h	/^struct _PangoAttrShape$/;"	s
+_PangoAttrSize	pango-attributes.h	/^struct _PangoAttrSize$/;"	s
+_PangoAttrString	pango-attributes.h	/^struct _PangoAttrString$/;"	s
+_PangoAttribute	pango-attributes.h	/^struct _PangoAttribute$/;"	s
+_PangoColor	pango-attributes.h	/^struct _PangoColor$/;"	s
+_PangoEngine	pango-engine.h	/^struct _PangoEngine$/;"	s
+_PangoEngineClass	pango-engine.h	/^struct _PangoEngineClass$/;"	s
+_PangoEngineInfo	pango-engine.h	/^struct _PangoEngineInfo$/;"	s
+_PangoEngineLang	pango-engine.h	/^struct _PangoEngineLang$/;"	s
+_PangoEngineLangClass	pango-engine.h	/^struct _PangoEngineLangClass$/;"	s
+_PangoEngineScriptInfo	pango-engine.h	/^struct _PangoEngineScriptInfo$/;"	s
+_PangoEngineShape	pango-engine.h	/^struct _PangoEngineShape$/;"	s
+_PangoEngineShapeClass	pango-engine.h	/^struct _PangoEngineShapeClass$/;"	s
+_PangoFcDecoder	pangofc-decoder.h	/^struct _PangoFcDecoder$/;"	s
+_PangoFcDecoderClass	pangofc-decoder.h	/^struct _PangoFcDecoderClass$/;"	s
+_PangoFcFont	pangofc-font.h	/^struct _PangoFcFont$/;"	s
+_PangoFcFontClass	pangofc-font.h	/^struct _PangoFcFontClass$/;"	s
+_PangoFcFontMap	pangofc-fontmap.h	/^struct _PangoFcFontMap$/;"	s
+_PangoFcFontMapClass	pangofc-fontmap.h	/^struct _PangoFcFontMapClass$/;"	s
+_PangoFont	pango-font.h	/^struct _PangoFont$/;"	s
+_PangoFontClass	pango-font.h	/^struct _PangoFontClass$/;"	s
+_PangoFontFace	pango-font.h	/^struct _PangoFontFace$/;"	s
+_PangoFontFaceClass	pango-font.h	/^struct _PangoFontFaceClass$/;"	s
+_PangoFontFamily	pango-font.h	/^struct _PangoFontFamily$/;"	s
+_PangoFontFamilyClass	pango-font.h	/^struct _PangoFontFamilyClass$/;"	s
+_PangoFontMap	pango-fontmap.h	/^struct _PangoFontMap$/;"	s
+_PangoFontMapClass	pango-fontmap.h	/^struct _PangoFontMapClass$/;"	s
+_PangoFontMetrics	pango-font.h	/^struct _PangoFontMetrics$/;"	s
+_PangoFontset	pango-fontset.h	/^struct _PangoFontset$/;"	s
+_PangoFontsetClass	pango-fontset.h	/^struct _PangoFontsetClass$/;"	s
+_PangoGlyphGeometry	pango-glyph.h	/^struct _PangoGlyphGeometry$/;"	s
+_PangoGlyphInfo	pango-glyph.h	/^struct _PangoGlyphInfo$/;"	s
+_PangoGlyphItem	pango-glyph-item.h	/^struct _PangoGlyphItem$/;"	s
+_PangoGlyphItemIter	pango-glyph-item.h	/^struct _PangoGlyphItemIter$/;"	s
+_PangoGlyphString	pango-glyph.h	/^struct _PangoGlyphString {$/;"	s
+_PangoGlyphVisAttr	pango-glyph.h	/^struct _PangoGlyphVisAttr$/;"	s
+_PangoIncludedModule	pango-modules.h	/^struct _PangoIncludedModule$/;"	s
+_PangoItem	pango-item.h	/^struct _PangoItem$/;"	s
+_PangoLayoutLine	pango-layout.h	/^struct _PangoLayoutLine$/;"	s
+_PangoLogAttr	pango-break.h	/^struct _PangoLogAttr$/;"	s
+_PangoMatrix	pango-matrix.h	/^struct _PangoMatrix$/;"	s
+_PangoOTFeatureMap	pango-ot.h	/^struct _PangoOTFeatureMap$/;"	s
+_PangoOTGlyph	pango-ot.h	/^struct _PangoOTGlyph$/;"	s
+_PangoOTRulesetDescription	pango-ot.h	/^struct _PangoOTRulesetDescription {$/;"	s
+_PangoRectangle	pango-types.h	/^struct _PangoRectangle$/;"	s
+_PangoRenderer	pango-renderer.h	/^struct _PangoRenderer$/;"	s
+_PangoRendererClass	pango-renderer.h	/^struct _PangoRendererClass$/;"	s
+_PangoXftRenderer	pangoxft-render.h	/^struct _PangoXftRenderer$/;"	s
+_PangoXftRendererClass	pangoxft-render.h	/^struct _PangoXftRendererClass$/;"	s
+_XFT_NO_COMPAT_	pangoxft-render.h	29;"	d
+__PANGOCAIRO_H__	pangocairo.h	23;"	d
+__PANGOFT2_H__	pangoft2.h	24;"	d
+__PANGOXFT_H__	pangoxft.h	24;"	d
+__PANGOXFT_RENDER_H__	pangoxft-render.h	23;"	d
+__PANGOX_H__	pangox.h	24;"	d
+__PANGO_ATTRIBUTES_H__	pango-attributes.h	23;"	d
+__PANGO_BIDI_TYPE_H__	pango-bidi-type.h	23;"	d
+__PANGO_BREAK_H__	pango-break.h	23;"	d
+__PANGO_CONTEXT_H__	pango-context.h	23;"	d
+__PANGO_COVERAGE_H__	pango-coverage.h	23;"	d
+__PANGO_DECODER_H_	pangofc-decoder.h	23;"	d
+__PANGO_ENGINE_H__	pango-engine.h	23;"	d
+__PANGO_ENUM_TYPES_H__	pango-enum-types.h	5;"	d
+__PANGO_FC_FONT_H__	pangofc-font.h	23;"	d
+__PANGO_FC_FONT_MAP_H__	pangofc-fontmap.h	23;"	d
+__PANGO_FONTMAP_H__	pango-fontmap.h	23;"	d
+__PANGO_FONTSET_H__	pango-fontset.h	23;"	d
+__PANGO_FONT_H__	pango-font.h	23;"	d
+__PANGO_GLYPH_H__	pango-glyph.h	23;"	d
+__PANGO_GLYPH_ITEM_H__	pango-glyph-item.h	23;"	d
+__PANGO_GRAVITY_H__	pango-gravity.h	23;"	d
+__PANGO_H__	pango.h	23;"	d
+__PANGO_ITEM_H__	pango-item.h	23;"	d
+__PANGO_LANGUAGE_H__	pango-language.h	23;"	d
+__PANGO_LAYOUT_H__	pango-layout.h	23;"	d
+__PANGO_MATRIX_H__	pango-matrix.h	23;"	d
+__PANGO_MODULES_H__	pango-modules.h	23;"	d
+__PANGO_OT_H__	pango-ot.h	23;"	d
+__PANGO_RENDERER_H_	pango-renderer.h	22;"	d
+__PANGO_SCRIPT_H__	pango-script.h	23;"	d
+__PANGO_TABS_H__	pango-tabs.h	23;"	d
+__PANGO_TYPES_H__	pango-types.h	23;"	d
+__PANGO_UTILS_H__	pango-utils.h	23;"	d
+_pango_reserved1	pango-font.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFontClass
+_pango_reserved1	pango-fontmap.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFontMapClass
+_pango_reserved1	pango-fontset.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFontsetClass
+_pango_reserved1	pangofc-decoder.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFcDecoderClass
+_pango_reserved1	pangofc-font.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFcFontClass
+_pango_reserved1	pangofc-fontmap.h	/^  void (*_pango_reserved1) (void);$/;"	m	struct:_PangoFcFontMapClass
+_pango_reserved2	pango-font.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFontClass
+_pango_reserved2	pango-font.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFontFamilyClass
+_pango_reserved2	pango-fontmap.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFontMapClass
+_pango_reserved2	pango-fontset.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFontsetClass
+_pango_reserved2	pango-renderer.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoRendererClass
+_pango_reserved2	pangofc-decoder.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFcDecoderClass
+_pango_reserved2	pangofc-font.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFcFontClass
+_pango_reserved2	pangofc-fontmap.h	/^  void (*_pango_reserved2) (void);$/;"	m	struct:_PangoFcFontMapClass
+_pango_reserved3	pango-font.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFontFaceClass
+_pango_reserved3	pango-font.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFontFamilyClass
+_pango_reserved3	pango-fontmap.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFontMapClass
+_pango_reserved3	pango-fontset.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFontsetClass
+_pango_reserved3	pango-renderer.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoRendererClass
+_pango_reserved3	pangofc-decoder.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFcDecoderClass
+_pango_reserved3	pangofc-font.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFcFontClass
+_pango_reserved3	pangofc-fontmap.h	/^  void (*_pango_reserved3) (void);$/;"	m	struct:_PangoFcFontMapClass
+_pango_reserved4	pango-font.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFontFaceClass
+_pango_reserved4	pango-font.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFontFamilyClass
+_pango_reserved4	pango-fontmap.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFontMapClass
+_pango_reserved4	pango-fontset.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFontsetClass
+_pango_reserved4	pango-renderer.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoRendererClass
+_pango_reserved4	pangofc-decoder.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFcDecoderClass
+_pango_reserved4	pangofc-font.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFcFontClass
+_pango_reserved4	pangofc-fontmap.h	/^  void (*_pango_reserved4) (void);$/;"	m	struct:_PangoFcFontMapClass
+absolute	pango-attributes.h	/^  guint absolute : 1;$/;"	m	struct:_PangoAttrSize
+active_count	pango-renderer.h	/^  int active_count;$/;"	m	struct:_PangoRenderer
+analysis	pango-item.h	/^  PangoAnalysis analysis;$/;"	m	struct:_PangoItem
+approximate_char_width	pango-font.h	/^  int approximate_char_width;$/;"	m	struct:_PangoFontMetrics
+approximate_digit_width	pango-font.h	/^  int approximate_digit_width;$/;"	m	struct:_PangoFontMetrics
+ascent	pango-font.h	/^  int ascent;$/;"	m	struct:_PangoFontMetrics
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrColor
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrFloat
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrFontDesc
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrInt
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrLanguage
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrShape
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrSize
+attr	pango-attributes.h	/^  PangoAttribute attr;$/;"	m	struct:_PangoAttrString
+attr	pango-glyph.h	/^  PangoGlyphVisAttr  attr;$/;"	m	struct:_PangoGlyphInfo
+backspace_deletes_character	pango-break.h	/^  guint backspace_deletes_character : 1;$/;"	m	struct:_PangoLogAttr
+begin	pango-renderer.h	/^  void (*begin) (PangoRenderer *renderer);$/;"	m	struct:_PangoRendererClass
+blue	pango-attributes.h	/^  guint16 blue;$/;"	m	struct:_PangoColor
+cluster	pango-ot.h	/^  guint    cluster;$/;"	m	struct:_PangoOTGlyph
+color	pango-attributes.h	/^  PangoColor color;$/;"	m	struct:_PangoAttrColor
+component	pango-ot.h	/^  gushort  component;$/;"	m	struct:_PangoOTGlyph
+composite_glyphs	pangoxft-render.h	/^  void (*composite_glyphs)     (PangoXftRenderer *xftrenderer,$/;"	m	struct:_PangoXftRendererClass
+composite_trapezoids	pangoxft-render.h	/^  void (*composite_trapezoids) (PangoXftRenderer *xftrenderer,$/;"	m	struct:_PangoXftRendererClass
+context_key_copy	pangofc-fontmap.h	/^  gpointer     (*context_key_copy)   (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+context_key_equal	pangofc-fontmap.h	/^  gboolean     (*context_key_equal)  (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+context_key_free	pangofc-fontmap.h	/^  void         (*context_key_free)   (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+context_key_get	pangofc-fontmap.h	/^  gconstpointer (*context_key_get)   (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+context_key_hash	pangofc-fontmap.h	/^  guint32      (*context_key_hash)   (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+copy	pango-attributes.h	/^  PangoAttribute * (*copy) (const PangoAttribute *attr);$/;"	m	struct:_PangoAttrClass
+copy_func	pango-attributes.h	/^  PangoAttrDataCopyFunc copy_func;$/;"	m	struct:_PangoAttrShape
+covers	pango-engine.h	/^  PangoCoverageLevel (*covers)   (PangoEngineShape *engine,$/;"	m	struct:_PangoEngineShapeClass
+create	pango-modules.h	/^  PangoEngine *(*create) (const char       *id);$/;"	m	struct:_PangoIncludedModule
+create_font	pangofc-fontmap.h	/^  PangoFcFont  *(*create_font)       (PangoFcFontMap             *fontmap,$/;"	m	struct:_PangoFcFontMapClass
+data	pango-attributes.h	/^  gpointer              data;$/;"	m	struct:_PangoAttrShape
+default_substitute	pangofc-fontmap.h	/^  void         (*default_substitute) (PangoFcFontMap   *fontmap,$/;"	m	struct:_PangoFcFontMapClass
+desc	pango-attributes.h	/^  PangoFontDescription *desc;$/;"	m	struct:_PangoAttrFontDesc
+descent	pango-font.h	/^  int descent;$/;"	m	struct:_PangoFontMetrics
+describe	pango-font.h	/^  PangoFontDescription * (*describe)       (PangoFontFace *face);$/;"	m	struct:_PangoFontFaceClass
+describe	pango-font.h	/^  PangoFontDescription *(*describe)           (PangoFont      *font);$/;"	m	struct:_PangoFontClass
+describe_absolute	pango-font.h	/^  PangoFontDescription *(*describe_absolute)  (PangoFont      *font);$/;"	m	struct:_PangoFontClass
+description	pangofc-font.h	/^  PangoFontDescription *description;$/;"	m	struct:_PangoFcFont
+destroy	pango-attributes.h	/^  void             (*destroy) (PangoAttribute *attr);$/;"	m	struct:_PangoAttrClass
+destroy_func	pango-attributes.h	/^  GDestroyNotify        destroy_func;$/;"	m	struct:_PangoAttrShape
+display	pangoxft-render.h	/^  Display *display;$/;"	m	struct:_PangoXftRenderer
+draw	pangoxft-render.h	/^  XftDraw *draw;$/;"	m	struct:_PangoXftRenderer
+draw_error_underline	pango-renderer.h	/^  void (*draw_error_underline) (PangoRenderer     *renderer,$/;"	m	struct:_PangoRendererClass
+draw_glyph	pango-renderer.h	/^  void (*draw_glyph) (PangoRenderer *renderer,$/;"	m	struct:_PangoRendererClass
+draw_glyph_item	pango-renderer.h	/^  void (*draw_glyph_item) (PangoRenderer     *renderer,$/;"	m	struct:_PangoRendererClass
+draw_glyphs	pango-renderer.h	/^  void (*draw_glyphs) (PangoRenderer     *renderer,$/;"	m	struct:_PangoRendererClass
+draw_rectangle	pango-renderer.h	/^  void (*draw_rectangle) (PangoRenderer     *renderer,$/;"	m	struct:_PangoRendererClass
+draw_shape	pango-renderer.h	/^  void (*draw_shape) (PangoRenderer  *renderer,$/;"	m	struct:_PangoRendererClass
+draw_trapezoid	pango-renderer.h	/^  void (*draw_trapezoid) (PangoRenderer  *renderer,$/;"	m	struct:_PangoRendererClass
+end	pango-renderer.h	/^  void (*end)   (PangoRenderer *renderer);$/;"	m	struct:_PangoRendererClass
+end_char	pango-glyph-item.h	/^  int end_char;$/;"	m	struct:_PangoGlyphItemIter
+end_glyph	pango-glyph-item.h	/^  int end_glyph;$/;"	m	struct:_PangoGlyphItemIter
+end_index	pango-attributes.h	/^  guint end_index;	\/* in bytes. The character at this index is not included *\/$/;"	m	struct:_PangoAttribute
+end_index	pango-glyph-item.h	/^  int end_index;$/;"	m	struct:_PangoGlyphItemIter
+engine_type	pango-engine.h	/^  const gchar *engine_type;$/;"	m	struct:_PangoEngineInfo
+equal	pango-attributes.h	/^  gboolean         (*equal) (const PangoAttribute *attr1, const PangoAttribute *attr2);$/;"	m	struct:_PangoAttrClass
+exit	pango-modules.h	/^  void (*exit) (void);$/;"	m	struct:_PangoIncludedModule
+extra_attrs	pango-item.h	/^  GSList *extra_attrs;$/;"	m	struct:_PangoAnalysis
+feature_name	pango-ot.h	/^  char     feature_name[5];$/;"	m	struct:_PangoOTFeatureMap
+find_shaper	pango-font.h	/^  PangoEngineShape *    (*find_shaper)        (PangoFont      *font,$/;"	m	struct:_PangoFontClass
+flags	pango-item.h	/^  guint8 flags;$/;"	m	struct:_PangoAnalysis
+font	pango-item.h	/^  PangoFont *font;$/;"	m	struct:_PangoAnalysis
+font_pattern	pangofc-font.h	/^  FcPattern *font_pattern;	    \/* fully resolved pattern *\/$/;"	m	struct:_PangoFcFont
+fontmap	pangofc-font.h	/^  PangoFontMap *fontmap;	    \/* associated map *\/$/;"	m	struct:_PangoFcFont
+fontset_key_substitute	pangofc-fontmap.h	/^  void         (*fontset_key_substitute)(PangoFcFontMap             *fontmap,$/;"	m	struct:_PangoFcFontMapClass
+foreach	pango-fontset.h	/^  void              (*foreach)      (PangoFontset           *fontset,$/;"	m	struct:_PangoFontsetClass
+geometry	pango-glyph.h	/^  PangoGlyphGeometry geometry;$/;"	m	struct:_PangoGlyphInfo
+get_charset	pangofc-decoder.h	/^  FcCharSet  *(*get_charset) (PangoFcDecoder *decoder,$/;"	m	struct:_PangoFcDecoderClass
+get_coverage	pango-font.h	/^  PangoCoverage *       (*get_coverage)       (PangoFont      *font,$/;"	m	struct:_PangoFontClass
+get_face_name	pango-font.h	/^  const char           * (*get_face_name)  (PangoFontFace *face);$/;"	m	struct:_PangoFontFaceClass
+get_font	pango-fontset.h	/^  PangoFont *       (*get_font)     (PangoFontset     *fontset,$/;"	m	struct:_PangoFontsetClass
+get_font_map	pango-font.h	/^  PangoFontMap *        (*get_font_map)       (PangoFont      *font);$/;"	m	struct:_PangoFontClass
+get_glyph	pangofc-decoder.h	/^  PangoGlyph  (*get_glyph)   (PangoFcDecoder *decoder,$/;"	m	struct:_PangoFcDecoderClass
+get_glyph	pangofc-font.h	/^  guint      (*get_glyph)         (PangoFcFont      *font,$/;"	m	struct:_PangoFcFontClass
+get_glyph_extents	pango-font.h	/^  void                  (*get_glyph_extents)  (PangoFont      *font,$/;"	m	struct:_PangoFontClass
+get_language	pango-fontset.h	/^  PangoLanguage *   (*get_language) (PangoFontset     *fontset);$/;"	m	struct:_PangoFontsetClass
+get_metrics	pango-font.h	/^  PangoFontMetrics *    (*get_metrics)        (PangoFont      *font,$/;"	m	struct:_PangoFontClass
+get_metrics	pango-fontset.h	/^  PangoFontMetrics *(*get_metrics)  (PangoFontset     *fontset);$/;"	m	struct:_PangoFontsetClass
+get_name	pango-font.h	/^  const char * (*get_name) (PangoFontFamily  *family);$/;"	m	struct:_PangoFontFamilyClass
+get_resolution	pangofc-fontmap.h	/^  double       (*get_resolution)     (PangoFcFontMap             *fcfontmap,$/;"	m	struct:_PangoFcFontMapClass
+get_unknown_glyph	pangofc-font.h	/^  PangoGlyph (*get_unknown_glyph) (PangoFcFont      *font,$/;"	m	struct:_PangoFcFontClass
+glyph	pango-glyph.h	/^  PangoGlyph    glyph;$/;"	m	struct:_PangoGlyphInfo
+glyph	pango-ot.h	/^  guint32  glyph;$/;"	m	struct:_PangoOTGlyph
+glyph_item	pango-glyph-item.h	/^  PangoGlyphItem *glyph_item;$/;"	m	struct:_PangoGlyphItemIter
+glyphs	pango-glyph-item.h	/^  PangoGlyphString *glyphs;$/;"	m	struct:_PangoGlyphItem
+glyphs	pango-glyph.h	/^  PangoGlyphInfo *glyphs;$/;"	m	struct:_PangoGlyphString
+gravity	pango-item.h	/^  guint8 gravity; \/* PangoGravity *\/$/;"	m	struct:_PangoAnalysis
+green	pango-attributes.h	/^  guint16 green;$/;"	m	struct:_PangoColor
+has_char	pangofc-font.h	/^  gboolean   (*has_char)          (PangoFcFont      *font,$/;"	m	struct:_PangoFcFontClass
+height	pango-types.h	/^  int height;$/;"	m	struct:_PangoRectangle
+id	pango-engine.h	/^  const gchar *id;$/;"	m	struct:_PangoEngineInfo
+init	pango-modules.h	/^  void (*init) (GTypeModule      *module);$/;"	m	struct:_PangoIncludedModule
+ink_rect	pango-attributes.h	/^  PangoRectangle ink_rect;$/;"	m	struct:_PangoAttrShape
+internal	pango-ot.h	/^  guint    internal;$/;"	m	struct:_PangoOTGlyph
+is_char_break	pango-break.h	/^  guint is_char_break : 1;      \/* Can break here when doing char wrap *\/$/;"	m	struct:_PangoLogAttr
+is_cluster_start	pango-glyph.h	/^  guint is_cluster_start : 1;$/;"	m	struct:_PangoGlyphVisAttr
+is_cursor_position	pango-break.h	/^  guint is_cursor_position : 1;$/;"	m	struct:_PangoLogAttr
+is_expandable_space	pango-break.h	/^  guint is_expandable_space : 1;$/;"	m	struct:_PangoLogAttr
+is_hinted	pangofc-font.h	/^  guint is_hinted : 1;$/;"	m	struct:_PangoFcFont
+is_line_break	pango-break.h	/^  guint is_line_break : 1;      \/* Can break line in front of character *\/$/;"	m	struct:_PangoLogAttr
+is_mandatory_break	pango-break.h	/^  guint is_mandatory_break : 1; \/* Must break line in front of character *\/$/;"	m	struct:_PangoLogAttr
+is_monospace	pango-font.h	/^  gboolean (*is_monospace) (PangoFontFamily *family);$/;"	m	struct:_PangoFontFamilyClass
+is_paragraph_start	pango-layout.h	/^  guint        is_paragraph_start : 1;  \/* TRUE if this is the first line of the paragraph *\/$/;"	m	struct:_PangoLayoutLine
+is_sentence_boundary	pango-break.h	/^  guint is_sentence_boundary : 1;$/;"	m	struct:_PangoLogAttr
+is_sentence_end	pango-break.h	/^  guint is_sentence_end : 1;    \/* first non-sentence char after a sentence *\/$/;"	m	struct:_PangoLogAttr
+is_sentence_start	pango-break.h	/^  guint is_sentence_start : 1;  \/* first character in a sentence *\/$/;"	m	struct:_PangoLogAttr
+is_synthesized	pango-font.h	/^  gboolean               (*is_synthesized) (PangoFontFace *face);$/;"	m	struct:_PangoFontFaceClass
+is_transformed	pangofc-font.h	/^  guint is_transformed : 1;$/;"	m	struct:_PangoFcFont
+is_white	pango-break.h	/^  guint is_white : 1;           \/* Whitespace character *\/$/;"	m	struct:_PangoLogAttr
+is_word_boundary	pango-break.h	/^  guint is_word_boundary : 1;	\/* is NOT in the middle of a word *\/$/;"	m	struct:_PangoLogAttr
+is_word_end	pango-break.h	/^  guint is_word_end   : 1;      \/* is first non-word char after a word *\/$/;"	m	struct:_PangoLogAttr
+is_word_start	pango-break.h	/^  guint is_word_start : 1;      \/* first character in a word *\/$/;"	m	struct:_PangoLogAttr
+item	pango-glyph-item.h	/^  PangoItem        *item;$/;"	m	struct:_PangoGlyphItem
+klass	pango-attributes.h	/^  const PangoAttrClass *klass;$/;"	m	struct:_PangoAttribute
+lang_engine	pango-item.h	/^  PangoEngineLang  *lang_engine;$/;"	m	struct:_PangoAnalysis
+langs	pango-engine.h	/^  const gchar *langs;$/;"	m	struct:_PangoEngineScriptInfo
+language	pango-item.h	/^  PangoLanguage *language;$/;"	m	struct:_PangoAnalysis
+language	pango-ot.h	/^  PangoLanguage            *language;$/;"	m	struct:_PangoOTRulesetDescription
+layout	pango-layout.h	/^  PangoLayout *layout;$/;"	m	struct:_PangoLayoutLine
+length	pango-item.h	/^  gint length;$/;"	m	struct:_PangoItem
+length	pango-layout.h	/^  gint         length;		\/* length of line in bytes *\/$/;"	m	struct:_PangoLayoutLine
+level	pango-item.h	/^  guint8 level;$/;"	m	struct:_PangoAnalysis
+ligID	pango-ot.h	/^  gushort  ligID;$/;"	m	struct:_PangoOTGlyph
+list	pango-modules.h	/^  void (*list) (PangoEngineInfo **engines,$/;"	m	struct:_PangoIncludedModule
+list_faces	pango-font.h	/^  void  (*list_faces)      (PangoFontFamily  *family,$/;"	m	struct:_PangoFontFamilyClass
+list_families	pango-fontmap.h	/^  void          (*list_families) (PangoFontMap               *fontmap,$/;"	m	struct:_PangoFontMapClass
+list_sizes	pango-font.h	/^  void                   (*list_sizes)     (PangoFontFace  *face,$/;"	m	struct:_PangoFontFaceClass
+load_font	pango-fontmap.h	/^  PangoFont *   (*load_font)     (PangoFontMap               *fontmap,$/;"	m	struct:_PangoFontMapClass
+load_fontset	pango-fontmap.h	/^  PangoFontset *(*load_fontset)  (PangoFontMap               *fontmap,$/;"	m	struct:_PangoFontMapClass
+lock_face	pangofc-font.h	/^  FT_Face    (*lock_face)         (PangoFcFont      *font);$/;"	m	struct:_PangoFcFontClass
+log_clusters	pango-glyph.h	/^  gint *log_clusters;$/;"	m	struct:_PangoGlyphString
+logical_rect	pango-attributes.h	/^  PangoRectangle logical_rect;$/;"	m	struct:_PangoAttrShape
+matrix	pango-renderer.h	/^  PangoMatrix *matrix;		\/* May be NULL *\/$/;"	m	struct:_PangoRenderer
+matrix	pangofc-font.h	/^  PangoMatrix matrix;		    \/* used internally *\/$/;"	m	struct:_PangoFcFont
+metrics_by_lang	pangofc-font.h	/^  GSList *metrics_by_lang;$/;"	m	struct:_PangoFcFont
+n_other_features	pango-ot.h	/^  guint                   n_other_features;$/;"	m	struct:_PangoOTRulesetDescription
+n_scripts	pango-engine.h	/^  gint n_scripts;$/;"	m	struct:_PangoEngineInfo
+n_static_gpos_features	pango-ot.h	/^  guint                   n_static_gpos_features;$/;"	m	struct:_PangoOTRulesetDescription
+n_static_gsub_features	pango-ot.h	/^  guint                   n_static_gsub_features;$/;"	m	struct:_PangoOTRulesetDescription
+new_font	pangofc-fontmap.h	/^  PangoFcFont  *(*new_font)          (PangoFcFontMap  *fontmap,$/;"	m	struct:_PangoFcFontMapClass
+num_chars	pango-item.h	/^  gint num_chars;$/;"	m	struct:_PangoItem
+num_glyphs	pango-glyph.h	/^  gint num_glyphs;$/;"	m	struct:_PangoGlyphString
+offset	pango-item.h	/^  gint offset;$/;"	m	struct:_PangoItem
+other_features	pango-ot.h	/^  const PangoOTFeatureMap  *other_features;$/;"	m	struct:_PangoOTRulesetDescription
+pango_alignment_get_type	pango-enum-types.h	/^GType pango_alignment_get_type (void);$/;"	p
+pango_attr_background_new	pango-attributes.h	/^PangoAttribute *pango_attr_background_new    (guint16                     red,$/;"	p
+pango_attr_fallback_new	pango-attributes.h	/^PangoAttribute *pango_attr_fallback_new      (gboolean                    enable_fallback);$/;"	p
+pango_attr_family_new	pango-attributes.h	/^PangoAttribute *pango_attr_family_new        (const char                 *family);$/;"	p
+pango_attr_font_desc_new	pango-attributes.h	/^PangoAttribute *pango_attr_font_desc_new     (const PangoFontDescription *desc);$/;"	p
+pango_attr_foreground_new	pango-attributes.h	/^PangoAttribute *pango_attr_foreground_new    (guint16                     red,$/;"	p
+pango_attr_gravity_hint_new	pango-attributes.h	/^PangoAttribute *pango_attr_gravity_hint_new (PangoGravityHint hint);$/;"	p
+pango_attr_gravity_new	pango-attributes.h	/^PangoAttribute *pango_attr_gravity_new      (PangoGravity     gravity);$/;"	p
+pango_attr_iterator_copy	pango-attributes.h	/^PangoAttrIterator *pango_attr_iterator_copy     (PangoAttrIterator     *iterator);$/;"	p
+pango_attr_iterator_destroy	pango-attributes.h	/^void               pango_attr_iterator_destroy  (PangoAttrIterator     *iterator);$/;"	p
+pango_attr_iterator_get	pango-attributes.h	/^PangoAttribute *   pango_attr_iterator_get      (PangoAttrIterator     *iterator,$/;"	p
+pango_attr_iterator_get_attrs	pango-attributes.h	/^GSList *          pango_attr_iterator_get_attrs (PangoAttrIterator     *iterator);$/;"	p
+pango_attr_iterator_get_font	pango-attributes.h	/^void               pango_attr_iterator_get_font (PangoAttrIterator     *iterator,$/;"	p
+pango_attr_iterator_next	pango-attributes.h	/^gboolean           pango_attr_iterator_next     (PangoAttrIterator     *iterator);$/;"	p
+pango_attr_iterator_range	pango-attributes.h	/^void               pango_attr_iterator_range    (PangoAttrIterator     *iterator,$/;"	p
+pango_attr_language_new	pango-attributes.h	/^PangoAttribute *pango_attr_language_new      (PangoLanguage              *language);$/;"	p
+pango_attr_letter_spacing_new	pango-attributes.h	/^PangoAttribute *pango_attr_letter_spacing_new (int                        letter_spacing);$/;"	p
+pango_attr_list_change	pango-attributes.h	/^void               pango_attr_list_change        (PangoAttrList  *list,$/;"	p
+pango_attr_list_copy	pango-attributes.h	/^PangoAttrList *    pango_attr_list_copy          (PangoAttrList  *list);$/;"	p
+pango_attr_list_filter	pango-attributes.h	/^PangoAttrList *pango_attr_list_filter (PangoAttrList       *list,$/;"	p
+pango_attr_list_get_iterator	pango-attributes.h	/^PangoAttrIterator *pango_attr_list_get_iterator  (PangoAttrList  *list);$/;"	p
+pango_attr_list_insert	pango-attributes.h	/^void               pango_attr_list_insert        (PangoAttrList  *list,$/;"	p
+pango_attr_list_insert_before	pango-attributes.h	/^void               pango_attr_list_insert_before (PangoAttrList  *list,$/;"	p
+pango_attr_list_new	pango-attributes.h	/^PangoAttrList *    pango_attr_list_new           (void);$/;"	p
+pango_attr_list_ref	pango-attributes.h	/^PangoAttrList *    pango_attr_list_ref           (PangoAttrList  *list);$/;"	p
+pango_attr_list_splice	pango-attributes.h	/^void               pango_attr_list_splice        (PangoAttrList  *list,$/;"	p
+pango_attr_list_unref	pango-attributes.h	/^void               pango_attr_list_unref         (PangoAttrList  *list);$/;"	p
+pango_attr_rise_new	pango-attributes.h	/^PangoAttribute *pango_attr_rise_new          (int                         rise);$/;"	p
+pango_attr_scale_new	pango-attributes.h	/^PangoAttribute *pango_attr_scale_new         (double                      scale_factor);$/;"	p
+pango_attr_shape_new	pango-attributes.h	/^PangoAttribute *pango_attr_shape_new           (const PangoRectangle       *ink_rect,$/;"	p
+pango_attr_shape_new_with_data	pango-attributes.h	/^PangoAttribute *pango_attr_shape_new_with_data (const PangoRectangle       *ink_rect,$/;"	p
+pango_attr_size_new	pango-attributes.h	/^PangoAttribute *pango_attr_size_new          (int                         size);$/;"	p
+pango_attr_size_new_absolute	pango-attributes.h	/^PangoAttribute *pango_attr_size_new_absolute (int                         size);$/;"	p
+pango_attr_stretch_new	pango-attributes.h	/^PangoAttribute *pango_attr_stretch_new       (PangoStretch                stretch);$/;"	p
+pango_attr_strikethrough_color_new	pango-attributes.h	/^PangoAttribute *pango_attr_strikethrough_color_new (guint16        red,$/;"	p
+pango_attr_strikethrough_new	pango-attributes.h	/^PangoAttribute *pango_attr_strikethrough_new       (gboolean       strikethrough);$/;"	p
+pango_attr_style_new	pango-attributes.h	/^PangoAttribute *pango_attr_style_new         (PangoStyle                  style);$/;"	p
+pango_attr_type_get_type	pango-enum-types.h	/^GType pango_attr_type_get_type (void);$/;"	p
+pango_attr_type_register	pango-attributes.h	/^PangoAttrType         pango_attr_type_register (const gchar        *name);$/;"	p
+pango_attr_underline_color_new	pango-attributes.h	/^PangoAttribute *pango_attr_underline_color_new     (guint16        red,$/;"	p
+pango_attr_underline_new	pango-attributes.h	/^PangoAttribute *pango_attr_underline_new           (PangoUnderline underline);$/;"	p
+pango_attr_variant_new	pango-attributes.h	/^PangoAttribute *pango_attr_variant_new       (PangoVariant                variant);$/;"	p
+pango_attr_weight_new	pango-attributes.h	/^PangoAttribute *pango_attr_weight_new        (PangoWeight                 weight);$/;"	p
+pango_attribute_copy	pango-attributes.h	/^PangoAttribute * pango_attribute_copy        (const PangoAttribute *attr);$/;"	p
+pango_attribute_destroy	pango-attributes.h	/^void             pango_attribute_destroy     (PangoAttribute       *attr);$/;"	p
+pango_attribute_init	pango-attributes.h	/^void             pango_attribute_init        (PangoAttribute       *attr,$/;"	p
+pango_bidi_type_get_type	pango-enum-types.h	/^GType pango_bidi_type_get_type (void);$/;"	p
+pango_break	pango-break.h	/^void pango_break (const gchar   *text,$/;"	p
+pango_cairo_context_get_font_options	pangocairo.h	/^const cairo_font_options_t *pango_cairo_context_get_font_options (PangoContext               *context);$/;"	p
+pango_cairo_context_get_resolution	pangocairo.h	/^double             pango_cairo_context_get_resolution     (PangoContext       *context);$/;"	p
+pango_cairo_context_get_shape_renderer	pangocairo.h	/^PangoCairoShapeRendererFunc pango_cairo_context_get_shape_renderer (PangoContext                *context,$/;"	p
+pango_cairo_context_set_font_options	pangocairo.h	/^void                        pango_cairo_context_set_font_options (PangoContext               *context,$/;"	p
+pango_cairo_context_set_resolution	pangocairo.h	/^void               pango_cairo_context_set_resolution     (PangoContext       *context,$/;"	p
+pango_cairo_context_set_shape_renderer	pangocairo.h	/^void                        pango_cairo_context_set_shape_renderer (PangoContext                *context,$/;"	p
+pango_cairo_create_context	pangocairo.h	/^PangoContext *pango_cairo_create_context (cairo_t   *cr);$/;"	p
+pango_cairo_create_layout	pangocairo.h	/^PangoLayout *pango_cairo_create_layout (cairo_t     *cr);$/;"	p
+pango_cairo_error_underline_path	pangocairo.h	/^void pango_cairo_error_underline_path (cairo_t       *cr,$/;"	p
+pango_cairo_font_get_scaled_font	pangocairo.h	/^cairo_scaled_font_t *pango_cairo_font_get_scaled_font (PangoCairoFont *font);$/;"	p
+pango_cairo_font_map_get_default	pangocairo.h	/^PangoFontMap *pango_cairo_font_map_get_default       (void);$/;"	p
+pango_cairo_font_map_get_font_type	pangocairo.h	/^cairo_font_type_t pango_cairo_font_map_get_font_type (PangoCairoFontMap *fontmap);$/;"	p
+pango_cairo_font_map_get_resolution	pangocairo.h	/^double        pango_cairo_font_map_get_resolution (PangoCairoFontMap *fontmap);$/;"	p
+pango_cairo_font_map_new	pangocairo.h	/^PangoFontMap *pango_cairo_font_map_new               (void);$/;"	p
+pango_cairo_font_map_new_for_font_type	pangocairo.h	/^PangoFontMap *pango_cairo_font_map_new_for_font_type (cairo_font_type_t fonttype);$/;"	p
+pango_cairo_font_map_set_default	pangocairo.h	/^void          pango_cairo_font_map_set_default       (PangoCairoFontMap *fontmap);$/;"	p
+pango_cairo_font_map_set_resolution	pangocairo.h	/^void          pango_cairo_font_map_set_resolution (PangoCairoFontMap *fontmap,$/;"	p
+pango_cairo_glyph_string_path	pangocairo.h	/^void pango_cairo_glyph_string_path (cairo_t          *cr,$/;"	p
+pango_cairo_layout_line_path	pangocairo.h	/^void pango_cairo_layout_line_path  (cairo_t          *cr,$/;"	p
+pango_cairo_layout_path	pangocairo.h	/^void pango_cairo_layout_path       (cairo_t          *cr,$/;"	p
+pango_cairo_show_error_underline	pangocairo.h	/^void pango_cairo_show_error_underline (cairo_t       *cr,$/;"	p
+pango_cairo_show_glyph_item	pangocairo.h	/^void pango_cairo_show_glyph_item   (cairo_t          *cr,$/;"	p
+pango_cairo_show_glyph_string	pangocairo.h	/^void pango_cairo_show_glyph_string (cairo_t          *cr,$/;"	p
+pango_cairo_show_layout	pangocairo.h	/^void pango_cairo_show_layout       (cairo_t          *cr,$/;"	p
+pango_cairo_show_layout_line	pangocairo.h	/^void pango_cairo_show_layout_line  (cairo_t          *cr,$/;"	p
+pango_cairo_update_context	pangocairo.h	/^void         pango_cairo_update_context (cairo_t      *cr,$/;"	p
+pango_cairo_update_layout	pangocairo.h	/^void         pango_cairo_update_layout (cairo_t     *cr,$/;"	p
+pango_color_copy	pango-attributes.h	/^PangoColor *pango_color_copy     (const PangoColor *src);$/;"	p
+pango_color_free	pango-attributes.h	/^void        pango_color_free     (PangoColor       *color);$/;"	p
+pango_color_parse	pango-attributes.h	/^gboolean    pango_color_parse    (PangoColor       *color,$/;"	p
+pango_color_to_string	pango-attributes.h	/^gchar      *pango_color_to_string(const PangoColor *color);$/;"	p
+pango_config_key_get	pango-utils.h	/^char *   pango_config_key_get (const char  *key);$/;"	p
+pango_context_get_base_dir	pango-context.h	/^PangoDirection            pango_context_get_base_dir         (PangoContext               *context);$/;"	p
+pango_context_get_base_gravity	pango-context.h	/^PangoGravity              pango_context_get_base_gravity     (PangoContext               *context);$/;"	p
+pango_context_get_font_description	pango-context.h	/^PangoFontDescription *    pango_context_get_font_description (PangoContext               *context);$/;"	p
+pango_context_get_font_map	pango-context.h	/^PangoFontMap *pango_context_get_font_map  (PangoContext                 *context);$/;"	p
+pango_context_get_gravity	pango-context.h	/^PangoGravity              pango_context_get_gravity          (PangoContext               *context);$/;"	p
+pango_context_get_gravity_hint	pango-context.h	/^PangoGravityHint          pango_context_get_gravity_hint     (PangoContext               *context);$/;"	p
+pango_context_get_language	pango-context.h	/^PangoLanguage            *pango_context_get_language         (PangoContext               *context);$/;"	p
+pango_context_get_matrix	pango-context.h	/^const PangoMatrix *       pango_context_get_matrix           (PangoContext      *context);$/;"	p
+pango_context_get_metrics	pango-context.h	/^PangoFontMetrics *pango_context_get_metrics   (PangoContext                 *context,$/;"	p
+pango_context_list_families	pango-context.h	/^void          pango_context_list_families (PangoContext                 *context,$/;"	p
+pango_context_load_font	pango-context.h	/^PangoFont *   pango_context_load_font     (PangoContext                 *context,$/;"	p
+pango_context_load_fontset	pango-context.h	/^PangoFontset *pango_context_load_fontset  (PangoContext                 *context,$/;"	p
+pango_context_new	pango-context.h	/^PangoContext *pango_context_new           (void);$/;"	p
+pango_context_set_base_dir	pango-context.h	/^void                      pango_context_set_base_dir         (PangoContext               *context,$/;"	p
+pango_context_set_base_gravity	pango-context.h	/^void                      pango_context_set_base_gravity     (PangoContext               *context,$/;"	p
+pango_context_set_font_description	pango-context.h	/^void                      pango_context_set_font_description (PangoContext               *context,$/;"	p
+pango_context_set_font_map	pango-context.h	/^void          pango_context_set_font_map  (PangoContext                 *context,$/;"	p
+pango_context_set_gravity_hint	pango-context.h	/^void                      pango_context_set_gravity_hint     (PangoContext               *context,$/;"	p
+pango_context_set_language	pango-context.h	/^void                      pango_context_set_language         (PangoContext               *context,$/;"	p
+pango_context_set_matrix	pango-context.h	/^void                      pango_context_set_matrix           (PangoContext      *context,$/;"	p
+pango_coverage_copy	pango-coverage.h	/^PangoCoverage *    pango_coverage_copy    (PangoCoverage      *coverage);$/;"	p
+pango_coverage_from_bytes	pango-coverage.h	/^PangoCoverage *pango_coverage_from_bytes (guchar         *bytes,$/;"	p
+pango_coverage_get	pango-coverage.h	/^PangoCoverageLevel pango_coverage_get     (PangoCoverage      *coverage,$/;"	p
+pango_coverage_level_get_type	pango-enum-types.h	/^GType pango_coverage_level_get_type (void);$/;"	p
+pango_coverage_max	pango-coverage.h	/^void               pango_coverage_max     (PangoCoverage      *coverage,$/;"	p
+pango_coverage_new	pango-coverage.h	/^PangoCoverage *    pango_coverage_new     (void);$/;"	p
+pango_coverage_ref	pango-coverage.h	/^PangoCoverage *    pango_coverage_ref     (PangoCoverage      *coverage);$/;"	p
+pango_coverage_set	pango-coverage.h	/^void               pango_coverage_set     (PangoCoverage      *coverage,$/;"	p
+pango_coverage_to_bytes	pango-coverage.h	/^void           pango_coverage_to_bytes   (PangoCoverage  *coverage,$/;"	p
+pango_coverage_unref	pango-coverage.h	/^void               pango_coverage_unref   (PangoCoverage      *coverage);$/;"	p
+pango_default_break	pango-break.h	/^void pango_default_break (const gchar   *text,$/;"	p
+pango_direction_get_type	pango-enum-types.h	/^GType pango_direction_get_type (void);$/;"	p
+pango_ellipsize_mode_get_type	pango-enum-types.h	/^GType pango_ellipsize_mode_get_type (void);$/;"	p
+pango_extents_to_pixels	pango-types.h	/^void pango_extents_to_pixels (PangoRectangle *inclusive,$/;"	p
+pango_fc_decoder_get_charset	pangofc-decoder.h	/^FcCharSet *pango_fc_decoder_get_charset (PangoFcDecoder *decoder,$/;"	p
+pango_fc_decoder_get_glyph	pangofc-decoder.h	/^PangoGlyph pango_fc_decoder_get_glyph   (PangoFcDecoder *decoder,$/;"	p
+pango_fc_font_description_from_pattern	pangofc-fontmap.h	/^PangoFontDescription *pango_fc_font_description_from_pattern (FcPattern *pattern,$/;"	p
+pango_fc_font_get_glyph	pangofc-font.h	/^guint      pango_fc_font_get_glyph         (PangoFcFont      *font,$/;"	p
+pango_fc_font_has_char	pangofc-font.h	/^gboolean   pango_fc_font_has_char          (PangoFcFont      *font,$/;"	p
+pango_fc_font_kern_glyphs	pangofc-font.h	/^void       pango_fc_font_kern_glyphs       (PangoFcFont      *font,$/;"	v
+pango_fc_font_key_get_context_key	pangofc-fontmap.h	/^gpointer           pango_fc_font_key_get_context_key (const PangoFcFontKey *key);$/;"	p
+pango_fc_font_key_get_matrix	pangofc-fontmap.h	/^const PangoMatrix *pango_fc_font_key_get_matrix      (const PangoFcFontKey *key);$/;"	p
+pango_fc_font_key_get_pattern	pangofc-fontmap.h	/^const FcPattern   *pango_fc_font_key_get_pattern     (const PangoFcFontKey *key);$/;"	p
+pango_fc_font_lock_face	pangofc-font.h	/^FT_Face    pango_fc_font_lock_face         (PangoFcFont      *font);$/;"	p
+pango_fc_font_map_add_decoder_find_func	pangofc-fontmap.h	/^void pango_fc_font_map_add_decoder_find_func (PangoFcFontMap        *fcfontmap,$/;"	p
+pango_fc_font_map_cache_clear	pangofc-fontmap.h	/^void           pango_fc_font_map_cache_clear    (PangoFcFontMap *fcfontmap);$/;"	p
+pango_fc_font_map_find_decoder	pangofc-fontmap.h	/^PangoFcDecoder *pango_fc_font_map_find_decoder (PangoFcFontMap *fcfontmap,$/;"	p
+pango_fc_font_map_shutdown	pangofc-fontmap.h	/^void           pango_fc_font_map_shutdown       (PangoFcFontMap *fcfontmap);$/;"	v
+pango_fc_font_unlock_face	pangofc-font.h	/^void       pango_fc_font_unlock_face       (PangoFcFont      *font);$/;"	p
+pango_fc_fontset_key_get_absolute_size	pangofc-fontmap.h	/^double                      pango_fc_fontset_key_get_absolute_size (const PangoFcFontsetKey *key);$/;"	p
+pango_fc_fontset_key_get_context_key	pangofc-fontmap.h	/^gpointer                    pango_fc_fontset_key_get_context_key   (const PangoFcFontsetKey *key);$/;"	p
+pango_fc_fontset_key_get_description	pangofc-fontmap.h	/^const PangoFontDescription *pango_fc_fontset_key_get_description   (const PangoFcFontsetKey *key);$/;"	p
+pango_fc_fontset_key_get_language	pangofc-fontmap.h	/^PangoLanguage              *pango_fc_fontset_key_get_language      (const PangoFcFontsetKey *key);$/;"	p
+pango_fc_fontset_key_get_matrix	pangofc-fontmap.h	/^const PangoMatrix          *pango_fc_fontset_key_get_matrix        (const PangoFcFontsetKey *key);$/;"	p
+pango_fc_fontset_key_get_resolution	pangofc-fontmap.h	/^double                      pango_fc_fontset_key_get_resolution    (const PangoFcFontsetKey *key);$/;"	p
+pango_find_base_dir	pango-bidi-type.h	/^PangoDirection pango_find_base_dir          (const gchar *text,$/;"	p
+pango_find_map	pango-modules.h	/^PangoMap *     pango_find_map        (PangoLanguage       *language,$/;"	p
+pango_find_paragraph_boundary	pango-break.h	/^void pango_find_paragraph_boundary (const gchar *text,$/;"	p
+pango_font_describe	pango-font.h	/^PangoFontDescription *pango_font_describe          (PangoFont        *font);$/;"	p
+pango_font_describe_with_absolute_size	pango-font.h	/^PangoFontDescription *pango_font_describe_with_absolute_size (PangoFont        *font);$/;"	p
+pango_font_description_copy	pango-font.h	/^PangoFontDescription *pango_font_description_copy        (const PangoFontDescription  *desc);$/;"	p
+pango_font_description_copy_static	pango-font.h	/^PangoFontDescription *pango_font_description_copy_static (const PangoFontDescription  *desc);$/;"	p
+pango_font_description_free	pango-font.h	/^void                  pango_font_description_free        (PangoFontDescription        *desc);$/;"	p
+pango_font_description_from_string	pango-font.h	/^PangoFontDescription *pango_font_description_from_string (const char                  *str);$/;"	p
+pango_font_description_merge	pango-font.h	/^void pango_font_description_merge        (PangoFontDescription       *desc,$/;"	p
+pango_font_description_merge_static	pango-font.h	/^void pango_font_description_merge_static (PangoFontDescription       *desc,$/;"	p
+pango_font_description_new	pango-font.h	/^PangoFontDescription *pango_font_description_new         (void);$/;"	p
+pango_font_description_set_absolute_size	pango-font.h	/^void                 pango_font_description_set_absolute_size (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_family	pango-font.h	/^void                 pango_font_description_set_family        (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_family_static	pango-font.h	/^void                 pango_font_description_set_family_static (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_gravity	pango-font.h	/^void                 pango_font_description_set_gravity       (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_size	pango-font.h	/^void                 pango_font_description_set_size          (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_stretch	pango-font.h	/^void                 pango_font_description_set_stretch       (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_style	pango-font.h	/^void                 pango_font_description_set_style         (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_variant	pango-font.h	/^void                 pango_font_description_set_variant       (PangoFontDescription *desc,$/;"	p
+pango_font_description_set_weight	pango-font.h	/^void                 pango_font_description_set_weight        (PangoFontDescription *desc,$/;"	p
+pango_font_description_to_filename	pango-font.h	/^char *                pango_font_description_to_filename (const PangoFontDescription  *desc);$/;"	p
+pango_font_description_to_string	pango-font.h	/^char *                pango_font_description_to_string   (const PangoFontDescription  *desc);$/;"	p
+pango_font_description_unset_fields	pango-font.h	/^void          pango_font_description_unset_fields   (PangoFontDescription       *desc,$/;"	p
+pango_font_descriptions_free	pango-font.h	/^void                  pango_font_descriptions_free       (PangoFontDescription       **descs,$/;"	p
+pango_font_face_describe	pango-font.h	/^PangoFontDescription *pango_font_face_describe       (PangoFontFace  *face);$/;"	p
+pango_font_face_list_sizes	pango-font.h	/^void                  pango_font_face_list_sizes     (PangoFontFace  *face,$/;"	p
+pango_font_family_list_faces	pango-font.h	/^void                 pango_font_family_list_faces (PangoFontFamily  *family,$/;"	p
+pango_font_find_shaper	pango-font.h	/^PangoEngineShape *    pango_font_find_shaper       (PangoFont        *font,$/;"	p
+pango_font_get_coverage	pango-font.h	/^PangoCoverage *       pango_font_get_coverage      (PangoFont        *font,$/;"	p
+pango_font_get_font_map	pango-font.h	/^PangoFontMap         *pango_font_get_font_map      (PangoFont        *font);$/;"	p
+pango_font_get_glyph_extents	pango-font.h	/^void                  pango_font_get_glyph_extents (PangoFont        *font,$/;"	p
+pango_font_get_metrics	pango-font.h	/^PangoFontMetrics *    pango_font_get_metrics       (PangoFont        *font,$/;"	p
+pango_font_map_create_context	pango-fontmap.h	/^PangoContext * pango_font_map_create_context (PangoFontMap               *fontmap);$/;"	p
+pango_font_map_get_shape_engine_type	pango-fontmap.h	/^const char   *pango_font_map_get_shape_engine_type (PangoFontMap *fontmap);$/;"	p
+pango_font_map_list_families	pango-fontmap.h	/^void          pango_font_map_list_families (PangoFontMap                 *fontmap,$/;"	p
+pango_font_map_load_font	pango-fontmap.h	/^PangoFont *   pango_font_map_load_font     (PangoFontMap                 *fontmap,$/;"	p
+pango_font_map_load_fontset	pango-fontmap.h	/^PangoFontset *pango_font_map_load_fontset  (PangoFontMap                 *fontmap,$/;"	p
+pango_font_mask_get_type	pango-enum-types.h	/^GType pango_font_mask_get_type (void);$/;"	p
+pango_font_metrics_new	pango-font.h	/^PangoFontMetrics *pango_font_metrics_new (void);$/;"	p
+pango_font_metrics_ref	pango-font.h	/^PangoFontMetrics *pango_font_metrics_ref                         (PangoFontMetrics *metrics);$/;"	p
+pango_font_metrics_unref	pango-font.h	/^void              pango_font_metrics_unref                       (PangoFontMetrics *metrics);$/;"	p
+pango_fontset_foreach	pango-fontset.h	/^void              pango_fontset_foreach     (PangoFontset           *fontset,$/;"	p
+pango_fontset_get_font	pango-fontset.h	/^PangoFont *       pango_fontset_get_font    (PangoFontset           *fontset,$/;"	p
+pango_fontset_get_metrics	pango-fontset.h	/^PangoFontMetrics *pango_fontset_get_metrics (PangoFontset           *fontset);$/;"	p
+pango_fontset_simple_append	pango-fontset.h	/^void                 pango_fontset_simple_append (PangoFontsetSimple *fontset,$/;"	p
+pango_fontset_simple_new	pango-fontset.h	/^PangoFontsetSimple * pango_fontset_simple_new    (PangoLanguage      *language);$/;"	p
+pango_fontset_simple_size	pango-fontset.h	/^int                  pango_fontset_simple_size   (PangoFontsetSimple *fontset);$/;"	p
+pango_ft2_font_get_coverage	pangoft2.h	/^PangoCoverage *pango_ft2_font_get_coverage (PangoFont       *font,$/;"	v
+pango_ft2_font_get_kerning	pangoft2.h	/^int            pango_ft2_font_get_kerning  (PangoFont       *font,$/;"	v
+pango_ft2_font_map_new	pangoft2.h	/^PangoFontMap *pango_ft2_font_map_new                    (void);$/;"	p
+pango_ft2_font_map_set_default_substitute	pangoft2.h	/^void          pango_ft2_font_map_set_default_substitute (PangoFT2FontMap        *fontmap,$/;"	p
+pango_ft2_font_map_set_resolution	pangoft2.h	/^void          pango_ft2_font_map_set_resolution         (PangoFT2FontMap        *fontmap,$/;"	p
+pango_ft2_font_map_substitute_changed	pangoft2.h	/^void          pango_ft2_font_map_substitute_changed     (PangoFT2FontMap         *fontmap);$/;"	p
+pango_ft2_get_context	pangoft2.h	/^PangoContext      *pango_ft2_get_context          (double dpi_x,$/;"	v
+pango_ft2_render	pangoft2.h	/^void pango_ft2_render             (FT_Bitmap         *bitmap,$/;"	p
+pango_ft2_render_layout	pangoft2.h	/^void pango_ft2_render_layout               (FT_Bitmap        *bitmap,$/;"	p
+pango_ft2_render_layout_line	pangoft2.h	/^void pango_ft2_render_layout_line          (FT_Bitmap        *bitmap,$/;"	p
+pango_ft2_render_layout_line_subpixel	pangoft2.h	/^void pango_ft2_render_layout_line_subpixel (FT_Bitmap        *bitmap,$/;"	p
+pango_ft2_render_layout_subpixel	pangoft2.h	/^void pango_ft2_render_layout_subpixel      (FT_Bitmap        *bitmap,$/;"	p
+pango_ft2_render_transformed	pangoft2.h	/^void pango_ft2_render_transformed (FT_Bitmap         *bitmap,$/;"	p
+pango_ft2_shutdown_display	pangoft2.h	/^void               pango_ft2_shutdown_display     (void);$/;"	v
+pango_get_log_attrs	pango-break.h	/^void pango_get_log_attrs (const char    *text,$/;"	p
+pango_glyph_item_apply_attrs	pango-glyph-item.h	/^GSList *        pango_glyph_item_apply_attrs  (PangoGlyphItem *glyph_item,$/;"	p
+pango_glyph_item_copy	pango-glyph-item.h	/^PangoGlyphItem *pango_glyph_item_copy         (PangoGlyphItem *orig);$/;"	p
+pango_glyph_item_free	pango-glyph-item.h	/^void            pango_glyph_item_free         (PangoGlyphItem *glyph_item);$/;"	p
+pango_glyph_item_get_logical_widths	pango-glyph-item.h	/^void 	  pango_glyph_item_get_logical_widths (PangoGlyphItem *glyph_item,$/;"	p
+pango_glyph_item_iter_copy	pango-glyph-item.h	/^PangoGlyphItemIter *pango_glyph_item_iter_copy (PangoGlyphItemIter *orig);$/;"	p
+pango_glyph_item_iter_free	pango-glyph-item.h	/^void                pango_glyph_item_iter_free (PangoGlyphItemIter *iter);$/;"	p
+pango_glyph_item_iter_init_end	pango-glyph-item.h	/^gboolean pango_glyph_item_iter_init_end     (PangoGlyphItemIter *iter,$/;"	p
+pango_glyph_item_iter_init_start	pango-glyph-item.h	/^gboolean pango_glyph_item_iter_init_start   (PangoGlyphItemIter *iter,$/;"	p
+pango_glyph_item_iter_next_cluster	pango-glyph-item.h	/^gboolean pango_glyph_item_iter_next_cluster (PangoGlyphItemIter *iter);$/;"	p
+pango_glyph_item_iter_prev_cluster	pango-glyph-item.h	/^gboolean pango_glyph_item_iter_prev_cluster (PangoGlyphItemIter *iter);$/;"	p
+pango_glyph_item_letter_space	pango-glyph-item.h	/^void            pango_glyph_item_letter_space (PangoGlyphItem *glyph_item,$/;"	p
+pango_glyph_item_split	pango-glyph-item.h	/^PangoGlyphItem *pango_glyph_item_split        (PangoGlyphItem *orig,$/;"	p
+pango_glyph_string_copy	pango-glyph.h	/^PangoGlyphString *pango_glyph_string_copy     (PangoGlyphString *string);$/;"	p
+pango_glyph_string_extents	pango-glyph.h	/^void              pango_glyph_string_extents  (PangoGlyphString *glyphs,$/;"	p
+pango_glyph_string_extents_range	pango-glyph.h	/^void              pango_glyph_string_extents_range  (PangoGlyphString *glyphs,$/;"	p
+pango_glyph_string_free	pango-glyph.h	/^void              pango_glyph_string_free     (PangoGlyphString *string);$/;"	p
+pango_glyph_string_get_logical_widths	pango-glyph.h	/^void pango_glyph_string_get_logical_widths (PangoGlyphString *glyphs,$/;"	p
+pango_glyph_string_get_width	pango-glyph.h	/^int               pango_glyph_string_get_width(PangoGlyphString *glyphs);$/;"	p
+pango_glyph_string_index_to_x	pango-glyph.h	/^void pango_glyph_string_index_to_x (PangoGlyphString *glyphs,$/;"	p
+pango_glyph_string_new	pango-glyph.h	/^PangoGlyphString *pango_glyph_string_new      (void);$/;"	p
+pango_glyph_string_set_size	pango-glyph.h	/^void              pango_glyph_string_set_size (PangoGlyphString *string,$/;"	p
+pango_glyph_string_x_to_index	pango-glyph.h	/^void pango_glyph_string_x_to_index (PangoGlyphString *glyphs,$/;"	p
+pango_gravity_get_type	pango-enum-types.h	/^GType pango_gravity_get_type (void);$/;"	p
+pango_gravity_hint_get_type	pango-enum-types.h	/^GType pango_gravity_hint_get_type (void);$/;"	p
+pango_item_copy	pango-item.h	/^PangoItem *pango_item_copy  (PangoItem  *item);$/;"	p
+pango_item_free	pango-item.h	/^void       pango_item_free  (PangoItem  *item);$/;"	p
+pango_item_new	pango-item.h	/^PangoItem *pango_item_new   (void);$/;"	p
+pango_item_split	pango-item.h	/^PangoItem *pango_item_split (PangoItem  *orig,$/;"	p
+pango_itemize	pango-context.h	/^GList *pango_itemize                (PangoContext      *context,$/;"	p
+pango_itemize_with_base_dir	pango-context.h	/^GList *pango_itemize_with_base_dir  (PangoContext      *context,$/;"	p
+pango_language_from_string	pango-language.h	/^PangoLanguage *pango_language_from_string (const char *language);$/;"	p
+pango_language_get_scripts	pango-language.h	/^const PangoScript          *pango_language_get_scripts	   (PangoLanguage *language,$/;"	p
+pango_language_to_string	pango-language.h	39;"	d
+pango_layout_context_changed	pango-layout.h	/^void     pango_layout_context_changed (PangoLayout    *layout);$/;"	p
+pango_layout_copy	pango-layout.h	/^PangoLayout *pango_layout_copy           (PangoLayout    *src);$/;"	p
+pango_layout_get_alignment	pango-layout.h	/^PangoAlignment pango_layout_get_alignment        (PangoLayout                *layout);$/;"	p
+pango_layout_get_attributes	pango-layout.h	/^PangoAttrList *pango_layout_get_attributes (PangoLayout    *layout);$/;"	p
+pango_layout_get_auto_dir	pango-layout.h	/^gboolean       pango_layout_get_auto_dir         (PangoLayout                *layout);$/;"	p
+pango_layout_get_baseline	pango-layout.h	/^int      pango_layout_get_baseline         (PangoLayout    *layout);$/;"	p
+pango_layout_get_character_count	pango-layout.h	/^gint           pango_layout_get_character_count (PangoLayout *layout);$/;"	p
+pango_layout_get_context	pango-layout.h	/^PangoContext  *pango_layout_get_context    (PangoLayout    *layout);$/;"	p
+pango_layout_get_cursor_pos	pango-layout.h	/^void     pango_layout_get_cursor_pos       (PangoLayout    *layout,$/;"	p
+pango_layout_get_ellipsize	pango-layout.h	/^PangoEllipsizeMode pango_layout_get_ellipsize (PangoLayout        *layout);$/;"	p
+pango_layout_get_extents	pango-layout.h	/^void     pango_layout_get_extents          (PangoLayout    *layout,$/;"	p
+pango_layout_get_font_description	pango-layout.h	/^const PangoFontDescription *pango_layout_get_font_description (PangoLayout *layout);$/;"	p
+pango_layout_get_height	pango-layout.h	/^int            pango_layout_get_height           (PangoLayout                *layout);$/;"	p
+pango_layout_get_indent	pango-layout.h	/^int            pango_layout_get_indent           (PangoLayout                *layout);$/;"	p
+pango_layout_get_iter	pango-layout.h	/^PangoLayoutIter *pango_layout_get_iter  (PangoLayout     *layout);$/;"	p
+pango_layout_get_justify	pango-layout.h	/^gboolean       pango_layout_get_justify          (PangoLayout                *layout);$/;"	p
+pango_layout_get_line	pango-layout.h	/^PangoLayoutLine *pango_layout_get_line             (PangoLayout    *layout,$/;"	p
+pango_layout_get_line_count	pango-layout.h	/^int              pango_layout_get_line_count       (PangoLayout    *layout);$/;"	p
+pango_layout_get_line_readonly	pango-layout.h	/^PangoLayoutLine *pango_layout_get_line_readonly    (PangoLayout    *layout,$/;"	p
+pango_layout_get_lines	pango-layout.h	/^GSList *         pango_layout_get_lines            (PangoLayout    *layout);$/;"	p
+pango_layout_get_lines_readonly	pango-layout.h	/^GSList *         pango_layout_get_lines_readonly   (PangoLayout    *layout);$/;"	p
+pango_layout_get_log_attrs	pango-layout.h	/^void     pango_layout_get_log_attrs (PangoLayout    *layout,$/;"	p
+pango_layout_get_log_attrs_readonly	pango-layout.h	/^const PangoLogAttr *pango_layout_get_log_attrs_readonly (PangoLayout *layout,$/;"	p
+pango_layout_get_pixel_extents	pango-layout.h	/^void     pango_layout_get_pixel_extents    (PangoLayout    *layout,$/;"	p
+pango_layout_get_pixel_size	pango-layout.h	/^void     pango_layout_get_pixel_size       (PangoLayout    *layout,$/;"	p
+pango_layout_get_single_paragraph_mode	pango-layout.h	/^gboolean       pango_layout_get_single_paragraph_mode (PangoLayout                *layout);$/;"	p
+pango_layout_get_size	pango-layout.h	/^void     pango_layout_get_size             (PangoLayout    *layout,$/;"	p
+pango_layout_get_spacing	pango-layout.h	/^int            pango_layout_get_spacing          (PangoLayout                *layout);$/;"	p
+pango_layout_get_tabs	pango-layout.h	/^PangoTabArray* pango_layout_get_tabs             (PangoLayout                *layout);$/;"	p
+pango_layout_get_text	pango-layout.h	/^const char    *pango_layout_get_text       (PangoLayout    *layout);$/;"	p
+pango_layout_get_unknown_glyphs_count	pango-layout.h	/^int      pango_layout_get_unknown_glyphs_count (PangoLayout    *layout);$/;"	p
+pango_layout_get_width	pango-layout.h	/^int            pango_layout_get_width            (PangoLayout                *layout);$/;"	p
+pango_layout_get_wrap	pango-layout.h	/^PangoWrapMode  pango_layout_get_wrap             (PangoLayout                *layout);$/;"	p
+pango_layout_index_to_line_x	pango-layout.h	/^void     pango_layout_index_to_line_x      (PangoLayout    *layout,$/;"	p
+pango_layout_index_to_pos	pango-layout.h	/^void     pango_layout_index_to_pos         (PangoLayout    *layout,$/;"	p
+pango_layout_is_ellipsized	pango-layout.h	/^gboolean           pango_layout_is_ellipsized (PangoLayout        *layout);$/;"	p
+pango_layout_is_wrapped	pango-layout.h	/^gboolean       pango_layout_is_wrapped           (PangoLayout                *layout);$/;"	p
+pango_layout_iter_at_last_line	pango-layout.h	/^gboolean         pango_layout_iter_at_last_line (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_copy	pango-layout.h	/^PangoLayoutIter *pango_layout_iter_copy (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_free	pango-layout.h	/^void             pango_layout_iter_free (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_baseline	pango-layout.h	/^int  pango_layout_iter_get_baseline        (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_char_extents	pango-layout.h	/^void pango_layout_iter_get_char_extents    (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_cluster_extents	pango-layout.h	/^void pango_layout_iter_get_cluster_extents (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_index	pango-layout.h	/^int              pango_layout_iter_get_index  (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_layout	pango-layout.h	/^PangoLayout     *pango_layout_iter_get_layout (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_layout_extents	pango-layout.h	/^void pango_layout_iter_get_layout_extents  (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_line	pango-layout.h	/^PangoLayoutLine *pango_layout_iter_get_line   (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_line_extents	pango-layout.h	/^void pango_layout_iter_get_line_extents    (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_line_readonly	pango-layout.h	/^PangoLayoutLine *pango_layout_iter_get_line_readonly  (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_line_yrange	pango-layout.h	/^void pango_layout_iter_get_line_yrange     (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_run	pango-layout.h	/^PangoLayoutRun  *pango_layout_iter_get_run    (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_get_run_extents	pango-layout.h	/^void pango_layout_iter_get_run_extents     (PangoLayoutIter *iter,$/;"	p
+pango_layout_iter_get_run_readonly	pango-layout.h	/^PangoLayoutRun  *pango_layout_iter_get_run_readonly   (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_next_char	pango-layout.h	/^gboolean pango_layout_iter_next_char    (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_next_cluster	pango-layout.h	/^gboolean pango_layout_iter_next_cluster (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_next_line	pango-layout.h	/^gboolean pango_layout_iter_next_line    (PangoLayoutIter *iter);$/;"	p
+pango_layout_iter_next_run	pango-layout.h	/^gboolean pango_layout_iter_next_run     (PangoLayoutIter *iter);$/;"	p
+pango_layout_line_get_extents	pango-layout.h	/^void     pango_layout_line_get_extents  (PangoLayoutLine  *line,$/;"	p
+pango_layout_line_get_pixel_extents	pango-layout.h	/^void     pango_layout_line_get_pixel_extents (PangoLayoutLine *layout_line,$/;"	p
+pango_layout_line_get_x_ranges	pango-layout.h	/^void     pango_layout_line_get_x_ranges (PangoLayoutLine  *line,$/;"	p
+pango_layout_line_index_to_x	pango-layout.h	/^void     pango_layout_line_index_to_x   (PangoLayoutLine  *line,$/;"	p
+pango_layout_line_ref	pango-layout.h	/^PangoLayoutLine *pango_layout_line_ref   (PangoLayoutLine *line);$/;"	p
+pango_layout_line_unref	pango-layout.h	/^void             pango_layout_line_unref (PangoLayoutLine *line);$/;"	p
+pango_layout_line_x_to_index	pango-layout.h	/^gboolean pango_layout_line_x_to_index   (PangoLayoutLine  *line,$/;"	p
+pango_layout_move_cursor_visually	pango-layout.h	/^void     pango_layout_move_cursor_visually (PangoLayout    *layout,$/;"	p
+pango_layout_new	pango-layout.h	/^PangoLayout *pango_layout_new            (PangoContext   *context);$/;"	p
+pango_layout_set_alignment	pango-layout.h	/^void           pango_layout_set_alignment        (PangoLayout                *layout,$/;"	p
+pango_layout_set_attributes	pango-layout.h	/^void           pango_layout_set_attributes (PangoLayout    *layout,$/;"	p
+pango_layout_set_auto_dir	pango-layout.h	/^void           pango_layout_set_auto_dir         (PangoLayout                *layout,$/;"	p
+pango_layout_set_ellipsize	pango-layout.h	/^void               pango_layout_set_ellipsize (PangoLayout        *layout,$/;"	p
+pango_layout_set_font_description	pango-layout.h	/^void           pango_layout_set_font_description (PangoLayout                *layout,$/;"	p
+pango_layout_set_height	pango-layout.h	/^void           pango_layout_set_height           (PangoLayout                *layout,$/;"	p
+pango_layout_set_indent	pango-layout.h	/^void           pango_layout_set_indent           (PangoLayout                *layout,$/;"	p
+pango_layout_set_justify	pango-layout.h	/^void           pango_layout_set_justify          (PangoLayout                *layout,$/;"	p
+pango_layout_set_markup	pango-layout.h	/^void           pango_layout_set_markup     (PangoLayout    *layout,$/;"	p
+pango_layout_set_markup_with_accel	pango-layout.h	/^void           pango_layout_set_markup_with_accel (PangoLayout    *layout,$/;"	p
+pango_layout_set_single_paragraph_mode	pango-layout.h	/^void           pango_layout_set_single_paragraph_mode (PangoLayout                *layout,$/;"	p
+pango_layout_set_spacing	pango-layout.h	/^void           pango_layout_set_spacing          (PangoLayout                *layout,$/;"	p
+pango_layout_set_tabs	pango-layout.h	/^void           pango_layout_set_tabs             (PangoLayout                *layout,$/;"	p
+pango_layout_set_text	pango-layout.h	/^void           pango_layout_set_text       (PangoLayout    *layout,$/;"	p
+pango_layout_set_width	pango-layout.h	/^void           pango_layout_set_width            (PangoLayout                *layout,$/;"	p
+pango_layout_set_wrap	pango-layout.h	/^void           pango_layout_set_wrap             (PangoLayout                *layout,$/;"	p
+pango_layout_xy_to_index	pango-layout.h	/^gboolean pango_layout_xy_to_index          (PangoLayout    *layout,$/;"	p
+pango_log2vis_get_embedding_levels	pango-utils.h	/^guint8 * pango_log2vis_get_embedding_levels (const gchar    *text,$/;"	p
+pango_lookup_aliases	pango-utils.h	/^void     pango_lookup_aliases (const char   *fontname,$/;"	p
+pango_map_get_engine	pango-modules.h	/^PangoEngine *  pango_map_get_engine  (PangoMap            *map,$/;"	p
+pango_map_get_engines	pango-modules.h	/^void           pango_map_get_engines (PangoMap            *map,$/;"	p
+pango_matrix_concat	pango-matrix.h	/^void pango_matrix_concat    (PangoMatrix       *matrix,$/;"	p
+pango_matrix_copy	pango-matrix.h	/^PangoMatrix *pango_matrix_copy   (const PangoMatrix *matrix);$/;"	p
+pango_matrix_free	pango-matrix.h	/^void         pango_matrix_free   (PangoMatrix *matrix);$/;"	p
+pango_matrix_rotate	pango-matrix.h	/^void pango_matrix_rotate    (PangoMatrix *matrix,$/;"	p
+pango_matrix_scale	pango-matrix.h	/^void pango_matrix_scale     (PangoMatrix *matrix,$/;"	p
+pango_matrix_transform_distance	pango-matrix.h	/^void pango_matrix_transform_distance (const PangoMatrix *matrix,$/;"	p
+pango_matrix_transform_pixel_rectangle	pango-matrix.h	/^void pango_matrix_transform_pixel_rectangle (const PangoMatrix *matrix,$/;"	p
+pango_matrix_transform_point	pango-matrix.h	/^void pango_matrix_transform_point    (const PangoMatrix *matrix,$/;"	p
+pango_matrix_transform_rectangle	pango-matrix.h	/^void pango_matrix_transform_rectangle (const PangoMatrix *matrix,$/;"	p
+pango_matrix_translate	pango-matrix.h	/^void pango_matrix_translate (PangoMatrix *matrix,$/;"	p
+pango_module_register	pango-modules.h	/^void           pango_module_register (PangoIncludedModule *module);$/;"	p
+pango_ot_buffer_add_glyph	pango-ot.h	/^void           pango_ot_buffer_add_glyph  (PangoOTBuffer     *buffer,$/;"	p
+pango_ot_buffer_clear	pango-ot.h	/^void           pango_ot_buffer_clear      (PangoOTBuffer     *buffer);$/;"	p
+pango_ot_buffer_destroy	pango-ot.h	/^void           pango_ot_buffer_destroy    (PangoOTBuffer     *buffer);$/;"	p
+pango_ot_buffer_get_glyphs	pango-ot.h	/^void           pango_ot_buffer_get_glyphs (const PangoOTBuffer  *buffer,$/;"	p
+pango_ot_buffer_new	pango-ot.h	/^PangoOTBuffer *pango_ot_buffer_new        (PangoFcFont       *font);$/;"	p
+pango_ot_buffer_output	pango-ot.h	/^void           pango_ot_buffer_output     (const PangoOTBuffer  *buffer,$/;"	p
+pango_ot_buffer_set_rtl	pango-ot.h	/^void           pango_ot_buffer_set_rtl    (PangoOTBuffer     *buffer,$/;"	p
+pango_ot_buffer_set_zero_width_marks	pango-ot.h	/^void           pango_ot_buffer_set_zero_width_marks (PangoOTBuffer     *buffer,$/;"	p
+pango_ot_info_find_feature	pango-ot.h	/^gboolean pango_ot_info_find_feature  (PangoOTInfo      *info,$/;"	p
+pango_ot_info_find_language	pango-ot.h	/^gboolean pango_ot_info_find_language (PangoOTInfo      *info,$/;"	p
+pango_ot_info_find_script	pango-ot.h	/^gboolean pango_ot_info_find_script   (PangoOTInfo      *info,$/;"	p
+pango_ot_info_get	pango-ot.h	/^PangoOTInfo *pango_ot_info_get (FT_Face face);$/;"	p
+pango_ot_info_list_features	pango-ot.h	/^PangoOTTag *pango_ot_info_list_features  (PangoOTInfo      *info,$/;"	p
+pango_ot_info_list_languages	pango-ot.h	/^PangoOTTag *pango_ot_info_list_languages (PangoOTInfo      *info,$/;"	p
+pango_ot_info_list_scripts	pango-ot.h	/^PangoOTTag *pango_ot_info_list_scripts   (PangoOTInfo      *info,$/;"	p
+pango_ot_ruleset_add_feature	pango-ot.h	/^void            pango_ot_ruleset_add_feature (PangoOTRuleset   *ruleset,$/;"	p
+pango_ot_ruleset_description_copy	pango-ot.h	/^PangoOTRulesetDescription *pango_ot_ruleset_description_copy  (const PangoOTRulesetDescription *desc);$/;"	p
+pango_ot_ruleset_description_free	pango-ot.h	/^void            pango_ot_ruleset_description_free  (PangoOTRulesetDescription       *desc);$/;"	p
+pango_ot_ruleset_get_feature_count	pango-ot.h	/^guint           pango_ot_ruleset_get_feature_count (const PangoOTRuleset   *ruleset,$/;"	p
+pango_ot_ruleset_get_for_description	pango-ot.h	/^const PangoOTRuleset *pango_ot_ruleset_get_for_description (PangoOTInfo                     *info,$/;"	p
+pango_ot_ruleset_maybe_add_feature	pango-ot.h	/^gboolean        pango_ot_ruleset_maybe_add_feature (PangoOTRuleset   *ruleset,$/;"	p
+pango_ot_ruleset_maybe_add_features	pango-ot.h	/^guint           pango_ot_ruleset_maybe_add_features (PangoOTRuleset          *ruleset,$/;"	p
+pango_ot_ruleset_new	pango-ot.h	/^PangoOTRuleset *pango_ot_ruleset_new (PangoOTInfo       *info);$/;"	p
+pango_ot_ruleset_new_for	pango-ot.h	/^PangoOTRuleset *pango_ot_ruleset_new_for (PangoOTInfo       *info,$/;"	p
+pango_ot_ruleset_new_from_description	pango-ot.h	/^PangoOTRuleset *pango_ot_ruleset_new_from_description (PangoOTInfo                     *info,$/;"	p
+pango_ot_ruleset_position	pango-ot.h	/^void            pango_ot_ruleset_position    (const PangoOTRuleset   *ruleset,$/;"	p
+pango_ot_ruleset_substitute	pango-ot.h	/^void            pango_ot_ruleset_substitute  (const PangoOTRuleset   *ruleset,$/;"	p
+pango_parse_enum	pango-utils.h	/^gboolean pango_parse_enum     (GType       type,$/;"	p
+pango_parse_markup	pango-attributes.h	/^gboolean pango_parse_markup (const char                 *markup_text,$/;"	p
+pango_parse_stretch	pango-utils.h	/^gboolean pango_parse_stretch (const char   *str,$/;"	p
+pango_parse_style	pango-utils.h	/^gboolean pango_parse_style   (const char   *str,$/;"	p
+pango_parse_variant	pango-utils.h	/^gboolean pango_parse_variant (const char   *str,$/;"	p
+pango_parse_weight	pango-utils.h	/^gboolean pango_parse_weight  (const char   *str,$/;"	p
+pango_quantize_line_geometry	pango-utils.h	/^void pango_quantize_line_geometry (int *thickness,$/;"	p
+pango_read_line	pango-utils.h	/^gint     pango_read_line      (FILE        *stream,$/;"	p
+pango_render_part_get_type	pango-enum-types.h	/^GType pango_render_part_get_type (void);$/;"	p
+pango_renderer_activate	pango-renderer.h	/^void pango_renderer_activate             (PangoRenderer    *renderer);$/;"	p
+pango_renderer_deactivate	pango-renderer.h	/^void pango_renderer_deactivate           (PangoRenderer    *renderer);$/;"	p
+pango_renderer_draw_error_underline	pango-renderer.h	/^void pango_renderer_draw_error_underline (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_glyph	pango-renderer.h	/^void pango_renderer_draw_glyph           (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_glyph_item	pango-renderer.h	/^void pango_renderer_draw_glyph_item      (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_glyphs	pango-renderer.h	/^void pango_renderer_draw_glyphs          (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_layout	pango-renderer.h	/^void pango_renderer_draw_layout          (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_layout_line	pango-renderer.h	/^void pango_renderer_draw_layout_line     (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_rectangle	pango-renderer.h	/^void pango_renderer_draw_rectangle       (PangoRenderer    *renderer,$/;"	p
+pango_renderer_draw_trapezoid	pango-renderer.h	/^void pango_renderer_draw_trapezoid       (PangoRenderer    *renderer,$/;"	p
+pango_renderer_get_color	pango-renderer.h	/^PangoColor *pango_renderer_get_color (PangoRenderer    *renderer,$/;"	p
+pango_renderer_get_layout	pango-renderer.h	/^PangoLayout     *pango_renderer_get_layout      (PangoRenderer     *renderer);$/;"	p
+pango_renderer_get_layout_line	pango-renderer.h	/^PangoLayoutLine *pango_renderer_get_layout_line (PangoRenderer     *renderer);$/;"	p
+pango_renderer_get_matrix	pango-renderer.h	/^const PangoMatrix          *pango_renderer_get_matrix (PangoRenderer     *renderer);$/;"	p
+pango_renderer_part_changed	pango-renderer.h	/^void        pango_renderer_part_changed (PangoRenderer   *renderer,$/;"	p
+pango_renderer_set_color	pango-renderer.h	/^void        pango_renderer_set_color (PangoRenderer    *renderer,$/;"	p
+pango_renderer_set_matrix	pango-renderer.h	/^void                        pango_renderer_set_matrix (PangoRenderer     *renderer,$/;"	p
+pango_reorder_items	pango-glyph.h	/^GList *pango_reorder_items (GList *logical_items);$/;"	p
+pango_scan_int	pango-utils.h	/^gboolean pango_scan_int       (const char **pos,$/;"	p
+pango_scan_string	pango-utils.h	/^gboolean pango_scan_string    (const char **pos,$/;"	p
+pango_scan_word	pango-utils.h	/^gboolean pango_scan_word      (const char **pos,$/;"	p
+pango_script_get_type	pango-enum-types.h	/^GType pango_script_get_type (void);$/;"	p
+pango_script_iter_free	pango-script.h	/^void             pango_script_iter_free      (PangoScriptIter     *iter);$/;"	p
+pango_script_iter_get_range	pango-script.h	/^void             pango_script_iter_get_range (PangoScriptIter     *iter,$/;"	p
+pango_script_iter_new	pango-script.h	/^PangoScriptIter *pango_script_iter_new       (const char          *text,$/;"	p
+pango_script_iter_next	pango-script.h	/^gboolean         pango_script_iter_next      (PangoScriptIter     *iter);$/;"	p
+pango_shape	pango-glyph.h	/^void pango_shape (const gchar      *text,$/;"	p
+pango_skip_space	pango-utils.h	/^gboolean pango_skip_space     (const char **pos);$/;"	p
+pango_split_file_list	pango-utils.h	/^char **  pango_split_file_list (const char *str);$/;"	p
+pango_stretch_get_type	pango-enum-types.h	/^GType pango_stretch_get_type (void);$/;"	p
+pango_style_get_type	pango-enum-types.h	/^GType pango_style_get_type (void);$/;"	p
+pango_tab_align_get_type	pango-enum-types.h	/^GType pango_tab_align_get_type (void);$/;"	p
+pango_tab_array_copy	pango-tabs.h	/^PangoTabArray  *pango_tab_array_copy                (PangoTabArray *src);$/;"	p
+pango_tab_array_free	pango-tabs.h	/^void            pango_tab_array_free                (PangoTabArray *tab_array);$/;"	p
+pango_tab_array_get_positions_in_pixels	pango-tabs.h	/^gboolean        pango_tab_array_get_positions_in_pixels (PangoTabArray *tab_array);$/;"	p
+pango_tab_array_get_size	pango-tabs.h	/^gint            pango_tab_array_get_size            (PangoTabArray *tab_array);$/;"	p
+pango_tab_array_get_tab	pango-tabs.h	/^void            pango_tab_array_get_tab             (PangoTabArray *tab_array,$/;"	p
+pango_tab_array_get_tabs	pango-tabs.h	/^void            pango_tab_array_get_tabs            (PangoTabArray *tab_array,$/;"	p
+pango_tab_array_new	pango-tabs.h	/^PangoTabArray  *pango_tab_array_new                 (gint           initial_size,$/;"	p
+pango_tab_array_new_with_positions	pango-tabs.h	/^PangoTabArray  *pango_tab_array_new_with_positions  (gint           size,$/;"	p
+pango_tab_array_resize	pango-tabs.h	/^void            pango_tab_array_resize              (PangoTabArray *tab_array,$/;"	p
+pango_tab_array_set_tab	pango-tabs.h	/^void            pango_tab_array_set_tab             (PangoTabArray *tab_array,$/;"	p
+pango_trim_string	pango-utils.h	/^char    *pango_trim_string     (const char *str);$/;"	p
+pango_underline_get_type	pango-enum-types.h	/^GType pango_underline_get_type (void);$/;"	p
+pango_variant_get_type	pango-enum-types.h	/^GType pango_variant_get_type (void);$/;"	p
+pango_weight_get_type	pango-enum-types.h	/^GType pango_weight_get_type (void);$/;"	p
+pango_wrap_mode_get_type	pango-enum-types.h	/^GType pango_wrap_mode_get_type (void);$/;"	p
+pango_x_apply_ligatures	pangox.h	/^gboolean pango_x_apply_ligatures (PangoFont     *font,$/;"	p
+pango_x_context_set_funcs	pangox.h	/^void           pango_x_context_set_funcs  (PangoContext     *context,$/;"	p
+pango_x_fallback_shape	pangox.h	/^void pango_x_fallback_shape (PangoFont        *font,$/;"	p
+pango_x_find_first_subfont	pangox.h	/^gboolean pango_x_find_first_subfont (PangoFont     *font,$/;"	p
+pango_x_font_cache_free	pangox.h	/^void             pango_x_font_cache_free    (PangoXFontCache *cache);$/;"	p
+pango_x_font_cache_load	pangox.h	/^XFontStruct * pango_x_font_cache_load      (PangoXFontCache *cache,$/;"	p
+pango_x_font_cache_new	pangox.h	/^PangoXFontCache *pango_x_font_cache_new     (Display         *display);$/;"	p
+pango_x_font_cache_unload	pangox.h	/^void          pango_x_font_cache_unload    (PangoXFontCache *cache,$/;"	p
+pango_x_font_get_unknown_glyph	pangox.h	/^PangoGlyph pango_x_font_get_unknown_glyph (PangoFont    *font,$/;"	p
+pango_x_font_map_for_display	pangox.h	/^PangoFontMap *   pango_x_font_map_for_display  (Display     *display);$/;"	p
+pango_x_font_map_get_font_cache	pangox.h	/^PangoXFontCache *pango_x_font_map_get_font_cache (PangoFontMap *font_map);$/;"	p
+pango_x_font_subfont_xlfd	pangox.h	/^char *pango_x_font_subfont_xlfd (PangoFont     *font,$/;"	p
+pango_x_get_context	pangox.h	/^PangoContext * pango_x_get_context        (Display          *display);$/;"	p
+pango_x_get_unknown_glyph	pangox.h	/^PangoGlyph pango_x_get_unknown_glyph (PangoFont      *font);$/;"	p
+pango_x_has_glyph	pangox.h	/^gboolean   pango_x_has_glyph         (PangoFont      *font,$/;"	p
+pango_x_list_subfonts	pangox.h	/^int        pango_x_list_subfonts     (PangoFont      *font,$/;"	p
+pango_x_load_font	pangox.h	/^PangoFont *    pango_x_load_font          (Display          *display,$/;"	p
+pango_x_render	pangox.h	/^void           pango_x_render             (Display          *display,$/;"	p
+pango_x_render_layout	pangox.h	/^void           pango_x_render_layout      (Display          *display,$/;"	p
+pango_x_render_layout_line	pangox.h	/^void           pango_x_render_layout_line (Display          *display,$/;"	p
+pango_x_shutdown_display	pangox.h	/^void             pango_x_shutdown_display      (Display     *display);$/;"	p
+pango_xft_font_get_display	pangoxft.h	/^Display *     pango_xft_font_get_display       (PangoFont *font);$/;"	p
+pango_xft_font_get_font	pangoxft.h	/^XftFont *     pango_xft_font_get_font          (PangoFont *font);$/;"	p
+pango_xft_font_has_char	pangoxft.h	/^gboolean      pango_xft_font_has_char          (PangoFont *font,$/;"	v
+pango_xft_font_unlock_face	pangoxft.h	/^void	      pango_xft_font_unlock_face       (PangoFont *font);$/;"	v
+pango_xft_get_context	pangoxft.h	/^PangoContext *pango_xft_get_context      (Display *display,$/;"	p
+pango_xft_get_font_map	pangoxft.h	/^PangoFontMap *pango_xft_get_font_map     (Display *display,$/;"	p
+pango_xft_picture_render	pangoxft-render.h	/^void pango_xft_picture_render     (Display          *display,$/;"	p
+pango_xft_render	pangoxft-render.h	/^void pango_xft_render             (XftDraw          *draw,$/;"	p
+pango_xft_render_layout	pangoxft-render.h	/^void pango_xft_render_layout      (XftDraw          *draw,$/;"	p
+pango_xft_render_layout_line	pangoxft-render.h	/^void pango_xft_render_layout_line (XftDraw          *draw,$/;"	p
+pango_xft_render_transformed	pangoxft-render.h	/^void pango_xft_render_transformed (XftDraw          *draw,$/;"	p
+pango_xft_renderer_new	pangoxft-render.h	/^PangoRenderer *pango_xft_renderer_new                 (Display          *display,$/;"	p
+pango_xft_renderer_set_default_color	pangoxft-render.h	/^void           pango_xft_renderer_set_default_color   (PangoXftRenderer *xftrenderer,$/;"	p
+pango_xft_renderer_set_draw	pangoxft-render.h	/^void           pango_xft_renderer_set_draw            (PangoXftRenderer *xftrenderer,$/;"	p
+pango_xft_set_default_substitute	pangoxft.h	/^void pango_xft_set_default_substitute (Display                *display,$/;"	p
+pango_xft_shutdown_display	pangoxft.h	/^void          pango_xft_shutdown_display (Display *display,$/;"	p
+pango_xft_substitute_changed	pangoxft.h	/^void pango_xft_substitute_changed     (Display                *display,$/;"	p
+parent_class	pango-engine.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoEngineClass
+parent_class	pango-engine.h	/^  PangoEngineClass parent_class;$/;"	m	struct:_PangoEngineLangClass
+parent_class	pango-engine.h	/^  PangoEngineClass parent_class;$/;"	m	struct:_PangoEngineShapeClass
+parent_class	pango-font.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFontClass
+parent_class	pango-font.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFontFaceClass
+parent_class	pango-font.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFontFamilyClass
+parent_class	pango-fontmap.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFontMapClass
+parent_class	pango-fontset.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFontsetClass
+parent_class	pango-renderer.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoRendererClass
+parent_class	pangofc-decoder.h	/^  GObjectClass parent_class;$/;"	m	struct:_PangoFcDecoderClass
+parent_class	pangofc-font.h	/^  PangoFontClass parent_class;$/;"	m	struct:_PangoFcFontClass
+parent_class	pangofc-fontmap.h	/^  PangoFontMapClass parent_class;$/;"	m	struct:_PangoFcFontMapClass
+parent_class	pangoxft-render.h	/^  PangoRendererClass parent_class;$/;"	m	struct:_PangoXftRendererClass
+parent_instance	pango-engine.h	/^  GObject parent_instance;$/;"	m	struct:_PangoEngine
+parent_instance	pango-engine.h	/^  PangoEngine parent_instance;$/;"	m	struct:_PangoEngineLang
+parent_instance	pango-engine.h	/^  PangoEngine parent_instance;$/;"	m	struct:_PangoEngineShape
+parent_instance	pango-font.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFont
+parent_instance	pango-font.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFontFace
+parent_instance	pango-font.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFontFamily
+parent_instance	pango-fontmap.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFontMap
+parent_instance	pango-fontset.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFontset
+parent_instance	pango-renderer.h	/^  GObject parent_instance;$/;"	m	struct:_PangoRenderer
+parent_instance	pangofc-decoder.h	/^  GObject parent_instance;$/;"	m	struct:_PangoFcDecoder
+parent_instance	pangofc-font.h	/^  PangoFont parent_instance;$/;"	m	struct:_PangoFcFont
+parent_instance	pangofc-fontmap.h	/^  PangoFontMap parent_instance;$/;"	m	struct:_PangoFcFontMap
+parent_instance	pangoxft-render.h	/^  PangoRenderer parent_instance;$/;"	m	struct:_PangoXftRenderer
+part_changed	pango-renderer.h	/^  void (*part_changed) (PangoRenderer   *renderer,$/;"	m	struct:_PangoRendererClass
+prepare_run	pango-renderer.h	/^  void (*prepare_run) (PangoRenderer  *renderer,$/;"	m	struct:_PangoRendererClass
+priv	pango-renderer.h	/^  PangoRendererPrivate *priv;$/;"	m	struct:_PangoRenderer
+priv	pangofc-font.h	/^  gpointer priv;		    \/* used internally *\/$/;"	m	struct:_PangoFcFont
+priv	pangofc-fontmap.h	/^  PangoFcFontMapPrivate *priv;$/;"	m	struct:_PangoFcFontMap
+priv	pangoxft-render.h	/^  PangoXftRendererPrivate *priv;$/;"	m	struct:_PangoXftRenderer
+properties	pango-ot.h	/^  guint    properties;$/;"	m	struct:_PangoOTGlyph
+property_bit	pango-ot.h	/^  gulong   property_bit;$/;"	m	struct:_PangoOTFeatureMap
+red	pango-attributes.h	/^  guint16 red;$/;"	m	struct:_PangoColor
+ref_count	pango-font.h	/^  guint ref_count;$/;"	m	struct:_PangoFontMetrics
+render_type	pango-engine.h	/^  const gchar *render_type;$/;"	m	struct:_PangoEngineInfo
+resolved_dir	pango-layout.h	/^  guint        resolved_dir : 3;  \/* Resolved PangoDirection of line *\/$/;"	m	struct:_PangoLayoutLine
+runs	pango-layout.h	/^  GSList      *runs;$/;"	m	struct:_PangoLayoutLine
+screen	pangoxft-render.h	/^  int screen;$/;"	m	struct:_PangoXftRenderer
+script	pango-engine.h	/^  PangoScript script;$/;"	m	struct:_PangoEngineScriptInfo
+script	pango-item.h	/^  guint8 script; \/* PangoScript *\/$/;"	m	struct:_PangoAnalysis
+script	pango-ot.h	/^  PangoScript               script;$/;"	m	struct:_PangoOTRulesetDescription
+script_break	pango-engine.h	/^  void (*script_break) (PangoEngineLang *engine,$/;"	m	struct:_PangoEngineLangClass
+script_engine_create	pango-engine.h	/^PangoEngine *script_engine_create (const char *id);$/;"	p
+script_engine_exit	pango-engine.h	/^void script_engine_exit (void);$/;"	p
+script_engine_init	pango-engine.h	/^void script_engine_init (GTypeModule *module);$/;"	p
+script_engine_list	pango-engine.h	/^void script_engine_list (PangoEngineInfo **engines,$/;"	p
+script_shape	pango-engine.h	/^  void (*script_shape) (PangoEngineShape *engine,$/;"	m	struct:_PangoEngineShapeClass
+scripts	pango-engine.h	/^  PangoEngineScriptInfo *scripts;$/;"	m	struct:_PangoEngineInfo
+shape_engine	pango-item.h	/^  PangoEngineShape *shape_engine;$/;"	m	struct:_PangoAnalysis
+shape_engine_type	pango-fontmap.h	/^  const char *shape_engine_type;$/;"	m	struct:_PangoFontMapClass
+shutdown	pangofc-font.h	/^  void       (*shutdown)          (PangoFcFont      *font);$/;"	m	struct:_PangoFcFontClass
+size	pango-attributes.h	/^  int size;$/;"	m	struct:_PangoAttrSize
+space	pango-glyph.h	/^  gint space;$/;"	m	struct:_PangoGlyphString
+start_char	pango-glyph-item.h	/^  int start_char;$/;"	m	struct:_PangoGlyphItemIter
+start_glyph	pango-glyph-item.h	/^  int start_glyph;$/;"	m	struct:_PangoGlyphItemIter
+start_index	pango-attributes.h	/^  guint start_index;	\/* in bytes *\/$/;"	m	struct:_PangoAttribute
+start_index	pango-glyph-item.h	/^  int start_index;$/;"	m	struct:_PangoGlyphItemIter
+start_index	pango-layout.h	/^  gint         start_index;     \/* start of line as byte index into layout->text *\/$/;"	m	struct:_PangoLayoutLine
+static_gpos_features	pango-ot.h	/^  const PangoOTFeatureMap  *static_gpos_features;$/;"	m	struct:_PangoOTRulesetDescription
+static_gsub_features	pango-ot.h	/^  const PangoOTFeatureMap  *static_gsub_features;$/;"	m	struct:_PangoOTRulesetDescription
+strikethrough	pango-renderer.h	/^  gboolean strikethrough;$/;"	m	struct:_PangoRenderer
+strikethrough_position	pango-font.h	/^  int strikethrough_position;$/;"	m	struct:_PangoFontMetrics
+strikethrough_thickness	pango-font.h	/^  int strikethrough_thickness;$/;"	m	struct:_PangoFontMetrics
+text	pango-glyph-item.h	/^  const gchar *text;$/;"	m	struct:_PangoGlyphItemIter
+type	pango-attributes.h	/^  PangoAttrType type;$/;"	m	struct:_PangoAttrClass
+underline	pango-renderer.h	/^  PangoUnderline underline;$/;"	m	struct:_PangoRenderer
+underline_position	pango-font.h	/^  int underline_position;$/;"	m	struct:_PangoFontMetrics
+underline_thickness	pango-font.h	/^  int underline_thickness;$/;"	m	struct:_PangoFontMetrics
+unlock_face	pangofc-font.h	/^  void       (*unlock_face)       (PangoFcFont      *font);$/;"	m	struct:_PangoFcFontClass
+value	pango-attributes.h	/^  PangoLanguage *value;$/;"	m	struct:_PangoAttrLanguage
+value	pango-attributes.h	/^  char *value;$/;"	m	struct:_PangoAttrString
+value	pango-attributes.h	/^  double value;$/;"	m	struct:_PangoAttrFloat
+value	pango-attributes.h	/^  int value;$/;"	m	struct:_PangoAttrInt
+width	pango-glyph.h	/^  PangoGlyphUnit width;$/;"	m	struct:_PangoGlyphGeometry
+width	pango-types.h	/^  int width;$/;"	m	struct:_PangoRectangle
+x	pango-types.h	/^  int x;$/;"	m	struct:_PangoRectangle
+x0	pango-matrix.h	/^  double x0;$/;"	m	struct:_PangoMatrix
+x_offset	pango-glyph.h	/^  PangoGlyphUnit x_offset;$/;"	m	struct:_PangoGlyphGeometry
+xx	pango-matrix.h	/^  double xx;$/;"	m	struct:_PangoMatrix
+xy	pango-matrix.h	/^  double xy;$/;"	m	struct:_PangoMatrix
+y	pango-types.h	/^  int y;$/;"	m	struct:_PangoRectangle
+y0	pango-matrix.h	/^  double y0;$/;"	m	struct:_PangoMatrix
+y_offset	pango-glyph.h	/^  PangoGlyphUnit y_offset;$/;"	m	struct:_PangoGlyphGeometry
+yx	pango-matrix.h	/^  double yx;$/;"	m	struct:_PangoMatrix
+yy	pango-matrix.h	/^  double yy;$/;"	m	struct:_PangoMatrix
