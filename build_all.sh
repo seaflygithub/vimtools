@@ -618,6 +618,15 @@ function install_git_plugins()
     #自动插入和格式化方括号和圆括号
     #https://github.com/jiangmiao/auto-pairs 
 
+    #方便对代码进行注释
+    #https://github.com/tpope/vim-commentary
+
+    #Automated tag file generation and syntax highlighting of tags in Vim
+    #https://github.com/xolox/vim-easytags
+
+    #收集了一大坨配色
+    #http://github.com/biskark/vim-ultimate-colorscheme-utility
+
     #插件安装配置目录走向:
     #    插件源目录: vimtools/plugins/script/
     #    插件目标目录: ~/.vim/bundle
@@ -642,18 +651,17 @@ function install_git_plugins()
 
     #install_git_plugin参数取值:
     #       "xxx.vimrc" 插件配置，一般为: 插件名.vimrc
-    #       "xxx"       插件目录，一般为: 插件名（插件目录名）目录为插件顶层目录，且目录下为plugin或after,autoload字样目录或xxx.vim脚本文件
+    #       "xxx"       插件目录，一般为: 插件名（插件目录名）目录为插件顶层目录
     #       "xxx"       插件运行时(rtp)目录，通常默认为插件顶层目录，也可指定
     #       "git-addr"  插件地址，一般为: 插件的git获取地址
     #       "update"    插件更新，一般为: 是否更新(识别到update则更新为最新,否则不更新)
-    #方便对代码进行注释
-    #https://github.com/tpope/vim-commentary
 
-    #Automated tag file generation and syntax highlighting of tags in Vim
-    #https://github.com/xolox/vim-easytags
-
-    #收集了一大坨配色
-    #http://github.com/biskark/vim-ultimate-colorscheme-utility
+    install_git_plugin \
+        "vimwiki.vimrc" \
+        "vimwiki" \
+        "" \
+	    "https://github.com/vimwiki/vimwiki" \
+        "no-update"
 
     install_git_plugin \
         "winmanager.vimrc" \
