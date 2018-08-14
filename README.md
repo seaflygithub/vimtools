@@ -1,5 +1,6 @@
 - [项目名称](#项目名称)
 - [项目简介](#项目简介)
+- [最近更新](#最近更新)
 - [作者信息](#作者信息)
 - [使用环境](#使用环境)
 - [下载安装](#下载安装)
@@ -27,11 +28,34 @@
 - 项目核心: build_all.sh脚本
 - 项目特点: 充分使用vim，方便，可裁剪，可定制，可二次开发
 
-## 作者信息
+# 最近更新
+- 结构体成员补全功能
+- 用户可添加同步目录功能(project/extend.dir)
+    - extend.dir存放路径: 工程顶层目录
+    - extend.dir内容格式:(首行空一行)
 
-- 扣扣：1052061602
-- 微信：seafly0616
-![./doc/screenshots/contact_seafly.png](./doc/screenshots/contact_seafly.png)
+    `/home/kernel/include
+     /usr/include
+     /usr/local/include`
+
+- 修复cscope无法同步自定义目录的情况
+- 修复filenametags无法同步自定义目录的情况
+- 影响速度的插件删除
+	- syntax_check
+	- vim-autoformat
+	- AutoComplPop      #补全自动提示(可保留)
+	- popup.vim
+	- man
+
+- 如何增加同步目录(同步前添加)
+	- 在工程顶层目录新建extend.dir文件
+	- extend.dir文件格存放位置:工程顶层目录
+	- extend.dir文件内容格式:
+	```Markdown
+	(首行空一行)
+	/usr/include
+
+
 ## 使用环境
 
 - 当前分支只支持Ubuntu 64（作者平台(2017): 物理机Ubuntu14.04 x86 64位）
@@ -113,6 +137,12 @@ https://github.com/liuchengxu/space-vim
 https://github.com/hominlinx/vim
 vim-python: https://github.com/SeaflyGithub/vim
 https://github.com/wklken/vim-for-server
+
+## 作者信息
+
+- 扣扣：1052061602
+- 微信：seafly0616
+![./doc/screenshots/contact_seafly.png](./doc/screenshots/contact_seafly.png)
 
 ## 遵循的协议
 
