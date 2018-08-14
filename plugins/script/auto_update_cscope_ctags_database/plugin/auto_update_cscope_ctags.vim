@@ -193,6 +193,14 @@ let vim_arch_parameter_d = {'not_kernel':'1', 'alpha':'1', 'arm':'1', 'avr32':'1
     echo " "
     echo "Will run command:\n" . g:run_c
     echo " "
+    echo "seafly:"
+    echo "Note: if you wana to extend project dir(s)"
+    echo "    you should build new extend.dir file in your root dir of project"
+    echo "    extend.dir content format:"
+    echo "        /usr/include"
+    echo "        /usr/local/include"
+    echo "        /home/linux/include"
+    echo "        ..."
     echo " "
     echo "Do you really want to  create tag at dir: [" . g:to_user_suggest_tag_dir_str_vim . "]?"
     echo "Yes: please input yes start, will take about one minutes(depend on code size and I/O performance)"
@@ -200,7 +208,7 @@ let vim_arch_parameter_d = {'not_kernel':'1', 'alpha':'1', 'arm':'1', 'avr32':'1
     let b:tmps = input(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     echo " "
     if "yes" == b:tmps || "YES" == b:tmps
-        echo b:tmps
+        let b:tmps = "yes"
     else
         echo "stop to create tags"
         return 0
@@ -220,7 +228,7 @@ let vim_arch_parameter_d = {'not_kernel':'1', 'alpha':'1', 'arm':'1', 'avr32':'1
     let g:LookupFile_AlwaysAcceptFirst = 1          "<Enter> open first match item
     let g:LookupFile_AllowNewFiles = 0              "Don't allow create no-exist file
     let g:LookupFile_RecentFileListSize = 30
-    let g:LookupFile_FileFilter = '\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.war$\|\.ear$'
+    let g:LookupFile_FileFilter = '\.pyc$\|\.out$\|\.class$\|\.o$\|\.obj$\|\.exe$\|\.jar$\|\.zip$\|\.war$\|\.ear$'
 
     return 0
 endif

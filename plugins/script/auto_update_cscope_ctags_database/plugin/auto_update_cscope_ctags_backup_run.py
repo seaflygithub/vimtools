@@ -35,7 +35,22 @@ global_back_run_log_file = '/tmp/.Auto_update_cscope_ctags_debug_back_run.log'
 global_debug_enable = -1
 dir_obj_root= os.environ['PWD']         # 获取当前工程顶层目录绝对路径
 dir_home = os.environ['HOME']           # 获取当前用户HOME绝对路径
-home_systags = dir_home + "/.systags"   # 将C库的数据库文件列为隐藏文件
+
+# seafly: 用户自定义同步目录,
+# 用法: 在工程层目录新建extend.dir文件并填入目录绝
+# 对路径,多目录之间用换行符分隔
+file_extend_dir = dir_obj_root + "/extend.dir"
+dir_extend = 'dir_extend'
+def get_extend_dir():
+    print("find extend.dir config file ...")
+    if os.path.exists(file_extend_dir):
+        fp = open(file_extend_dir, "r")
+        dir_extend = ''
+        dir_extend = fp.read();
+        dir_extend = dir_extend.replace('\n', ' ')
+        return dir_extend
+
+dir_extend = get_extend_dir()
 
 #you may config this dir, if you change the
 #python default install dir, eg MAC os may
@@ -296,7 +311,7 @@ def gen_cscope_and_ctag_file():
         debug_backrun_python_print("All finish take %s s" % all_take_time)
 
     gnome_osd_print('%s project update tags end' % arch_type_str)
-    gnome_osd_print('(seafly debug)Project rootdir:' + dir_obj_root)
+    gnome_osd_print('rootdir:' + dir_obj_root)
 
 def clear_lock_i():
     end_remove_lock_cmd = "rm .auto_cscope_ctags/lock 1>/dev/null  2>&1"
@@ -307,11 +322,13 @@ def clear_lock_i():
 def cscope_task_func(show_message_enable, s_time):
 
     if 'not_kernel' == arch_type_str:
-        not_kernel_cmd = "find"
+        not_kernel_cmd = "find "
         if os.path.exists('./.auto_cscope_ctags/.enable_soft_link_file'):
             not_kernel_cmd = not_kernel_cmd + " -L "
 
-        not_kernel_cmd = not_kernel_cmd + " . -name '*.c' "
+        not_kernel_cmd = not_kernel_cmd + dir_obj_root + '  '
+        not_kernel_cmd = not_kernel_cmd + dir_extend
+        not_kernel_cmd = not_kernel_cmd + " -name '*.c' "
         for i_care_type in care_file_type:
             not_kernel_cmd = not_kernel_cmd + " -o -name " + '\'' + i_care_type + '\''
 
@@ -412,38 +429,24 @@ def ctags_task_func(show_message_enable, s_time, cscope_task_id):
         debug_backrun_python_print(handle_tags_files_cmd)
         os.system(handle_tags_files_cmd)
 
-        #ctags_cmd = "ctags -R --fields=+lafikmnsztS --extra=+fq -L tags.files"
 
-        #修改: 生成一个基于当前工程的数据库tags文件objtags
+        # seafly:修复结构体成员不能补全的问题
+        #通过tags.files生成tags文件
+        #ctags_cmd = "ctags --file-scope=yes -L tags.files"
 
-        #仅引入列表文件:tags.files
-        ctags_cmd = "ctags --file-scope=yes -L tags.files"
+        if os.path.exists(file_extend_dir):
+            dir_extend = get_extend_dir()
+        else:
+            dir_extend = ""
+        ctags_cmd = "ctags -R --file-scope=yes "
         ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q "
+        ctags_cmd = ctags_cmd + dir_obj_root + " "
+        ctags_cmd = ctags_cmd + dir_extend
         ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
-
-        #仅依赖当前目录生成: -R .
-        #ctags_cmd = "ctags -R --file-scope=yes "
-        #ctags_cmd = ctags_cmd + " --langmap=c:+.h --links=yes --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q ."
-        #ctags_cmd = ctags_cmd + " 2>/dev/null 1>/dev/null"
-
-        ctags_cmd = ctags_cmd + " ; mv tags objtags" + " 2>/dev/null 1>/dev/null"
-
-        # generate .systags in HOME
-        if not os.path.exists(home_systags):
-            ctags_cmd = ctags_cmd + " ; ctags -R --file-scope=yes --langmap=c:+.h --links=yes"
-            ctags_cmd = ctags_cmd + " --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q"
-            ctags_cmd = ctags_cmd + " -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__"
-            ctags_cmd = ctags_cmd + " -f " + home_systags + " /usr/include "
-            ctags_cmd = ctags_cmd + " ; sed -i '1,6d' " + home_systags + " 2>/dev/null 1>/dev/null"
-
-        #combine objtags+systags
-        ctags_cmd = ctags_cmd + " ; cd " + dir_obj_root + " ;  cat objtags >> tags"
-        ctags_cmd = ctags_cmd + " ; cp " + home_systags + " " + dir_obj_root + "/systags" + " 2>/dev/null 1>/dev/null"
-        ctags_cmd = ctags_cmd + " ; cat " + dir_obj_root + "/systags" + " >> tags"
 
         # generate filenametags
         ctags_cmd = ctags_cmd + ' ; echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase" > ./filenametags'
-        ctags_cmd = ctags_cmd + " ; find . -type f "
+        ctags_cmd = ctags_cmd + " ; find " + dir_obj_root + dir_extend + " -type f "
         ctags_cmd = ctags_cmd + ' -printf "%f\t%p\t1\n" | sort -f >> ./filenametags'
 
         debug_backrun_python_print("show print_message :cmd %s" % ctags_cmd)
