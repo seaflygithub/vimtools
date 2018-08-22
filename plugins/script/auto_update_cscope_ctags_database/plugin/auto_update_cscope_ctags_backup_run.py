@@ -42,7 +42,7 @@ dir_home = os.environ['HOME']           # 获取当前用户HOME绝对路径
 file_extend_dir = dir_obj_root + "/extend.dir"
 dir_extend = 'dir_extend'
 def get_extend_dir():
-    print("find extend.dir config file ...")
+    # print("find extend.dir config file ...")
     if os.path.exists(file_extend_dir):
         fp = open(file_extend_dir, "r")
         dir_extend = ''
