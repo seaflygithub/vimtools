@@ -1,4 +1,22 @@
-cscope 15 $HOME/workdir/github/vimtools-ubuntu-SI/lab/struct -q 0000000026 0000001285
+cscope 15 $HOME/workdir/github/vimtools-ubuntu-SI/lab/struct -q 0000000028 0000001823
+	@/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/README-CN.txt
+
+5 1、打开源文件
+ma�
+.
+c
+
+
+6 2、进入底行模式执行:
+C���ag
+ (目的用于同步工程)
+
+7 3、利用
+ma�
+.
+c
+里现成的结构体变量进行结构体变量复制操作,体验结构体成员智能补全功能
+
 	@/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c
 
 1 
@@ -134,6 +152,24 @@ node_t
 16 }
 	td�a_t
 ;
+
+	@README-CN.txt
+
+5 1、打开源文件
+ma�
+.
+c
+
+
+6 2、进入底行模式执行:
+C���ag
+ (目的用于同步工程)
+
+7 3、利用
+ma�
+.
+c
+里现成的结构体变量进行结构体变量复制操作,体验结构体成员智能补全功能
 
 	@main.c
 
@@ -275,9 +311,11 @@ node_t
 1
 .
 0
-4
-144
+6
+230
+/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/README-CN.txt
 /home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c
 /home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h
+README-CN.txt
 main.c
 main.h
