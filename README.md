@@ -31,35 +31,15 @@
 # 最近更新
 - 结构体成员补全功能
 - 用户可添加同步目录功能(project/extend.dir)
-    - extend.dir存放路径: 工程顶层目录
-    - extend.dir内容格式:(首行空一行)
-
-    `/home/kernel/include
-     /usr/include
-     /usr/local/include`
-
 - 修复cscope无法同步自定义目录的情况
 - 修复filenametags无法同步自定义目录的情况
 - 影响速度的插件删除
-	- syntax_check
-	- vim-autoformat
-	- AutoComplPop      #补全自动提示(可保留)
-	- popup.vim
-	- man
-
 - 如何增加同步目录(同步前添加)
-	- 在工程顶层目录新建extend.dir文件
-	- extend.dir文件格存放位置:工程顶层目录
-	- extend.dir文件内容格式:
-	```Markdown
-	(首行空一行)
-	/usr/include
-
 
 ## 使用环境
 
-- 当前分支只支持Ubuntu 64（作者平台(2017): 物理机Ubuntu14.04 x86 64位）
-- 网络通畅并配置好软件源,不确定的建议[配置为aliyun的软件源](./doc/sources-config-aliyun.gif)
+- 当前分支只支持Ubuntu 64（作者平台(2018): 物理机Ubuntu18.04 LTS x86 64位）
+- 网络通畅并配置好软件源,不确定的建议搜索"清华大学镜像站"
 
 - vim被世界评为Linux下的编辑器之神！vim的高度可扩展性可以让我们自己编写插件来实现我们需要的功能.
 
@@ -86,7 +66,7 @@
 - Q：修改工程代码保存自动同步更新后tags不见了。。。
 - A：保存修改请到顶层源文件下执行保存操作即可避免
 - Q：打开F8之后，最右边的Nerdtree突然异常停止了。。。
-- A：如果发现该情况，马上按两次F8重启SI窗口布局
+- A：如果发现该情况，马上按两次F8重启sourceinsight窗口布局
 
 ## 项目结构
 
@@ -103,10 +83,12 @@
 
 ## 版本说明
 
-- 待续
+    目前由于工作原因本作者使用的是Ubuntu发行版Linux,因此目前维护比较活跃的是Ubuntu版本,即vimtools-ubuntu-SI分支,
+    且由于工作性质,该分支支持C/C++，并且能够和sourceinsight的工程管理功能相近了，但其他编程语言就不清楚了
 
 ## 功能列表
 
++ 用户可以自定义需要同步的目录(extend.dir)
 + vimwiki离线版维基插件
 + 添加了GTK编程的独立环境配置包(config相关目录:vim_configure_GTK:内有独立安装脚本)
 + 优化工程自动同步插件（auto_update_cscope_ctags_database）
@@ -133,10 +115,10 @@
 
 ## 其他优秀网友作品
 
-https://github.com/liuchengxu/space-vim
+space-vim: https://github.com/liuchengxu/space-vim
 https://github.com/hominlinx/vim
 vim-python: https://github.com/SeaflyGithub/vim
-https://github.com/wklken/vim-for-server
+vim-for-server: https://github.com/wklken/vim-for-server
 
 ## 作者信息
 
