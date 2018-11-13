@@ -325,8 +325,8 @@ def cscope_task_func(show_message_enable, s_time):
         not_kernel_cmd = "find "
         if os.path.exists('./.auto_cscope_ctags/.enable_soft_link_file'):
             not_kernel_cmd = not_kernel_cmd + " -L "
-
-        not_kernel_cmd = not_kernel_cmd + dir_obj_root + '  '
+        #关闭默认同步当前目录,完全由用户自定义
+        #not_kernel_cmd = not_kernel_cmd + dir_obj_root + '  '
         not_kernel_cmd = not_kernel_cmd + dir_extend
         not_kernel_cmd = not_kernel_cmd + " -name '*.c' "
         for i_care_type in care_file_type:
