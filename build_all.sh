@@ -2,7 +2,7 @@
 # File              : build_all.sh
 # Author            : SeaflyGithub <seafly0616@qq.com>
 # Date              : 2017.10.24 10时42分53秒
-# Last Modified Date: 2017.11.11 10时18分47秒
+# Last Modified Date: 2018.11.13 09时37分40秒
 # Last Modified By  : Your Name <your@mail>
 
 DIR_CUR="`pwd`"
@@ -218,7 +218,7 @@ function install_python_libs()
     fi
     ${SUDO} pip install --upgrade pip
     ${SUDO} pip install --upgrade virtualenv
-    pip install jedi
+    pip install jedi --user
 }
 
 #名称: install_git_plugin
@@ -922,6 +922,7 @@ function build_all_help()
     echo "===============vimtools安装帮助=================="
     echo "->获取帮助:	bash ./build_all.sh"
     echo "->全新安装:	bash ./build_all.sh --all"
+    echo "->安装Py库:   bash ./build_all.sh --pythonlib"
     echo "->只安装vim:	bash ./build_all.sh --vim"
     echo "->只安装插件:	bash ./build_all.sh --plugins"
     echo "->安装本地插件:	bash ./build_all.sh --script"
@@ -985,6 +986,10 @@ function install_vimtools()
             enable_vimscript_plugins
             combine_vimrcs
             patch_plugins
+            ;;
+        "pythonlib"|"--pythonlib")
+            echo "提示: 正在安装Python相关库支持..."
+            install_python_libs
             ;;
         "vim"|"--vim")
             echo "提示: 正在进行vim安装..."

@@ -53,6 +53,14 @@ let g:rainbow_conf = {
 	\		'css': 0,
 	\	}
 	\}
+
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete/after
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete/after/ftplugin
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete/autoload/omni
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete/autoload/omni/common
+set rtp+=/home/linux/.vim/bundle/omnicppcomplete/autoload/omni/cpp
+
 " 	工程管理插件
 "=============================================================
 "               LookupFile文件查找插件
