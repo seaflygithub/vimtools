@@ -924,15 +924,8 @@ function build_all_help()
     echo "->全新安装:	bash ./build_all.sh --all"
     echo "->安装Py库:   bash ./build_all.sh --pythonlib"
     echo "->只安装vim:	bash ./build_all.sh --vim"
-    echo "->只安装插件:	bash ./build_all.sh --plugins"
-    echo "->安装本地插件:	bash ./build_all.sh --script"
+    echo "->打补丁:     bash ./build_all.sh --patch"
     echo "================================================="
-    echo "->工程管理流程:"
-    echo "->(1) 用户同步工程: Createtag"
-    echo "->    (1) 检查并生成cscope,objtags,~/.systags"
-    echo "->    (2) 合并tags: tags = systags + objtags"
-    echo "->(2) 自动导入工程数据文件(并动态检查更新)"
-    echo "->(3) 更新编程库: 删除~/.systags，重新执行同步操作生成新的.systags"
     echo "================================================="
     return 0
 }
@@ -963,6 +956,7 @@ function patch_plugins()
     #该补丁是安装完成后提示用户填写作者名和邮箱信息
     patch_plugin "vim-header.patch.sh" "bash"
     patch_plugin "indentLine.patch.sh" "bash"
+    patch_plugin "omnicppcomplete.patch.sh" "bash"
 
     return 0
 }
@@ -995,6 +989,10 @@ function install_vimtools()
             echo "提示: 正在进行vim安装..."
             install_python_libs
             install_vim "python2.x" "no-update" "8.0"
+            ;;
+        "patch"|"--patch")
+            echo "提示: 正在为vimtools打补丁..."
+            patch_plugins
             ;;
         "plugins"|"script_plugins"|"script"|"--script"|"--script_plugins")
             echo "提示: 正在进行本地插件安装..."
