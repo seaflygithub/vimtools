@@ -1,0 +1,23 @@
+-e !_TAG_FILE_SORTED	2	/2=foldcase
+cscope.files	./cscope.files	1
+cscope.files	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/cscope.files	1
+cscope.out	./cscope.out	1
+cscope.out	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/cscope.out	1
+cscope.out.in	./cscope.out.in	1
+cscope.out.in	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/cscope.out.in	1
+cscope.out.po	./cscope.out.po	1
+cscope.out.po	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/cscope.out.po	1
+extend.dir	./extend.dir	1
+extend.dir	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/extend.dir	1
+filenametags	./filenametags	1
+filenametags	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/filenametags	1
+lock	./.auto_cscope_ctags/lock	1
+lock	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/.auto_cscope_ctags/lock	1
+main.c	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c	1
+main.c	./main.c	1
+main.h	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	1
+main.h	./main.h	1
+tags.files	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/tags.files	1
+tags.files	./tags.files	1
+tags	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/tags	1
+tags	./tags	1

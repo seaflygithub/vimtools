@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAIN_H	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	2;"	d
+MAIN_H	main.h	2;"	d
+_tag_head	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^typedef struct _tag_head {$/;"	s
+_tag_head	main.h	/^typedef struct _tag_head {$/;"	s
+_tag_head::length	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int     length;$/;"	m	struct:_tag_head	access:public
+_tag_head::length	main.h	/^    int     length;$/;"	m	struct:_tag_head	access:public
+_tag_head::linker	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    node_t  linker;$/;"	m	struct:_tag_head	access:public
+_tag_head::linker	main.h	/^    node_t  linker;$/;"	m	struct:_tag_head	access:public
+_tag_node	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^typedef struct _tag_node {$/;"	s
+_tag_node	main.h	/^typedef struct _tag_node {$/;"	s
+_tag_node::next	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    struct _tag_node *next;$/;"	m	struct:_tag_node	typeref:struct:_tag_node::_tag_node	access:public
+_tag_node::next	main.h	/^    struct _tag_node *next;$/;"	m	struct:_tag_node	typeref:struct:_tag_node::_tag_node	access:public
+addr	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int addr;$/;"	m	struct:tag_data	access:public
+addr	main.h	/^    int addr;$/;"	m	struct:tag_data	access:public
+age	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int age;$/;"	m	struct:tag_data	access:public
+age	main.h	/^    int age;$/;"	m	struct:tag_data	access:public
+data_t	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^}data_t;$/;"	t	typeref:struct:tag_data
+data_t	main.h	/^}data_t;$/;"	t	typeref:struct:tag_data
+head_t	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^}head_t,list_t;$/;"	t	typeref:struct:_tag_head
+head_t	main.h	/^}head_t,list_t;$/;"	t	typeref:struct:_tag_head
+length	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int     length;$/;"	m	struct:_tag_head	access:public
+length	main.h	/^    int     length;$/;"	m	struct:_tag_head	access:public
+linker	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    node_t  linker;$/;"	m	struct:_tag_head	access:public
+linker	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    node_t linker;$/;"	m	struct:tag_data	access:public
+linker	main.h	/^    node_t  linker;$/;"	m	struct:_tag_head	access:public
+linker	main.h	/^    node_t linker;$/;"	m	struct:tag_data	access:public
+list_t	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^}head_t,list_t;$/;"	t	typeref:struct:_tag_head
+list_t	main.h	/^}head_t,list_t;$/;"	t	typeref:struct:_tag_head
+main	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+main	main.c	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+name	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int name;$/;"	m	struct:tag_data	access:public
+name	main.h	/^    int name;$/;"	m	struct:tag_data	access:public
+next	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    struct _tag_node *next;$/;"	m	struct:_tag_node	typeref:struct:_tag_node::_tag_node	access:public
+next	main.h	/^    struct _tag_node *next;$/;"	m	struct:_tag_node	typeref:struct:_tag_node::_tag_node	access:public
+node_t	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^}node_t;$/;"	t	typeref:struct:_tag_node
+node_t	main.h	/^}node_t;$/;"	t	typeref:struct:_tag_node
+tag_data	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^typedef struct tag_data {$/;"	s
+tag_data	main.h	/^typedef struct tag_data {$/;"	s
+tag_data::addr	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int addr;$/;"	m	struct:tag_data	access:public
+tag_data::addr	main.h	/^    int addr;$/;"	m	struct:tag_data	access:public
+tag_data::age	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int age;$/;"	m	struct:tag_data	access:public
+tag_data::age	main.h	/^    int age;$/;"	m	struct:tag_data	access:public
+tag_data::linker	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    node_t linker;$/;"	m	struct:tag_data	access:public
+tag_data::linker	main.h	/^    node_t linker;$/;"	m	struct:tag_data	access:public
+tag_data::name	/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h	/^    int name;$/;"	m	struct:tag_data	access:public
+tag_data::name	main.h	/^    int name;$/;"	m	struct:tag_data	access:public

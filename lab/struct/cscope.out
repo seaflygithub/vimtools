@@ -1,0 +1,283 @@
+cscope 15 $HOME/workdir/github/vimtools-ubuntu-SI/lab/struct -q 0000000026 0000001285
+	@/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"maö.h
+"
+
+5 
+	$maö
+(
+¨gc
+, *
+¨gv
+[])
+
+7 
+d©a_t
+ 
+d©a
+ = {0};
+
+8 
+d©a_t
+ *
+pd©a
+ = 
+NULL
+;
+
+9 
+pd©a
+ = 
+	`mÆloc
+((
+d©a_t
+));
+
+12 
+	`‰ì
+(
+pd©a
+);
+
+13 
+pd©a
+ = 
+NULL
+;
+
+15 
+	}
+}
+
+	@/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h
+
+1 #i‚de‡ 
+MAIN_H
+
+
+2 
+	#MAIN_H
+
+
+	)
+
+4 
+	s_èg_node
+ {
+
+5 
+_èg_node
+ *
+	m√xt
+;
+
+6 }
+	tnode_t
+;
+
+7 
+	s_èg_hód
+ {
+
+8 
+node_t
+ 
+	mlökî
+;
+
+9 
+	mÀngth
+;
+
+10 }
+	thód_t
+,
+	tli°_t
+;
+
+11 
+	sèg_d©a
+ {
+
+12 
+	m«me
+;
+
+13 
+	mage
+;
+
+14 
+	maddr
+;
+
+15 
+node_t
+ 
+	mlökî
+;
+
+16 }
+	td©a_t
+;
+
+	@main.c
+
+1 
+	~<°dio.h
+>
+
+2 
+	~<°dlib.h
+>
+
+3 
+	~<°rög.h
+>
+
+4 
+	~"maö.h
+"
+
+5 
+	$maö
+(
+¨gc
+, *
+¨gv
+[])
+
+7 
+d©a_t
+ 
+d©a
+ = {0};
+
+8 
+d©a_t
+ *
+pd©a
+ = 
+NULL
+;
+
+9 
+pd©a
+ = 
+	`mÆloc
+((
+d©a_t
+));
+
+12 
+	`‰ì
+(
+pd©a
+);
+
+13 
+pd©a
+ = 
+NULL
+;
+
+15 
+	}
+}
+
+	@main.h
+
+1 #i‚de‡ 
+MAIN_H
+
+
+2 
+	#MAIN_H
+
+
+	)
+
+4 
+	s_èg_node
+ {
+
+5 
+_èg_node
+ *
+	m√xt
+;
+
+6 }
+	tnode_t
+;
+
+7 
+	s_èg_hód
+ {
+
+8 
+node_t
+ 
+	mlökî
+;
+
+9 
+	mÀngth
+;
+
+10 }
+	thód_t
+,
+	tli°_t
+;
+
+11 
+	sèg_d©a
+ {
+
+12 
+	m«me
+;
+
+13 
+	mage
+;
+
+14 
+	maddr
+;
+
+15 
+node_t
+ 
+	mlökî
+;
+
+16 }
+	td©a_t
+;
+
+	@
+1
+.
+0
+4
+144
+/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.c
+/home/seafly/workdir/github/vimtools-ubuntu-SI/lab/struct/main.h
+main.c
+main.h
